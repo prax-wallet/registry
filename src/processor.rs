@@ -8,8 +8,9 @@ use tokio::task;
 use crate::error::AppResult;
 use crate::github::assetlist_schema::AssetTypeAsset;
 use crate::metadata::convert_to_proto_metadata;
-use crate::parser::{get_chain_configs, ChainConfig, IbcConfig, LOCAL_REGISTRY_DIR};
+use crate::parser::{ChainConfig, get_chain_configs, IbcConfig, LOCAL_REGISTRY_DIR};
 use crate::querier::query_github_assets;
+use crate::sanitize::sanitize_and_inline_metadata;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -78,6 +79,8 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
         }
     }
 
+    let sanitized = sanitize_and_inline_metadata(all_metadata).await?;
+
     Ok(Registry {
         chain_id: chain_config.chain_id,
         ibc: chain_config
@@ -85,6 +88,6 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
             .into_iter()
             .map(Into::into)
             .collect(),
-        assets: all_metadata,
+        assets: sanitized,
     })
 }

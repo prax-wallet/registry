@@ -330,6 +330,12 @@ dependencies = [
 
 [[package]]
 name = "base64"
+version = "0.13.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e1b586273c5702936fe7b7d6896644d8be71e6314cfe09d3167c95f712589e8"
+
+[[package]]
+name = "base64"
 version = "0.21.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9d297deb1925b89f2ccc13d7635fa0714f12c87adce1c75356b39ca9b7178567"
@@ -596,6 +602,12 @@ dependencies = [
  "quote",
  "syn 2.0.58",
 ]
+
+[[package]]
+name = "data-url"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5c297a1c74b71ae29df00c3e22dd9534821d60eb9af5a0192823fa2acea70c2a"
 
 [[package]]
 name = "decaf377"
@@ -1598,6 +1610,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8f518f335dce6725a761382244631d86cf0ccb2863413590b31338feb467f9c3"
 
 [[package]]
+name = "is-url"
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ecc3c11df614d56dcf271409b7a7efbcec8c07f55f685651232ddf26054d166b"
+dependencies = [
+ "lazy_static",
+ "regex",
+]
+
+[[package]]
 name = "itertools"
 version = "0.10.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2124,13 +2146,16 @@ name = "penumbra-registry"
 version = "1.0.0"
 dependencies = [
  "anyhow",
+ "base64 0.22.0",
  "futures",
+ "is-url",
  "penumbra-asset",
  "penumbra-proto",
  "regress",
  "reqwest",
  "serde",
  "serde_json",
+ "svg-hush",
  "thiserror",
  "tokio",
 ]
@@ -2378,6 +2403,12 @@ checksum = "3235c33eb02c1f1e212abdbe34c78b264b038fb58ca612664343271e36e55ffe"
 dependencies = [
  "prost",
 ]
+
+[[package]]
+name = "quick-error"
+version = "2.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a993555f31e5a609f617c12db6250dedcac1b0a85076912c436e6fc9b2c8e6a3"
 
 [[package]]
 name = "quote"
@@ -2903,6 +2934,20 @@ name = "subtle-ng"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "734676eb262c623cec13c3155096e08d1f8f29adce39ba17948b18dad1e54142"
+
+[[package]]
+name = "svg-hush"
+version = "0.9.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f755b9992346207ee132274476f9803953c3a9ba287b8cc899aa9aa200c2f4d"
+dependencies = [
+ "base64 0.13.1",
+ "data-url",
+ "once_cell",
+ "quick-error",
+ "url",
+ "xml-rs",
+]
 
 [[package]]
 name = "syn"
@@ -3643,6 +3688,12 @@ checksum = "05f360fc0b24296329c78fda852a1e9ae82de9cf7b27dae4b7f62f118f77b9ed"
 dependencies = [
  "tap",
 ]
+
+[[package]]
+name = "xml-rs"
+version = "0.8.20"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "791978798f0597cfc70478424c2b4fdc2b7a8024aaff78497ef00f24ef674193"
 
 [[package]]
 name = "zerocopy"

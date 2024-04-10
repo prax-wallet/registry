@@ -46,3 +46,13 @@ async fn fetch_asset_list(
     let asset_list = res.json::<AssetList>().await?;
     Ok((ibc_asset.clone(), asset_list))
 }
+
+pub async fn request_img(url: &str) -> AppResult<Vec<u8>> {
+    let client = Client::new();
+    let res = client
+        .get(url)
+        .header(reqwest::header::USER_AGENT, "request")
+        .send()
+        .await?;
+    Ok(res.bytes().await?.to_vec())
+}

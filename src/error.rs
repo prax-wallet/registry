@@ -1,3 +1,4 @@
+use svg_hush::FError;
 use thiserror::Error;
 use tokio::task;
 
@@ -8,6 +9,9 @@ pub enum AppError {
 
     #[error("{0}")]
     IoError(#[from] std::io::Error),
+
+    #[error("{0}")]
+    FilterError(#[from] FError),
 
     #[error("{0}")]
     JoinError(#[from] task::JoinError),
