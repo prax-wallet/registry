@@ -1,0 +1,14 @@
+[
+  {
+    "chainId": "osmo-test-5",
+    "ibcChannel": "channel-0",
+    "addressPrefix": "osmo",
+    "cosmosRegistryDir": "testnets/osmosistestnet"
+  },
+  {
+    "chainId": "grand-1",
+    "ibcChannel": "channel-3",
+    "addressPrefix": "noble",
+    "cosmosRegistryDir": "testnets/nobletestnet"
+  }
+]
