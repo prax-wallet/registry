@@ -1,3 +1,4 @@
+use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
 
@@ -34,7 +35,8 @@ impl From<IbcConfig> for IbcChains {
 pub struct Registry {
     pub chain_id: String,
     pub ibc: Vec<IbcChains>,
-    pub assets: Vec<Metadata>,
+    // Use a BTreeMap to have sorted (deterministic) output
+    pub asset_by_id: BTreeMap<String, Metadata>,
 }
 
 pub async fn generate_registry() -> AppResult<()> {
@@ -110,6 +112,19 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
         }
     }
 
+    // TODO: method should exist on the Id upstream
+    let base64_id = |m: &Metadata| {
+        let metadata_json = serde_json::value::to_value(m).unwrap();
+        metadata_json
+            .get("penumbraAssetId")
+            .unwrap()
+            .get("inner")
+            .unwrap()
+            .as_str()
+            .unwrap()
+            .to_string()
+    };
+
     Ok(Registry {
         chain_id: chain_config.chain_id,
         ibc: chain_config
@@ -117,6 +132,9 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
             .into_iter()
             .map(Into::into)
             .collect(),
-        assets: all_metadata,
+        asset_by_id: all_metadata
+            .into_iter()
+            .map(|m| (base64_id(&m), m))
+            .collect(),
     })
 }
