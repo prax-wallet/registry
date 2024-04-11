@@ -1,3 +1,4 @@
+use anyhow::anyhow;
 use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
@@ -64,7 +65,10 @@ pub async fn generate_registry() -> AppResult<()> {
 
 /// Given `ibc_data` describing a channel and `source_asset` on the source chain,
 /// compute the metadata for the asset when it is transported along the channel onto a Penumbra chain.
-fn transport_metadata_along_channel(ibc_data: &IbcConfig, source_asset: Metadata) -> Metadata {
+fn transport_metadata_along_channel(
+    ibc_data: &IbcConfig,
+    source_asset: Metadata,
+) -> AppResult<Metadata> {
     // The `Metadata` structure doesn't allow modifying the internals, so drop to raw proto data
     let mut pb_metadata: pb::Metadata = source_asset.into();
     tracing::debug!(?pb_metadata, "original");
@@ -87,7 +91,17 @@ fn transport_metadata_along_channel(ibc_data: &IbcConfig, source_asset: Metadata
     pb_metadata.penumbra_asset_id = None;
 
     tracing::debug!(?pb_metadata, "new");
-    Metadata::try_from(pb_metadata).unwrap()
+    Ok(Metadata::try_from(pb_metadata)?)
+}
+
+fn base64_id(m: &Metadata) -> AppResult<String> {
+    let id_json = serde_json::to_value(m.id())?;
+    let base64_str = id_json
+        .get("inner")
+        .and_then(|s| s.as_str()) // This extracts the string without the double quotes
+        .map(|s| s.to_owned())
+        .ok_or_else(|| anyhow!("Unexpected id json structure"))?;
+    Ok(base64_str)
 }
 
 async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
@@ -105,25 +119,13 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
             }
             // Turn the asset back into JSON so we can deserialize it as a penumbra Metadata
             let asset_json = serde_json::to_string(&source_asset)?;
+            let source_asset_metadata = serde_json::from_str(&asset_json)?;
             let transferred_asset =
-                transport_metadata_along_channel(&ibc_data, serde_json::from_str(&asset_json)?);
+                transport_metadata_along_channel(&ibc_data, source_asset_metadata)?;
             tracing::info!(?asset_json, transferred_asset_json = ?serde_json::to_string(&transferred_asset));
             all_metadata.push(transferred_asset);
         }
     }
-
-    // TODO: method should exist on the Id upstream
-    let base64_id = |m: &Metadata| {
-        let metadata_json = serde_json::value::to_value(m).unwrap();
-        metadata_json
-            .get("penumbraAssetId")
-            .unwrap()
-            .get("inner")
-            .unwrap()
-            .as_str()
-            .unwrap()
-            .to_string()
-    };
 
     Ok(Registry {
         chain_id: chain_config.chain_id,
@@ -134,7 +136,10 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
             .collect(),
         asset_by_id: all_metadata
             .into_iter()
-            .map(|m| (base64_id(&m), m))
-            .collect(),
+            .map(|m| {
+                let id = base64_id(&m)?;
+                Ok((id, m))
+            })
+            .collect::<AppResult<_>>()?,
     })
 }
