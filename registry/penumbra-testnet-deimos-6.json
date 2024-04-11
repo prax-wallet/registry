@@ -12,98 +12,33 @@
       "ibcChannel": "channel-3"
     }
   ],
-  "assets": [
-    {
+  "assetById": {
+    "+jDercxZxs90BjC91PrWyA53/p7uN3ZcSJj3N0mHjhI=": {
+      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
       "denomUnits": [
         {
-          "denom": "penumbra",
+          "denom": "transfer/channel-3/uusdlr"
+        },
+        {
+          "denom": "transfer/channel-3/usdlr",
           "exponent": 6
-        },
-        {
-          "denom": "mpenumbra",
-          "exponent": 3
-        },
-        {
-          "denom": "upenumbra"
         }
       ],
-      "base": "upenumbra",
-      "display": "penumbra",
-      "symbol": "UM",
+      "base": "transfer/channel-3/uusdlr",
+      "display": "transfer/channel-3/usdlr",
+      "name": "USDLR by Stable",
+      "symbol": "USDLR",
       "penumbraAssetId": {
-        "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
+        "inner": "+jDercxZxs90BjC91PrWyA53/p7uN3ZcSJj3N0mHjhI="
       },
       "images": [
         {
-          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmcyIgogICB3aWR0aD0iMzIiCiAgIGhlaWdodD0iMzIiCiAgIHZpZXdCb3g9IjAgMCAzMiAzMiIKICAgc29kaXBvZGk6ZG9jbmFtZT0iMTUtUGVudW1icmEtdG9rZW4tbG9nby0yNHgyNHB4LTEtMi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMi4yIChiMGE4NDg2NSwgMjAyMi0xMi0wMSkiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnMKICAgICBpZD0iZGVmczYiPgogICAgPHJhZGlhbEdyYWRpZW50CiAgICAgICBmeD0iMCIKICAgICAgIGZ5PSIwIgogICAgICAgY3g9IjAiCiAgICAgICBjeT0iMCIKICAgICAgIHI9IjEiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoOC42ODQyMzc1LDMuOTM4MjAwNywzLjkzODIwMDcsLTguNjg0MjM3NSwxMS44MjIzNDQsMTEuNzA0NDM0KSIKICAgICAgIHNwcmVhZE1ldGhvZD0icGFkIgogICAgICAgaWQ9InJhZGlhbEdyYWRpZW50MzQiPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1vcGFjaXR5OjE7c3RvcC1jb2xvcjojZjc5MDM2IgogICAgICAgICBvZmZzZXQ9IjAiCiAgICAgICAgIGlkPSJzdG9wMjYiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLW9wYWNpdHk6MTtzdG9wLWNvbG9yOiNmNzkwMzYiCiAgICAgICAgIG9mZnNldD0iMC42MDMwMTciCiAgICAgICAgIGlkPSJzdG9wMjgiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLW9wYWNpdHk6MTtzdG9wLWNvbG9yOiM5NmQ1ZDEiCiAgICAgICAgIG9mZnNldD0iMC44Nzk2NjgiCiAgICAgICAgIGlkPSJzdG9wMzAiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLW9wYWNpdHk6MTtzdG9wLWNvbG9yOiM5NmQ1ZDEiCiAgICAgICAgIG9mZnNldD0iMSIKICAgICAgICAgaWQ9InN0b3AzMiIgLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0ibmFtZWR2aWV3NCIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiMwMDAwMDAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMC4yNSIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgaW5rc2NhcGU6ZGVza2NvbG9yPSIjZDFkMWQxIgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp6b29tPSIzMi4wOTM3NSIKICAgICBpbmtzY2FwZTpjeD0iMTcuNzc2MDQ3IgogICAgIGlua3NjYXBlOmN5PSIxNy4wNzQ5NzYiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxNDE5IgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjkxNiIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iNTAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjM4IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjAiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0iZzEwIj4KICAgIDxpbmtzY2FwZTpwYWdlCiAgICAgICB4PSIwIgogICAgICAgeT0iMCIKICAgICAgIGlkPSJwYWdlOCIKICAgICAgIHdpZHRoPSIzMiIKICAgICAgIGhlaWdodD0iMzIiIC8+CiAgPC9zb2RpcG9kaTpuYW1lZHZpZXc+CiAgPGcKICAgICBpZD0iZzEwIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaW5rc2NhcGU6bGFiZWw9IlBhZ2UgMSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjMzMzMzMzMsMCwwLC0xLjMzMzMzMzMsMCwzMikiPgogICAgPHBhdGgKICAgICAgIGQ9Ik0gMC4wMTY1MjM4NSwwIEggMjQuMDAxIFYgMjQgSCAwLjAxNjUyMzg1IFoiCiAgICAgICBzdHlsZT0iZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDoxLjAwMTk1IgogICAgICAgaWQ9InBhdGgxMiIgLz4KICAgIDxnCiAgICAgICBpZD0iZzE0Ij4KICAgICAgPGcKICAgICAgICAgaWQ9ImcxNiI+CiAgICAgICAgPGcKICAgICAgICAgICBpZD0iZzIyIj4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzI0Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgZD0ibSAxNS43ODIsMjAuODk1IGMgLTAuNjU3LC0wLjIzNCAtMS4yOTgsLTAuNTMgLTEuOTE4LC0wLjgxNyB2IDAgQyAxMi43MjksMTkuNTU0IDExLjY1OCwxOS4wNiAxMC44MSwxOS4xMTEgdiAwIGMgLTAuMjk3LDAuMDE4IC0wLjY2MiwwLjA2MyAtMS4wODUsMC4xMTcgdiAwIEMgOC4xMzIsMTkuNDI2IDUuOTUyLDE5LjcgNC44MTUsMTguNzcxIHYgMCBDIDQuMDA3LDE4LjExMiA0LjEzMywxNi41MzggNC4yNTQsMTUuMDE2IHYgMCBDIDQuMzQ2LDEzLjg3OCA0LjQ0MSwxMi43MDIgNC4xMjcsMTEuOTk3IHYgMCBDIDMuNDIsMTAuNDAxIDMuMTc5LDkuMDQgMy40MTEsNy45NTIgdiAwIEMgMy42MzksNi44ODMgNC4zMjUsNi4wNDYgNS40NSw1LjQ2MyB2IDAgQyA2LjA4NCw1LjEzNSA2LjY2OCw0Ljk5OCA3LjI4Niw0Ljg1MyB2IDAgQyA4LjE4OCw0LjY0IDkuMTIsNC40MjEgMTAuMjg0LDMuNTY4IHYgMCBjIDAuNTgyLC0wLjQyNyAxLjE4MiwtMC42NDIgMS44MTgsLTAuNjQyIHYgMCBjIDEuMjEsMCAyLjU1MiwwLjc3OCA0LjE1MSwyLjM3MiB2IDAgYyAwLjU4MSwwLjU4IDEuMjksMC45MTcgMS45NzUsMS4yNDUgdiAwIGMgMC44MDUsMC4zODQgMS42MzksMC43ODIgMi4yNzUsMS41NyB2IDAgYyAwLjM4OSwwLjQ4MSAwLjQ4NywwLjk5NiAwLjMsMS41NzMgdiAwIGMgLTAuMTYzLDAuNTA3IC0wLjUyNiwxLjAyMSAtMC45MSwxLjU2NSB2IDAgYyAtMC40MTgsMC41OTEgLTAuODUxLDEuMjAzIC0xLjEwOSwxLjkgdiAwIGMgLTAuNDUyLDEuMjE1IC0wLjM2NywxLjcwMSAtMC4yMTUsMi41ODUgdiAwIGMgMC4xLDAuNTcyIDAuMjIyLDEuMjg1IDAuMjUxLDIuNDQyIHYgMCBjIDAuMDMyLDEuMzIxIC0wLjM0MSwyLjA3NCAtMC45NDQsMi41MSB2IDAgYyAtMC4zMjUsMC4yMzUgLTAuNywwLjM4NiAtMS4xNjEsMC4zODYgdiAwIGMgLTAuMjc3LDAgLTAuNTg1LC0wLjA1NSAtMC45MzMsLTAuMTc5IE0gOC44MjgsNy42NzIgQyA3Ljk0Myw4LjMyNiA3LjMyMiw5LjIyNyA3LjAzMiwxMC4yNzggdiAwIGMgLTAuMzQ1LDEuMjUxIC0wLjE3MSwyLjU1OSAwLjQ4OSwzLjY4MiB2IDAgYyAwLjY2MiwxLjEyMyAxLjczLDEuOTI4IDMuMDEsMi4yNjUgdiAwIGMgMC40MjQsMC4xMTIgMC44NTksMC4xNjkgMS4yOTUsMC4xNjkgdiAwIGMgMS4wNjksMCAyLjEzMSwtMC4zNSAyLjk5LC0wLjk4NCB2IDAgYyAwLjg4NSwtMC42NTQgMS41MDYsLTEuNTU1IDEuNzk2LC0yLjYwNiB2IDAgYyAwLjM0NSwtMS4yNTIgMC4xNzEsLTIuNTU5IC0wLjQ4OSwtMy42ODIgdiAwIEMgMTUuNDYyLDcuOTk4IDE0LjM5Myw3LjE5NSAxMy4xMTQsNi44NTcgdiAwIEMgMTIuNjg5LDYuNzQ1IDEyLjI1Myw2LjY4OCAxMS44MTksNi42ODggdiAwIGMgLTEuMDcsMCAtMi4xMzEsMC4zNSAtMi45OTEsMC45ODQiCiAgICAgICAgICAgICAgIHN0eWxlPSJmaWxsOnVybCgjcmFkaWFsR3JhZGllbnQzNCk7c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgICAgIGlkPSJwYXRoMzYiIC8+CiAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
         }
       ]
     },
-    {
-      "denomUnits": [
-        {
-          "denom": "gm",
-          "exponent": 6
-        },
-        {
-          "denom": "mgm",
-          "exponent": 3
-        },
-        {
-          "denom": "ugm"
-        }
-      ],
-      "base": "ugm",
-      "display": "gm",
-      "symbol": "GM",
-      "penumbraAssetId": {
-        "inner": "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc="
-      }
-    },
-    {
-      "denomUnits": [
-        {
-          "denom": "gn",
-          "exponent": 6
-        },
-        {
-          "denom": "mgn",
-          "exponent": 3
-        },
-        {
-          "denom": "ugn"
-        }
-      ],
-      "base": "ugn",
-      "display": "gn",
-      "symbol": "GN",
-      "penumbraAssetId": {
-        "inner": "nwPDkQq3OvLnBwGTD+nmv1Ifb2GEmFCgNHrU++9BsRE="
-      }
-    },
-    {
-      "denomUnits": [
-        {
-          "denom": "test_usd",
-          "exponent": 18
-        },
-        {
-          "denom": "wtest_usd"
-        }
-      ],
-      "base": "wtest_usd",
-      "display": "test_usd",
-      "symbol": "TestUSD",
-      "penumbraAssetId": {
-        "inner": "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg="
-      },
-      "images": [
-        {
-          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjU2IDI1NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjU2IDI1NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMxNTgwM2Q7fQoJLnN0MXtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxMjgiIGN5PSIxMjgiIHI9IjEyOCIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTA0LDIxN2MwLDMtMi40LDQuNy01LjIsMy44QzYwLDIwOC40LDMyLDE3Mi4yLDMyLDEyOS4zYzAtNDIuOCwyOC03OS4xLDY2LjgtOTEuNWMyLjktMC45LDUuMiwwLjgsNS4yLDMuOAoJdjcuNWMwLDItMS41LDQuMy0zLjQsNUM2OS45LDY1LjQsNDgsOTQuOSw0OCwxMjkuM2MwLDM0LjUsMjEuOSw2My45LDUyLjYsNzUuMWMxLjksMC43LDMuNCwzLDMuNCw1VjIxN3oiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTEzNiwxODkuM2MwLDIuMi0xLjgsNC00LDRoLThjLTIuMiwwLTQtMS44LTQtNHYtMTIuNmMtMTcuNS0yLjQtMjYtMTIuMS0yOC4zLTI1LjVjLTAuNC0yLjMsMS40LTQuMywzLjctNC4zCgloOS4xYzEuOSwwLDMuNSwxLjQsMy45LDMuMmMxLjcsNy45LDYuMywxNCwyMC4zLDE0YzEwLjMsMCwxNy43LTUuOCwxNy43LTE0LjRjMC04LjYtNC4zLTExLjktMTkuNS0xNC40Yy0yMi40LTMtMzMtOS44LTMzLTI3LjMKCWMwLTEzLjUsMTAuMy0yNC4xLDI2LjEtMjYuM1Y2OS4zYzAtMi4yLDEuOC00LDQtNGg4YzIuMiwwLDQsMS44LDQsNHYxMi43YzEyLjksMi4zLDIxLjEsOS42LDIzLjgsMjEuOGMwLjUsMi4zLTEuMyw0LjQtMy43LDQuNAoJaC04LjRjLTEuOCwwLTMuMy0xLjItMy44LTIuOWMtMi4zLTcuNy03LjgtMTEuMS0xNy40LTExLjFjLTEwLjYsMC0xNi4xLDUuMS0xNi4xLDEyLjNjMCw3LjYsMy4xLDExLjQsMTkuNCwxMy43CgljMjIsMywzMy40LDkuMywzMy40LDI4YzAsMTQuMi0xMC42LDI1LjctMjcuMSwyOC4zVjE4OS4zeiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTU3LjIsMjIwLjhjLTIuOSwwLjktNS4yLTAuOC01LjItMy44di03LjVjMC0yLjIsMS4zLTQuMywzLjQtNWMzMC42LTExLjIsNTIuNi00MC43LDUyLjYtNzUuMQoJYzAtMzQuNS0yMS45LTYzLjktNTIuNi03NS4xYy0xLjktMC43LTMuNC0zLTMuNC01di03LjVjMC0zLDIuNC00LjcsNS4yLTMuOEMxOTYsNTAuMiwyMjQsODYuNSwyMjQsMTI5LjMKCUMyMjQsMTcyLjIsMTk2LDIwOC40LDE1Ny4yLDIyMC44eiIvPgo8L3N2Zz4K"
-        }
-      ]
-    },
-    {
+    "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws=": {
       "denomUnits": [
         {
           "denom": "cube"
@@ -116,25 +51,31 @@
         "inner": "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws="
       }
     },
-    {
+    "CKBQapu+DkQpsKyTfKESLTV19/NPWR5sNZtvQsd3Hw8=": {
+      "description": "USD Coin",
       "denomUnits": [
         {
-          "denom": "pizza"
+          "denom": "transfer/channel-3/uusdc"
+        },
+        {
+          "denom": "transfer/channel-3/usdc",
+          "exponent": 6
         }
       ],
-      "base": "pizza",
-      "display": "pizza",
-      "symbol": "PIZZA",
+      "base": "transfer/channel-3/uusdc",
+      "display": "transfer/channel-3/usdc",
+      "name": "USD Coin",
+      "symbol": "USDC",
       "penumbraAssetId": {
-        "inner": "nDjzm+ldIrNMJha1anGMDVxpA5cLCPnUYQ1clmHF1gw="
+        "inner": "CKBQapu+DkQpsKyTfKESLTV19/NPWR5sNZtvQsd3Hw8="
       },
       "images": [
         {
-          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIEdlbmVyYXRvcjogU1ZHIFJlcG8gTWl4ZXIgVG9vbHMgLS0+Cjxzdmcgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjgwMHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGFyaWEtaGlkZGVuPSJ0cnVlIiByb2xlPSJpbWciIGNsYXNzPSJpY29uaWZ5IGljb25pZnktLWVtb2ppb25lIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KDTxwYXRoIGQ9Ik02Mi4zIDQ3LjFDNjIuMiAyMi43IDQxLjUgMi4xIDE3LjEgMkwyLjMgNjJsNjAtMTQuOSIgZmlsbD0iI2Y2ZGE3NyI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNNTQuNSA0OWwyLjEtLjRjLTEtMTktMTQuNi0zOC45LTQxLTQwLjlsLS4zIDJDMzUuNSAxMi4zIDUyIDI4LjcgNTQuNSA0OSIgZmlsbD0iIzg2MGQxNiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNNTYuNSA0OC42bDUuNy0xLjRDNjIuMyAyMi44IDQxLjUgMiAxNi45IDJsLTEuNCA1LjdjMjMuNSAyLjIgMzguOCAxNy42IDQxIDQwLjl6IiBmaWxsPSIjYzk4ZTUyIj4KDTwvcGF0aD4KDTxnIGZpbGw9IiM4M2JmNGYiPgoNPHBhdGggZD0iTTEzLjUgNDEuN2MtMS43IDAtMy4yLS42LTQuNC0xLjhjLS41LS41LS41LTEuMyAwLTEuN2MuNS0uNSAxLjMtLjUgMS43IDBjMS40IDEuNCAzLjkgMS40IDUuMyAwYy43LS43IDEuMS0xLjYgMS4xLTIuNnMtLjQtMS45LTEuMS0yLjZjLS41LS41LS41LTEuMyAwLTEuN2MuNS0uNSAxLjMtLjUgMS43IDBjMS4yIDEuMiAxLjggMi43IDEuOCA0LjRjMCAxLjctLjYgMy4yLTEuOCA0LjRjLTEuMS45LTIuNyAxLjYtNC4zIDEuNiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMzguNiAyMS45di41Yy0uMS4zLS4yLjUtLjUuN2MtLjMuMi0uNi4yLS44LjFjLS44LS4yLTEuNiAwLTIuMy40Yy0uNy40LTEuMiAxLjEtMS40IDEuOWMtLjQgMS42LjcgMy4zIDIuMyAzLjdjLjYuMSAxIC44LjggMS4zYy0uMS42LS43IDEtMS4zLjhjLTItLjUtMy41LTItNC00Yy0uMi0uOC0uMi0xLjYgMC0yLjNjLjMtMS40IDEuMi0yLjUgMi40LTMuM2MxLjItLjggMi42LTEgNC0uN2MuMy4yLjcuNS44LjkiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTQzLjkgNTAuOWgtLjVjLS4zLS4xLS41LS4yLS42LS41Yy0uMS0uMi0uMi0uNS0uMS0uOGMuMi0uNy4xLTEuNS0uMy0yLjJjLS40LS43LTEtMS4yLTEuOC0xLjRjLTEuNS0uNC0zLjIuNi0zLjYgMmMtLjEuNS0uOC45LTEuMy43Yy0uNi0uMi0uOS0uNy0uNy0xLjNjLjUtMS44IDItMy4zIDMuOS0zLjZjLjctLjEgMS41LS4xIDIuMi4xYzEuMy4zIDIuNCAxLjIgMyAyLjNjLjcgMS4yLjggMi41LjUgMy44YzAgLjUtLjMuOC0uNy45Ij4KDTwvcGF0aD4KDTwvZz4KDTxnIGZpbGw9IiNiMjE3MjUiPgoNPHBhdGggZD0iTTM3LjEgMzYuMmMxLjQgNC4xLS44IDguNS01IDkuOWMtNC4yIDEuNC04LjctLjgtMTAtNC45Yy0xLjQtNC4xLjgtOC41IDUtOS45YzQuMS0xLjQgOC42LjggMTAgNC45Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik00OS42IDM3Yy44IDIuNS0uNSA1LjEtMyA2Yy0yLjUuOC01LjItLjUtNi0zYy0uOC0yLjUuNS01LjEgMy02YzIuNC0uOCA1LjEuNSA2IDMiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTI5IDE5YzEuMSAzLjMtLjcgNy00LjEgOC4xYy0zLjQgMS4xLTcuMS0uNy04LjItNGMtMS4xLTMuMy43LTcgNC4xLTguMWMzLjQtMS4xIDcuMS43IDguMiA0Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0zNC40IDU0bC05LjcgMi40Yy0uOS0yLjYuOS01LjcgMy41LTYuNGMzLjItLjggNS4zIDEuNSA2LjIgNCI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMTkuNiA0N2MxLjIgMy40LS43IDcuMi00LjIgOC4zYy0zLjUgMS4yLTcuMy0uNy04LjUtNC4yYy0xLjItMy40LjctNy4yIDQuMi04LjNjMy41LTEuMSA3LjMuOCA4LjUgNC4yIj4KDTwvcGF0aD4KDTwvZz4KDTxwYXRoIGQ9Ik0xNS41IDcuN2M1LjMuMSAxMC42IDEuMSAxNS42IDMuMWM1IDEuOSA5LjcgNC45IDEzLjUgOC44YzMuOCAzLjggNi44IDguNSA4LjggMTMuNWMyIDUgMyAxMC4zIDMuMSAxNS42Yy0uOS01LjItMi4zLTEwLjMtNC41LTE1Yy0yLjItNC43LTUuMS05LjEtOC44LTEyLjdjLTMuNi0zLjctOC02LjYtMTIuNy04LjdjLTQuNy0yLjMtOS44LTMuNy0xNS00LjYiIGZpbGw9IiNlMGE3NjMiPgoNPC9wYXRoPgoNPGcgZmlsbD0iI2ZmYWI0MSI+Cg08cGF0aCBkPSJNMTYuNzk0IDEzLjQzNmwxLjk4LTEuOThsMS45OCAxLjk4bC0xLjk4IDEuOTh6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0yOS43MiAxOS4wNDRsMS45OC0xLjk4bDEuOTggMS45OGwtMS45OCAxLjk4eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMTIuOTA4IDI2LjQ0OGwxLjk4LTEuOThsMS45OCAxLjk4bC0xLjk4IDEuOTh6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0xOS43NDggMzIuMTM1bDEuOTgtMS45OGwxLjk4IDEuOThsLTEuOTggMS45OHoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTM3LjU0NSAzMi4zOWwxLjk4LTEuOThsMS45OCAxLjk4bC0xLjk4IDEuOTh6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik00OS4wMjQgNDYuNTQxbDEuOTgtMS45OGwxLjk4IDEuOThsLTEuOTggMS45OHoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTE5LjYxNyA0NC42NTJsMS45OC0xLjk4bDEuOTggMS45OGwtMS45OCAxLjk4eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMjEuMDM0IDUxLjkwM2wxLjk4LTEuOThsMS45OCAxLjk4bC0xLjk4IDEuOTh6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik00LjMzOCA1OC4yNDFsMS45OC0xLjk4bDEuOTggMS45OGwtMS45OCAxLjk4eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMTMuOTcgMTcuMzI4bDEuNDg1LTEuNDg1bDEuNDg1IDEuNDg1bC0xLjQ4NSAxLjQ4NXoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTI2LjU1MiAyNy44OTNsMS40ODUtMS40ODVsMS40ODUgMS40ODVsLTEuNDg1IDEuNDg1eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNNDAuMDc1IDI3Ljk1NWwxLjQ4NS0xLjQ4NWwxLjQ4NSAxLjQ4NWwtMS40ODUgMS40ODV6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0xMy40MzYgMzYuMTY0bDEuNDg1LTEuNDg1bDEuNDg1IDEuNDg1bC0xLjQ4NSAxLjQ4NXoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTcuMzYgNDIuMWwxLjQ4NS0xLjQ4NWwxLjQ4NSAxLjQ4NGwtMS40ODUgMS40ODV6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik01LjAzIDU0LjQ4NUw2LjUxNSA1M0w4IDU0LjQ4NUw2LjUxNSA1NS45N3oiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTE3Ljg3NiA1NS4yODZsMS40ODUtMS40ODVsMS40ODUgMS40ODZsLTEuNDg1IDEuNDg0eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMzAuNzc4IDQ4LjM0NmwxLjQ4NS0xLjQ4NWwxLjQ4NSAxLjQ4NWwtMS40ODUgMS40ODV6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0zNy4wNDIgNTAuODk2bDEuNDg1LTEuNDg1bDEuNDg1IDEuNDg1bC0xLjQ4NSAxLjQ4NHoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTQ1LjM3NiA0NS4xN2wxLjQ4NS0xLjQ4NGwxLjQ4NSAxLjQ4NWwtMS40ODUgMS40ODV6Ij4KDTwvcGF0aD4KDTwvZz4KDTwvc3ZnPg=="
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg"
         }
       ]
     },
-    {
+    "CwpUYIdQ9H5Dnf3oQ1l7ISeVMVahWbVNNvMA0dBSdwI=": {
       "denomUnits": [
         {
           "denom": "delegation_penumbravalid18nkv0r3sfp2seleq6du5kt3mhfce3k6cqm77kj2e7mhakmyw9v9qx42a20",
@@ -160,7 +101,180 @@
         }
       ]
     },
-    {
+    "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc=": {
+      "denomUnits": [
+        {
+          "denom": "gm",
+          "exponent": 6
+        },
+        {
+          "denom": "mgm",
+          "exponent": 3
+        },
+        {
+          "denom": "ugm"
+        }
+      ],
+      "base": "ugm",
+      "display": "gm",
+      "symbol": "GM",
+      "penumbraAssetId": {
+        "inner": "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc="
+      }
+    },
+    "Hqn6gTCqE7mCBsVa4agsTFmrO0Rip5xmLcipnGKH9AI=": {
+      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-3/ulove"
+        },
+        {
+          "denom": "transfer/channel-3/love",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-3/ulove",
+      "display": "transfer/channel-3/love",
+      "name": "Love",
+      "symbol": "LOVE",
+      "penumbraAssetId": {
+        "inner": "Hqn6gTCqE7mCBsVa4agsTFmrO0Rip5xmLcipnGKH9AI="
+      }
+    },
+    "KX8cjRGFpZUkZCwCtUX8Pi2lEyO5g0oPVr8WhsLgkwg=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-0/uion"
+        },
+        {
+          "denom": "transfer/channel-0/ion",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-0/uion",
+      "display": "transfer/channel-0/ion",
+      "name": "Ion",
+      "symbol": "ION",
+      "penumbraAssetId": {
+        "inner": "KX8cjRGFpZUkZCwCtUX8Pi2lEyO5g0oPVr8WhsLgkwg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
+        }
+      ]
+    },
+    "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
+      "denomUnits": [
+        {
+          "denom": "penumbra",
+          "exponent": 6
+        },
+        {
+          "denom": "mpenumbra",
+          "exponent": 3
+        },
+        {
+          "denom": "upenumbra"
+        }
+      ],
+      "base": "upenumbra",
+      "display": "penumbra",
+      "symbol": "UM",
+      "penumbraAssetId": {
+        "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
+      },
+      "images": [
+        {
+          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmcyIgogICB3aWR0aD0iMzIiCiAgIGhlaWdodD0iMzIiCiAgIHZpZXdCb3g9IjAgMCAzMiAzMiIKICAgc29kaXBvZGk6ZG9jbmFtZT0iMTUtUGVudW1icmEtdG9rZW4tbG9nby0yNHgyNHB4LTEtMi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjEuMi4yIChiMGE4NDg2NSwgMjAyMi0xMi0wMSkiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnMKICAgICBpZD0iZGVmczYiPgogICAgPHJhZGlhbEdyYWRpZW50CiAgICAgICBmeD0iMCIKICAgICAgIGZ5PSIwIgogICAgICAgY3g9IjAiCiAgICAgICBjeT0iMCIKICAgICAgIHI9IjEiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoOC42ODQyMzc1LDMuOTM4MjAwNywzLjkzODIwMDcsLTguNjg0MjM3NSwxMS44MjIzNDQsMTEuNzA0NDM0KSIKICAgICAgIHNwcmVhZE1ldGhvZD0icGFkIgogICAgICAgaWQ9InJhZGlhbEdyYWRpZW50MzQiPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1vcGFjaXR5OjE7c3RvcC1jb2xvcjojZjc5MDM2IgogICAgICAgICBvZmZzZXQ9IjAiCiAgICAgICAgIGlkPSJzdG9wMjYiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLW9wYWNpdHk6MTtzdG9wLWNvbG9yOiNmNzkwMzYiCiAgICAgICAgIG9mZnNldD0iMC42MDMwMTciCiAgICAgICAgIGlkPSJzdG9wMjgiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLW9wYWNpdHk6MTtzdG9wLWNvbG9yOiM5NmQ1ZDEiCiAgICAgICAgIG9mZnNldD0iMC44Nzk2NjgiCiAgICAgICAgIGlkPSJzdG9wMzAiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLW9wYWNpdHk6MTtzdG9wLWNvbG9yOiM5NmQ1ZDEiCiAgICAgICAgIG9mZnNldD0iMSIKICAgICAgICAgaWQ9InN0b3AzMiIgLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0ibmFtZWR2aWV3NCIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiMwMDAwMDAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMC4yNSIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9IjAiCiAgICAgaW5rc2NhcGU6ZGVza2NvbG9yPSIjZDFkMWQxIgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp6b29tPSIzMi4wOTM3NSIKICAgICBpbmtzY2FwZTpjeD0iMTcuNzc2MDQ3IgogICAgIGlua3NjYXBlOmN5PSIxNy4wNzQ5NzYiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxNDE5IgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjkxNiIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iNTAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjM4IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjAiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0iZzEwIj4KICAgIDxpbmtzY2FwZTpwYWdlCiAgICAgICB4PSIwIgogICAgICAgeT0iMCIKICAgICAgIGlkPSJwYWdlOCIKICAgICAgIHdpZHRoPSIzMiIKICAgICAgIGhlaWdodD0iMzIiIC8+CiAgPC9zb2RpcG9kaTpuYW1lZHZpZXc+CiAgPGcKICAgICBpZD0iZzEwIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaW5rc2NhcGU6bGFiZWw9IlBhZ2UgMSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjMzMzMzMzMsMCwwLC0xLjMzMzMzMzMsMCwzMikiPgogICAgPHBhdGgKICAgICAgIGQ9Ik0gMC4wMTY1MjM4NSwwIEggMjQuMDAxIFYgMjQgSCAwLjAxNjUyMzg1IFoiCiAgICAgICBzdHlsZT0iZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDoxLjAwMTk1IgogICAgICAgaWQ9InBhdGgxMiIgLz4KICAgIDxnCiAgICAgICBpZD0iZzE0Ij4KICAgICAgPGcKICAgICAgICAgaWQ9ImcxNiI+CiAgICAgICAgPGcKICAgICAgICAgICBpZD0iZzIyIj4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzI0Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgZD0ibSAxNS43ODIsMjAuODk1IGMgLTAuNjU3LC0wLjIzNCAtMS4yOTgsLTAuNTMgLTEuOTE4LC0wLjgxNyB2IDAgQyAxMi43MjksMTkuNTU0IDExLjY1OCwxOS4wNiAxMC44MSwxOS4xMTEgdiAwIGMgLTAuMjk3LDAuMDE4IC0wLjY2MiwwLjA2MyAtMS4wODUsMC4xMTcgdiAwIEMgOC4xMzIsMTkuNDI2IDUuOTUyLDE5LjcgNC44MTUsMTguNzcxIHYgMCBDIDQuMDA3LDE4LjExMiA0LjEzMywxNi41MzggNC4yNTQsMTUuMDE2IHYgMCBDIDQuMzQ2LDEzLjg3OCA0LjQ0MSwxMi43MDIgNC4xMjcsMTEuOTk3IHYgMCBDIDMuNDIsMTAuNDAxIDMuMTc5LDkuMDQgMy40MTEsNy45NTIgdiAwIEMgMy42MzksNi44ODMgNC4zMjUsNi4wNDYgNS40NSw1LjQ2MyB2IDAgQyA2LjA4NCw1LjEzNSA2LjY2OCw0Ljk5OCA3LjI4Niw0Ljg1MyB2IDAgQyA4LjE4OCw0LjY0IDkuMTIsNC40MjEgMTAuMjg0LDMuNTY4IHYgMCBjIDAuNTgyLC0wLjQyNyAxLjE4MiwtMC42NDIgMS44MTgsLTAuNjQyIHYgMCBjIDEuMjEsMCAyLjU1MiwwLjc3OCA0LjE1MSwyLjM3MiB2IDAgYyAwLjU4MSwwLjU4IDEuMjksMC45MTcgMS45NzUsMS4yNDUgdiAwIGMgMC44MDUsMC4zODQgMS42MzksMC43ODIgMi4yNzUsMS41NyB2IDAgYyAwLjM4OSwwLjQ4MSAwLjQ4NywwLjk5NiAwLjMsMS41NzMgdiAwIGMgLTAuMTYzLDAuNTA3IC0wLjUyNiwxLjAyMSAtMC45MSwxLjU2NSB2IDAgYyAtMC40MTgsMC41OTEgLTAuODUxLDEuMjAzIC0xLjEwOSwxLjkgdiAwIGMgLTAuNDUyLDEuMjE1IC0wLjM2NywxLjcwMSAtMC4yMTUsMi41ODUgdiAwIGMgMC4xLDAuNTcyIDAuMjIyLDEuMjg1IDAuMjUxLDIuNDQyIHYgMCBjIDAuMDMyLDEuMzIxIC0wLjM0MSwyLjA3NCAtMC45NDQsMi41MSB2IDAgYyAtMC4zMjUsMC4yMzUgLTAuNywwLjM4NiAtMS4xNjEsMC4zODYgdiAwIGMgLTAuMjc3LDAgLTAuNTg1LC0wLjA1NSAtMC45MzMsLTAuMTc5IE0gOC44MjgsNy42NzIgQyA3Ljk0Myw4LjMyNiA3LjMyMiw5LjIyNyA3LjAzMiwxMC4yNzggdiAwIGMgLTAuMzQ1LDEuMjUxIC0wLjE3MSwyLjU1OSAwLjQ4OSwzLjY4MiB2IDAgYyAwLjY2MiwxLjEyMyAxLjczLDEuOTI4IDMuMDEsMi4yNjUgdiAwIGMgMC40MjQsMC4xMTIgMC44NTksMC4xNjkgMS4yOTUsMC4xNjkgdiAwIGMgMS4wNjksMCAyLjEzMSwtMC4zNSAyLjk5LC0wLjk4NCB2IDAgYyAwLjg4NSwtMC42NTQgMS41MDYsLTEuNTU1IDEuNzk2LC0yLjYwNiB2IDAgYyAwLjM0NSwtMS4yNTIgMC4xNzEsLTIuNTU5IC0wLjQ4OSwtMy42ODIgdiAwIEMgMTUuNDYyLDcuOTk4IDE0LjM5Myw3LjE5NSAxMy4xMTQsNi44NTcgdiAwIEMgMTIuNjg5LDYuNzQ1IDEyLjI1Myw2LjY4OCAxMS44MTksNi42ODggdiAwIGMgLTEuMDcsMCAtMi4xMzEsMC4zNSAtMi45OTEsMC45ODQiCiAgICAgICAgICAgICAgIHN0eWxlPSJmaWxsOnVybCgjcmFkaWFsR3JhZGllbnQzNCk7c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgICAgIGlkPSJwYXRoMzYiIC8+CiAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgICA8L2c+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K"
+        }
+      ]
+    },
+    "hGwO3SuE1/D05ooLMUVVe7XvYbAFnxAUbIRIZdG3TwI=": {
+      "description": "The controlled staking asset for Noble Chain",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-3/ustake"
+        },
+        {
+          "denom": "transfer/channel-3/stake",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-3/ustake",
+      "display": "transfer/channel-3/stake",
+      "name": "Stake",
+      "symbol": "STAKE",
+      "penumbraAssetId": {
+        "inner": "hGwO3SuE1/D05ooLMUVVe7XvYbAFnxAUbIRIZdG3TwI="
+      }
+    },
+    "jIowYEpoMr+LQYqjDVEnQO6hyzb9raVxbO1GLyDxlhI=": {
+      "description": "The native token of Osmosis",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-0/uosmo"
+        },
+        {
+          "denom": "transfer/channel-0/osmo",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-0/uosmo",
+      "display": "transfer/channel-0/osmo",
+      "name": "Osmosis",
+      "symbol": "OSMO",
+      "penumbraAssetId": {
+        "inner": "jIowYEpoMr+LQYqjDVEnQO6hyzb9raVxbO1GLyDxlhI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
+    },
+    "nDjzm+ldIrNMJha1anGMDVxpA5cLCPnUYQ1clmHF1gw=": {
+      "denomUnits": [
+        {
+          "denom": "pizza"
+        }
+      ],
+      "base": "pizza",
+      "display": "pizza",
+      "symbol": "PIZZA",
+      "penumbraAssetId": {
+        "inner": "nDjzm+ldIrNMJha1anGMDVxpA5cLCPnUYQ1clmHF1gw="
+      },
+      "images": [
+        {
+          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIEdlbmVyYXRvcjogU1ZHIFJlcG8gTWl4ZXIgVG9vbHMgLS0+Cjxzdmcgd2lkdGg9IjgwMHB4IiBoZWlnaHQ9IjgwMHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGFyaWEtaGlkZGVuPSJ0cnVlIiByb2xlPSJpbWciIGNsYXNzPSJpY29uaWZ5IGljb25pZnktLWVtb2ppb25lIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KDTxwYXRoIGQ9Ik02Mi4zIDQ3LjFDNjIuMiAyMi43IDQxLjUgMi4xIDE3LjEgMkwyLjMgNjJsNjAtMTQuOSIgZmlsbD0iI2Y2ZGE3NyI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNNTQuNSA0OWwyLjEtLjRjLTEtMTktMTQuNi0zOC45LTQxLTQwLjlsLS4zIDJDMzUuNSAxMi4zIDUyIDI4LjcgNTQuNSA0OSIgZmlsbD0iIzg2MGQxNiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNNTYuNSA0OC42bDUuNy0xLjRDNjIuMyAyMi44IDQxLjUgMiAxNi45IDJsLTEuNCA1LjdjMjMuNSAyLjIgMzguOCAxNy42IDQxIDQwLjl6IiBmaWxsPSIjYzk4ZTUyIj4KDTwvcGF0aD4KDTxnIGZpbGw9IiM4M2JmNGYiPgoNPHBhdGggZD0iTTEzLjUgNDEuN2MtMS43IDAtMy4yLS42LTQuNC0xLjhjLS41LS41LS41LTEuMyAwLTEuN2MuNS0uNSAxLjMtLjUgMS43IDBjMS40IDEuNCAzLjkgMS40IDUuMyAwYy43LS43IDEuMS0xLjYgMS4xLTIuNnMtLjQtMS45LTEuMS0yLjZjLS41LS41LS41LTEuMyAwLTEuN2MuNS0uNSAxLjMtLjUgMS43IDBjMS4yIDEuMiAxLjggMi43IDEuOCA0LjRjMCAxLjctLjYgMy4yLTEuOCA0LjRjLTEuMS45LTIuNyAxLjYtNC4zIDEuNiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMzguNiAyMS45di41Yy0uMS4zLS4yLjUtLjUuN2MtLjMuMi0uNi4yLS44LjFjLS44LS4yLTEuNiAwLTIuMy40Yy0uNy40LTEuMiAxLjEtMS40IDEuOWMtLjQgMS42LjcgMy4zIDIuMyAzLjdjLjYuMSAxIC44LjggMS4zYy0uMS42LS43IDEtMS4zLjhjLTItLjUtMy41LTItNC00Yy0uMi0uOC0uMi0xLjYgMC0yLjNjLjMtMS40IDEuMi0yLjUgMi40LTMuM2MxLjItLjggMi42LTEgNC0uN2MuMy4yLjcuNS44LjkiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTQzLjkgNTAuOWgtLjVjLS4zLS4xLS41LS4yLS42LS41Yy0uMS0uMi0uMi0uNS0uMS0uOGMuMi0uNy4xLTEuNS0uMy0yLjJjLS40LS43LTEtMS4yLTEuOC0xLjRjLTEuNS0uNC0zLjIuNi0zLjYgMmMtLjEuNS0uOC45LTEuMy43Yy0uNi0uMi0uOS0uNy0uNy0xLjNjLjUtMS44IDItMy4zIDMuOS0zLjZjLjctLjEgMS41LS4xIDIuMi4xYzEuMy4zIDIuNCAxLjIgMyAyLjNjLjcgMS4yLjggMi41LjUgMy44YzAgLjUtLjMuOC0uNy45Ij4KDTwvcGF0aD4KDTwvZz4KDTxnIGZpbGw9IiNiMjE3MjUiPgoNPHBhdGggZD0iTTM3LjEgMzYuMmMxLjQgNC4xLS44IDguNS01IDkuOWMtNC4yIDEuNC04LjctLjgtMTAtNC45Yy0xLjQtNC4xLjgtOC41IDUtOS45YzQuMS0xLjQgOC42LjggMTAgNC45Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik00OS42IDM3Yy44IDIuNS0uNSA1LjEtMyA2Yy0yLjUuOC01LjItLjUtNi0zYy0uOC0yLjUuNS01LjEgMy02YzIuNC0uOCA1LjEuNSA2IDMiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTI5IDE5YzEuMSAzLjMtLjcgNy00LjEgOC4xYy0zLjQgMS4xLTcuMS0uNy04LjItNGMtMS4xLTMuMy43LTcgNC4xLTguMWMzLjQtMS4xIDcuMS43IDguMiA0Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0zNC40IDU0bC05LjcgMi40Yy0uOS0yLjYuOS01LjcgMy41LTYuNGMzLjItLjggNS4zIDEuNSA2LjIgNCI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMTkuNiA0N2MxLjIgMy40LS43IDcuMi00LjIgOC4zYy0zLjUgMS4yLTcuMy0uNy04LjUtNC4yYy0xLjItMy40LjctNy4yIDQuMi04LjNjMy41LTEuMSA3LjMuOCA4LjUgNC4yIj4KDTwvcGF0aD4KDTwvZz4KDTxwYXRoIGQ9Ik0xNS41IDcuN2M1LjMuMSAxMC42IDEuMSAxNS42IDMuMWM1IDEuOSA5LjcgNC45IDEzLjUgOC44YzMuOCAzLjggNi44IDguNSA4LjggMTMuNWMyIDUgMyAxMC4zIDMuMSAxNS42Yy0uOS01LjItMi4zLTEwLjMtNC41LTE1Yy0yLjItNC43LTUuMS05LjEtOC44LTEyLjdjLTMuNi0zLjctOC02LjYtMTIuNy04LjdjLTQuNy0yLjMtOS44LTMuNy0xNS00LjYiIGZpbGw9IiNlMGE3NjMiPgoNPC9wYXRoPgoNPGcgZmlsbD0iI2ZmYWI0MSI+Cg08cGF0aCBkPSJNMTYuNzk0IDEzLjQzNmwxLjk4LTEuOThsMS45OCAxLjk4bC0xLjk4IDEuOTh6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0yOS43MiAxOS4wNDRsMS45OC0xLjk4bDEuOTggMS45OGwtMS45OCAxLjk4eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMTIuOTA4IDI2LjQ0OGwxLjk4LTEuOThsMS45OCAxLjk4bC0xLjk4IDEuOTh6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0xOS43NDggMzIuMTM1bDEuOTgtMS45OGwxLjk4IDEuOThsLTEuOTggMS45OHoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTM3LjU0NSAzMi4zOWwxLjk4LTEuOThsMS45OCAxLjk4bC0xLjk4IDEuOTh6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik00OS4wMjQgNDYuNTQxbDEuOTgtMS45OGwxLjk4IDEuOThsLTEuOTggMS45OHoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTE5LjYxNyA0NC42NTJsMS45OC0xLjk4bDEuOTggMS45OGwtMS45OCAxLjk4eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMjEuMDM0IDUxLjkwM2wxLjk4LTEuOThsMS45OCAxLjk4bC0xLjk4IDEuOTh6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik00LjMzOCA1OC4yNDFsMS45OC0xLjk4bDEuOTggMS45OGwtMS45OCAxLjk4eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMTMuOTcgMTcuMzI4bDEuNDg1LTEuNDg1bDEuNDg1IDEuNDg1bC0xLjQ4NSAxLjQ4NXoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTI2LjU1MiAyNy44OTNsMS40ODUtMS40ODVsMS40ODUgMS40ODVsLTEuNDg1IDEuNDg1eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNNDAuMDc1IDI3Ljk1NWwxLjQ4NS0xLjQ4NWwxLjQ4NSAxLjQ4NWwtMS40ODUgMS40ODV6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0xMy40MzYgMzYuMTY0bDEuNDg1LTEuNDg1bDEuNDg1IDEuNDg1bC0xLjQ4NSAxLjQ4NXoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTcuMzYgNDIuMWwxLjQ4NS0xLjQ4NWwxLjQ4NSAxLjQ4NGwtMS40ODUgMS40ODV6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik01LjAzIDU0LjQ4NUw2LjUxNSA1M0w4IDU0LjQ4NUw2LjUxNSA1NS45N3oiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTE3Ljg3NiA1NS4yODZsMS40ODUtMS40ODVsMS40ODUgMS40ODZsLTEuNDg1IDEuNDg0eiI+Cg08L3BhdGg+Cg08cGF0aCBkPSJNMzAuNzc4IDQ4LjM0NmwxLjQ4NS0xLjQ4NWwxLjQ4NSAxLjQ4NWwtMS40ODUgMS40ODV6Ij4KDTwvcGF0aD4KDTxwYXRoIGQ9Ik0zNy4wNDIgNTAuODk2bDEuNDg1LTEuNDg1bDEuNDg1IDEuNDg1bC0xLjQ4NSAxLjQ4NHoiPgoNPC9wYXRoPgoNPHBhdGggZD0iTTQ1LjM3NiA0NS4xN2wxLjQ4NS0xLjQ4NGwxLjQ4NSAxLjQ4NWwtMS40ODUgMS40ODV6Ij4KDTwvcGF0aD4KDTwvZz4KDTwvc3ZnPg=="
+        }
+      ]
+    },
+    "nwPDkQq3OvLnBwGTD+nmv1Ifb2GEmFCgNHrU++9BsRE=": {
+      "denomUnits": [
+        {
+          "denom": "gn",
+          "exponent": 6
+        },
+        {
+          "denom": "mgn",
+          "exponent": 3
+        },
+        {
+          "denom": "ugn"
+        }
+      ],
+      "base": "ugn",
+      "display": "gn",
+      "symbol": "GN",
+      "penumbraAssetId": {
+        "inner": "nwPDkQq3OvLnBwGTD+nmv1Ifb2GEmFCgNHrU++9BsRE="
+      }
+    },
+    "qUn70lKZ3qQlCT5gj5sakux4daiTPKj0AN6ZuuFldQU=": {
       "denomUnits": [
         {
           "denom": "delegation_penumbravalid1qfxldejdhanmu302kcn5fm98q5d7d2upfhzqhaz95hyjdn82pqysqfq050",
@@ -186,56 +300,7 @@
         }
       ]
     },
-    {
-      "description": "The native token of Osmosis",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-0/uosmo"
-        },
-        {
-          "denom": "transfer/channel-0/osmo",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-0/uosmo",
-      "display": "transfer/channel-0/osmo",
-      "name": "Osmosis",
-      "symbol": "OSMO",
-      "penumbraAssetId": {
-        "inner": "jIowYEpoMr+LQYqjDVEnQO6hyzb9raVxbO1GLyDxlhI="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
-        }
-      ]
-    },
-    {
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-0/uion"
-        },
-        {
-          "denom": "transfer/channel-0/ion",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-0/uion",
-      "display": "transfer/channel-0/ion",
-      "name": "Ion",
-      "symbol": "ION",
-      "penumbraAssetId": {
-        "inner": "KX8cjRGFpZUkZCwCtUX8Pi2lEyO5g0oPVr8WhsLgkwg="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
-        }
-      ]
-    },
-    {
+    "ra98J77CX10Us2s6+d7bebfpm1Q3+UOycPfaaEeeuAY=": {
       "denomUnits": [
         {
           "denom": "transfer/channel-0/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
@@ -259,92 +324,27 @@
         }
       ]
     },
-    {
-      "description": "The controlled staking asset for Noble Chain",
+    "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=": {
       "denomUnits": [
         {
-          "denom": "transfer/channel-3/ustake"
+          "denom": "test_usd",
+          "exponent": 18
         },
         {
-          "denom": "transfer/channel-3/stake",
-          "exponent": 6
+          "denom": "wtest_usd"
         }
       ],
-      "base": "transfer/channel-3/ustake",
-      "display": "transfer/channel-3/stake",
-      "name": "Stake",
-      "symbol": "STAKE",
+      "base": "wtest_usd",
+      "display": "test_usd",
+      "symbol": "TestUSD",
       "penumbraAssetId": {
-        "inner": "hGwO3SuE1/D05ooLMUVVe7XvYbAFnxAUbIRIZdG3TwI="
-      }
-    },
-    {
-      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-3/ulove"
-        },
-        {
-          "denom": "transfer/channel-3/love",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-3/ulove",
-      "display": "transfer/channel-3/love",
-      "name": "Love",
-      "symbol": "LOVE",
-      "penumbraAssetId": {
-        "inner": "Hqn6gTCqE7mCBsVa4agsTFmrO0Rip5xmLcipnGKH9AI="
-      }
-    },
-    {
-      "description": "USD Coin",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-3/uusdc"
-        },
-        {
-          "denom": "transfer/channel-3/usdc",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-3/uusdc",
-      "display": "transfer/channel-3/usdc",
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "penumbraAssetId": {
-        "inner": "CKBQapu+DkQpsKyTfKESLTV19/NPWR5sNZtvQsd3Hw8="
+        "inner": "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg="
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg"
-        }
-      ]
-    },
-    {
-      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-3/uusdlr"
-        },
-        {
-          "denom": "transfer/channel-3/usdlr",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-3/uusdlr",
-      "display": "transfer/channel-3/usdlr",
-      "name": "USDLR by Stable",
-      "symbol": "USDLR",
-      "penumbraAssetId": {
-        "inner": "+jDercxZxs90BjC91PrWyA53/p7uN3ZcSJj3N0mHjhI="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
+          "svg": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMjU2IDI1NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjU2IDI1NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMxNTgwM2Q7fQoJLnN0MXtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxMjgiIGN5PSIxMjgiIHI9IjEyOCIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTA0LDIxN2MwLDMtMi40LDQuNy01LjIsMy44QzYwLDIwOC40LDMyLDE3Mi4yLDMyLDEyOS4zYzAtNDIuOCwyOC03OS4xLDY2LjgtOTEuNWMyLjktMC45LDUuMiwwLjgsNS4yLDMuOAoJdjcuNWMwLDItMS41LDQuMy0zLjQsNUM2OS45LDY1LjQsNDgsOTQuOSw0OCwxMjkuM2MwLDM0LjUsMjEuOSw2My45LDUyLjYsNzUuMWMxLjksMC43LDMuNCwzLDMuNCw1VjIxN3oiLz4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTEzNiwxODkuM2MwLDIuMi0xLjgsNC00LDRoLThjLTIuMiwwLTQtMS44LTQtNHYtMTIuNmMtMTcuNS0yLjQtMjYtMTIuMS0yOC4zLTI1LjVjLTAuNC0yLjMsMS40LTQuMywzLjctNC4zCgloOS4xYzEuOSwwLDMuNSwxLjQsMy45LDMuMmMxLjcsNy45LDYuMywxNCwyMC4zLDE0YzEwLjMsMCwxNy43LTUuOCwxNy43LTE0LjRjMC04LjYtNC4zLTExLjktMTkuNS0xNC40Yy0yMi40LTMtMzMtOS44LTMzLTI3LjMKCWMwLTEzLjUsMTAuMy0yNC4xLDI2LjEtMjYuM1Y2OS4zYzAtMi4yLDEuOC00LDQtNGg4YzIuMiwwLDQsMS44LDQsNHYxMi43YzEyLjksMi4zLDIxLjEsOS42LDIzLjgsMjEuOGMwLjUsMi4zLTEuMyw0LjQtMy43LDQuNAoJaC04LjRjLTEuOCwwLTMuMy0xLjItMy44LTIuOWMtMi4zLTcuNy03LjgtMTEuMS0xNy40LTExLjFjLTEwLjYsMC0xNi4xLDUuMS0xNi4xLDEyLjNjMCw3LjYsMy4xLDExLjQsMTkuNCwxMy43CgljMjIsMywzMy40LDkuMywzMy40LDI4YzAsMTQuMi0xMC42LDI1LjctMjcuMSwyOC4zVjE4OS4zeiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTU3LjIsMjIwLjhjLTIuOSwwLjktNS4yLTAuOC01LjItMy44di03LjVjMC0yLjIsMS4zLTQuMywzLjQtNWMzMC42LTExLjIsNTIuNi00MC43LDUyLjYtNzUuMQoJYzAtMzQuNS0yMS45LTYzLjktNTIuNi03NS4xYy0xLjktMC43LTMuNC0zLTMuNC01di03LjVjMC0zLDIuNC00LjcsNS4yLTMuOEMxOTYsNTAuMiwyMjQsODYuNSwyMjQsMTI5LjMKCUMyMjQsMTcyLjIsMTk2LDIwOC40LDE1Ny4yLDIyMC44eiIvPgo8L3N2Zz4K"
         }
       ]
     }
-  ]
+  }
 }
