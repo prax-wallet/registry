@@ -1,13 +1,13 @@
 use std::fs;
 use std::path::Path;
 
+use penumbra_asset::asset::Metadata;
 use penumbra_proto::penumbra::core::asset::v1 as pb;
 use serde::{Deserialize, Serialize};
 use tokio::task;
 
 use crate::error::AppResult;
 use crate::github::assetlist_schema::AssetTypeAsset;
-use crate::metadata::convert_to_proto_metadata;
 use crate::parser::{get_chain_configs, ChainConfig, IbcConfig, LOCAL_REGISTRY_DIR};
 use crate::querier::query_github_assets;
 
@@ -34,7 +34,7 @@ impl From<IbcConfig> for IbcChains {
 pub struct Registry {
     pub chain_id: String,
     pub ibc: Vec<IbcChains>,
-    pub assets: Vec<pb::Metadata>,
+    pub assets: Vec<Metadata>,
 }
 
 pub async fn generate_registry() -> AppResult<()> {
@@ -60,6 +60,34 @@ pub async fn generate_registry() -> AppResult<()> {
     Ok(())
 }
 
+/// Given `ibc_data` describing a channel and `source_asset` on the source chain,
+/// compute the metadata for the asset when it is transported along the channel onto a Penumbra chain.
+fn transport_metadata_along_channel(ibc_data: &IbcConfig, source_asset: Metadata) -> Metadata {
+    // The `Metadata` structure doesn't allow modifying the internals, so drop to raw proto data
+    let mut pb_metadata: pb::Metadata = source_asset.into();
+    tracing::debug!(?pb_metadata, "original");
+
+    let prefix_channel = |x: &mut String| {
+        *x = format!("transfer/{}/{}", ibc_data.ibc_channel, x);
+    };
+
+    // Prefix the channel to the base denom.
+    prefix_channel(&mut pb_metadata.base);
+    // Prefix the channel to the display denom.
+    prefix_channel(&mut pb_metadata.display);
+    // Prefix the channel to all denom units.
+    for denom_unit in pb_metadata.denom_units.iter_mut() {
+        prefix_channel(&mut denom_unit.denom);
+    }
+
+    // Delete the asset ID, so that it will be recomputed with the adjusted base denom.
+    // Without this, decoding will fail because the asset ID won't match.
+    pb_metadata.penumbra_asset_id = None;
+
+    tracing::debug!(?pb_metadata, "new");
+    Metadata::try_from(pb_metadata).unwrap()
+}
+
 async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
     let mut all_metadata = Vec::new();
     all_metadata.extend(chain_config.native_assets.clone());
@@ -67,14 +95,18 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
     // For each ibc connection, fetch all metadata of native assets from the cosmos registry
     let responses = query_github_assets(&chain_config).await?;
 
-    for (ibc_asset, asset_list) in responses {
-        for asset in asset_list.assets {
+    for (ibc_data, asset_list) in responses {
+        for source_asset in asset_list.assets {
             // ICS20 assets should be unwound through their native chains, we can skip
-            if asset.type_asset == AssetTypeAsset::Ics20 {
+            if source_asset.type_asset == AssetTypeAsset::Ics20 {
                 continue;
             }
-            let metadata = convert_to_proto_metadata(&ibc_asset, asset)?;
-            all_metadata.push(metadata);
+            // Turn the asset back into JSON so we can deserialize it as a penumbra Metadata
+            let asset_json = serde_json::to_string(&source_asset)?;
+            let transferred_asset =
+                transport_metadata_along_channel(&ibc_data, serde_json::from_str(&asset_json)?);
+            tracing::info!(?asset_json, transferred_asset_json = ?serde_json::to_string(&transferred_asset));
+            all_metadata.push(transferred_asset);
         }
     }
 
