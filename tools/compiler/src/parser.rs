@@ -2,7 +2,7 @@ use std::fs;
 use std::path::Path;
 
 use anyhow::anyhow;
-use penumbra_proto::penumbra::core::asset::v1 as pb;
+use penumbra_asset::asset::Metadata;
 use serde::{Deserialize, Serialize};
 
 use crate::error::AppResult;
@@ -12,7 +12,7 @@ use crate::error::AppResult;
 pub struct ChainConfig {
     pub chain_id: String,
     pub ibc_assets: Vec<IbcConfig>,
-    pub native_assets: Vec<pb::Metadata>,
+    pub native_assets: Vec<Metadata>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -48,7 +48,7 @@ pub fn get_chain_configs() -> AppResult<Vec<ChainConfig>> {
     fs::create_dir_all(registry_dir)?;
     let chain_dirs = fs::read_dir(LOCAL_INPUT_DIR)?;
 
-    chain_dirs
+    Ok(chain_dirs
         .into_iter()
         .map(|dir_entry| -> AppResult<ChainConfig> {
             let chain_path = dir_entry?.path();
@@ -74,5 +74,6 @@ pub fn get_chain_configs() -> AppResult<Vec<ChainConfig>> {
             };
             Ok(chain_config)
         })
-        .collect()
+        .filter_map(|result| result.ok())
+        .collect())
 }

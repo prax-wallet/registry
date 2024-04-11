@@ -197,12 +197,12 @@
           "exponent": 6
         }
       ],
-      "base": "uosmo",
-      "display": "osmo",
+      "base": "transfer/channel-0/uosmo",
+      "display": "transfer/channel-0/osmo",
       "name": "Osmosis",
       "symbol": "OSMO",
       "penumbraAssetId": {
-        "inner": "pjiYlm5+VallEe+wo+t8QNFsNKUyPtRB3AFvi0Cb6AI="
+        "inner": "jIowYEpoMr+LQYqjDVEnQO6hyzb9raVxbO1GLyDxlhI="
       },
       "images": [
         {
@@ -221,12 +221,12 @@
           "exponent": 6
         }
       ],
-      "base": "uion",
-      "display": "ion",
+      "base": "transfer/channel-0/uion",
+      "display": "transfer/channel-0/ion",
       "name": "Ion",
       "symbol": "ION",
       "penumbraAssetId": {
-        "inner": "KCzsvepTyhh+1zBj5xaBf2+mLoFV1n/YD55xRDN3kAw="
+        "inner": "KX8cjRGFpZUkZCwCtUX8Pi2lEyO5g0oPVr8WhsLgkwg="
       },
       "images": [
         {
@@ -245,12 +245,12 @@
           "exponent": 6
         }
       ],
-      "base": "factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
-      "display": "willyz",
+      "base": "transfer/channel-0/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
+      "display": "transfer/channel-0/willyz",
       "name": "Willyz",
       "symbol": "WILLYZ",
       "penumbraAssetId": {
-        "inner": "nhVpxXo2RTn91ldkmDlPWogWZPH7PfLDq813YUo2TRE="
+        "inner": "ra98J77CX10Us2s6+d7bebfpm1Q3+UOycPfaaEeeuAY="
       },
       "images": [
         {
@@ -263,66 +263,57 @@
       "description": "The controlled staking asset for Noble Chain",
       "denomUnits": [
         {
-          "denom": "transfer/channel-3/ustake",
-          "aliases": [
-            "microstake"
-          ]
+          "denom": "transfer/channel-3/ustake"
         },
         {
           "denom": "transfer/channel-3/stake",
           "exponent": 6
         }
       ],
-      "base": "ustake",
-      "display": "stake",
+      "base": "transfer/channel-3/ustake",
+      "display": "transfer/channel-3/stake",
       "name": "Stake",
       "symbol": "STAKE",
       "penumbraAssetId": {
-        "inner": "W+FJMVYhwDLC0dOa5OkDTpxyHUfjO6f6BhsrwHltjgk="
+        "inner": "hGwO3SuE1/D05ooLMUVVe7XvYbAFnxAUbIRIZdG3TwI="
       }
     },
     {
       "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
       "denomUnits": [
         {
-          "denom": "transfer/channel-3/ulove",
-          "aliases": [
-            "microlove"
-          ]
+          "denom": "transfer/channel-3/ulove"
         },
         {
           "denom": "transfer/channel-3/love",
           "exponent": 6
         }
       ],
-      "base": "ulove",
-      "display": "love",
+      "base": "transfer/channel-3/ulove",
+      "display": "transfer/channel-3/love",
       "name": "Love",
       "symbol": "LOVE",
       "penumbraAssetId": {
-        "inner": "IeuQ1Y5T62mLaez/2WaDLm6e8CbDw9E4WJpe6Q9++AE="
+        "inner": "Hqn6gTCqE7mCBsVa4agsTFmrO0Rip5xmLcipnGKH9AI="
       }
     },
     {
       "description": "USD Coin",
       "denomUnits": [
         {
-          "denom": "transfer/channel-3/uusdc",
-          "aliases": [
-            "microusdc"
-          ]
+          "denom": "transfer/channel-3/uusdc"
         },
         {
           "denom": "transfer/channel-3/usdc",
           "exponent": 6
         }
       ],
-      "base": "uusdc",
-      "display": "usdc",
+      "base": "transfer/channel-3/uusdc",
+      "display": "transfer/channel-3/usdc",
       "name": "USD Coin",
       "symbol": "USDC",
       "penumbraAssetId": {
-        "inner": "ziENb4v2dxNHmbUzRAVK/tuDL7gtVaJpA8ZdEIkh0Qk="
+        "inner": "CKBQapu+DkQpsKyTfKESLTV19/NPWR5sNZtvQsd3Hw8="
       },
       "images": [
         {
@@ -334,22 +325,19 @@
       "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
       "denomUnits": [
         {
-          "denom": "transfer/channel-3/uusdlr",
-          "aliases": [
-            "microusdlr"
-          ]
+          "denom": "transfer/channel-3/uusdlr"
         },
         {
           "denom": "transfer/channel-3/usdlr",
           "exponent": 6
         }
       ],
-      "base": "uusdlr",
-      "display": "usdlr",
+      "base": "transfer/channel-3/uusdlr",
+      "display": "transfer/channel-3/usdlr",
       "name": "USDLR by Stable",
       "symbol": "USDLR",
       "penumbraAssetId": {
-        "inner": "nd4l/VXn/XaePOgpqr9V/JN010HaGi1svkjMLrgFOAA="
+        "inner": "+jDercxZxs90BjC91PrWyA53/p7uN3ZcSJj3N0mHjhI="
       },
       "images": [
         {
