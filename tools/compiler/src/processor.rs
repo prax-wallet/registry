@@ -122,7 +122,6 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
             let source_asset_metadata = serde_json::from_str(&asset_json)?;
             let transferred_asset =
                 transport_metadata_along_channel(&ibc_data, source_asset_metadata)?;
-            tracing::info!(?asset_json, transferred_asset_json = ?serde_json::to_string(&transferred_asset));
             all_metadata.push(transferred_asset);
         }
     }

@@ -24,8 +24,8 @@ pub struct IbcConfig {
     pub cosmos_registry_dir: String,
 }
 
-pub const LOCAL_REGISTRY_DIR: &str = "registry";
-const LOCAL_INPUT_DIR: &str = "input";
+pub const LOCAL_REGISTRY_DIR: &str = "../../registry";
+const LOCAL_INPUT_DIR: &str = "../../input";
 const IBC_ASSETS_FILE: &str = "ibc-assets.json";
 const NATIVE_ASSETS_FILE: &str = "native-assets.json";
 
