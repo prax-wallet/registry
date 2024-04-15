@@ -10,7 +10,9 @@ use tokio::task;
 
 use crate::error::AppResult;
 use crate::github::assetlist_schema::AssetTypeAsset;
-use crate::parser::{get_chain_configs, ChainConfig, IbcConnection, Rpc, LOCAL_REGISTRY_DIR};
+use crate::parser::{
+    get_chain_configs, ChainConfig, IbcConnection, Rpc, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
+};
 use crate::querier::query_github_assets;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -44,7 +46,7 @@ pub async fn generate_registry() -> AppResult<()> {
     let mut tasks = Vec::new();
 
     // Get local configs from /input directory
-    let chain_configs = get_chain_configs()?;
+    let chain_configs = get_chain_configs(LOCAL_REGISTRY_DIR, LOCAL_INPUT_DIR)?;
     chain_configs.into_iter().for_each(|c| {
         // Async fetch metadata for ibc assets from cosmos registry
         let task = task::spawn(async move { process_chain_config(c).await });
@@ -65,7 +67,7 @@ pub async fn generate_registry() -> AppResult<()> {
 
 /// Given `ibc_data` describing a channel and `source_asset` on the source chain,
 /// compute the metadata for the asset when it is transported along the channel onto a Penumbra chain.
-fn transport_metadata_along_channel(
+pub fn transport_metadata_along_channel(
     ibc_data: &IbcConnection,
     source_asset: Metadata,
 ) -> AppResult<Metadata> {
@@ -94,7 +96,7 @@ fn transport_metadata_along_channel(
     Ok(Metadata::try_from(pb_metadata)?)
 }
 
-fn base64_id(m: &Metadata) -> AppResult<String> {
+pub fn base64_id(m: &Metadata) -> AppResult<String> {
     let id_json = serde_json::to_value(m.id())?;
     let base64_str = id_json
         .get("inner")

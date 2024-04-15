@@ -38,7 +38,7 @@ pub struct IbcConnection {
 }
 
 pub const LOCAL_REGISTRY_DIR: &str = "../../registry";
-const LOCAL_INPUT_DIR: &str = "../../input";
+pub const LOCAL_INPUT_DIR: &str = "../../input";
 
 /// Retrieves a list of `ChainConfig` objects representing the configuration for various chains.
 /// This function assumes a specific directory structure and configs inside:
@@ -46,15 +46,15 @@ const LOCAL_INPUT_DIR: &str = "../../input";
 /// input/
 /// ├── penumbra-testnet-deimos-6.json
 /// └── mars-1.json
-pub fn get_chain_configs() -> AppResult<Vec<ChainConfig>> {
+pub fn get_chain_configs(registry_dir: &str, input_dir: &str) -> AppResult<Vec<ChainConfig>> {
     // Clear registry output dir
-    let registry_dir = Path::new(LOCAL_REGISTRY_DIR);
+    let registry_dir = Path::new(registry_dir);
     if registry_dir.exists() {
         fs::remove_dir_all(registry_dir)?;
     }
     fs::create_dir_all(registry_dir)?;
 
-    let chain_configs = fs::read_dir(LOCAL_INPUT_DIR)?;
+    let chain_configs = fs::read_dir(input_dir)?;
     Ok(chain_configs
         .into_iter()
         .map(|input| -> AppResult<ChainConfig> {
