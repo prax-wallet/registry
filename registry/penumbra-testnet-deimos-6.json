@@ -1,6 +1,6 @@
 {
   "chainId": "penumbra-testnet-deimos-6",
-  "ibc": [
+  "ibcConfig": [
     {
       "addressPrefix": "osmo",
       "chainId": "osmo-test-5",
@@ -10,6 +10,18 @@
       "addressPrefix": "noble",
       "chainId": "grand-1",
       "ibcChannel": "channel-3"
+    }
+  ],
+  "rpcs": [
+    {
+      "name": "Penumbra Labs Testnet RPC",
+      "url": "https://grpc.testnet.penumbra.zone",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png",
+          "svg": null
+        }
+      ]
     }
   ],
   "assetById": {
@@ -97,7 +109,7 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/input/penumbra-testnet-deimos-6/images/penumbra-favicon.png"
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
         }
       ]
     },
@@ -187,7 +199,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/input/penumbra-testnet-deimos-6/images/um.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
         }
       ]
     },
@@ -249,7 +261,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/input/penumbra-testnet-deimos-6/images/pizza.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/pizza.svg"
         }
       ]
     },
@@ -296,7 +308,7 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/input/penumbra-testnet-deimos-6/images/penumbra-favicon.png"
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
         }
       ]
     },
@@ -342,7 +354,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/input/penumbra-testnet-deimos-6/images/test-usd.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/test-usd.svg"
         }
       ]
     }
