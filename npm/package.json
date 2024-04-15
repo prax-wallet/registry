@@ -1,0 +1,41 @@
+{
+  "name": "@penumbra-labs/regisry",
+  "version": "0.1.0",
+  "description": "Chain and asset registry for Penumbra",
+  "main": "build/main/index.js",
+  "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "eslint src --ext .ts",
+    "test": "run-s build test:*"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-turbo": "^1.13.2",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-functional": "^6.5.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "eslint-plugin-tailwindcss": "^3.15.1",
+    "eslint-plugin-turbo": "^1.13.2",
+    "eslint-plugin-vitest": "^0.5.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  },
+  "files": [
+    "build/main",
+    "build/module",
+    "!**/*.spec.*",
+    "!**/*.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ]
+}
