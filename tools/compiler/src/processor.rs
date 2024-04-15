@@ -10,20 +10,20 @@ use tokio::task;
 
 use crate::error::AppResult;
 use crate::github::assetlist_schema::AssetTypeAsset;
-use crate::parser::{get_chain_configs, ChainConfig, IbcConfig, LOCAL_REGISTRY_DIR};
+use crate::parser::{get_chain_configs, ChainConfig, IbcConnection, Rpc, LOCAL_REGISTRY_DIR};
 use crate::querier::query_github_assets;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct IbcChains {
+pub struct IbcConfig {
     pub address_prefix: String,
     pub chain_id: String,
     pub ibc_channel: String,
 }
 
-impl From<IbcConfig> for IbcChains {
-    fn from(config: IbcConfig) -> Self {
-        IbcChains {
+impl From<IbcConnection> for IbcConfig {
+    fn from(config: IbcConnection) -> Self {
+        IbcConfig {
             address_prefix: config.address_prefix,
             chain_id: config.chain_id,
             ibc_channel: config.ibc_channel,
@@ -35,9 +35,9 @@ impl From<IbcConfig> for IbcChains {
 #[serde(rename_all = "camelCase")]
 pub struct Registry {
     pub chain_id: String,
-    pub ibc: Vec<IbcChains>,
-    // Use a BTreeMap to have sorted (deterministic) output
-    pub asset_by_id: BTreeMap<String, Metadata>,
+    pub ibc_config: Vec<IbcConfig>,
+    pub rpcs: Vec<Rpc>,
+    pub asset_by_id: BTreeMap<String, Metadata>, // Using a BTreeMap to have sorted (deterministic) output
 }
 
 pub async fn generate_registry() -> AppResult<()> {
@@ -66,7 +66,7 @@ pub async fn generate_registry() -> AppResult<()> {
 /// Given `ibc_data` describing a channel and `source_asset` on the source chain,
 /// compute the metadata for the asset when it is transported along the channel onto a Penumbra chain.
 fn transport_metadata_along_channel(
-    ibc_data: &IbcConfig,
+    ibc_data: &IbcConnection,
     source_asset: Metadata,
 ) -> AppResult<Metadata> {
     // The `Metadata` structure doesn't allow modifying the internals, so drop to raw proto data
@@ -128,8 +128,9 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
 
     Ok(Registry {
         chain_id: chain_config.chain_id,
-        ibc: chain_config
-            .ibc_assets
+        rpcs: chain_config.rpcs,
+        ibc_config: chain_config
+            .ibc_connections
             .into_iter()
             .map(Into::into)
             .collect(),
