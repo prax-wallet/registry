@@ -1,0 +1,31 @@
+{
+  "name": "@penumbra-labs/registry",
+  "version": "1.0.0",
+  "description": "Chain and asset registry for Penumbra",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "format": "prettier . --write",
+    "format-check": "prettier --check .",
+    "lint": "eslint . --max-warnings=0",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "changeset": "changeset",
+    "changeset:publish": "changeset publish"
+  },
+  "devDependencies": {
+    "@buf/penumbra-zone_penumbra.bufbuild_es": "1.8.0-20240415223544-c0a709144747.2",
+    "@eslint/eslintrc": "^3.0.2",
+    "@changesets/cli": "^2.27.1",
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.0"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ]
+}

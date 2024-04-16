@@ -1,10 +1,12 @@
 name: Rust CI
 
 on:
+  workflow_call:
+  workflow_dispatch:
+  pull_request:
   push:
     branches:
       - main
-  pull_request:
 
 jobs:
   check_fmt:
