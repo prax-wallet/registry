@@ -11,6 +11,8 @@ jobs:
   publish:
     name: Publish to npm
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     defaults:
       run:
         working-directory: npm
@@ -34,6 +36,7 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm changeset:publish
+          cwd: "./npm"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
