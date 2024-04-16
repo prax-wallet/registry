@@ -32,39 +32,18 @@ interface Image {
   svg?: string;
 }
 
-export interface RegistryOptions {
-  chainIds: string[];
-}
-
 export class ChainRegistryClient {
   private readonly github: GithubFetcher;
 
-  constructor(options: RegistryOptions) {
-    this.github = new GithubFetcher(options.chainIds);
-  }
-
-  async allRegistries(): Promise<Registry[]> {
-    return this.github.fetchRegistryData();
+  constructor() {
+    this.github = new GithubFetcher();
   }
 
   async registry(chainId: string): Promise<Registry> {
-    const all = await this.github.fetchRegistryData();
-    const match = all.find(r => r.chainId === chainId);
-    if (!match) {
-      throw new Error(
-        `Unable to fetch registry for ${chainId}. Did you pass in the right chain names?`,
-      );
-    }
-    return match;
+    return this.github.fetchRegistryData(chainId);
   }
 
   clearCache() {
     this.github.clearCache();
   }
 }
-
-// // Example usage:
-// const client = new ChainRegistryClient({ chainNames: ['osmosis', 'cosmos'] });
-// client.fetchRegistryData().then(data => {
-//   console.log(data); // Process or display the fetched data
-// });

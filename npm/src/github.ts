@@ -19,28 +19,26 @@ export interface GithubContentsRes {
 
 const REGISTRY_URL = 'https://api.github.com/repos/prax-wallet/registry';
 
+type ChainId = string;
+
 export class GithubFetcher {
-  private cache: Registry[] = [];
+  private cache: Record<ChainId, Registry> = {};
 
-  constructor(private readonly chainIds: string[]) {
-  }
-
-  async fetchRegistryData(): Promise<Registry[]> {
-    if (this.cache.length) return this.cache;
+  async fetchRegistryData(chainId: ChainId): Promise<Registry> {
+    if (this.cache[chainId]) return this.cache[chainId]!;
 
     const chains = await this.typedFetcher<GithubContentsRes[]>(
       `${REGISTRY_URL}/contents/registry`,
     );
-    // Filter and fetch only the JSON files that match the chainNames
-    const chainDataPromises = chains
-      .filter(res => this.matchesChains(res))
-      .map(file => this.typedFetcher<Registry>(file.download_url));
 
-    return await Promise.all(chainDataPromises);
+    const match = chains.find(res => this.matchesChain(res, chainId));
+    if (!match) throw new Error(`Could not find registry for ${chainId}`);
+
+    return await this.typedFetcher<Registry>(match.download_url);
   }
 
   clearCache(): void {
-    this.cache = [];
+    this.cache = {};
   }
 
   private async typedFetcher<T>(url: string): Promise<T> {
@@ -48,12 +46,12 @@ export class GithubFetcher {
     if (!response.ok) {
       throw new Error(`Failed to fetch from: ${url}`);
     }
-    return await response.json() as T;
+    return (await response.json()) as T;
   }
 
-  private matchesChains({ name }: GithubContentsRes): boolean {
+  private matchesChain({ name }: GithubContentsRes, chain: ChainId): boolean {
     if (!name.endsWith('.json')) return false;
     const withoutExt = name.replace('.json', '');
-    return this.chainIds.includes(withoutExt);
+    return chain === withoutExt;
   }
 }

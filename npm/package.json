@@ -7,8 +7,8 @@
   "module": "build/module/index.js",
   "scripts": {
     "format": "prettier . --write",
-    "lint": "eslint .",
-    "test": "run-s build test:*"
+    "format-check": "prettier --check .",
+    "lint": "eslint . --max-warnings=0"
   },
   "devDependencies": {
     "@buf/penumbra-zone_penumbra.bufbuild_es": "1.8.0-20240415223544-c0a709144747.2",

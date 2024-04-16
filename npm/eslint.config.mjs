@@ -17,4 +17,9 @@ export default tseslint.config(
     files: ['eslint.config.mjs'],
     extends: [tseslint.configs.disableTypeChecked],
   },
+  {
+    rules: {
+      '@typescript-eslint/no-non-null-assertion': 'off',
+    },
+  },
 );
