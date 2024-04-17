@@ -10,15 +10,17 @@ type Jsonified<T> = string;
 
 export interface Registry {
   chainId: string;
-  ibcConfig: IbcConfig[];
+  ibcConnections: Chain[];
   rpcs: Rpc[];
   assetById: Record<Jsonified<AssetId>, Metadata>;
 }
 
-export interface IbcConfig {
+export interface Chain {
   addressPrefix: string;
   chainId: string;
   ibcChannel: string;
+  images: Image[];
+  displayName: string;
 }
 
 export interface Rpc {

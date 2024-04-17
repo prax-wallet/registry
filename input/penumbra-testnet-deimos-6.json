@@ -13,16 +13,28 @@
   ],
   "ibcConnections": [
     {
+      "displayName": "Osmosis",
       "chainId": "osmo-test-5",
       "ibcChannel": "channel-0",
       "addressPrefix": "osmo",
-      "cosmosRegistryDir": "testnets/osmosistestnet"
+      "cosmosRegistryDir": "testnets/osmosistestnet",
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/f1348793beb994c6cc0256ed7ebdb48c7aa70003/osmosis/images/osmo.svg"
+        }
+      ]
     },
     {
+      "displayName": "Noble",
       "chainId": "grand-1",
       "ibcChannel": "channel-3",
       "addressPrefix": "noble",
-      "cosmosRegistryDir": "testnets/nobletestnet"
+      "cosmosRegistryDir": "testnets/nobletestnet",
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/2ca39d0e4eaf3431cca13991948e099801f02e46/noble/images/stake.svg"
+        }
+      ]
     }
   ],
   "nativeAssets": [

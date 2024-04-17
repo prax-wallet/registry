@@ -4,7 +4,7 @@ This repo contains a registry of metadata for assets on Penumbra.
 
 Penumbra records value in its shielded pool tagged by _asset ID_, and client
 software must map asset IDs to a `Metadata` object describing its base denom,
-display units, symbol, asset icons, etc.  Because this information is presented
+display units, symbol, asset icons, etc. Because this information is presented
 to users to help them understand their actions, it is relatively
 security-critical. As in other parts of the Cosmos ecosystem, the expectation
 for the Penumbra ecosystem is that client software is responsible for choosing
@@ -21,8 +21,8 @@ Cosmos chain registry.
 ### Why not use the Cosmos Chain Registry?
 
 We do, but indirectly. The Cosmos chain registry contains data about assets on
-Cosmos chains.  Penumbra clients require data about assets on Penumbra,
-including Penumbra-specific data such as the Penumbra asset ID.  The Prax
+Cosmos chains. Penumbra clients require data about assets on Penumbra,
+including Penumbra-specific data such as the Penumbra asset ID. The Prax
 registry is a registry of Cosmos assets _on Penumbra_.
 
 We also intend to submit metadata about Penumbra assets upstream to the CCR for
@@ -45,22 +45,16 @@ The generator expects a specific directory structure:
 
 - An `input` directory at the root of the project, containing configuration JSON files for each chain you want to
   process.
-- The `input` directory should contain subdirectories named after each chain's ID, each of which should
-  contain `ibc-assets.json` and `native-assets.json`.
 
 Example:
 
 ```
 input/
-├── osmosis-test-5/
-│   ├── ibc-assets.json
-│   └── native-assets.json
-└── mars-1/
-    ├── ibc-assets.json
-    └── native-assets.json
+├── penumbra-testnet-deimos-6.json
+└── mars-1.json
 ```
 
-Each subdirectory should be named with the chain ID.
+Each file should be named with the chain ID.
 
 ### Output Directory
 

@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 3.0.0
+
+### Major Changes
+
+- Augmented and adapted ibc connections
+
 ## 2.0.0
 
 ### Major Changes
