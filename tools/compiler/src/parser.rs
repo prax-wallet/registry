@@ -11,7 +11,7 @@ use crate::error::AppResult;
 pub struct ChainConfig {
     pub chain_id: String,
     pub rpcs: Vec<Rpc>,
-    pub ibc_connections: Vec<IbcConnection>,
+    pub ibc_connections: Vec<IbcInput>,
     pub native_assets: Vec<Metadata>,
 }
 
@@ -24,17 +24,21 @@ pub struct Rpc {
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Image {
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub png: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     pub svg: Option<String>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct IbcConnection {
+pub struct IbcInput {
     pub chain_id: String,
     pub ibc_channel: String,
     pub address_prefix: String,
     pub cosmos_registry_dir: String,
+    pub display_name: String,
+    pub images: Vec<Image>,
 }
 
 pub const LOCAL_REGISTRY_DIR: &str = "../../registry";

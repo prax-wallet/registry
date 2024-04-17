@@ -2,14 +2,14 @@ use reqwest::Client;
 
 use crate::error::AppResult;
 use crate::github::types::{AssetList, GitHubContent};
-use crate::parser::{ChainConfig, IbcConnection};
+use crate::parser::{ChainConfig, IbcInput};
 
 const GITHUB_API_BASE_URL: &str = "https://api.github.com/repos/cosmos/chain-registry/contents";
 
 /// Queries asset metadata from the cosmos asset registry
 pub async fn query_github_assets(
     chain_config: &ChainConfig,
-) -> AppResult<Vec<(IbcConnection, AssetList)>> {
+) -> AppResult<Vec<(IbcInput, AssetList)>> {
     let client = Client::new();
     let mut futures = Vec::new();
 
@@ -29,8 +29,8 @@ pub async fn query_github_assets(
 async fn fetch_asset_list(
     client: &Client,
     url: String,
-    ibc_asset: &IbcConnection,
-) -> AppResult<(IbcConnection, AssetList)> {
+    ibc_asset: &IbcInput,
+) -> AppResult<(IbcInput, AssetList)> {
     let res = client
         .get(&url)
         .header(reqwest::header::USER_AGENT, "request")

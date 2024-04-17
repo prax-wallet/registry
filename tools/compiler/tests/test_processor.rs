@@ -1,4 +1,4 @@
-use penumbra_registry::parser::IbcConnection;
+use penumbra_registry::parser::IbcInput;
 use penumbra_registry::processor::{base64_id, transport_metadata_along_channel};
 
 #[test]
@@ -20,11 +20,13 @@ fn base64_id_extracts_correctly() {
 
 #[test]
 fn test_transport_metadata_along_channel() {
-    let ibc_data = IbcConnection {
+    let ibc_data = IbcInput {
         ibc_channel: "channel-123".to_string(),
         chain_id: "love-999".to_string(),
         address_prefix: "love".to_string(),
         cosmos_registry_dir: "love-124".to_string(),
+        display_name: "Strangelove".to_string(),
+        images: vec![],
     };
 
     let input_json = r#"

@@ -1,15 +1,27 @@
 {
   "chainId": "penumbra-testnet-deimos-6",
-  "ibcConfig": [
+  "ibcConnections": [
     {
       "addressPrefix": "osmo",
       "chainId": "osmo-test-5",
-      "ibcChannel": "channel-0"
+      "ibcChannel": "channel-0",
+      "displayName": "Osmosis",
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/f1348793beb994c6cc0256ed7ebdb48c7aa70003/osmosis/images/osmo.svg"
+        }
+      ]
     },
     {
       "addressPrefix": "noble",
       "chainId": "grand-1",
-      "ibcChannel": "channel-3"
+      "ibcChannel": "channel-3",
+      "displayName": "Noble",
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/2ca39d0e4eaf3431cca13991948e099801f02e46/noble/images/stake.svg"
+        }
+      ]
     }
   ],
   "rpcs": [
@@ -18,8 +30,7 @@
       "url": "https://grpc.testnet.penumbra.zone",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png",
-          "svg": null
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
         }
       ]
     }
@@ -235,7 +246,7 @@
       ],
       "base": "transfer/channel-0/uosmo",
       "display": "transfer/channel-0/osmo",
-      "name": "Osmosis",
+      "name": "Osmosis Testnet",
       "symbol": "OSMO",
       "penumbraAssetId": {
         "inner": "jIowYEpoMr+LQYqjDVEnQO6hyzb9raVxbO1GLyDxlhI="
