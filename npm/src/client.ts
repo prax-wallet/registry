@@ -15,19 +15,19 @@ export interface Registry {
   assetById: Record<Jsonified<AssetId>, Metadata>;
 }
 
-interface IbcConfig {
+export interface IbcConfig {
   addressPrefix: string;
   chainId: string;
   ibcChannel: string;
 }
 
-interface Rpc {
+export interface Rpc {
   name: string;
   url: string;
   images: Image[];
 }
 
-interface Image {
+export interface Image {
   png?: string;
   svg?: string;
 }
@@ -39,7 +39,7 @@ export class ChainRegistryClient {
     this.github = new GithubFetcher();
   }
 
-  async registry(chainId: string): Promise<Registry> {
+  async get(chainId: string): Promise<Registry> {
     return this.github.fetchRegistryData(chainId);
   }
 
