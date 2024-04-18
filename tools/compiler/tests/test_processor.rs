@@ -1,3 +1,4 @@
+use penumbra_asset::asset::Metadata;
 use penumbra_registry::parser::IbcInput;
 use penumbra_registry::processor::{base64_id, transport_metadata_along_channel};
 
@@ -10,10 +11,10 @@ fn base64_id_extracts_correctly() {
                 "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
             }
         }"#;
-    let metadata = serde_json::from_str(asset_json).unwrap();
+    let metadata: Metadata = serde_json::from_str(asset_json).unwrap();
 
     assert_eq!(
-        base64_id(&metadata).unwrap(),
+        base64_id(&metadata.id()).unwrap(),
         "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
     );
 }

@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 4.0.0
+
+### Major Changes
+
+- Added stakingAssetId and numeraires
+
 ## 3.0.0
 
 ### Major Changes

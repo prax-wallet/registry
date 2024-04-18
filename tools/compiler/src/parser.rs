@@ -13,6 +13,7 @@ pub struct ChainConfig {
     pub rpcs: Vec<Rpc>,
     pub ibc_connections: Vec<IbcInput>,
     pub native_assets: Vec<Metadata>,
+    pub canonical_numeraires: Vec<String>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
