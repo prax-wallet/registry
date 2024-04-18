@@ -3,7 +3,8 @@ use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
 
-use penumbra_asset::asset::Metadata;
+use penumbra_asset::asset::{Id, Metadata};
+use penumbra_asset::STAKING_TOKEN_ASSET_ID;
 use penumbra_proto::penumbra::core::asset::v1 as pb;
 use serde::{Deserialize, Serialize};
 use tokio::task;
@@ -44,6 +45,8 @@ pub struct Registry {
     pub ibc_connections: Vec<Chain>,
     pub rpcs: Vec<Rpc>,
     pub asset_by_id: BTreeMap<String, Metadata>, // Using a BTreeMap to have sorted (deterministic) output
+    pub staking_asset_id: String,
+    pub numeraires: Vec<String>,
 }
 
 pub async fn generate_registry() -> AppResult<()> {
@@ -100,8 +103,8 @@ pub fn transport_metadata_along_channel(
     Ok(Metadata::try_from(pb_metadata)?)
 }
 
-pub fn base64_id(m: &Metadata) -> AppResult<String> {
-    let id_json = serde_json::to_value(m.id())?;
+pub fn base64_id(id: &Id) -> AppResult<String> {
+    let id_json = serde_json::to_value(id)?;
     let base64_str = id_json
         .get("inner")
         .and_then(|s| s.as_str()) // This extracts the string without the double quotes
@@ -141,11 +144,22 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
             .map(Into::into)
             .collect(),
         asset_by_id: all_metadata
+            .clone()
             .into_iter()
             .map(|m| {
-                let id = base64_id(&m)?;
+                let id = base64_id(&m.id())?;
                 Ok((id, m))
             })
             .collect::<AppResult<_>>()?,
+        staking_asset_id: base64_id(&STAKING_TOKEN_ASSET_ID)?,
+        numeraires: all_metadata
+            .into_iter()
+            .filter(|metadata| {
+                chain_config
+                    .canonical_numeraires
+                    .contains(&metadata.base_denom().denom)
+            })
+            .filter_map(|m| base64_id(&m.id()).ok())
+            .collect(),
     })
 }

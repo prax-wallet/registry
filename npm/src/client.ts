@@ -12,7 +12,9 @@ export interface Registry {
   chainId: string;
   ibcConnections: Chain[];
   rpcs: Rpc[];
-  assetById: Record<Jsonified<AssetId>, Metadata>;
+  assetById: Record<Jsonified<AssetId>, Jsonified<Metadata>>;
+  stakingAssetId: Jsonified<AssetId>;
+  numeraires: Jsonified<AssetId>[];
 }
 
 export interface Chain {

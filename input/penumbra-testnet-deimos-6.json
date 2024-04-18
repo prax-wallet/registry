@@ -211,5 +211,6 @@
         }
       ]
     }
-  ]
+  ],
+  "canonicalNumeraires": ["wtest_usd", "transfer/channel-3/uusdc"]
 }

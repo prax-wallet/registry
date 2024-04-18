@@ -19,7 +19,8 @@ fn test_get_chain_configs_reads_configs_correctly() {
         "chainId": "test-chain-1",
         "rpcs": [],
         "ibcConnections": [],
-        "nativeAssets": []
+        "nativeAssets": [],
+        "canonicalNumeraires": []
     })
     .to_string();
     create_test_config_file(temp_input_dir.path(), "test-chain-1.json", &config_content);
@@ -42,7 +43,9 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
         "chainId": "test-chain-1",
         "rpcs": [],
         "ibcConnections": [],
-        "nativeAssets": []
+        "nativeAssets": [],
+        "canonicalNumeraires": []
+
     })
     .to_string();
     create_test_config_file(
@@ -55,7 +58,9 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
         "chainId": "test-chain-2",
         "rpcs": [],
         "ibcConnections": [],
-        "nativeAssets": []
+        "nativeAssets": [],
+        "canonicalNumeraires": []
+
     })
     .to_string();
     create_test_config_file(
