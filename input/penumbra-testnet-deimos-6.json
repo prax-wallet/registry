@@ -15,7 +15,7 @@
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
-      "ibcChannel": "channel-0",
+      "ibcChannel": "channel-3",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
@@ -27,7 +27,7 @@
     {
       "displayName": "Noble",
       "chainId": "grand-1",
-      "ibcChannel": "channel-3",
+      "ibcChannel": "channel-2",
       "addressPrefix": "noble",
       "cosmosRegistryDir": "testnets/nobletestnet",
       "images": [
@@ -212,5 +212,8 @@
       ]
     }
   ],
-  "canonicalNumeraires": ["wtest_usd", "transfer/channel-3/uusdc"]
+  "canonicalNumeraires": [
+    "wtest_usd",
+    "transfer/channel-3/uusdc"
+  ]
 }
