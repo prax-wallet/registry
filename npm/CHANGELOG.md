@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 4.1.0
+
+### Minor Changes
+
+- Added registry for testnet-preview
+
 ## 4.0.0
 
 ### Major Changes
