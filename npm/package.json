@@ -11,18 +11,20 @@
     "lint": "eslint . --max-warnings=0",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "changeset": "changeset",
-    "changeset:publish": "changeset publish"
+    "changeset:publish": "changeset publish",
+    "test": "vitest run"
   },
   "devDependencies": {
     "@buf/penumbra-zone_penumbra.bufbuild_es": "1.8.0-20240415223544-c0a709144747.2",
-    "@eslint/eslintrc": "^3.0.2",
     "@changesets/cli": "^2.27.1",
+    "@eslint/eslintrc": "^3.0.2",
     "@eslint/js": "^9.0.0",
     "eslint": "^9.0.0",
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.7.0"
+    "typescript-eslint": "^7.7.0",
+    "vitest": "^1.5.0"
   },
   "files": [
     "dist",
