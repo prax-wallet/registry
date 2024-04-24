@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 5.0.0
+
+### Major Changes
+
+- New registry class
+
 ## 4.1.0
 
 ### Minor Changes
