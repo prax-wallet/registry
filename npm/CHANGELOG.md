@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 5.1.0
+
+### Minor Changes
+
+- Get all assets
+
 ## 5.0.0
 
 ### Major Changes

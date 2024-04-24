@@ -98,4 +98,10 @@ describe('Registry', () => {
     const getCubeMetadata = () => registry.getMetadata(new AssetId({ inner: cubeId }));
     expect(getCubeMetadata).toThrow();
   });
+
+  it('get all assets successfully', () => {
+    const registry = new Registry(testRegistry);
+    const res = registry.getAllAssets();
+    expect(res.length).toEqual(2);
+  });
 });

@@ -52,4 +52,8 @@ export class Registry {
     }
     return metadata;
   }
+
+  getAllAssets(): Metadata[] {
+    return Object.values(this.assetById);
+  }
 }
