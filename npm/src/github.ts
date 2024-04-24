@@ -1,20 +1,14 @@
-import { Registry } from './client';
+import { Metadata } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
+import { Jsonified } from './utils';
+import { Base64AssetId, Chain, Registry, Rpc } from './registry';
 
-export interface GithubContentsRes {
-  name: string;
-  path: string;
-  sha: string;
-  size: number;
-  url: string;
-  html_url: string;
-  git_url: string;
-  download_url: string;
-  type: string;
-  _links: {
-    self: string;
-    git: string;
-    html: string;
-  };
+export interface GithubRegistryResponse {
+  chainId: string;
+  ibcConnections: Chain[];
+  rpcs: Rpc[];
+  assetById: Record<Base64AssetId, Jsonified<Metadata>>;
+  stakingAssetId: Base64AssetId;
+  numeraires: Base64AssetId[];
 }
 
 const REGISTRY_BASE_URL = 'https://raw.githubusercontent.com/prax-wallet/registry/main/registry';
@@ -26,7 +20,10 @@ export class GithubFetcher {
 
   async fetchRegistryData(chainId: ChainId): Promise<Registry> {
     if (this.cache[chainId]) return this.cache[chainId]!;
-    return this.typedFetcher<Registry>(`${REGISTRY_BASE_URL}/${chainId}.json`);
+    const response = await this.typedFetcher<GithubRegistryResponse>(
+      `${REGISTRY_BASE_URL}/${chainId}.json`,
+    );
+    return new Registry(response);
   }
 
   clearCache(): void {
