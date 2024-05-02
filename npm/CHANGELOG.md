@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 5.2.0
+
+### Minor Changes
+
+- Update to latest ibc channels
+
 ## 5.1.0
 
 ### Minor Changes
