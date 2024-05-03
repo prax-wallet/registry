@@ -4,7 +4,7 @@
     {
       "addressPrefix": "osmo",
       "chainId": "osmo-test-5",
-      "ibcChannel": "channel-2",
+      "ibcChannel": "channel-4",
       "displayName": "Osmosis",
       "images": [
         {
@@ -164,6 +164,31 @@
         "inner": "Hqn6gTCqE7mCBsVa4agsTFmrO0Rip5xmLcipnGKH9AI="
       }
     },
+    "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc=": {
+      "description": "The native token of Osmosis",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/uosmo"
+        },
+        {
+          "denom": "transfer/channel-4/osmo",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/uosmo",
+      "display": "transfer/channel-4/osmo",
+      "name": "Osmosis Testnet",
+      "symbol": "OSMO",
+      "penumbraAssetId": {
+        "inner": "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
+    },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "denomUnits": [
         {
@@ -190,52 +215,27 @@
         }
       ]
     },
-    "PTkvjX+oV1r5k1nU5BJw46gfpk7KD+VhuNefdsGD3Qk=": {
+    "ZPcze3Lhpgavnk2eQ/N49hJGttezr+Gl3TiJeL6MvhE=": {
       "denomUnits": [
         {
-          "denom": "transfer/channel-2/uion"
+          "denom": "transfer/channel-4/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
         },
         {
-          "denom": "transfer/channel-2/ion",
+          "denom": "transfer/channel-4/willyz",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-2/uion",
-      "display": "transfer/channel-2/ion",
-      "name": "Ion",
-      "symbol": "ION",
+      "base": "transfer/channel-4/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
+      "display": "transfer/channel-4/willyz",
+      "name": "Willyz",
+      "symbol": "WILLYZ",
       "penumbraAssetId": {
-        "inner": "PTkvjX+oV1r5k1nU5BJw46gfpk7KD+VhuNefdsGD3Qk="
+        "inner": "ZPcze3Lhpgavnk2eQ/N49hJGttezr+Gl3TiJeL6MvhE="
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
-        }
-      ]
-    },
-    "RinC31a7S4x9YkTwAf2sDQ3dN18FV6WLmxAetVprUgQ=": {
-      "description": "The native token of Osmosis",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-2/uosmo"
-        },
-        {
-          "denom": "transfer/channel-2/osmo",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-2/uosmo",
-      "display": "transfer/channel-2/osmo",
-      "name": "Osmosis Testnet",
-      "symbol": "OSMO",
-      "penumbraAssetId": {
-        "inner": "RinC31a7S4x9YkTwAf2sDQ3dN18FV6WLmxAetVprUgQ="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
         }
       ]
     },
@@ -257,30 +257,6 @@
       "penumbraAssetId": {
         "inner": "hGwO3SuE1/D05ooLMUVVe7XvYbAFnxAUbIRIZdG3TwI="
       }
-    },
-    "mnGyyC1IOFxD5qnm9jAWNRDtqA5MdxXuBLqtk26nggQ=": {
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-2/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
-        },
-        {
-          "denom": "transfer/channel-2/willyz",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-2/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
-      "display": "transfer/channel-2/willyz",
-      "name": "Willyz",
-      "symbol": "WILLYZ",
-      "penumbraAssetId": {
-        "inner": "mnGyyC1IOFxD5qnm9jAWNRDtqA5MdxXuBLqtk26nggQ="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
-        }
-      ]
     },
     "nDjzm+ldIrNMJha1anGMDVxpA5cLCPnUYQ1clmHF1gw=": {
       "denomUnits": [
@@ -366,6 +342,30 @@
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/test-usd.svg"
+        }
+      ]
+    },
+    "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/uion"
+        },
+        {
+          "denom": "transfer/channel-4/ion",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/uion",
+      "display": "transfer/channel-4/ion",
+      "name": "Ion",
+      "symbol": "ION",
+      "penumbraAssetId": {
+        "inner": "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
         }
       ]
     }

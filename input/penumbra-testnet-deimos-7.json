@@ -15,7 +15,7 @@
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
-      "ibcChannel": "channel-2",
+      "ibcChannel": "channel-4",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
