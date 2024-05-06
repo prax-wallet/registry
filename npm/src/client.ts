@@ -1,4 +1,4 @@
-import { deriveTestnetChainIdFromPreview, isTestnetPreviewChainId } from './utils';
+import { deriveTestnetChainIdFromPreview, isTestnetPreviewChainId } from './utils/testnet-parser';
 import { Registry } from './registry';
 import { allJsonRegistries } from './json';
 
@@ -11,6 +11,13 @@ export class ChainRegistryClient {
     }
 
     return new Registry(jsonRegistry);
+  }
+
+  version() {
+    return {
+      commit: __COMMIT_HASH__,
+      date: new Date(__COMMIT_DATE__),
+    };
   }
 
   private swapIfPreviewChain(chainId: string): string {

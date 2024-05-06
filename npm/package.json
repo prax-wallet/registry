@@ -1,6 +1,6 @@
 {
-  "name": "@penumbra-labs/registry",
-  "version": "7.0.0",
+  "name": "@penumbra-zone/test-publish",
+  "version": "0.7.0",
   "description": "Chain and asset registry for Penumbra",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -9,7 +9,8 @@
     "format": "prettier . --write",
     "format-check": "prettier --check .",
     "lint": "eslint . --max-warnings=0",
-    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "build": "pnpm clean && tsc && vite build",
+    "clean": "rm -rfv dist",
     "changeset": "changeset",
     "changeset:publish": "changeset publish",
     "test": "vitest run"
@@ -25,6 +26,8 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.8.0",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.6.0"
   },
   "files": [

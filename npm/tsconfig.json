@@ -22,9 +22,10 @@
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ES2022",
+    "outDir": "dist",
+    "noEmit": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules/**", "dist"],
-  "compileOnSave": false
+  "include": ["src/**/*.ts", "vite-env.d.ts"],
+  "exclude": ["node_modules/**", "dist", "vite.config.ts"]
 }

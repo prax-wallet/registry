@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { base64ToUint8Array } from './utils';
 import { Registry } from './registry';
 import { AssetId } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
 import { JsonRegistry } from './json';
+import { base64ToUint8Array } from './utils/base64';
 
 const testRegistry: JsonRegistry = {
   chainId: 'penumbra-testnet-deimos-6',

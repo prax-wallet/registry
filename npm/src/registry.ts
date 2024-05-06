@@ -2,9 +2,14 @@ import {
   AssetId,
   Metadata,
 } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
-import { base64ToUint8Array, mapObjectValues, Stringified, uint8ArrayToBase64 } from './utils';
 import { JsonRegistry } from './json';
 import { JsonValue } from '@bufbuild/protobuf';
+import { base64ToUint8Array, uint8ArrayToBase64 } from './utils/base64';
+import { mapObjectValues } from './utils/object-mapping';
+
+// @ts-expect-error alias for dev only
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type Stringified<T> = string;
 
 export type Base64AssetId = Stringified<AssetId['inner']>;
 
