@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 6.0.0
+
+### Major Changes
+
+- Counterparty chain id added + renamed ibcChannel to channelId
+
 ## 5.2.0
 
 ### Minor Changes
