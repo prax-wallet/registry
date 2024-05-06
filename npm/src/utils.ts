@@ -1,9 +1,3 @@
-import { JsonValue } from '@bufbuild/protobuf';
-
-// @ts-expect-error alias for dev only
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export type Jsonified<T> = JsonValue;
-
 // @ts-expect-error alias for dev only
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export type Stringified<T> = string;

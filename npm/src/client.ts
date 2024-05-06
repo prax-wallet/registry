@@ -1,25 +1,25 @@
-import { GithubFetcher } from './github';
 import { deriveTestnetChainIdFromPreview, isTestnetPreviewChainId } from './utils';
 import { Registry } from './registry';
+import { allJsonRegistries } from './json';
 
 export class ChainRegistryClient {
-  private readonly github: GithubFetcher;
-
-  constructor() {
-    this.github = new GithubFetcher();
-  }
-
-  async get(chainId: string): Promise<Registry> {
-    if (isTestnetPreviewChainId(chainId)) {
-      const derivedChainId = deriveTestnetChainIdFromPreview(chainId);
-      if (derivedChainId) {
-        return this.github.fetchRegistryData(derivedChainId);
-      }
+  get(chainId: string): Registry {
+    const chainIdToIndex = this.swapIfPreviewChain(chainId);
+    const jsonRegistry = allJsonRegistries[chainIdToIndex];
+    if (!jsonRegistry) {
+      throw new Error(`Registry not found for ${chainIdToIndex}`);
     }
-    return this.github.fetchRegistryData(chainId);
+
+    return new Registry(jsonRegistry);
   }
 
-  clearCache() {
-    this.github.clearCache();
+  private swapIfPreviewChain(chainId: string): string {
+    if (!isTestnetPreviewChainId(chainId)) return chainId;
+
+    const derivedChainId = deriveTestnetChainIdFromPreview(chainId);
+    if (!derivedChainId) {
+      throw new Error(`Chain id could not be derived from testnet preview chain: ${chainId}`);
+    }
+    return derivedChainId;
   }
 }

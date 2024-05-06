@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.0.0
+
+### Major Changes
+
+- Bundle registry in dist
+
 ## 6.0.0
 
 ### Major Changes
