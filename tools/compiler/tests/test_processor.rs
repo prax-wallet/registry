@@ -22,7 +22,8 @@ fn base64_id_extracts_correctly() {
 #[test]
 fn test_transport_metadata_along_channel() {
     let ibc_data = IbcInput {
-        ibc_channel: "channel-123".to_string(),
+        channel_id: "channel-123".to_string(),
+        counterparty_channel_id: "channel-456".to_string(),
         chain_id: "love-999".to_string(),
         address_prefix: "love".to_string(),
         cosmos_registry_dir: "love-124".to_string(),

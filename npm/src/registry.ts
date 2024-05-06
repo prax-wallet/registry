@@ -10,7 +10,8 @@ export type Base64AssetId = Stringified<AssetId['inner']>;
 export interface Chain {
   addressPrefix: string;
   chainId: string;
-  ibcChannel: string;
+  channelId: string;
+  counterpartyChannelId: string;
   images: Image[];
   displayName: string;
 }

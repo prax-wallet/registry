@@ -35,7 +35,8 @@ pub struct Image {
 #[serde(rename_all = "camelCase")]
 pub struct IbcInput {
     pub chain_id: String,
-    pub ibc_channel: String,
+    pub channel_id: String,
+    pub counterparty_channel_id: String,
     pub address_prefix: String,
     pub cosmos_registry_dir: String,
     pub display_name: String,

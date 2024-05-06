@@ -15,7 +15,8 @@
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
-      "ibcChannel": "channel-4",
+      "channelId": "channel-4",
+      "counterpartyChannelId": "channel-7780",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
@@ -27,7 +28,8 @@
     {
       "displayName": "Noble",
       "chainId": "grand-1",
-      "ibcChannel": "channel-3",
+      "channelId": "channel-3",
+      "counterpartyChannelId": "channel-164",
       "addressPrefix": "noble",
       "cosmosRegistryDir": "testnets/nobletestnet",
       "images": [

@@ -10,7 +10,8 @@ const testRegistry: GithubRegistryResponse = {
     {
       addressPrefix: 'osmo',
       chainId: 'osmo-test-5',
-      ibcChannel: 'channel-3',
+      channelId: 'channel-4',
+      counterpartyChannelId: 'channel-7780',
       displayName: 'Osmosis',
       images: [
         {

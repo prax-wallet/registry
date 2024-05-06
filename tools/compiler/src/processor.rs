@@ -21,7 +21,8 @@ use crate::querier::query_github_assets;
 pub struct Chain {
     pub address_prefix: String,
     pub chain_id: String,
-    pub ibc_channel: String,
+    pub channel_id: String,
+    pub counterparty_channel_id: String,
     pub display_name: String,
     pub images: Vec<Image>,
 }
@@ -31,7 +32,8 @@ impl From<IbcInput> for Chain {
         Chain {
             address_prefix: config.address_prefix,
             chain_id: config.chain_id,
-            ibc_channel: config.ibc_channel,
+            channel_id: config.channel_id,
+            counterparty_channel_id: config.counterparty_channel_id,
             display_name: config.display_name,
             images: config.images,
         }
@@ -83,7 +85,7 @@ pub fn transport_metadata_along_channel(
     tracing::debug!(?pb_metadata, "original");
 
     let prefix_channel = |x: &mut String| {
-        *x = format!("transfer/{}/{}", ibc_data.ibc_channel, x);
+        *x = format!("transfer/{}/{}", ibc_data.channel_id, x);
     };
 
     // Prefix the channel to the base denom.
