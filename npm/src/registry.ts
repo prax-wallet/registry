@@ -2,8 +2,14 @@ import {
   AssetId,
   Metadata,
 } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
-import { base64ToUint8Array, mapObjectValues, Stringified, uint8ArrayToBase64 } from './utils';
-import { GithubRegistryResponse } from './github';
+import { JsonRegistry } from './json';
+import { JsonValue } from '@bufbuild/protobuf';
+import { base64ToUint8Array, uint8ArrayToBase64 } from './utils/base64';
+import { mapObjectValues } from './utils/object-mapping';
+
+// @ts-expect-error alias for dev only
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type Stringified<T> = string;
 
 export type Base64AssetId = Stringified<AssetId['inner']>;
 
@@ -36,13 +42,15 @@ export class Registry {
 
   private readonly assetById: Record<Base64AssetId, Metadata>;
 
-  constructor(response: GithubRegistryResponse) {
-    this.chainId = response.chainId;
-    this.ibcConnections = response.ibcConnections;
-    this.rpcs = response.rpcs;
-    this.assetById = mapObjectValues(response.assetById, id => Metadata.fromJson(id));
-    this.stakingAssetId = new AssetId({ inner: base64ToUint8Array(response.stakingAssetId) });
-    this.numeraires = response.numeraires.map(a => new AssetId({ inner: base64ToUint8Array(a) }));
+  constructor(r: JsonRegistry) {
+    this.chainId = r.chainId;
+    this.ibcConnections = r.ibcConnections;
+    this.rpcs = r.rpcs;
+    this.assetById = mapObjectValues(r.assetById, jsonMetadata =>
+      Metadata.fromJson(jsonMetadata as unknown as JsonValue),
+    );
+    this.stakingAssetId = new AssetId({ inner: base64ToUint8Array(r.stakingAssetId) });
+    this.numeraires = r.numeraires.map(a => new AssetId({ inner: base64ToUint8Array(a) }));
   }
 
   getMetadata(id: AssetId): Metadata {
