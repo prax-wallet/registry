@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.2.0
+
+### Minor Changes
+
+- Fix deimos-8 exports
+
 ## 7.1.0
 
 ### Minor Changes

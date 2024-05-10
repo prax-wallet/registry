@@ -1,5 +1,7 @@
 import * as Deimos6 from '../../registry/penumbra-testnet-deimos-6.json';
 import * as Deimos7 from '../../registry/penumbra-testnet-deimos-7.json';
+import * as Deimos8 from '../../registry/penumbra-testnet-deimos-8.json';
+
 import { Base64AssetId, Chain, Rpc } from './registry';
 
 export interface JsonRegistry {
@@ -39,4 +41,5 @@ interface Image {
 export const allJsonRegistries: Record<string, JsonRegistry> = {
   'penumbra-testnet-deimos-6': Deimos6,
   'penumbra-testnet-deimos-7': Deimos7,
+  'penumbra-testnet-deimos-8': Deimos8,
 };
