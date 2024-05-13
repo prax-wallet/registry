@@ -16,8 +16,8 @@
     {
       "addressPrefix": "noble",
       "chainId": "grand-1",
-      "channelId": "channel-3",
-      "counterpartyChannelId": "channel-164",
+      "channelId": "channel-2",
+      "counterpartyChannelId": "channel-170",
       "displayName": "Noble",
       "images": [
         {
@@ -38,30 +38,24 @@
     }
   ],
   "assetById": {
-    "+jDercxZxs90BjC91PrWyA53/p7uN3ZcSJj3N0mHjhI=": {
-      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
+    "2l5fLuem6wiMOhuIqDF3XGFa20EfBV7XAYmTvKN55Q4=": {
+      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
       "denomUnits": [
         {
-          "denom": "transfer/channel-3/uusdlr"
+          "denom": "transfer/channel-2/ulove"
         },
         {
-          "denom": "transfer/channel-3/usdlr",
+          "denom": "transfer/channel-2/love",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-3/uusdlr",
-      "display": "transfer/channel-3/usdlr",
-      "name": "USDLR by Stable",
-      "symbol": "USDLR",
+      "base": "transfer/channel-2/ulove",
+      "display": "transfer/channel-2/love",
+      "name": "Love",
+      "symbol": "LOVE",
       "penumbraAssetId": {
-        "inner": "+jDercxZxs90BjC91PrWyA53/p7uN3ZcSJj3N0mHjhI="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
-        }
-      ]
+        "inner": "2l5fLuem6wiMOhuIqDF3XGFa20EfBV7XAYmTvKN55Q4="
+      }
     },
     "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws=": {
       "denomUnits": [
@@ -75,30 +69,6 @@
       "penumbraAssetId": {
         "inner": "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws="
       }
-    },
-    "CKBQapu+DkQpsKyTfKESLTV19/NPWR5sNZtvQsd3Hw8=": {
-      "description": "USD Coin",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-3/uusdc"
-        },
-        {
-          "denom": "transfer/channel-3/usdc",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-3/uusdc",
-      "display": "transfer/channel-3/usdc",
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "penumbraAssetId": {
-        "inner": "CKBQapu+DkQpsKyTfKESLTV19/NPWR5sNZtvQsd3Hw8="
-      },
-      "images": [
-        {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg"
-        }
-      ]
     },
     "CwpUYIdQ9H5Dnf3oQ1l7ISeVMVahWbVNNvMA0dBSdwI=": {
       "denomUnits": [
@@ -126,6 +96,31 @@
         }
       ]
     },
+    "FQo69KceOETEAvrREa1+GAoesN44ISBMleaEz43HCgA=": {
+      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-2/uusdlr"
+        },
+        {
+          "denom": "transfer/channel-2/usdlr",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-2/uusdlr",
+      "display": "transfer/channel-2/usdlr",
+      "name": "USDLR by Stable",
+      "symbol": "USDLR",
+      "penumbraAssetId": {
+        "inner": "FQo69KceOETEAvrREa1+GAoesN44ISBMleaEz43HCgA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
+        }
+      ]
+    },
     "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc=": {
       "denomUnits": [
         {
@@ -145,25 +140,6 @@
       "symbol": "GM",
       "penumbraAssetId": {
         "inner": "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc="
-      }
-    },
-    "Hqn6gTCqE7mCBsVa4agsTFmrO0Rip5xmLcipnGKH9AI=": {
-      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-3/ulove"
-        },
-        {
-          "denom": "transfer/channel-3/love",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-3/ulove",
-      "display": "transfer/channel-3/love",
-      "name": "Love",
-      "symbol": "LOVE",
-      "penumbraAssetId": {
-        "inner": "Hqn6gTCqE7mCBsVa4agsTFmrO0Rip5xmLcipnGKH9AI="
       }
     },
     "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc=": {
@@ -217,6 +193,25 @@
         }
       ]
     },
+    "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA=": {
+      "description": "The controlled staking asset for Noble Chain",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-2/ustake"
+        },
+        {
+          "denom": "transfer/channel-2/stake",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-2/ustake",
+      "display": "transfer/channel-2/stake",
+      "name": "Stake",
+      "symbol": "STAKE",
+      "penumbraAssetId": {
+        "inner": "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA="
+      }
+    },
     "ZPcze3Lhpgavnk2eQ/N49hJGttezr+Gl3TiJeL6MvhE=": {
       "denomUnits": [
         {
@@ -241,24 +236,29 @@
         }
       ]
     },
-    "hGwO3SuE1/D05ooLMUVVe7XvYbAFnxAUbIRIZdG3TwI=": {
-      "description": "The controlled staking asset for Noble Chain",
+    "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs=": {
+      "description": "USD Coin",
       "denomUnits": [
         {
-          "denom": "transfer/channel-3/ustake"
+          "denom": "transfer/channel-2/uusdc"
         },
         {
-          "denom": "transfer/channel-3/stake",
+          "denom": "transfer/channel-2/usdc",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-3/ustake",
-      "display": "transfer/channel-3/stake",
-      "name": "Stake",
-      "symbol": "STAKE",
+      "base": "transfer/channel-2/uusdc",
+      "display": "transfer/channel-2/usdc",
+      "name": "USD Coin",
+      "symbol": "USDC",
       "penumbraAssetId": {
-        "inner": "hGwO3SuE1/D05ooLMUVVe7XvYbAFnxAUbIRIZdG3TwI="
-      }
+        "inner": "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg"
+        }
+      ]
     },
     "nDjzm+ldIrNMJha1anGMDVxpA5cLCPnUYQ1clmHF1gw=": {
       "denomUnits": [
@@ -374,7 +374,6 @@
   },
   "stakingAssetId": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=",
   "numeraires": [
-    "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=",
-    "CKBQapu+DkQpsKyTfKESLTV19/NPWR5sNZtvQsd3Hw8="
+    "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg="
   ]
 }

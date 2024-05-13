@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.2.1
+
+### Patch Changes
+
+- Update noble channelids
+
 ## 7.2.0
 
 ### Minor Changes
