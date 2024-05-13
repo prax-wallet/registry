@@ -28,8 +28,8 @@
     {
       "displayName": "Noble",
       "chainId": "grand-1",
-      "channelId": "channel-3",
-      "counterpartyChannelId": "channel-164",
+      "channelId": "channel-2",
+      "counterpartyChannelId": "channel-170",
       "addressPrefix": "noble",
       "cosmosRegistryDir": "testnets/nobletestnet",
       "images": [

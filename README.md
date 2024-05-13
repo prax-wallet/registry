@@ -28,6 +28,11 @@ registry is a registry of Cosmos assets _on Penumbra_.
 We also intend to submit metadata about Penumbra assets upstream to the CCR for
 use by other Cosmos chains.
 
+### IBC Channels
+
+The Prax view of which IBC channels are canonical is set by the `ibcConnections`
+field in the input JSON file.
+
 ## Generator usage
 
 To generate a fresh registry, you must have Rust and Cargo installed. Once you have cloned the repository and navigated
