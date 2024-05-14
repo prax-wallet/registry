@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.2.2
+
+### Patch Changes
+
+- update osmosis channel for deimos-8
+
 ## 7.2.1
 
 ### Patch Changes
