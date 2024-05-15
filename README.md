@@ -35,14 +35,18 @@ field in the input JSON file.
 
 ## Generator usage
 
-To generate a fresh registry, you must have Rust and Cargo installed. Once you have cloned the repository and navigated
-to the root directory of the project, you can run the application with the following command:
+Let's say you want to add or edit an asset in the registry. Here are the steps you should take.
 
-```bash
-cargo run
-```
-
-If there are changes, create a PR and push them up.
+1. Install pre-requisite deps: [Rust](https://www.rust-lang.org/tools/install) & [pnpm](https://pnpm.io/installation)
+2. Fork repository & clone it down locally
+3. In `input/<chain_name>.json`, add your new asset or edit the metadata as needed
+4. In `tools/compiler/` directory run `cargo run`
+5. In `npm/` run `pnpm install` and `pnpm changeset`. Make a minor (if new chain added) or patch (add/edit to existing)
+   update. It will ask for a summary of the change.
+6. In `npm/` run `pnpm changeset version`. This will bump the package version.
+7. Make PR. Maintainers will review and merge.
+8. After merge, the latest registry will be live in `registry/` and available in the newly published npm package
+   version.
 
 ### File structure
 
