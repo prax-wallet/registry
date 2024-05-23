@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.3.0
+
+### Minor Changes
+
+- Update noble channels
+
 ## 7.2.2
 
 ### Patch Changes
