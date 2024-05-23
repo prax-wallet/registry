@@ -16,8 +16,8 @@
     {
       "addressPrefix": "noble",
       "chainId": "grand-1",
-      "channelId": "channel-2",
-      "counterpartyChannelId": "channel-170",
+      "channelId": "channel-4",
+      "counterpartyChannelId": "channel-175",
       "displayName": "Noble",
       "images": [
         {
@@ -122,31 +122,6 @@
         }
       ]
     },
-    "FQo69KceOETEAvrREa1+GAoesN44ISBMleaEz43HCgA=": {
-      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-2/uusdlr"
-        },
-        {
-          "denom": "transfer/channel-2/usdlr",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-2/uusdlr",
-      "display": "transfer/channel-2/usdlr",
-      "name": "USDLR by Stable",
-      "symbol": "USDLR",
-      "penumbraAssetId": {
-        "inner": "FQo69KceOETEAvrREa1+GAoesN44ISBMleaEz43HCgA="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
-        }
-      ]
-    },
     "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc=": {
       "denomUnits": [
         {
@@ -218,49 +193,6 @@
         }
       ]
     },
-    "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA=": {
-      "description": "The controlled staking asset for Noble Chain",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-2/ustake"
-        },
-        {
-          "denom": "transfer/channel-2/stake",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-2/ustake",
-      "display": "transfer/channel-2/stake",
-      "name": "Stake",
-      "symbol": "STAKE",
-      "penumbraAssetId": {
-        "inner": "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA="
-      }
-    },
-    "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs=": {
-      "description": "USD Coin",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-2/uusdc"
-        },
-        {
-          "denom": "transfer/channel-2/usdc",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-2/uusdc",
-      "display": "transfer/channel-2/usdc",
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "penumbraAssetId": {
-        "inner": "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="
-      },
-      "images": [
-        {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg"
-        }
-      ]
-    },
     "fLgjA/jT2EN7SFFeKUgZkL8UePmcz5qvNO/CyDBSwQE=": {
       "description": "The native token of Osmosis",
       "denomUnits": [
@@ -307,6 +239,50 @@
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
+        }
+      ]
+    },
+    "lc3CwpZrkd3hE3IBmt4vJzWiSdpUK+aCSJcK6wFubA0=": {
+      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/ulove"
+        },
+        {
+          "denom": "transfer/channel-4/love",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/ulove",
+      "display": "transfer/channel-4/love",
+      "name": "Love",
+      "symbol": "LOVE",
+      "penumbraAssetId": {
+        "inner": "lc3CwpZrkd3hE3IBmt4vJzWiSdpUK+aCSJcK6wFubA0="
+      }
+    },
+    "mnnn9Gz94sDqZJf3aNb2andC6fG2peR3w64eJjRYWwA=": {
+      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/uusdlr"
+        },
+        {
+          "denom": "transfer/channel-4/usdlr",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/uusdlr",
+      "display": "transfer/channel-4/usdlr",
+      "name": "USDLR by Stable",
+      "symbol": "USDLR",
+      "penumbraAssetId": {
+        "inner": "mnnn9Gz94sDqZJf3aNb2andC6fG2peR3w64eJjRYWwA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
         }
       ]
     },
@@ -396,6 +372,49 @@
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/test-usd.svg"
         }
       ]
+    },
+    "syX8mVrVNeG5qL01t1Sr8vgtbWfi7DX4CI4YtK05cwE=": {
+      "description": "USD Coin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/uusdc"
+        },
+        {
+          "denom": "transfer/channel-4/usdc",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/uusdc",
+      "display": "transfer/channel-4/usdc",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "penumbraAssetId": {
+        "inner": "syX8mVrVNeG5qL01t1Sr8vgtbWfi7DX4CI4YtK05cwE="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg"
+        }
+      ]
+    },
+    "w8SoLUSACYyoEI+/B4SlI+QkTYNMZBLLuTj6Np/5+QU=": {
+      "description": "The controlled staking asset for Noble Chain",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/ustake"
+        },
+        {
+          "denom": "transfer/channel-4/stake",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/ustake",
+      "display": "transfer/channel-4/stake",
+      "name": "Stake",
+      "symbol": "STAKE",
+      "penumbraAssetId": {
+        "inner": "w8SoLUSACYyoEI+/B4SlI+QkTYNMZBLLuTj6Np/5+QU="
+      }
     }
   },
   "stakingAssetId": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=",

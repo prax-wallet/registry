@@ -5,6 +5,7 @@
 ### Minor Changes
 
 - Add Starling Staking delegation token metadata
+- Update noble channels
 
 ## 7.2.2
 
