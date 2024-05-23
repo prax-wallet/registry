@@ -54,34 +54,15 @@
       ],
       "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
       "display": "delegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
-      "symbol": "Delegation (Starling Staking)",
+      "symbol": "delUM(Starling Staking)",
       "penumbraAssetId": {
         "inner": "/5AHh95RAybBbUhQ5zXMWCvstH4rRK/5KMVIVGQltAw="
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
         }
       ]
-    },
-    "2l5fLuem6wiMOhuIqDF3XGFa20EfBV7XAYmTvKN55Q4=": {
-      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-2/ulove"
-        },
-        {
-          "denom": "transfer/channel-2/love",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-2/ulove",
-      "display": "transfer/channel-2/love",
-      "name": "Love",
-      "symbol": "LOVE",
-      "penumbraAssetId": {
-        "inner": "2l5fLuem6wiMOhuIqDF3XGFa20EfBV7XAYmTvKN55Q4="
-      }
     },
     "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws=": {
       "denomUnits": [
