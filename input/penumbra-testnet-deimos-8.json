@@ -235,7 +235,7 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
         }
       ]
     }
