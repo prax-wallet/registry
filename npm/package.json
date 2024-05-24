@@ -1,6 +1,6 @@
 {
   "name": "@penumbra-labs/registry",
-  "version": "7.4.0",
+  "version": "7.4.1",
   "description": "Chain and asset registry for Penumbra",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
