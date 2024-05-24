@@ -1,10 +1,15 @@
 # @penumbra-labs/registry
 
-## 7.3.0
+## 7.4.0
 
 ### Minor Changes
 
 - Add Starling Staking delegation token metadata
+
+## 7.3.0
+
+### Minor Changes
+
 - Update noble channels
 
 ## 7.2.2
