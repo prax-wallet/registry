@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.4.1
+
+### Patch Changes
+
+- Fix Penumbra Labs testnet validator denoms
+
 ## 7.4.0
 
 ### Minor Changes
