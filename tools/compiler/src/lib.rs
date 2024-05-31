@@ -3,3 +3,4 @@ pub mod github;
 pub mod parser;
 pub mod processor;
 pub mod querier;
+pub mod validator;

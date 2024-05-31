@@ -15,6 +15,7 @@ use crate::parser::{
     get_chain_configs, ChainConfig, IbcInput, Image, Rpc, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
 };
 use crate::querier::query_github_assets;
+use crate::validator::generate_metadata_from_validators;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -117,6 +118,8 @@ pub fn base64_id(id: &Id) -> AppResult<String> {
 
 async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
     let mut all_metadata = Vec::new();
+
+    all_metadata.extend(generate_metadata_from_validators(&chain_config.validators)?);
     all_metadata.extend(chain_config.native_assets.clone());
 
     // For each ibc connection, fetch all metadata of native assets from the cosmos registry
