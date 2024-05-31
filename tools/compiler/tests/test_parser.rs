@@ -19,6 +19,7 @@ fn test_get_chain_configs_reads_configs_correctly() {
         "chainId": "test-chain-1",
         "rpcs": [],
         "ibcConnections": [],
+        "validators": [],
         "nativeAssets": [],
         "canonicalNumeraires": []
     })
@@ -43,6 +44,7 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
         "chainId": "test-chain-1",
         "rpcs": [],
         "ibcConnections": [],
+        "validators": [],
         "nativeAssets": [],
         "canonicalNumeraires": []
 
@@ -58,6 +60,7 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
         "chainId": "test-chain-2",
         "rpcs": [],
         "ibcConnections": [],
+        "validators": [],
         "nativeAssets": [],
         "canonicalNumeraires": []
 

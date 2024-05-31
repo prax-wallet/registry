@@ -12,7 +12,7 @@ pub fn generate_metadata_from_validators(
     validators
         .iter()
         .map(|v| {
-            // udelegation_penumbravalid1... -> delegation_penumbravalid1...
+            // udelegation_penumbravalid1... -> estdelegation_penumbravalid1...
             let display_denom = v.base.chars().skip(1).collect::<String>();
 
             let pb_metadata = pb::Metadata {
