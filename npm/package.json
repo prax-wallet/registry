@@ -1,6 +1,6 @@
 {
   "name": "@penumbra-labs/registry",
-  "version": "7.4.1",
+  "version": "7.5.0",
   "description": "Chain and asset registry for Penumbra",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -16,17 +16,17 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@buf/penumbra-zone_penumbra.bufbuild_es": "1.9.0-20240505174225-78be1d64b1cb.1",
-    "@bufbuild/protobuf": "^1.9.0",
-    "@changesets/cli": "^2.27.1",
-    "@eslint/eslintrc": "^3.0.2",
-    "@eslint/js": "^9.2.0",
-    "eslint": "^9.2.0",
+    "@buf/penumbra-zone_penumbra.bufbuild_es": "1.9.0-20240528180215-8fe1c79485f8.1",
+    "@bufbuild/protobuf": "^1.10.0",
+    "@changesets/cli": "^2.27.5",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
-    "typescript-eslint": "^7.8.0",
-    "vite": "^5.2.11",
+    "typescript-eslint": "^7.11.0",
+    "vite": "^5.2.12",
     "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.6.0"
   },

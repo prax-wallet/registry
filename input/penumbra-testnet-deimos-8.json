@@ -39,6 +39,35 @@
       ]
     }
   ],
+  "validators": [
+    {
+      "name": "Penumbra Labs CI 1",
+      "base": "udelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
+        }
+      ]
+    },
+    {
+      "name": "Penumbra Labs CI 2",
+      "base": "udelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
+        }
+      ]
+    },
+    {
+      "name": "Starling Staking",
+      "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
+        }
+      ]
+    }
+  ],
   "nativeAssets": [
     {
       "denomUnits": [
@@ -85,7 +114,12 @@
       "symbol": "GM",
       "penumbraAssetId": {
         "inner": "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc="
-      }
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/full-moon-face.svg"
+        }
+      ]
     },
     {
       "denomUnits": [
@@ -106,7 +140,12 @@
       "symbol": "GN",
       "penumbraAssetId": {
         "inner": "nwPDkQq3OvLnBwGTD+nmv1Ifb2GEmFCgNHrU++9BsRE="
-      }
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/new-moon-face.svg"
+        }
+      ]
     },
     {
       "denomUnits": [
@@ -160,88 +199,10 @@
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/pizza.svg"
         }
       ]
-    },
-    {
-      "denomUnits": [
-        {
-          "denom": "delegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
-          "exponent": 6
-        },
-        {
-          "denom": "mdelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
-          "exponent": 3
-        },
-        {
-          "denom": "udelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja"
-        }
-      ],
-      "base": "udelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
-      "display": "delegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
-      "penumbraAssetId": {
-        "inner": "s82FyPdtSi8r0syejJHbC6PcjKTQ8a5hCbrnROuBxQ8="
-      },
-      "symbol": "delUM(Penumbra Labs CI 1)",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    },
-    {
-      "denomUnits": [
-        {
-          "denom": "delegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
-          "exponent": 6
-        },
-        {
-          "denom": "mdelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
-          "exponent": 3
-        },
-        {
-          "denom": "udelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63"
-        }
-      ],
-      "base": "udelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
-      "display": "delegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
-      "penumbraAssetId": {
-        "inner": "eeD8X4rWeMaC3Oqdw8tyU6YBLryAYCBLwEbiIKoo5Qc="
-      },
-      "symbol": "delUM(Penumbra Labs CI 2)",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    },
-    {
-      "denomUnits": [
-        {
-          "denom": "delegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
-          "exponent": 6
-        },
-        {
-          "denom": "mdelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
-          "exponent": 3
-        },
-        {
-          "denom": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u"
-        }
-      ],
-      "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
-      "display": "delegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
-      "symbol": "delUM(Starling Staking)",
-      "penumbraAssetId": {
-        "inner": "/5AHh95RAybBbUhQ5zXMWCvstH4rRK/5KMVIVGQltAw="
-      },
-      "images": [
-        {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
-        }
-      ]
     }
   ],
   "canonicalNumeraires": [
     "wtest_usd",
-    "transfer/channel-3/uusdc"
+    "transfer/channel-4/uusdc"
   ]
 }

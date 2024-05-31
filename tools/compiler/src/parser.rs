@@ -2,6 +2,7 @@ use std::fs;
 use std::path::Path;
 
 use penumbra_asset::asset::Metadata;
+use penumbra_proto::core::asset::v1::AssetImage;
 use serde::{Deserialize, Serialize};
 
 use crate::error::AppResult;
@@ -11,6 +12,7 @@ use crate::error::AppResult;
 pub struct ChainConfig {
     pub chain_id: String,
     pub rpcs: Vec<Rpc>,
+    pub validators: Vec<ValidatorInput>,
     pub ibc_connections: Vec<IbcInput>,
     pub native_assets: Vec<Metadata>,
     pub canonical_numeraires: Vec<String>,
@@ -31,6 +33,26 @@ pub struct Image {
     pub svg: Option<String>,
 }
 
+impl From<Image> for AssetImage {
+    fn from(image: Image) -> Self {
+        AssetImage {
+            png: image.png.unwrap_or_default(),
+            svg: image.svg.unwrap_or_default(),
+            theme: None,
+        }
+    }
+}
+
+pub trait IntoPbImages {
+    fn into_pb_images(self) -> Vec<AssetImage>;
+}
+
+impl IntoPbImages for Vec<Image> {
+    fn into_pb_images(self) -> Vec<AssetImage> {
+        self.into_iter().map(AssetImage::from).collect()
+    }
+}
+
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct IbcInput {
@@ -40,6 +62,14 @@ pub struct IbcInput {
     pub address_prefix: String,
     pub cosmos_registry_dir: String,
     pub display_name: String,
+    pub images: Vec<Image>,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ValidatorInput {
+    pub name: String,
+    pub base: String,
     pub images: Vec<Image>,
 }
 

@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.5.0
+
+### Minor Changes
+
+- New gm/gn icons
+
 ## 7.4.1
 
 ### Patch Changes

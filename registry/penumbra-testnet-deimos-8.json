@@ -41,15 +41,15 @@
     "/5AHh95RAybBbUhQ5zXMWCvstH4rRK/5KMVIVGQltAw=": {
       "denomUnits": [
         {
-          "denom": "delegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
-          "exponent": 6
+          "denom": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u"
         },
         {
           "denom": "mdelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
           "exponent": 3
         },
         {
-          "denom": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u"
+          "denom": "delegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
+          "exponent": 6
         }
       ],
       "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
@@ -96,7 +96,12 @@
       "symbol": "GM",
       "penumbraAssetId": {
         "inner": "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc="
-      }
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/full-moon-face.svg"
+        }
+      ]
     },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "denomUnits": [
@@ -151,15 +156,15 @@
     "eeD8X4rWeMaC3Oqdw8tyU6YBLryAYCBLwEbiIKoo5Qc=": {
       "denomUnits": [
         {
-          "denom": "delegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
-          "exponent": 6
+          "denom": "udelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63"
         },
         {
           "denom": "mdelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
           "exponent": 3
         },
         {
-          "denom": "udelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63"
+          "denom": "delegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
+          "exponent": 6
         }
       ],
       "base": "udelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
@@ -304,7 +309,12 @@
       "symbol": "GN",
       "penumbraAssetId": {
         "inner": "nwPDkQq3OvLnBwGTD+nmv1Ifb2GEmFCgNHrU++9BsRE="
-      }
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/new-moon-face.svg"
+        }
+      ]
     },
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=": {
       "denomUnits": [
@@ -331,15 +341,15 @@
     "s82FyPdtSi8r0syejJHbC6PcjKTQ8a5hCbrnROuBxQ8=": {
       "denomUnits": [
         {
-          "denom": "delegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
-          "exponent": 6
+          "denom": "udelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja"
         },
         {
           "denom": "mdelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
           "exponent": 3
         },
         {
-          "denom": "udelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja"
+          "denom": "delegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
+          "exponent": 6
         }
       ],
       "base": "udelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
@@ -400,6 +410,7 @@
   },
   "stakingAssetId": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=",
   "numeraires": [
-    "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg="
+    "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=",
+    "syX8mVrVNeG5qL01t1Sr8vgtbWfi7DX4CI4YtK05cwE="
   ]
 }
