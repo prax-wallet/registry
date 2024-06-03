@@ -145,6 +145,23 @@
         "inner": "H0dAkstiWmRZIIu8BM8IQioPVl7i+isElLWajNOntQ8="
       }
     },
+    "HLkKbVfA72oQaMdYFroWQ1qoSyl/KLHZiOMJhL2y9w0=": {
+      "denomUnits": [
+        {
+          "denom": "test_eth",
+          "exponent": 18
+        },
+        {
+          "denom": "wtest_eth"
+        }
+      ],
+      "base": "wtest_eth",
+      "display": "test_eth",
+      "symbol": "TestETH",
+      "penumbraAssetId": {
+        "inner": "HLkKbVfA72oQaMdYFroWQ1qoSyl/KLHZiOMJhL2y9w0="
+      }
+    },
     "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc=": {
       "denomUnits": [
         {
@@ -359,6 +376,44 @@
         }
       ]
     },
+    "o2gZdbhCH70Ry+7iBhkSeHC/PB1LZhgkn7LHC2kEhQc=": {
+      "denomUnits": [
+        {
+          "denom": "test_btc",
+          "exponent": 8
+        },
+        {
+          "denom": "test_sat"
+        }
+      ],
+      "base": "test_sat",
+      "display": "test_btc",
+      "symbol": "TestBTC",
+      "penumbraAssetId": {
+        "inner": "o2gZdbhCH70Ry+7iBhkSeHC/PB1LZhgkn7LHC2kEhQc="
+      }
+    },
+    "pmpygqUf4DL+z849rGPpudpdK/+FAv8qQ01U2C73kAw=": {
+      "denomUnits": [
+        {
+          "denom": "test_osmo",
+          "exponent": 6
+        },
+        {
+          "denom": "mtest_osmo",
+          "exponent": 3
+        },
+        {
+          "denom": "utest_osmo"
+        }
+      ],
+      "base": "utest_osmo",
+      "display": "test_osmo",
+      "symbol": "TestOSMO",
+      "penumbraAssetId": {
+        "inner": "pmpygqUf4DL+z849rGPpudpdK/+FAv8qQ01U2C73kAw="
+      }
+    },
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=": {
       "denomUnits": [
         {
@@ -406,6 +461,27 @@
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
         }
       ]
+    },
+    "ypUT1AOtjfwMOKMATACoD9RSvi8jY/YnYGi46CZ/6Q8=": {
+      "denomUnits": [
+        {
+          "denom": "test_atom",
+          "exponent": 6
+        },
+        {
+          "denom": "mtest_atom",
+          "exponent": 3
+        },
+        {
+          "denom": "utest_atom"
+        }
+      ],
+      "base": "utest_atom",
+      "display": "test_atom",
+      "symbol": "TestATOM",
+      "penumbraAssetId": {
+        "inner": "ypUT1AOtjfwMOKMATACoD9RSvi8jY/YnYGi46CZ/6Q8="
+      }
     }
   },
   "stakingAssetId": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=",
