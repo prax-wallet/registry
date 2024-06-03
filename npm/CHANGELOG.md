@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.6.0
+
+### Minor Changes
+
+- Add wtest_eth, test_sat, utest_atom, utest_osmo
+
 ## 7.5.1
 
 ### Patch Changes
