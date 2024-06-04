@@ -18,6 +18,7 @@ fn test_get_chain_configs_reads_configs_correctly() {
     let config_content = serde_json::json!({
         "chainId": "test-chain-1",
         "rpcs": [],
+        "frontends": [],
         "ibcConnections": [],
         "validators": [],
         "nativeAssets": [],
@@ -43,6 +44,7 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
     let config_content_1 = serde_json::json!({
         "chainId": "test-chain-1",
         "rpcs": [],
+        "frontends": [],
         "ibcConnections": [],
         "validators": [],
         "nativeAssets": [],
@@ -59,6 +61,7 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
     let config_content_2 = serde_json::json!({
         "chainId": "test-chain-2",
         "rpcs": [],
+        "frontends": [],
         "ibcConnections": [],
         "validators": [],
         "nativeAssets": [],
