@@ -46,6 +46,7 @@ impl From<IbcInput> for Chain {
 pub struct Registry {
     pub chain_id: String,
     pub ibc_connections: Vec<Chain>,
+    pub frontends: Vec<String>,
     pub rpcs: Vec<Rpc>,
     pub asset_by_id: BTreeMap<String, Metadata>, // Using a BTreeMap to have sorted (deterministic) output
     pub staking_asset_id: String,
@@ -143,6 +144,7 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
     Ok(Registry {
         chain_id: chain_config.chain_id,
         rpcs: chain_config.rpcs,
+        frontends: chain_config.frontends,
         ibc_connections: chain_config
             .ibc_connections
             .into_iter()

@@ -11,6 +11,9 @@
       ]
     }
   ],
+  "frontends": [
+    "https://app.testnet.penumbra.zone"
+  ],
   "ibcConnections": [
     {
       "displayName": "Osmosis",
