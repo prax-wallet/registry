@@ -31,6 +31,7 @@ const testRegistry: JsonRegistry = {
       ],
     },
   ],
+  frontends: ['https://app.testnet.penumbra.zone'],
   assetById: {
     'KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=': {
       denomUnits: [
@@ -86,23 +87,29 @@ const testRegistry: JsonRegistry = {
 };
 
 describe('Registry', () => {
-  it('get metadata successfully', () => {
+  it('gets metadata successfully', () => {
     const registry = new Registry(testRegistry);
     const usdcId = base64ToUint8Array('reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=');
     const res = registry.getMetadata(new AssetId({ inner: usdcId }));
     expect(res.base).toEqual('wtest_usd');
   });
 
-  it('throw when searching for metadata that does not exist', () => {
+  it('throws when searching for metadata that does not exist', () => {
     const registry = new Registry(testRegistry);
     const cubeId = base64ToUint8Array('6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws=');
     const getCubeMetadata = () => registry.getMetadata(new AssetId({ inner: cubeId }));
     expect(getCubeMetadata).toThrow();
   });
 
-  it('get all assets successfully', () => {
+  it('gets all assets successfully', () => {
     const registry = new Registry(testRegistry);
     const res = registry.getAllAssets();
     expect(res.length).toEqual(2);
+  });
+
+  it('frontends are accessible', () => {
+    const registry = new Registry(testRegistry);
+    expect(registry.frontends.length).toEqual(1);
+    expect(registry.frontends[0]).toEqual('https://app.testnet.penumbra.zone');
   });
 });

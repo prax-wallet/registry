@@ -12,6 +12,7 @@ use crate::error::AppResult;
 pub struct ChainConfig {
     pub chain_id: String,
     pub rpcs: Vec<Rpc>,
+    pub frontends: Vec<String>,
     pub validators: Vec<ValidatorInput>,
     pub ibc_connections: Vec<IbcInput>,
     pub native_assets: Vec<Metadata>,

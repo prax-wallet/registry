@@ -8,6 +8,7 @@ export interface JsonRegistry {
   chainId: string;
   ibcConnections: Chain[];
   rpcs: Rpc[];
+  frontends: string[];
   assetById: Record<Base64AssetId, JsonMetadata>;
   stakingAssetId: Base64AssetId;
   numeraires: Base64AssetId[];

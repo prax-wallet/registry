@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 7.7.0
+
+### Minor Changes
+
+- Add frontends to registry
+
 ## 7.6.0
 
 ### Minor Changes
