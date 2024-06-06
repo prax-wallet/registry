@@ -9,10 +9,15 @@ use crate::error::AppResult;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct ChainConfig {
-    pub chain_id: String,
+pub struct Globals {
     pub rpcs: Vec<Rpc>,
     pub frontends: Vec<String>,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ChainConfig {
+    pub chain_id: String,
     pub validators: Vec<ValidatorInput>,
     pub ibc_connections: Vec<IbcInput>,
     pub native_assets: Vec<Metadata>,
@@ -83,15 +88,9 @@ pub const LOCAL_INPUT_DIR: &str = "../../input";
 /// input/
 /// ├── penumbra-testnet-deimos-6.json
 /// └── mars-1.json
-pub fn get_chain_configs(registry_dir: &str, input_dir: &str) -> AppResult<Vec<ChainConfig>> {
-    // Clear registry output dir
-    let registry_dir = Path::new(registry_dir);
-    if registry_dir.exists() {
-        fs::remove_dir_all(registry_dir)?;
-    }
-    fs::create_dir_all(registry_dir)?;
-
-    let chain_configs = fs::read_dir(input_dir)?;
+pub fn get_chain_configs(input_dir: &str) -> AppResult<Vec<ChainConfig>> {
+    let input_path = Path::new(input_dir).join("chains");
+    let chain_configs = fs::read_dir(input_path)?;
     Ok(chain_configs
         .into_iter()
         .map(|input| -> AppResult<ChainConfig> {
@@ -108,4 +107,44 @@ pub fn get_chain_configs(registry_dir: &str, input_dir: &str) -> AppResult<Vec<C
             }
         })
         .collect())
+}
+
+// Validates globals and copies over to registry without change
+pub fn copy_globals(input_dir: &str, registry_dir: &str) -> AppResult<()> {
+    let input_path = Path::new(input_dir).join("globals.json");
+    let json_data = fs::read_to_string(input_path)?;
+    let globals: Globals = serde_json::from_str(&json_data)?;
+
+    // Write the validated JSON data to the output file
+    let output_path = Path::new(registry_dir).join("globals.json");
+    let output_json = serde_json::to_string_pretty(&globals)?;
+    fs::write(output_path, output_json)?;
+
+    Ok(())
+}
+
+// Deletes and re-creates registry dir
+pub fn reset_registry_dir(path: &str) -> AppResult<()> {
+    let dir_path = Path::new(path);
+
+    // Create the directory if it doesn't exist
+    if !dir_path.exists() {
+        fs::create_dir_all(dir_path)?;
+    }
+
+    // Remove all the contents of the directory
+    for entry in fs::read_dir(dir_path)? {
+        let entry_path = entry?.path();
+        if entry_path.is_dir() {
+            fs::remove_dir_all(entry_path)?;
+        } else {
+            fs::remove_file(entry_path)?;
+        }
+    }
+
+    // Create the "chains" directory inside
+    let chains_dir = dir_path.join("chains");
+    fs::create_dir(chains_dir)?;
+
+    Ok(())
 }

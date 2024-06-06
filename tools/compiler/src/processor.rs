@@ -12,7 +12,8 @@ use tokio::task;
 use crate::error::AppResult;
 use crate::github::assetlist_schema::AssetTypeAsset;
 use crate::parser::{
-    get_chain_configs, ChainConfig, IbcInput, Image, Rpc, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
+    copy_globals, get_chain_configs, reset_registry_dir, ChainConfig, IbcInput, Image,
+    LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
 };
 use crate::querier::query_github_assets;
 use crate::validator::generate_metadata_from_validators;
@@ -46,18 +47,18 @@ impl From<IbcInput> for Chain {
 pub struct Registry {
     pub chain_id: String,
     pub ibc_connections: Vec<Chain>,
-    pub frontends: Vec<String>,
-    pub rpcs: Vec<Rpc>,
     pub asset_by_id: BTreeMap<String, Metadata>, // Using a BTreeMap to have sorted (deterministic) output
     pub staking_asset_id: String,
     pub numeraires: Vec<String>,
 }
 
 pub async fn generate_registry() -> AppResult<()> {
-    let mut tasks = Vec::new();
+    reset_registry_dir(LOCAL_REGISTRY_DIR)?;
+    copy_globals(LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR)?;
 
     // Get local configs from /input directory
-    let chain_configs = get_chain_configs(LOCAL_REGISTRY_DIR, LOCAL_INPUT_DIR)?;
+    let chain_configs = get_chain_configs(LOCAL_INPUT_DIR)?;
+    let mut tasks = Vec::new();
     chain_configs.into_iter().for_each(|c| {
         // Async fetch metadata for ibc assets from cosmos registry
         let task = task::spawn(async move { process_chain_config(c).await });
@@ -68,7 +69,7 @@ pub async fn generate_registry() -> AppResult<()> {
     for task in tasks {
         let registry = task.await??;
         let file_name = format!("{}.json", registry.chain_id);
-        let output_path = Path::new(LOCAL_REGISTRY_DIR).join(file_name);
+        let output_path = Path::new(LOCAL_REGISTRY_DIR).join("chains").join(file_name);
         let output_json = serde_json::to_string_pretty(&registry)?;
         fs::write(output_path, output_json)?;
     }
@@ -143,8 +144,6 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
 
     Ok(Registry {
         chain_id: chain_config.chain_id,
-        rpcs: chain_config.rpcs,
-        frontends: chain_config.frontends,
         ibc_connections: chain_config
             .ibc_connections
             .into_iter()

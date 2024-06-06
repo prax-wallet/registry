@@ -651,8 +651,8 @@ dependencies = [
 
 [[package]]
 name = "decaf377-fmd"
-version = "0.77.1"
-source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.1#13f81d0792ffd1b03b7ac169544f1d3663013272"
+version = "0.77.2"
+source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.2#76aab4b843f47b7ce9d7177196fdd2495ccf7bfa"
 dependencies = [
  "ark-ff",
  "ark-serialize",
@@ -2042,8 +2042,8 @@ dependencies = [
 
 [[package]]
 name = "penumbra-asset"
-version = "0.77.1"
-source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.1#13f81d0792ffd1b03b7ac169544f1d3663013272"
+version = "0.77.2"
+source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.2#76aab4b843f47b7ce9d7177196fdd2495ccf7bfa"
 dependencies = [
  "anyhow",
  "ark-ff",
@@ -2080,8 +2080,8 @@ dependencies = [
 
 [[package]]
 name = "penumbra-num"
-version = "0.77.1"
-source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.1#13f81d0792ffd1b03b7ac169544f1d3663013272"
+version = "0.77.2"
+source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.2#76aab4b843f47b7ce9d7177196fdd2495ccf7bfa"
 dependencies = [
  "anyhow",
  "ark-ff",
@@ -2116,8 +2116,8 @@ dependencies = [
 
 [[package]]
 name = "penumbra-proto"
-version = "0.77.1"
-source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.1#13f81d0792ffd1b03b7ac169544f1d3663013272"
+version = "0.77.2"
+source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.2#76aab4b843f47b7ce9d7177196fdd2495ccf7bfa"
 dependencies = [
  "anyhow",
  "async-trait",

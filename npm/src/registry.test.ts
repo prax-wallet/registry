@@ -20,18 +20,6 @@ const testRegistry: JsonRegistry = {
       ],
     },
   ],
-  rpcs: [
-    {
-      name: 'Penumbra Labs Testnet RPC',
-      url: 'https://grpc.testnet.penumbra.zone',
-      images: [
-        {
-          png: 'https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png',
-        },
-      ],
-    },
-  ],
-  frontends: ['https://app.testnet.penumbra.zone'],
   assetById: {
     'KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=': {
       denomUnits: [
@@ -105,11 +93,5 @@ describe('Registry', () => {
     const registry = new Registry(testRegistry);
     const res = registry.getAllAssets();
     expect(res.length).toEqual(2);
-  });
-
-  it('frontends are accessible', () => {
-    const registry = new Registry(testRegistry);
-    expect(registry.frontends.length).toEqual(1);
-    expect(registry.frontends[0]).toEqual('https://app.testnet.penumbra.zone');
   });
 });

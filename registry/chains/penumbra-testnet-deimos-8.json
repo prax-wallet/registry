@@ -26,20 +26,6 @@
       ]
     }
   ],
-  "frontends": [
-    "https://app.testnet.penumbra.zone"
-  ],
-  "rpcs": [
-    {
-      "name": "Penumbra Labs Testnet RPC",
-      "url": "https://grpc.testnet.penumbra.zone",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    }
-  ],
   "assetById": {
     "/5AHh95RAybBbUhQ5zXMWCvstH4rRK/5KMVIVGQltAw=": {
       "denomUnits": [

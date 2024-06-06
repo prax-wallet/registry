@@ -1,5 +1,5 @@
 {
-  "chainId": "penumbra-testnet-deimos-7",
+  "chainId": "penumbra-testnet-deimos-6",
   "ibcConnections": [
     {
       "addressPrefix": "osmo",
@@ -22,20 +22,6 @@
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/2ca39d0e4eaf3431cca13991948e099801f02e46/noble/images/stake.svg"
-        }
-      ]
-    }
-  ],
-  "frontends": [
-    "https://app.testnet.penumbra.zone"
-  ],
-  "rpcs": [
-    {
-      "name": "Penumbra Labs Testnet RPC",
-      "url": "https://grpc.testnet.penumbra.zone",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
         }
       ]
     }
