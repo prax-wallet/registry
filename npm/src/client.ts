@@ -1,6 +1,6 @@
 import { deriveTestnetChainIdFromPreview, isTestnetPreviewChainId } from './utils/testnet-parser';
 import { Registry } from './registry';
-import { allJsonRegistries } from './json';
+import { allJsonRegistries, registryGlobals, RegistryGlobals } from './json';
 
 export class ChainRegistryClient {
   get(chainId: string): Registry {
@@ -11,6 +11,10 @@ export class ChainRegistryClient {
     }
 
     return new Registry(jsonRegistry);
+  }
+
+  globals(): RegistryGlobals {
+    return registryGlobals;
   }
 
   version() {

@@ -36,8 +36,6 @@ export interface Image {
 export class Registry {
   public readonly chainId: string;
   public readonly ibcConnections: Chain[];
-  public readonly rpcs: Rpc[];
-  public readonly frontends: string[];
   public readonly stakingAssetId: AssetId;
   public readonly numeraires: AssetId[];
 
@@ -46,8 +44,6 @@ export class Registry {
   constructor(r: JsonRegistry) {
     this.chainId = r.chainId;
     this.ibcConnections = r.ibcConnections;
-    this.rpcs = r.rpcs;
-    this.frontends = r.frontends;
     this.assetById = mapObjectValues(r.assetById, jsonMetadata =>
       Metadata.fromJson(jsonMetadata as unknown as JsonValue),
     );

@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 8.0.0
+
+### Major Changes
+
+- New API for global rpcs & frontends
+
 ## 7.7.0
 
 ### Minor Changes

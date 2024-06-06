@@ -1,25 +1,11 @@
 {
-  "chainId": "penumbra-testnet-deimos-8",
-  "rpcs": [
-    {
-      "name": "Penumbra Labs Testnet RPC",
-      "url": "https://grpc.testnet.penumbra.zone",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    }
-  ],
-  "frontends": [
-    "https://app.testnet.penumbra.zone"
-  ],
+  "chainId": "penumbra-testnet-deimos-6",
   "ibcConnections": [
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
-      "channelId": "channel-5",
-      "counterpartyChannelId": "channel-8007",
+      "channelId": "channel-4",
+      "counterpartyChannelId": "channel-7780",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
@@ -31,8 +17,8 @@
     {
       "displayName": "Noble",
       "chainId": "grand-1",
-      "channelId": "channel-6",
-      "counterpartyChannelId": "channel-176",
+      "channelId": "channel-3",
+      "counterpartyChannelId": "channel-164",
       "addressPrefix": "noble",
       "cosmosRegistryDir": "testnets/nobletestnet",
       "images": [
@@ -42,35 +28,7 @@
       ]
     }
   ],
-  "validators": [
-    {
-      "name": "Penumbra Labs CI 1",
-      "base": "udelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    },
-    {
-      "name": "Penumbra Labs CI 2",
-      "base": "udelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    },
-    {
-      "name": "Starling Staking",
-      "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
-      "images": [
-        {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
-        }
-      ]
-    }
-  ],
+  "validators": [],
   "nativeAssets": [
     {
       "denomUnits": [
@@ -117,12 +75,7 @@
       "symbol": "GM",
       "penumbraAssetId": {
         "inner": "HW2Eq3UZVSBttoUwUi/MUtE7rr2UU7/UH500byp7OAc="
-      },
-      "images": [
-        {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/full-moon-face.svg"
-        }
-      ]
+      }
     },
     {
       "denomUnits": [
@@ -143,12 +96,7 @@
       "symbol": "GN",
       "penumbraAssetId": {
         "inner": "nwPDkQq3OvLnBwGTD+nmv1Ifb2GEmFCgNHrU++9BsRE="
-      },
-      "images": [
-        {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/new-moon-face.svg"
-        }
-      ]
+      }
     },
     {
       "denomUnits": [
@@ -206,82 +154,58 @@
     {
       "denomUnits": [
         {
-          "denom": "test_eth",
-          "exponent": 18
-        },
-        {
-          "denom": "wtest_eth"
-        }
-      ],
-      "base": "wtest_eth",
-      "display": "test_eth",
-      "symbol": "TestETH",
-      "penumbraAssetId": {
-        "inner": "HLkKbVfA72oQaMdYFroWQ1qoSyl/KLHZiOMJhL2y9w0="
-      }
-    },
-    {
-      "denomUnits": [
-        {
-          "denom": "test_btc",
-          "exponent": 8
-        },
-        {
-          "denom": "test_sat"
-        }
-      ],
-      "base": "test_sat",
-      "display": "test_btc",
-      "symbol": "TestBTC",
-      "penumbraAssetId": {
-        "inner": "o2gZdbhCH70Ry+7iBhkSeHC/PB1LZhgkn7LHC2kEhQc="
-      }
-    },
-    {
-      "denomUnits": [
-        {
-          "denom": "test_atom",
+          "denom": "delegation_penumbravalid18nkv0r3sfp2seleq6du5kt3mhfce3k6cqm77kj2e7mhakmyw9v9qx42a20",
           "exponent": 6
         },
         {
-          "denom": "mtest_atom",
+          "denom": "mdelegation_penumbravalid18nkv0r3sfp2seleq6du5kt3mhfce3k6cqm77kj2e7mhakmyw9v9qx42a20",
           "exponent": 3
         },
         {
-          "denom": "utest_atom"
+          "denom": "udelegation_penumbravalid18nkv0r3sfp2seleq6du5kt3mhfce3k6cqm77kj2e7mhakmyw9v9qx42a20"
         }
       ],
-      "base": "utest_atom",
-      "display": "test_atom",
-      "symbol": "TestATOM",
+      "base": "udelegation_penumbravalid18nkv0r3sfp2seleq6du5kt3mhfce3k6cqm77kj2e7mhakmyw9v9qx42a20",
+      "display": "delegation_penumbravalid18nkv0r3sfp2seleq6du5kt3mhfce3k6cqm77kj2e7mhakmyw9v9qx42a20",
       "penumbraAssetId": {
-        "inner": "ypUT1AOtjfwMOKMATACoD9RSvi8jY/YnYGi46CZ/6Q8="
-      }
+        "inner": "CwpUYIdQ9H5Dnf3oQ1l7ISeVMVahWbVNNvMA0dBSdwI="
+      },
+      "symbol": "Delegation (Penumbra Labs CI 1)",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
+        }
+      ]
     },
     {
       "denomUnits": [
         {
-          "denom": "test_osmo",
+          "denom": "delegation_penumbravalid1qfxldejdhanmu302kcn5fm98q5d7d2upfhzqhaz95hyjdn82pqysqfq050",
           "exponent": 6
         },
         {
-          "denom": "mtest_osmo",
+          "denom": "mdelegation_penumbravalid1qfxldejdhanmu302kcn5fm98q5d7d2upfhzqhaz95hyjdn82pqysqfq050",
           "exponent": 3
         },
         {
-          "denom": "utest_osmo"
+          "denom": "udelegation_penumbravalid1qfxldejdhanmu302kcn5fm98q5d7d2upfhzqhaz95hyjdn82pqysqfq050"
         }
       ],
-      "base": "utest_osmo",
-      "display": "test_osmo",
-      "symbol": "TestOSMO",
+      "base": "udelegation_penumbravalid1qfxldejdhanmu302kcn5fm98q5d7d2upfhzqhaz95hyjdn82pqysqfq050",
+      "display": "delegation_penumbravalid1qfxldejdhanmu302kcn5fm98q5d7d2upfhzqhaz95hyjdn82pqysqfq050",
       "penumbraAssetId": {
-        "inner": "pmpygqUf4DL+z849rGPpudpdK/+FAv8qQ01U2C73kAw="
-      }
+        "inner": "qUn70lKZ3qQlCT5gj5sakux4daiTPKj0AN6ZuuFldQU="
+      },
+      "symbol": "Delegation (Penumbra Labs CI 2)",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
+        }
+      ]
     }
   ],
   "canonicalNumeraires": [
     "wtest_usd",
-    "transfer/channel-6/uusdc"
+    "transfer/channel-3/uusdc"
   ]
 }
