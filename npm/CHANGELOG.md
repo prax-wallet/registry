@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 8.0.1
+
+### Patch Changes
+
+- Update testnet to new noble/osmosis ibc channels
+
 ## 8.0.0
 
 ### Major Changes

@@ -4,8 +4,8 @@
     {
       "addressPrefix": "osmo",
       "chainId": "osmo-test-5",
-      "channelId": "channel-5",
-      "counterpartyChannelId": "channel-8007",
+      "channelId": "channel-8",
+      "counterpartyChannelId": "channel-8104",
       "displayName": "Osmosis",
       "images": [
         {
@@ -16,8 +16,8 @@
     {
       "addressPrefix": "noble",
       "chainId": "grand-1",
-      "channelId": "channel-6",
-      "counterpartyChannelId": "channel-176",
+      "channelId": "channel-7",
+      "counterpartyChannelId": "channel-182",
       "displayName": "Noble",
       "images": [
         {
@@ -53,28 +53,27 @@
         }
       ]
     },
-    "4r8PcN/HkX0W/eeEKFUQijIESu8YEC8Fec+h8qO1rgU=": {
-      "description": "The native token of Osmosis",
+    "/H79tg9Fd3Pm2SNy6vJVf+dw2ozb3St1+g+oUsgfPQE=": {
       "denomUnits": [
         {
-          "denom": "transfer/channel-5/uosmo"
+          "denom": "transfer/channel-8/uion"
         },
         {
-          "denom": "transfer/channel-5/osmo",
+          "denom": "transfer/channel-8/ion",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-5/uosmo",
-      "display": "transfer/channel-5/osmo",
-      "name": "Osmosis Testnet",
-      "symbol": "OSMO",
+      "base": "transfer/channel-8/uion",
+      "display": "transfer/channel-8/ion",
+      "name": "Ion",
+      "symbol": "ION",
       "penumbraAssetId": {
-        "inner": "4r8PcN/HkX0W/eeEKFUQijIESu8YEC8Fec+h8qO1rgU="
+        "inner": "/H79tg9Fd3Pm2SNy6vJVf+dw2ozb3St1+g+oUsgfPQE="
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
         }
       ]
     },
@@ -91,48 +90,29 @@
         "inner": "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws="
       }
     },
-    "DOqaAC7a90KP3405fvLRG4rumqMB4tzKa7XsU3CcdxE=": {
+    "A/8PdbaWqFds9NiYzmAN75SehGpkLwr7tgoVmwaIVgg=": {
       "description": "USD Coin",
       "denomUnits": [
         {
-          "denom": "transfer/channel-6/uusdc"
+          "denom": "transfer/channel-7/uusdc"
         },
         {
-          "denom": "transfer/channel-6/usdc",
+          "denom": "transfer/channel-7/usdc",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-6/uusdc",
-      "display": "transfer/channel-6/usdc",
+      "base": "transfer/channel-7/uusdc",
+      "display": "transfer/channel-7/usdc",
       "name": "USD Coin",
       "symbol": "USDC",
       "penumbraAssetId": {
-        "inner": "DOqaAC7a90KP3405fvLRG4rumqMB4tzKa7XsU3CcdxE="
+        "inner": "A/8PdbaWqFds9NiYzmAN75SehGpkLwr7tgoVmwaIVgg="
       },
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg"
         }
       ]
-    },
-    "H0dAkstiWmRZIIu8BM8IQioPVl7i+isElLWajNOntQ8=": {
-      "description": "The controlled staking asset for Noble Chain",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-6/ustake"
-        },
-        {
-          "denom": "transfer/channel-6/stake",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-6/ustake",
-      "display": "transfer/channel-6/stake",
-      "name": "Stake",
-      "symbol": "STAKE",
-      "penumbraAssetId": {
-        "inner": "H0dAkstiWmRZIIu8BM8IQioPVl7i+isElLWajNOntQ8="
-      }
     },
     "HLkKbVfA72oQaMdYFroWQ1qoSyl/KLHZiOMJhL2y9w0=": {
       "denomUnits": [
@@ -177,6 +157,25 @@
         }
       ]
     },
+    "KOzSyroXl6g63ADPTVMW+AEc2rvFMld69+5ZblsX0xA=": {
+      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/ulove"
+        },
+        {
+          "denom": "transfer/channel-7/love",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/ulove",
+      "display": "transfer/channel-7/love",
+      "name": "Love",
+      "symbol": "LOVE",
+      "penumbraAssetId": {
+        "inner": "KOzSyroXl6g63ADPTVMW+AEc2rvFMld69+5ZblsX0xA="
+      }
+    },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "denomUnits": [
         {
@@ -203,70 +202,72 @@
         }
       ]
     },
-    "M9YkqCHcD0SLIb0phwFWRAWXF10ovNe8DcQTiszO4QY=": {
+    "McT0xdxc1RltFaYG+hQ7txt89LJMSyu9JFVV0mOpQBI=": {
+      "description": "The native token of Osmosis",
       "denomUnits": [
         {
-          "denom": "transfer/channel-5/uion"
+          "denom": "transfer/channel-8/uosmo"
         },
         {
-          "denom": "transfer/channel-5/ion",
+          "denom": "transfer/channel-8/osmo",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-5/uion",
-      "display": "transfer/channel-5/ion",
-      "name": "Ion",
-      "symbol": "ION",
+      "base": "transfer/channel-8/uosmo",
+      "display": "transfer/channel-8/osmo",
+      "name": "Osmosis Testnet",
+      "symbol": "OSMO",
       "penumbraAssetId": {
-        "inner": "M9YkqCHcD0SLIb0phwFWRAWXF10ovNe8DcQTiszO4QY="
+        "inner": "McT0xdxc1RltFaYG+hQ7txt89LJMSyu9JFVV0mOpQBI="
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
       ]
     },
-    "Pc1lr9eCdoKTkBJCCia9egZdG/qGdMg4WFDhWmXr7Q8=": {
-      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
+    "W6xo3Dww1gT85lSP0GvUl3lE1IYWn7J4EIbW1acE3g4=": {
+      "description": "The controlled staking asset for Noble Chain",
       "denomUnits": [
         {
-          "denom": "transfer/channel-6/ulove"
+          "denom": "transfer/channel-7/ustake"
         },
         {
-          "denom": "transfer/channel-6/love",
+          "denom": "transfer/channel-7/stake",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-6/ulove",
-      "display": "transfer/channel-6/love",
-      "name": "Love",
-      "symbol": "LOVE",
+      "base": "transfer/channel-7/ustake",
+      "display": "transfer/channel-7/stake",
+      "name": "Stake",
+      "symbol": "STAKE",
       "penumbraAssetId": {
-        "inner": "Pc1lr9eCdoKTkBJCCia9egZdG/qGdMg4WFDhWmXr7Q8="
+        "inner": "W6xo3Dww1gT85lSP0GvUl3lE1IYWn7J4EIbW1acE3g4="
       }
     },
-    "X0Q9Q0l8kegfiXxSU4PULHulV/36XcWyFk8LgrW19gI=": {
+    "c+PoM4Os9JFrdS8Ug+O1bhWaedk96Xol3+tdB3pEYgE=": {
+      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
       "denomUnits": [
         {
-          "denom": "transfer/channel-5/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
+          "denom": "transfer/channel-7/uusdlr"
         },
         {
-          "denom": "transfer/channel-5/willyz",
+          "denom": "transfer/channel-7/usdlr",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-5/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
-      "display": "transfer/channel-5/willyz",
-      "name": "Willyz",
-      "symbol": "WILLYZ",
+      "base": "transfer/channel-7/uusdlr",
+      "display": "transfer/channel-7/usdlr",
+      "name": "USDLR by Stable",
+      "symbol": "USDLR",
       "penumbraAssetId": {
-        "inner": "X0Q9Q0l8kegfiXxSU4PULHulV/36XcWyFk8LgrW19gI="
+        "inner": "c+PoM4Os9JFrdS8Ug+O1bhWaedk96Xol3+tdB3pEYgE="
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
         }
       ]
     },
@@ -293,31 +294,6 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    },
-    "iU8SGp8cljkRWVH6MJmKG0pH1MEO4LQpSESJKuWsFQY=": {
-      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-6/uusdlr"
-        },
-        {
-          "denom": "transfer/channel-6/usdlr",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-6/uusdlr",
-      "display": "transfer/channel-6/usdlr",
-      "name": "USDLR by Stable",
-      "symbol": "USDLR",
-      "penumbraAssetId": {
-        "inner": "iU8SGp8cljkRWVH6MJmKG0pH1MEO4LQpSESJKuWsFQY="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
         }
       ]
     },
@@ -451,6 +427,30 @@
         }
       ]
     },
+    "wkjtBCK1PQo0/4wbS0zhq9MVDP2DWFaJHxT1M5cI+wo=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
+        },
+        {
+          "denom": "transfer/channel-8/willyz",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
+      "display": "transfer/channel-8/willyz",
+      "name": "Willyz",
+      "symbol": "WILLYZ",
+      "penumbraAssetId": {
+        "inner": "wkjtBCK1PQo0/4wbS0zhq9MVDP2DWFaJHxT1M5cI+wo="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
+        }
+      ]
+    },
     "ypUT1AOtjfwMOKMATACoD9RSvi8jY/YnYGi46CZ/6Q8=": {
       "denomUnits": [
         {
@@ -476,6 +476,6 @@
   "stakingAssetId": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=",
   "numeraires": [
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=",
-    "DOqaAC7a90KP3405fvLRG4rumqMB4tzKa7XsU3CcdxE="
+    "A/8PdbaWqFds9NiYzmAN75SehGpkLwr7tgoVmwaIVgg="
   ]
 }
