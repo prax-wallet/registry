@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 9.1.1
+
+### Patch Changes
+
+- Fix testnet-preview parsing
+
 ## 9.1.0
 
 ### Minor Changes
