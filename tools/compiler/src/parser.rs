@@ -6,10 +6,11 @@ use penumbra_proto::core::asset::v1::AssetImage;
 use serde::{Deserialize, Serialize};
 
 use crate::error::AppResult;
+use crate::processor::Globals;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct Globals {
+pub struct GlobalsInput {
     pub rpcs: Vec<Rpc>,
     pub frontends: Vec<String>,
 }
@@ -113,11 +114,12 @@ pub fn get_chain_configs(input_dir: &str) -> AppResult<Vec<ChainConfig>> {
 pub fn copy_globals(input_dir: &str, registry_dir: &str) -> AppResult<()> {
     let input_path = Path::new(input_dir).join("globals.json");
     let json_data = fs::read_to_string(input_path)?;
-    let globals: Globals = serde_json::from_str(&json_data)?;
+    let globals_input: GlobalsInput = serde_json::from_str(&json_data)?;
+    let globals: Globals = globals_input.try_into()?;
 
     // Write the validated JSON data to the output file
     let output_path = Path::new(registry_dir).join("globals.json");
-    let output_json = serde_json::to_string_pretty(&globals)?;
+    let output_json = serde_json::to_string_pretty::<Globals>(&globals)?;
     fs::write(output_path, output_json)?;
 
     Ok(())

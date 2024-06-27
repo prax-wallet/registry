@@ -3,20 +3,19 @@ use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
 
+use crate::error::{AppError, AppResult};
+use crate::github::assetlist_schema::AssetTypeAsset;
+use crate::parser::{
+    copy_globals, get_chain_configs, reset_registry_dir, ChainConfig, GlobalsInput, IbcInput,
+    Image, Rpc, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
+};
+use crate::querier::query_github_assets;
+use crate::validator::generate_metadata_from_validators;
 use penumbra_asset::asset::{Id, Metadata};
 use penumbra_asset::STAKING_TOKEN_ASSET_ID;
 use penumbra_proto::penumbra::core::asset::v1 as pb;
 use serde::{Deserialize, Serialize};
 use tokio::task;
-
-use crate::error::AppResult;
-use crate::github::assetlist_schema::AssetTypeAsset;
-use crate::parser::{
-    copy_globals, get_chain_configs, reset_registry_dir, ChainConfig, IbcInput, Image,
-    LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
-};
-use crate::querier::query_github_assets;
-use crate::validator::generate_metadata_from_validators;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -44,11 +43,30 @@ impl From<IbcInput> for Chain {
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
+pub struct Globals {
+    pub rpcs: Vec<Rpc>,
+    pub frontends: Vec<String>,
+    pub staking_asset_id: String,
+}
+
+impl TryFrom<GlobalsInput> for Globals {
+    type Error = AppError;
+
+    fn try_from(g: GlobalsInput) -> AppResult<Self> {
+        Ok(Globals {
+            rpcs: g.rpcs,
+            frontends: g.frontends,
+            staking_asset_id: base64_id(&STAKING_TOKEN_ASSET_ID)?,
+        })
+    }
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Registry {
     pub chain_id: String,
     pub ibc_connections: Vec<Chain>,
     pub asset_by_id: BTreeMap<String, Metadata>, // Using a BTreeMap to have sorted (deterministic) output
-    pub staking_asset_id: String,
     pub numeraires: Vec<String>,
 }
 
@@ -157,7 +175,6 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
                 Ok((id, m))
             })
             .collect::<AppResult<_>>()?,
-        staking_asset_id: base64_id(&STAKING_TOKEN_ASSET_ID)?,
         numeraires: all_metadata
             .into_iter()
             .filter(|metadata| {

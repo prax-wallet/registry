@@ -1,4 +1,5 @@
-use penumbra_registry::parser::{copy_globals, Globals, Rpc};
+use penumbra_registry::parser::{copy_globals, GlobalsInput, Rpc};
+use penumbra_registry::processor::Globals;
 use std::fs::{self, File};
 use std::io::Write;
 use std::path::Path;
@@ -14,7 +15,7 @@ fn create_file_with_content(dir: &Path, file_name: &str, content: &str) {
 fn test_successful_copy() {
     let temp_input_dir = TempDir::new("").unwrap();
     let temp_output_dir = TempDir::new("").unwrap();
-    let globals = Globals {
+    let globals = GlobalsInput {
         rpcs: vec![Rpc {
             name: "cybernetics".to_string(),
             url: "http://api.zone".to_string(),
@@ -38,7 +39,12 @@ fn test_successful_copy() {
     let output_contents = fs::read_to_string(output_path).unwrap();
     let output_globals: Globals = serde_json::from_str(&output_contents).unwrap();
 
-    assert_eq!(output_globals, globals);
+    assert_eq!(output_globals.frontends, globals.frontends);
+    assert_eq!(output_globals.rpcs, globals.rpcs);
+    assert_eq!(
+        output_globals.staking_asset_id,
+        "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=".to_string()
+    );
 }
 
 #[test]

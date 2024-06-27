@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 9.0.0
+
+### Major Changes
+
+- Add stakingAssetId to globals
+
 ## 8.0.1
 
 ### Patch Changes
