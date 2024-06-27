@@ -114,6 +114,31 @@
         }
       ]
     },
+    "HBbZz97zUT7haWR5vaS+IlBfPdGXJPik98UMa+vnTgQ=": {
+      "description": "Ondo US Dollar Yield",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/ausdy"
+        },
+        {
+          "denom": "transfer/channel-7/usdy",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/ausdy",
+      "display": "transfer/channel-7/usdy",
+      "name": "Ondo US Dollar Yield",
+      "symbol": "USDY",
+      "penumbraAssetId": {
+        "inner": "HBbZz97zUT7haWR5vaS+IlBfPdGXJPik98UMa+vnTgQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg"
+        }
+      ]
+    },
     "HLkKbVfA72oQaMdYFroWQ1qoSyl/KLHZiOMJhL2y9w0=": {
       "denomUnits": [
         {
@@ -245,31 +270,6 @@
       "penumbraAssetId": {
         "inner": "W6xo3Dww1gT85lSP0GvUl3lE1IYWn7J4EIbW1acE3g4="
       }
-    },
-    "c+PoM4Os9JFrdS8Ug+O1bhWaedk96Xol3+tdB3pEYgE=": {
-      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-7/uusdlr"
-        },
-        {
-          "denom": "transfer/channel-7/usdlr",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-7/uusdlr",
-      "display": "transfer/channel-7/usdlr",
-      "name": "USDLR by Stable",
-      "symbol": "USDLR",
-      "penumbraAssetId": {
-        "inner": "c+PoM4Os9JFrdS8Ug+O1bhWaedk96Xol3+tdB3pEYgE="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
-        }
-      ]
     },
     "eeD8X4rWeMaC3Oqdw8tyU6YBLryAYCBLwEbiIKoo5Qc=": {
       "denomUnits": [
@@ -473,7 +473,6 @@
       }
     }
   },
-  "stakingAssetId": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=",
   "numeraires": [
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=",
     "A/8PdbaWqFds9NiYzmAN75SehGpkLwr7tgoVmwaIVgg="

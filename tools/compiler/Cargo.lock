@@ -651,8 +651,8 @@ dependencies = [
 
 [[package]]
 name = "decaf377-fmd"
-version = "0.77.2"
-source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.2#76aab4b843f47b7ce9d7177196fdd2495ccf7bfa"
+version = "0.78.0"
+source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.78.0#14959350abcb8cfbf33f9aedc7463fccfd8e3f9f"
 dependencies = [
  "ark-ff",
  "ark-serialize",
@@ -1159,6 +1159,23 @@ dependencies = [
  "smallvec",
  "tokio",
  "want",
+]
+
+[[package]]
+name = "hyper-rustls"
+version = "0.27.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5ee4be2c948921a1a5320b629c4193916ed787a7f7f293fd3f7f5a6c9de74155"
+dependencies = [
+ "futures-util",
+ "http",
+ "hyper",
+ "hyper-util",
+ "rustls",
+ "rustls-pki-types",
+ "tokio",
+ "tokio-rustls",
+ "tower-service",
 ]
 
 [[package]]
@@ -2042,8 +2059,8 @@ dependencies = [
 
 [[package]]
 name = "penumbra-asset"
-version = "0.77.2"
-source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.2#76aab4b843f47b7ce9d7177196fdd2495ccf7bfa"
+version = "0.78.0"
+source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.78.0#14959350abcb8cfbf33f9aedc7463fccfd8e3f9f"
 dependencies = [
  "anyhow",
  "ark-ff",
@@ -2080,8 +2097,8 @@ dependencies = [
 
 [[package]]
 name = "penumbra-num"
-version = "0.77.2"
-source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.2#76aab4b843f47b7ce9d7177196fdd2495ccf7bfa"
+version = "0.78.0"
+source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.78.0#14959350abcb8cfbf33f9aedc7463fccfd8e3f9f"
 dependencies = [
  "anyhow",
  "ark-ff",
@@ -2116,8 +2133,8 @@ dependencies = [
 
 [[package]]
 name = "penumbra-proto"
-version = "0.77.2"
-source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.77.2#76aab4b843f47b7ce9d7177196fdd2495ccf7bfa"
+version = "0.78.0"
+source = "git+https://github.com/penumbra-zone/penumbra.git?tag=v0.78.0#14959350abcb8cfbf33f9aedc7463fccfd8e3f9f"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -2560,9 +2577,9 @@ dependencies = [
 
 [[package]]
 name = "reqwest"
-version = "0.12.4"
+version = "0.12.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "566cafdd92868e0939d3fb961bd0dc25fcfaaed179291093b3d43e6b3150ea10"
+checksum = "c7d6d2a27d57148378eb5e111173f4276ad26340ecc5c49a4a2152167a2d6a37"
 dependencies = [
  "base64 0.22.0",
  "bytes",
@@ -2574,6 +2591,7 @@ dependencies = [
  "http-body",
  "http-body-util",
  "hyper",
+ "hyper-rustls",
  "hyper-tls",
  "hyper-util",
  "ipnet",
@@ -2598,6 +2616,21 @@ dependencies = [
  "wasm-bindgen-futures",
  "web-sys",
  "winreg",
+]
+
+[[package]]
+name = "ring"
+version = "0.17.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c17fa4cb658e3583423e915b9f3acc01cceaee1860e33d59ebae66adc3a2dc0d"
+dependencies = [
+ "cc",
+ "cfg-if",
+ "getrandom",
+ "libc",
+ "spin",
+ "untrusted",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -2644,6 +2677,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "rustls"
+version = "0.23.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ebbbdb961df0ad3f2652da8f3fdc4b36122f568f968f45ad3316f26c025c677b"
+dependencies = [
+ "once_cell",
+ "rustls-pki-types",
+ "rustls-webpki",
+ "subtle",
+ "zeroize",
+]
+
+[[package]]
 name = "rustls-pemfile"
 version = "2.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2658,6 +2704,17 @@ name = "rustls-pki-types"
 version = "1.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ecd36cc4259e3e4514335c4a138c6b43171a8d61d8f5c9348f9fc7529416f247"
+
+[[package]]
+name = "rustls-webpki"
+version = "0.102.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f3bce581c0dd41bce533ce695a1437fa16a7ab5ac3ccfa99fe1a620a7885eabf"
+dependencies = [
+ "ring",
+ "rustls-pki-types",
+ "untrusted",
+]
 
 [[package]]
 name = "ryu"
@@ -2787,9 +2844,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.117"
+version = "1.0.118"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "455182ea6142b14f93f4bc5320a2b31c1f266b66a4a5c858b013302a5d8cbfc3"
+checksum = "d947f6b3163d8857ea16c4fa0dd4840d52f3041039a85decd46867eb1abef2e4"
 dependencies = [
  "itoa",
  "ryu",
@@ -2933,6 +2990,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "spin"
+version = "0.9.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6980e8d7511241f8acf4aebddbb1ff938df5eebe98691418c4468d0b72a96a67"
+
+[[package]]
 name = "spki"
 version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2999,9 +3062,9 @@ dependencies = [
 
 [[package]]
 name = "sync_wrapper"
-version = "0.1.2"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2047c6ded9c721764247e62cd3b03c09ffc529b2ba5b10ec482ae507a4a70160"
+checksum = "a7065abeca94b6a8a577f9bd45aa0867a2238b74e8eb67cf10d492bc39351394"
 
 [[package]]
 name = "system-configuration"
@@ -3229,6 +3292,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "tokio-rustls"
+version = "0.26.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0c7bc40d0e5a97695bb96e27995cd3a08538541b0a846f65bba7a359f36700d4"
+dependencies = [
+ "rustls",
+ "rustls-pki-types",
+ "tokio",
+]
+
+[[package]]
 name = "tokio-util"
 version = "0.7.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3438,6 +3512,12 @@ name = "unicode-xid"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc72304796d0818e357ead4e000d19c9c174ab23dc11093ac919054d20a6a7fc"
+
+[[package]]
+name = "untrusted"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8ecb6da28b8a351d773b68d5825ac39017e680750f980f3a1a85cd8dd28a47c1"
 
 [[package]]
 name = "url"

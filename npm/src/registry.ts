@@ -36,7 +36,6 @@ export interface Image {
 export class Registry {
   public readonly chainId: string;
   public readonly ibcConnections: Chain[];
-  public readonly stakingAssetId: AssetId;
   public readonly numeraires: AssetId[];
 
   private readonly assetById: Record<Base64AssetId, Metadata>;
@@ -47,7 +46,6 @@ export class Registry {
     this.assetById = mapObjectValues(r.assetById, jsonMetadata =>
       Metadata.fromJson(jsonMetadata as unknown as JsonValue),
     );
-    this.stakingAssetId = new AssetId({ inner: base64ToUint8Array(r.stakingAssetId) });
     this.numeraires = r.numeraires.map(a => new AssetId({ inner: base64ToUint8Array(a) }));
   }
 

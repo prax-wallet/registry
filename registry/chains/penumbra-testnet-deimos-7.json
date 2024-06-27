@@ -27,31 +27,6 @@
     }
   ],
   "assetById": {
-    "+jDercxZxs90BjC91PrWyA53/p7uN3ZcSJj3N0mHjhI=": {
-      "description": "USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-3/uusdlr"
-        },
-        {
-          "denom": "transfer/channel-3/usdlr",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-3/uusdlr",
-      "display": "transfer/channel-3/usdlr",
-      "name": "USDLR by Stable",
-      "symbol": "USDLR",
-      "penumbraAssetId": {
-        "inner": "+jDercxZxs90BjC91PrWyA53/p7uN3ZcSJj3N0mHjhI="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg"
-        }
-      ]
-    },
     "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws=": {
       "denomUnits": [
         {
@@ -203,6 +178,31 @@
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
+        }
+      ]
+    },
+    "VDuTDzoFOg4mMrNeyqCEC1L4lSjtJUJ5jJ2D6SQsRgM=": {
+      "description": "Ondo US Dollar Yield",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-3/ausdy"
+        },
+        {
+          "denom": "transfer/channel-3/usdy",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-3/ausdy",
+      "display": "transfer/channel-3/usdy",
+      "name": "Ondo US Dollar Yield",
+      "symbol": "USDY",
+      "penumbraAssetId": {
+        "inner": "VDuTDzoFOg4mMrNeyqCEC1L4lSjtJUJ5jJ2D6SQsRgM="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg"
         }
       ]
     },
@@ -361,7 +361,6 @@
       ]
     }
   },
-  "stakingAssetId": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=",
   "numeraires": [
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=",
     "CKBQapu+DkQpsKyTfKESLTV19/NPWR5sNZtvQsd3Hw8="

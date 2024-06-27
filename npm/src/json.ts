@@ -8,13 +8,13 @@ import { Base64AssetId, Chain, Rpc } from './registry';
 export interface RegistryGlobals {
   rpcs: Rpc[];
   frontends: string[];
+  stakingAssetId: string;
 }
 
 export interface JsonRegistry {
   chainId: string;
   ibcConnections: Chain[];
   assetById: Record<Base64AssetId, JsonMetadata>;
-  stakingAssetId: Base64AssetId;
   numeraires: Base64AssetId[];
 }
 

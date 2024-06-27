@@ -70,7 +70,6 @@ const testRegistry: JsonRegistry = {
       ],
     },
   },
-  stakingAssetId: 'KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=',
   numeraires: ['reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg='],
 };
 
