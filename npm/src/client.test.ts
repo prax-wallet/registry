@@ -16,7 +16,7 @@ describe('ChainRegistryClient', () => {
   });
 
   it('handles preview chain IDs by swapping them', () => {
-    const registry = client.get('penumbra-testnet-deimos-7-711be12a');
+    const registry = client.get('penumbra-testnet-deimos-7-xf2dbce94');
     expect(registry).toBeInstanceOf(Registry);
     expect(registry.chainId).toEqual('penumbra-testnet-deimos-7');
   });

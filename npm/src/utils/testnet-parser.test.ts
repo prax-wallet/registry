@@ -3,10 +3,10 @@ import { deriveTestnetChainIdFromPreview, isTestnetPreviewChainId } from './test
 
 describe('testnet-preview helper', () => {
   it('should correctly identify testnet-preview chain-id', () => {
-    expect(isTestnetPreviewChainId('penumbra-testnet-deimos-6-711be12a')).toBeTruthy();
-    expect(isTestnetPreviewChainId('penumbra-testnet-deimos-222-711be12a')).toBeTruthy();
-    expect(isTestnetPreviewChainId('penumbra-testnet-rhea-8b2dfc5c')).toBeTruthy();
-    expect(isTestnetPreviewChainId('penumbra-testnet-tethy12-8777cb20')).toBeTruthy();
+    expect(isTestnetPreviewChainId('penumbra-testnet-deimos-8-xf2dbce94')).toBeTruthy();
+    expect(isTestnetPreviewChainId('penumbra-testnet-deimos-x0044bb22')).toBeTruthy();
+    expect(isTestnetPreviewChainId('penumbra-testnet-rhea-xff99ee10')).toBeTruthy();
+    expect(isTestnetPreviewChainId('penumbra-testnet-tethy12-xb4d8f9a0')).toBeTruthy();
   });
 
   it('should not identify chain-id as testnet-preview', () => {
@@ -16,13 +16,13 @@ describe('testnet-preview helper', () => {
   });
 
   it('should correctly derive testnet chain-id from testnet-preview chain-id', () => {
-    expect(deriveTestnetChainIdFromPreview('penumbra-testnet-deimos-6-711be12a')).toEqual(
-      'penumbra-testnet-deimos-6',
+    expect(deriveTestnetChainIdFromPreview('penumbra-testnet-deimos-8-xf2dbce94')).toEqual(
+      'penumbra-testnet-deimos-8',
     );
-    expect(deriveTestnetChainIdFromPreview('penumbra-testnet-rhea-8b2dfc5c')).toEqual(
+    expect(deriveTestnetChainIdFromPreview('penumbra-testnet-rhea-x0044bb22')).toEqual(
       'penumbra-testnet-rhea',
     );
-    expect(deriveTestnetChainIdFromPreview('penumbra-testnet-tethys12-8777cb20')).toEqual(
+    expect(deriveTestnetChainIdFromPreview('penumbra-testnet-tethys12-xb4d8f9a0')).toEqual(
       'penumbra-testnet-tethys12',
     );
   });
