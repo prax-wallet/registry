@@ -13,5 +13,7 @@
   "frontends": [
     "https://app.testnet.penumbra.zone"
   ],
-  "stakingAssetId": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
+  "stakingAssetId": {
+    "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
+  }
 }

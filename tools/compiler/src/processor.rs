@@ -41,12 +41,12 @@ impl From<IbcInput> for Chain {
     }
 }
 
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Globals {
     pub rpcs: Vec<Rpc>,
     pub frontends: Vec<String>,
-    pub staking_asset_id: String,
+    pub staking_asset_id: Id,
 }
 
 impl TryFrom<GlobalsInput> for Globals {
@@ -56,7 +56,7 @@ impl TryFrom<GlobalsInput> for Globals {
         Ok(Globals {
             rpcs: g.rpcs,
             frontends: g.frontends,
-            staking_asset_id: base64_id(&STAKING_TOKEN_ASSET_ID)?,
+            staking_asset_id: *STAKING_TOKEN_ASSET_ID,
         })
     }
 }
