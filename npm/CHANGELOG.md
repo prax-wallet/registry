@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 9.1.0
+
+### Minor Changes
+
+- b5726c2: Changed stakingAssetId type
+
 ## 9.0.0
 
 ### Major Changes
