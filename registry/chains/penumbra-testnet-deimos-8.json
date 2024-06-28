@@ -4,8 +4,8 @@
     {
       "addressPrefix": "osmo",
       "chainId": "osmo-test-5",
-      "channelId": "channel-8",
-      "counterpartyChannelId": "channel-8104",
+      "channelId": "channel-9",
+      "counterpartyChannelId": "channel-8343",
       "displayName": "Osmosis",
       "images": [
         {
@@ -50,30 +50,6 @@
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
-        }
-      ]
-    },
-    "/H79tg9Fd3Pm2SNy6vJVf+dw2ozb3St1+g+oUsgfPQE=": {
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-8/uion"
-        },
-        {
-          "denom": "transfer/channel-8/ion",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-8/uion",
-      "display": "transfer/channel-8/ion",
-      "name": "Ion",
-      "symbol": "ION",
-      "penumbraAssetId": {
-        "inner": "/H79tg9Fd3Pm2SNy6vJVf+dw2ozb3St1+g+oUsgfPQE="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
         }
       ]
     },
@@ -227,31 +203,6 @@
         }
       ]
     },
-    "McT0xdxc1RltFaYG+hQ7txt89LJMSyu9JFVV0mOpQBI=": {
-      "description": "The native token of Osmosis",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-8/uosmo"
-        },
-        {
-          "denom": "transfer/channel-8/osmo",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-8/uosmo",
-      "display": "transfer/channel-8/osmo",
-      "name": "Osmosis Testnet",
-      "symbol": "OSMO",
-      "penumbraAssetId": {
-        "inner": "McT0xdxc1RltFaYG+hQ7txt89LJMSyu9JFVV0mOpQBI="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
-        }
-      ]
-    },
     "W6xo3Dww1gT85lSP0GvUl3lE1IYWn7J4EIbW1acE3g4=": {
       "description": "The controlled staking asset for Noble Chain",
       "denomUnits": [
@@ -270,6 +221,30 @@
       "penumbraAssetId": {
         "inner": "W6xo3Dww1gT85lSP0GvUl3lE1IYWn7J4EIbW1acE3g4="
       }
+    },
+    "WUz70nLlQjjRFJDz//neiPRqDyLCX2rB/pTmAKVlTw4=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
+        },
+        {
+          "denom": "transfer/channel-9/willyz",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
+      "display": "transfer/channel-9/willyz",
+      "name": "Willyz",
+      "symbol": "WILLYZ",
+      "penumbraAssetId": {
+        "inner": "WUz70nLlQjjRFJDz//neiPRqDyLCX2rB/pTmAKVlTw4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
+        }
+      ]
     },
     "eeD8X4rWeMaC3Oqdw8tyU6YBLryAYCBLwEbiIKoo5Qc=": {
       "denomUnits": [
@@ -294,6 +269,30 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
+        }
+      ]
+    },
+    "hMtHaDpbuAknRJsa+BQEuST3GDeF91asCSThgTDAkwk=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/uion"
+        },
+        {
+          "denom": "transfer/channel-9/ion",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/uion",
+      "display": "transfer/channel-9/ion",
+      "name": "Ion",
+      "symbol": "ION",
+      "penumbraAssetId": {
+        "inner": "hMtHaDpbuAknRJsa+BQEuST3GDeF91asCSThgTDAkwk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
         }
       ]
     },
@@ -427,27 +426,28 @@
         }
       ]
     },
-    "wkjtBCK1PQo0/4wbS0zhq9MVDP2DWFaJHxT1M5cI+wo=": {
+    "w0cmsVnoTuAFZdDtNXztOvBwBflTnxmxnfJoXJSWGQU=": {
+      "description": "The native token of Osmosis",
       "denomUnits": [
         {
-          "denom": "transfer/channel-8/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
+          "denom": "transfer/channel-9/uosmo"
         },
         {
-          "denom": "transfer/channel-8/willyz",
+          "denom": "transfer/channel-9/osmo",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-8/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
-      "display": "transfer/channel-8/willyz",
-      "name": "Willyz",
-      "symbol": "WILLYZ",
+      "base": "transfer/channel-9/uosmo",
+      "display": "transfer/channel-9/osmo",
+      "name": "Osmosis Testnet",
+      "symbol": "OSMO",
       "penumbraAssetId": {
-        "inner": "wkjtBCK1PQo0/4wbS0zhq9MVDP2DWFaJHxT1M5cI+wo="
+        "inner": "w0cmsVnoTuAFZdDtNXztOvBwBflTnxmxnfJoXJSWGQU="
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
       ]
     },
