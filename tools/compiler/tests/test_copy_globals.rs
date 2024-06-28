@@ -1,3 +1,4 @@
+use penumbra_asset::STAKING_TOKEN_ASSET_ID;
 use penumbra_registry::parser::{copy_globals, GlobalsInput, Rpc};
 use penumbra_registry::processor::Globals;
 use std::fs::{self, File};
@@ -41,10 +42,7 @@ fn test_successful_copy() {
 
     assert_eq!(output_globals.frontends, globals.frontends);
     assert_eq!(output_globals.rpcs, globals.rpcs);
-    assert_eq!(
-        output_globals.staking_asset_id,
-        "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=".to_string()
-    );
+    assert_eq!(output_globals.staking_asset_id, *STAKING_TOKEN_ASSET_ID);
 }
 
 #[test]

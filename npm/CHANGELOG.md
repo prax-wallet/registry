@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 9.2.0
+
+### Minor Changes
+
+- Save stakingAssetId as proto-compatible type
+
 ## 9.1.1
 
 ### Patch Changes
