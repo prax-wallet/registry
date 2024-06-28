@@ -10,7 +10,7 @@ import { AssetId } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/a
 export interface RegistryGlobals {
   rpcs: Rpc[];
   frontends: string[];
-  stakingAssetId: string;
+  stakingAssetId: AssetId;
 }
 
 export interface JsonRegistry {
