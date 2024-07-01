@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 9.3.0
+
+### Minor Changes
+
+- Clear out rpcs & frontends
+
 ## 9.2.0
 
 ### Minor Changes
