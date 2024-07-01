@@ -1,16 +1,4 @@
 {
-  "rpcs": [
-    {
-      "name": "Penumbra Labs Testnet RPC",
-      "url": "https://grpc.testnet.penumbra.zone",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    }
-  ],
-  "frontends": [
-    "https://app.testnet.penumbra.zone"
-  ]
+  "rpcs": [],
+  "frontends": []
 }
