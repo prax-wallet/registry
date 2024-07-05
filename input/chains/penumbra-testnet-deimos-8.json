@@ -48,11 +48,11 @@
       ]
     },
     {
-      "name": "Starling Staking",
+      "name": "Starling Cybernetics",
       "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-staking.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-cybernetics.svg"
         }
       ]
     }
