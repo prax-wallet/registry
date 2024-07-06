@@ -1,0 +1,85 @@
+{
+  "chainId": "penumbra-1",
+  "ibcConnections": [],
+  "assetById": {
+    "/5AHh95RAybBbUhQ5zXMWCvstH4rRK/5KMVIVGQltAw=": {
+      "denomUnits": [
+        {
+          "denom": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u"
+        },
+        {
+          "denom": "mdelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
+          "exponent": 3
+        },
+        {
+          "denom": "delegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
+          "exponent": 6
+        }
+      ],
+      "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
+      "display": "delegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
+      "symbol": "delUM(Starling Cybernetics)",
+      "penumbraAssetId": {
+        "inner": "/5AHh95RAybBbUhQ5zXMWCvstH4rRK/5KMVIVGQltAw="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-cybernetics.svg"
+        }
+      ]
+    },
+    "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
+      "denomUnits": [
+        {
+          "denom": "penumbra",
+          "exponent": 6
+        },
+        {
+          "denom": "mpenumbra",
+          "exponent": 3
+        },
+        {
+          "denom": "upenumbra"
+        }
+      ],
+      "base": "upenumbra",
+      "display": "penumbra",
+      "symbol": "UM",
+      "penumbraAssetId": {
+        "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
+        }
+      ]
+    },
+    "gI6zNj+Hq7YP/X2AVx/rpkDTn94KeLfRNmFDfjdJ+QU=": {
+      "denomUnits": [
+        {
+          "denom": "udelegation_penumbravalid1qttzflwwf76qsredmcmqdny3z2v35a3kklrzram6l7x9l69v7szslkuzy0"
+        },
+        {
+          "denom": "mdelegation_penumbravalid1qttzflwwf76qsredmcmqdny3z2v35a3kklrzram6l7x9l69v7szslkuzy0",
+          "exponent": 3
+        },
+        {
+          "denom": "delegation_penumbravalid1qttzflwwf76qsredmcmqdny3z2v35a3kklrzram6l7x9l69v7szslkuzy0",
+          "exponent": 6
+        }
+      ],
+      "base": "udelegation_penumbravalid1qttzflwwf76qsredmcmqdny3z2v35a3kklrzram6l7x9l69v7szslkuzy0",
+      "display": "delegation_penumbravalid1qttzflwwf76qsredmcmqdny3z2v35a3kklrzram6l7x9l69v7szslkuzy0",
+      "symbol": "delUM(⊤⊥)",
+      "penumbraAssetId": {
+        "inner": "gI6zNj+Hq7YP/X2AVx/rpkDTn94KeLfRNmFDfjdJ+QU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/22a435.png"
+        }
+      ]
+    }
+  },
+  "numeraires": []
+}

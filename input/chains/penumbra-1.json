@@ -1,0 +1,53 @@
+{
+  "chainId": "penumbra-1",
+  "ibcConnections": [],
+  "validators": [
+    {
+      "name": "Starling Cybernetics",
+      "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-cybernetics.svg"
+        }
+      ]
+    },
+    {
+      "name": "⊤⊥",
+      "base": "udelegation_penumbravalid1qttzflwwf76qsredmcmqdny3z2v35a3kklrzram6l7x9l69v7szslkuzy0",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/22a435.png"
+        }
+      ]
+    }
+  ],
+  "nativeAssets": [
+    {
+      "denomUnits": [
+        {
+          "denom": "penumbra",
+          "exponent": 6
+        },
+        {
+          "denom": "mpenumbra",
+          "exponent": 3
+        },
+        {
+          "denom": "upenumbra"
+        }
+      ],
+      "base": "upenumbra",
+      "display": "penumbra",
+      "symbol": "UM",
+      "penumbraAssetId": {
+        "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
+        }
+      ]
+    }
+  ],
+  "canonicalNumeraires": []
+}
