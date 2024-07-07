@@ -8,9 +8,9 @@ describe('ChainRegistryClient', () => {
   const client = new ChainRegistryClient();
 
   it('returns a Registry object for valid chain IDs', () => {
-    const registry = client.get('penumbra-testnet-deimos-7');
+    const registry = client.get('penumbra-1');
     expect(registry).toBeInstanceOf(Registry);
-    expect(registry.chainId).toEqual('penumbra-testnet-deimos-7');
+    expect(registry.chainId).toEqual('penumbra-1');
   });
 
   it('throws an error when no registry is found', () => {
