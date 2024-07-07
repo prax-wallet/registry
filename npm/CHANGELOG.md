@@ -1,5 +1,15 @@
 # @penumbra-labs/registry
 
+## 9.4.0
+
+### Minor Changes
+
+- Add penumbra-1 to registry list
+
+### Patch Changes
+
+- 779e2bc: Change validator name for Starling Cybernetics to "Starling Cybernetics"
+
 ## 9.3.0
 
 ### Minor Changes

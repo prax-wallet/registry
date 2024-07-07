@@ -1,0 +1,34 @@
+{
+  "chainId": "penumbra-1",
+  "ibcConnections": [],
+  "validators": [],
+  "nativeAssets": [
+    {
+      "denomUnits": [
+        {
+          "denom": "penumbra",
+          "exponent": 6
+        },
+        {
+          "denom": "mpenumbra",
+          "exponent": 3
+        },
+        {
+          "denom": "upenumbra"
+        }
+      ],
+      "base": "upenumbra",
+      "display": "penumbra",
+      "symbol": "UM",
+      "penumbraAssetId": {
+        "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
+        }
+      ]
+    }
+  ],
+  "canonicalNumeraires": []
+}
