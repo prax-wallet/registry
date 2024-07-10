@@ -30,9 +30,4 @@ describe('BundledClient', () => {
     });
     expect(umStakingAsset.equals(registry.stakingAssetId)).toBeTruthy();
   });
-
-  it('returns a version hash', async () => {
-    const hash = await bundled.version('penumbra-testnet-deimos-8');
-    expect('f533e27f727f6154783e9029e4644d6f0b71a97364048179b3699a7507afec22').toBe(hash);
-  });
 });

@@ -1,6 +1,6 @@
 import { Base64AssetId, Chain, Registry, Rpc } from './registry';
 import { JsonGlobals, JsonMetadata } from './json';
-import { globalsFromJson, RegistryGlobals } from './globals';
+import { RegistryGlobals } from './globals';
 
 export interface GithubRegistryResponse {
   chainId: string;
@@ -26,7 +26,7 @@ export class GithubFetcher {
 
   async fetchGlobals(): Promise<RegistryGlobals> {
     const response = await this.typedFetcher<JsonGlobals>(`${REGISTRY_BASE_URL}/globals.json`);
-    return globalsFromJson(response);
+    return new RegistryGlobals(response);
   }
 
   private async typedFetcher<T>(url: string): Promise<T> {
