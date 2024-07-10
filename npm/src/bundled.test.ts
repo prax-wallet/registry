@@ -4,7 +4,7 @@ import { Registry } from './registry';
 import { AssetId } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
 import { base64ToUint8Array } from './utils/base64';
 
-describe('ChainRegistryClient', () => {
+describe('BundledClient', () => {
   const { bundled } = new ChainRegistryClient();
 
   it('returns a Registry object for valid chain IDs', () => {
@@ -29,5 +29,10 @@ describe('ChainRegistryClient', () => {
       inner: base64ToUint8Array('KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA='),
     });
     expect(umStakingAsset.equals(registry.stakingAssetId)).toBeTruthy();
+  });
+
+  it('returns a version hash', async () => {
+    const hash = await bundled.version('penumbra-testnet-deimos-8');
+    expect('f533e27f727f6154783e9029e4644d6f0b71a97364048179b3699a7507afec22').toBe(hash);
   });
 });
