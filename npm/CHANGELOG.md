@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 10.0.0
+
+### Major Changes
+
+- Expose remote fetching methods
+
 ## 9.4.0
 
 ### Minor Changes

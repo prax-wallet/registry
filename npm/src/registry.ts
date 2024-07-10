@@ -6,6 +6,7 @@ import { JsonRegistry } from './json';
 import { JsonValue } from '@bufbuild/protobuf';
 import { base64ToUint8Array, uint8ArrayToBase64 } from './utils/base64';
 import { mapObjectValues } from './utils/object-mapping';
+import { sha256Hash } from './utils/sha256';
 
 // @ts-expect-error alias for dev only
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -60,5 +61,9 @@ export class Registry {
 
   getAllAssets(): Metadata[] {
     return Object.values(this.assetById);
+  }
+
+  async version(): Promise<string> {
+    return sha256Hash(JSON.stringify(this));
   }
 }
