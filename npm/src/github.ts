@@ -11,38 +11,22 @@ export interface GithubRegistryResponse {
   numeraires: Base64AssetId[];
 }
 
-const REGISTRY_BASE_URL = 'https://raw.githubusercontent.com/prax-wallet/registry/main/registry';
+export const REGISTRY_BASE_URL =
+  'https://raw.githubusercontent.com/prax-wallet/registry/main/registry';
 
 type ChainId = string;
 
 export class GithubFetcher {
-  private registryCache: Record<ChainId, Registry> = {};
-  private globalsCache: RegistryGlobals | undefined = undefined;
-
   async fetchRegistry(chainId: ChainId): Promise<Registry> {
-    if (this.registryCache[chainId]) {
-      return this.registryCache[chainId];
-    }
     const response = await this.typedFetcher<GithubRegistryResponse>(
       `${REGISTRY_BASE_URL}/chains/${chainId}.json`,
     );
-    this.registryCache[chainId] = new Registry(response);
-    return this.registryCache[chainId];
+    return new Registry(response);
   }
 
   async fetchGlobals(): Promise<RegistryGlobals> {
-    if (this.globalsCache) {
-      return this.globalsCache;
-    }
     const response = await this.typedFetcher<JsonGlobals>(`${REGISTRY_BASE_URL}/globals.json`);
-
-    this.globalsCache = globalsFromJson(response);
-    return this.globalsCache;
-  }
-
-  clearCache(): void {
-    this.registryCache = {};
-    this.globalsCache = undefined;
+    return globalsFromJson(response);
   }
 
   private async typedFetcher<T>(url: string): Promise<T> {
