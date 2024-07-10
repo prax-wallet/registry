@@ -1,17 +1,6 @@
-import * as Deimos6 from '../../registry/chains/penumbra-testnet-deimos-6.json';
-import * as Deimos7 from '../../registry/chains/penumbra-testnet-deimos-7.json';
 import * as Deimos8 from '../../registry/chains/penumbra-testnet-deimos-8.json';
 import * as Penumbra1 from '../../registry/chains/penumbra-1.json';
-import * as GlobalsJson from '../../registry/globals.json';
-
 import { Base64AssetId, Chain, Rpc } from './registry';
-import { AssetId } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
-
-export interface RegistryGlobals {
-  rpcs: Rpc[];
-  frontends: string[];
-  stakingAssetId: AssetId;
-}
 
 export interface JsonRegistry {
   chainId: string;
@@ -20,7 +9,13 @@ export interface JsonRegistry {
   numeraires: Base64AssetId[];
 }
 
-interface JsonMetadata {
+export interface JsonGlobals {
+  rpcs: Rpc[];
+  frontends: string[];
+  stakingAssetId: { inner: string };
+}
+
+export interface JsonMetadata {
   description?: string;
   denomUnits: DenomUnit[];
   base: string;
@@ -46,13 +41,6 @@ interface Image {
 }
 
 export const allJsonRegistries: Record<string, JsonRegistry> = {
-  'penumbra-testnet-deimos-6': Deimos6,
-  'penumbra-testnet-deimos-7': Deimos7,
   'penumbra-testnet-deimos-8': Deimos8,
   'penumbra-1': Penumbra1,
-};
-
-export const registryGlobals: RegistryGlobals = {
-  ...GlobalsJson,
-  stakingAssetId: AssetId.fromJson(GlobalsJson.stakingAssetId),
 };

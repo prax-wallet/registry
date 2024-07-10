@@ -5,26 +5,26 @@ import { AssetId } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/a
 import { base64ToUint8Array } from './utils/base64';
 
 describe('ChainRegistryClient', () => {
-  const client = new ChainRegistryClient();
+  const { bundled } = new ChainRegistryClient();
 
   it('returns a Registry object for valid chain IDs', () => {
-    const registry = client.get('penumbra-1');
+    const registry = bundled.get('penumbra-1');
     expect(registry).toBeInstanceOf(Registry);
     expect(registry.chainId).toEqual('penumbra-1');
   });
 
   it('throws an error when no registry is found', () => {
-    expect(() => client.get('unknown')).toThrow('Registry not found for unknown');
+    expect(() => bundled.get('unknown')).toThrow('Registry not found for unknown');
   });
 
   it('handles preview chain IDs by swapping them', () => {
-    const registry = client.get('penumbra-testnet-deimos-7-xf2dbce94');
+    const registry = bundled.get('penumbra-testnet-deimos-8-xf2dbce94');
     expect(registry).toBeInstanceOf(Registry);
-    expect(registry.chainId).toEqual('penumbra-testnet-deimos-7');
+    expect(registry.chainId).toEqual('penumbra-testnet-deimos-8');
   });
 
   it('returns staking asset global as expected', () => {
-    const registry = client.globals();
+    const registry = bundled.globals();
     const umStakingAsset = new AssetId({
       inner: base64ToUint8Array('KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA='),
     });
