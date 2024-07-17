@@ -23,7 +23,7 @@
       "url": "https://grpc.penumbra.silentvalidator.com",
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/silent-validator.svg"
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/silent-validator.png"
         }
       ]
     },
