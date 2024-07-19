@@ -1,4 +1,47 @@
 {
-  "rpcs": [],
-  "frontends": []
+  "rpcs": [
+    {
+      "name": "CroutonDigital",
+      "url": "https://penumbra.crouton.digital",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/crouton-digital.png"
+        }
+      ]
+    },
+    {
+      "name": "Simply Staking",
+      "url": "https://penumbra-grpc.simplystaking.xyz",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/simply-staking.png"
+        }
+      ]
+    },
+    {
+      "name": "Silent Validator",
+      "url": "https://grpc.penumbra.silentvalidator.com",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/silent-validator.png"
+        }
+      ]
+    },
+    {
+      "name": "Binary Builders",
+      "url": "https://penumbra.stakewith.binary.builders",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/binary-builders.png"
+        }
+      ]
+    }
+  ],
+  "frontends": [
+    "https://penumbra.silentvalidator.com",
+    "https://stake.with.starlingcyber.net"
+  ],
+  "stakingAssetId": {
+    "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
+  }
 }
