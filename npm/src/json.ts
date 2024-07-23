@@ -12,6 +12,7 @@ export interface JsonRegistry {
 export interface JsonGlobals {
   rpcs: Rpc[];
   websites: Frontend[];
+  /** @deprecated use `websites` instead */
   frontends: string[];
   stakingAssetId: { inner: string };
 }

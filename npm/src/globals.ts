@@ -7,6 +7,7 @@ export class RegistryGlobals {
   readonly stakingAssetId: AssetId;
   readonly rpcs: Rpc[];
   readonly websites: Frontend[];
+  /** @deprecated use `websites` instead */
   readonly frontends: string[];
 
   constructor(json: JsonGlobals) {
