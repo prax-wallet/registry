@@ -56,6 +56,20 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg"
         }
       ]
+    },
+    {
+      "displayName": "Osmosis",
+      "chainId": "osmosis-1",
+      "channelId": "channel-4",
+      "counterpartyChannelId": "channel-79703",
+      "addressPrefix": "osmo",
+      "cosmosRegistryDir": "osmosis",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     }
   ],
   "validators": [],

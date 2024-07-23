@@ -52,9 +52,267 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg"
         }
       ]
+    },
+    {
+      "addressPrefix": "osmo",
+      "chainId": "osmosis-1",
+      "channelId": "channel-4",
+      "counterpartyChannelId": "channel-79703",
+      "displayName": "Osmosis",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     }
   ],
   "assetById": {
+    "1b1489PiR06kGAYS4y4+J0baqVEdYYqLDlxkHLy5CwA=": {
+      "description": "The governance and utility token of Yieldmos, the Interchain Automation Protocol",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1vdvnznwg597qngrq9mnfcfk0am9jdc9y446jewhcqdreqz4r75xq5j5zvy/ymos"
+        },
+        {
+          "denom": "transfer/channel-4/ymos",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1vdvnznwg597qngrq9mnfcfk0am9jdc9y446jewhcqdreqz4r75xq5j5zvy/ymos",
+      "display": "transfer/channel-4/ymos",
+      "name": "Yieldmos Coin",
+      "symbol": "YMOS",
+      "penumbraAssetId": {
+        "inner": "1b1489PiR06kGAYS4y4+J0baqVEdYYqLDlxkHLy5CwA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ymos.png",
+          "theme": {
+            "primaryColorHex": "#2c3554"
+          }
+        }
+      ]
+    },
+    "2EG6vOq/2YXCYlhzeSQEwXIIVvoroVvMse0e3Hc4PAE=": {
+      "description": "The first native memecoin on Osmosis. Crafted by the deftest of hands in the lab of lunacy. It's scientifically anarchic, professionally foolish, and your ticket to the madhouse.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO"
+        },
+        {
+          "denom": "transfer/channel-4/WOSMO",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO",
+      "display": "transfer/channel-4/WOSMO",
+      "name": "WOSMO",
+      "symbol": "WOSMO",
+      "penumbraAssetId": {
+        "inner": "2EG6vOq/2YXCYlhzeSQEwXIIVvoroVvMse0e3Hc4PAE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png",
+          "theme": {
+            "primaryColorHex": "#edd5ee"
+          }
+        }
+      ]
+    },
+    "4oyjsrIftezXMm5xBVMef2Pn+dhkEx1GFwIOniiPnQw=": {
+      "description": "wLibra is a bridged version of Libra Coin from 0L Network via LibraBridge.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo19hdqma2mj0vnmgcxag6ytswjnr8a3y07q7e70p/wLIBRA"
+        },
+        {
+          "denom": "transfer/channel-4/wLIBRA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo19hdqma2mj0vnmgcxag6ytswjnr8a3y07q7e70p/wLIBRA",
+      "display": "transfer/channel-4/wLIBRA",
+      "name": "Wrapped Libra Coin (LibraBridge)",
+      "symbol": "wLIBRA",
+      "penumbraAssetId": {
+        "inner": "4oyjsrIftezXMm5xBVMef2Pn+dhkEx1GFwIOniiPnQw="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/0l/images/libra.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/0l/images/libra.svg",
+          "theme": {
+            "primaryColorHex": "#e45c5c"
+          }
+        }
+      ]
+    },
+    "5B0jxWP9LX+U4uD7aU9OVsIk0U385uD2q+a2eEerHg0=": {
+      "description": "Cosmos Airdrop Chat",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/cac"
+        },
+        {
+          "denom": "transfer/channel-4/CAC",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/cac",
+      "display": "transfer/channel-4/CAC",
+      "name": "Cosmos Airdrop Chat",
+      "symbol": "CAC",
+      "penumbraAssetId": {
+        "inner": "5B0jxWP9LX+U4uD7aU9OVsIk0U385uD2q+a2eEerHg0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CAC.png",
+          "theme": {
+            "primaryColorHex": "#160542"
+          }
+        }
+      ]
+    },
+    "5QjC25GYK9LOU39kjHGYTS9tJSAiPNuDl/RDnNLxaBE=": {
+      "description": "Uhm, Power Bottom",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/pbb"
+        },
+        {
+          "denom": "transfer/channel-4/PBB",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/pbb",
+      "display": "transfer/channel-4/PBB",
+      "name": "Power Bottom",
+      "symbol": "PBB",
+      "penumbraAssetId": {
+        "inner": "5QjC25GYK9LOU39kjHGYTS9tJSAiPNuDl/RDnNLxaBE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/PBB.png",
+          "theme": {
+            "primaryColorHex": "#f21313"
+          }
+        }
+      ]
+    },
+    "6zEm1cTHN1PsueimuNxC+6S/t6uDYRdhbitgkUV9IxE=": {
+      "description": "MilkyWay's liquid staked TIA",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA"
+        },
+        {
+          "denom": "transfer/channel-4/milkTIA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+      "display": "transfer/channel-4/milkTIA",
+      "name": "milkTIA",
+      "symbol": "milkTIA",
+      "penumbraAssetId": {
+        "inner": "6zEm1cTHN1PsueimuNxC+6S/t6uDYRdhbitgkUV9IxE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.svg",
+          "theme": {
+            "primaryColorHex": "#d18dfc"
+          }
+        }
+      ]
+    },
+    "9K0nhsHG5pn/MpmxYDkGyIHbVXh2aZm3eknCYy9auws=": {
+      "description": "A group of french boulanger who wanna bring fun and baguette on cosmos",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/bag"
+        },
+        {
+          "denom": "transfer/channel-4/BAG",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/bag",
+      "display": "transfer/channel-4/BAG",
+      "name": "Baguette",
+      "symbol": "BAG",
+      "penumbraAssetId": {
+        "inner": "9K0nhsHG5pn/MpmxYDkGyIHbVXh2aZm3eknCYy9auws="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BAG.png",
+          "theme": {
+            "primaryColorHex": "#a07042"
+          }
+        }
+      ]
+    },
+    "9Z2H/H4MCnYH8evt2Q6kMCTFSYe88EtWn7131rmwgAA=": {
+      "description": "LAB - Everything is an Experiment",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo17fel472lgzs87ekt9dvk0zqyh5gl80sqp4sk4n/LAB"
+        },
+        {
+          "denom": "transfer/channel-4/LAB",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo17fel472lgzs87ekt9dvk0zqyh5gl80sqp4sk4n/LAB",
+      "display": "transfer/channel-4/LAB",
+      "name": "LAB",
+      "symbol": "LAB",
+      "penumbraAssetId": {
+        "inner": "9Z2H/H4MCnYH8evt2Q6kMCTFSYe88EtWn7131rmwgAA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/LAB.png",
+          "theme": {
+            "primaryColorHex": "#bcdd76"
+          }
+        }
+      ]
+    },
+    "Ar6MhFcFk9QWltJ2omSY3xgXpextuXXTsQsubmSy7gk=": {
+      "description": "Sail DAO is a liquidity deployment and management DAO built as a collaboration between the Osmosis and Migaloo Blockchains.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail"
+        },
+        {
+          "denom": "transfer/channel-4/sail",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail",
+      "display": "transfer/channel-4/sail",
+      "name": "Sail",
+      "symbol": "SAIL",
+      "penumbraAssetId": {
+        "inner": "Ar6MhFcFk9QWltJ2omSY3xgXpextuXXTsQsubmSy7gk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sail.png",
+          "theme": {
+            "primaryColorHex": "#1e264f"
+          }
+        }
+      ]
+    },
     "B+9mATKkwyNfqyctQ9m5dSqDN7LRCFl6v/r/XyRtDw8=": {
       "description": "ATOM is the native cryptocurrency of the Cosmos network, designed to facilitate interoperability between multiple blockchains through its innovative hub-and-spoke model.",
       "denomUnits": [
@@ -79,6 +337,163 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg",
           "theme": {
             "primaryColorHex": "#272d45"
+          }
+        }
+      ]
+    },
+    "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc=": {
+      "description": "Margined Power Token sqBTC",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqbtc"
+        },
+        {
+          "denom": "transfer/channel-4/sqbtc",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqbtc",
+      "display": "transfer/channel-4/sqbtc",
+      "name": "BTC Squared",
+      "symbol": "sqBTC",
+      "penumbraAssetId": {
+        "inner": "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqbtc.svg"
+        }
+      ]
+    },
+    "HiMfbhLbTTAP0bDI1spwmkZUDAl658X8/8WptethTww=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1xqw2sl9zk8a6pch0csaw78n4swg5ws8t62wc5qta4gnjxfqg6v2qcs243k/stuibcx"
+        },
+        {
+          "denom": "transfer/channel-4/stibcx",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1xqw2sl9zk8a6pch0csaw78n4swg5ws8t62wc5qta4gnjxfqg6v2qcs243k/stuibcx",
+      "display": "transfer/channel-4/stibcx",
+      "name": "Staked IBCX",
+      "symbol": "stIBCX",
+      "penumbraAssetId": {
+        "inner": "HiMfbhLbTTAP0bDI1spwmkZUDAl658X8/8WptethTww="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/stibcx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/stibcx.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
+    "J4w9rlk4Hx6VpVLI/kqtxf+KcxEwyGNkTtzxYUpKqwY=": {
+      "description": "Margined Power Token sqATOM",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqatom"
+        },
+        {
+          "denom": "transfer/channel-4/sqatom",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqatom",
+      "display": "transfer/channel-4/sqatom",
+      "name": "ATOM Squared",
+      "symbol": "sqATOM",
+      "penumbraAssetId": {
+        "inner": "J4w9rlk4Hx6VpVLI/kqtxf+KcxEwyGNkTtzxYUpKqwY="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqatom.svg"
+        }
+      ]
+    },
+    "JfJc35xgtUPmKfidDjgHDnIYQ2klmu8x4N8lbKryDwY=": {
+      "description": "For th",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/crazyhorse"
+        },
+        {
+          "denom": "transfer/channel-4/CRAZYHORSE",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/crazyhorse",
+      "display": "transfer/channel-4/CRAZYHORSE",
+      "name": "HorseShoeBar",
+      "symbol": "CRAZYHORSE",
+      "penumbraAssetId": {
+        "inner": "JfJc35xgtUPmKfidDjgHDnIYQ2klmu8x4N8lbKryDwY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CrazyHorse.png",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc=": {
+      "description": "The native token of Osmosis",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/uosmo"
+        },
+        {
+          "denom": "transfer/channel-4/osmo",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/uosmo",
+      "display": "transfer/channel-4/osmo",
+      "name": "Osmosis",
+      "symbol": "OSMO",
+      "penumbraAssetId": {
+        "inner": "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg",
+          "theme": {
+            "primaryColorHex": "#760dbb"
+          }
+        }
+      ]
+    },
+    "KTJ9iZ/eNN42V2hhzs6Nlgb8zzdJmlBZZvKfCc4GiAw=": {
+      "description": "A clan of 11y bad kids crafting chaos on the Cosmos eco. One bad memecoin to rule them all  $BADKID. Airdropped to Badkids NFT holders and $STARS stakers. It's so bad, your wallet's throwing a tantrum for it.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo10n8rv8npx870l69248hnp6djy6pll2yuzzn9x8/BADKID"
+        },
+        {
+          "denom": "transfer/channel-4/BADKID",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo10n8rv8npx870l69248hnp6djy6pll2yuzzn9x8/BADKID",
+      "display": "transfer/channel-4/BADKID",
+      "name": "BADKID",
+      "symbol": "BADKID",
+      "penumbraAssetId": {
+        "inner": "KTJ9iZ/eNN42V2hhzs6Nlgb8zzdJmlBZZvKfCc4GiAw="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/badkid.png",
+          "theme": {
+            "primaryColorHex": "#57443f"
           }
         }
       ]
@@ -109,6 +524,62 @@
         }
       ]
     },
+    "LdexCcIS7h5jbSjieMV+MoC2IB1XmuKxzNNeRgq4QAQ=": {
+      "description": "An alloy of SOL asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1n3n75av8awcnw4jl62n3l48e6e4sxqmaf97w5ua6ddu4s475q5qq9udvx4/alloyed/allSOL"
+        },
+        {
+          "denom": "transfer/channel-4/allSOL",
+          "exponent": 9
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1n3n75av8awcnw4jl62n3l48e6e4sxqmaf97w5ua6ddu4s475q5qq9udvx4/alloyed/allSOL",
+      "display": "transfer/channel-4/allSOL",
+      "name": "Alloyed SOL",
+      "symbol": "allSOL",
+      "penumbraAssetId": {
+        "inner": "LdexCcIS7h5jbSjieMV+MoC2IB1XmuKxzNNeRgq4QAQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.svg"
+        },
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol.svg"
+        }
+      ]
+    },
+    "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE=": {
+      "description": "Levana Well-funded Perps is a protocol for perpetual swaps, which are leveraged trading contracts.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn"
+        },
+        {
+          "denom": "transfer/channel-4/lvn",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+      "display": "transfer/channel-4/lvn",
+      "name": "Levana",
+      "symbol": "LVN",
+      "penumbraAssetId": {
+        "inner": "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/levana.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/levana.svg",
+          "theme": {
+            "primaryColorHex": "#4c146c"
+          }
+        }
+      ]
+    },
     "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA=": {
       "description": "The permissioned staking asset for Noble Chain",
       "denomUnits": [
@@ -133,6 +604,60 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.svg",
           "theme": {
             "primaryColorHex": "#a8bbfb"
+          }
+        }
+      ]
+    },
+    "OUcXG7YEx8a5Nld/wCMK1aOKARlvoJtGpXHkju4LVgQ=": {
+      "description": "Coin to support the real world in Wilhelmshall im Huy",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/wiha"
+        },
+        {
+          "denom": "transfer/channel-4/WIHA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/wiha",
+      "display": "transfer/channel-4/WIHA",
+      "name": "WiliHall",
+      "symbol": "WIHA",
+      "penumbraAssetId": {
+        "inner": "OUcXG7YEx8a5Nld/wCMK1aOKARlvoJtGpXHkju4LVgQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WIHA.png",
+          "theme": {
+            "primaryColorHex": "#f2f2ec"
+          }
+        }
+      ]
+    },
+    "Px1BjGEeaPvgSPZX/8gDwHwwn2BWD+fjMrdu5/ZhLhI=": {
+      "description": "Bernese Mountain Dog. Thematic dog token to have fun and be friends with all other dog tokens. Fixed supply 132M",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1s6ht8qrm8x0eg8xag5x3ckx9mse9g4se248yss/BERNESE"
+        },
+        {
+          "denom": "transfer/channel-4/BERNESE",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1s6ht8qrm8x0eg8xag5x3ckx9mse9g4se248yss/BERNESE",
+      "display": "transfer/channel-4/BERNESE",
+      "name": "BERNESE",
+      "symbol": "BERNESE",
+      "penumbraAssetId": {
+        "inner": "Px1BjGEeaPvgSPZX/8gDwHwwn2BWD+fjMrdu5/ZhLhI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bernese.png",
+          "theme": {
+            "primaryColorHex": "#e7754f"
           }
         }
       ]
@@ -171,6 +696,84 @@
         }
       ]
     },
+    "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA=": {
+      "description": "An alloy of BTC asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC"
+        },
+        {
+          "denom": "transfer/channel-4/allBTC",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC",
+      "display": "transfer/channel-4/allBTC",
+      "name": "Alloyed BTC",
+      "symbol": "allBTC",
+      "penumbraAssetId": {
+        "inner": "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBTC.svg"
+        },
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/bitcoin/images/btc.png",
+          "theme": {
+            "primaryColorHex": "#f4941c"
+          }
+        }
+      ]
+    },
+    "U3U0P+fV2U5EqU0+kgq7qd+sjCbVhGeB6F8ix421WAc=": {
+      "description": "Memecoin for The International Brane Wave",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo13gu58hzw3e9aqpj25h67m7snwcjuccd7v4p55w/brnz"
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo13gu58hzw3e9aqpj25h67m7snwcjuccd7v4p55w/brnz",
+      "display": "transfer/channel-4/factory/osmo13gu58hzw3e9aqpj25h67m7snwcjuccd7v4p55w/brnz",
+      "name": "Branez",
+      "symbol": "BRNZ",
+      "penumbraAssetId": {
+        "inner": "U3U0P+fV2U5EqU0+kgq7qd+sjCbVhGeB6F8ix421WAc="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BRNZ.svg"
+        }
+      ]
+    },
+    "UWEI0NC7o/duH5gtCnzeEYgzMHsDwM1My5TogrU8Hw8=": {
+      "description": "Wrapped Bitcoin (WBTC) is an ERC20 token backed 1:1 with Bitcoin. Completely transparent. 100% verifiable. Community led.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc"
+        },
+        {
+          "denom": "transfer/channel-4/wbtc",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc",
+      "display": "transfer/channel-4/wbtc",
+      "name": "Wrapped Bitcoin",
+      "symbol": "WBTC",
+      "penumbraAssetId": {
+        "inner": "UWEI0NC7o/duH5gtCnzeEYgzMHsDwM1My5TogrU8Hw8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.svg",
+          "theme": {
+            "primaryColorHex": "#f39444"
+          }
+        }
+      ]
+    },
     "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE=": {
       "description": "Celestia is a modular blockchain network focused on data availability, allowing developers to deploy their own customizable blockchains with ease.",
       "denomUnits": [
@@ -195,6 +798,107 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg",
           "theme": {
             "primaryColorHex": "#7c2cfb"
+          }
+        }
+      ]
+    },
+    "VDEYVUZ8ZKlhsAT2nr6NgdNdi7jREsKmFUV0U5uUxwU=": {
+      "description": "OnE mEmEcOiN tO cOnNeCt oL ImBeCiles - aNd in Da Cosmos BiNd DeM",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1kqdw6pvn0xww6tyfv2sqvkkencdz0qw406x54r/IBC"
+        },
+        {
+          "denom": "transfer/channel-4/IBC",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1kqdw6pvn0xww6tyfv2sqvkkencdz0qw406x54r/IBC",
+      "display": "transfer/channel-4/IBC",
+      "name": "IBC",
+      "symbol": "IBC",
+      "penumbraAssetId": {
+        "inner": "VDEYVUZ8ZKlhsAT2nr6NgdNdi7jREsKmFUV0U5uUxwU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibc.png",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "WdHeHDmklWKxFf0g86MiYy6Mt6lUQza5g+NfNuK2oAE=": {
+      "description": "Membrane's CDP-style stablecoin called CDT",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/ucdt"
+        },
+        {
+          "denom": "transfer/channel-4/cdt",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/ucdt",
+      "display": "transfer/channel-4/cdt",
+      "name": "CDT Stablecoin",
+      "symbol": "CDT",
+      "penumbraAssetId": {
+        "inner": "WdHeHDmklWKxFf0g86MiYy6Mt6lUQza5g+NfNuK2oAE="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CDT.svg"
+        }
+      ]
+    },
+    "ZAf0vwfQdMjLyJH6OIQrt6t2y6VU37rzXBm8XeF6dQY=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo14klwqgkmackvx2tqa0trtg69dmy0nrg4ntq4gjgw2za4734r5seqjqm4gm/uibcx"
+        },
+        {
+          "denom": "transfer/channel-4/ibcx",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo14klwqgkmackvx2tqa0trtg69dmy0nrg4ntq4gjgw2za4734r5seqjqm4gm/uibcx",
+      "display": "transfer/channel-4/ibcx",
+      "name": "IBC Index",
+      "symbol": "IBCX",
+      "penumbraAssetId": {
+        "inner": "ZAf0vwfQdMjLyJH6OIQrt6t2y6VU37rzXBm8XeF6dQY="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibcx.svg"
+        }
+      ]
+    },
+    "d2/yBdjkz//htrQwHYXVx3XN2QILdZoS5ickDAcRWgs=": {
+      "description": "Beer Is Good for You!",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/bwh"
+        },
+        {
+          "denom": "transfer/channel-4/bwh",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/bwh",
+      "display": "transfer/channel-4/bwh",
+      "name": "BeerWifHat",
+      "symbol": "BWH",
+      "penumbraAssetId": {
+        "inner": "d2/yBdjkz//htrQwHYXVx3XN2QILdZoS5ickDAcRWgs="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BWH.png",
+          "theme": {
+            "primaryColorHex": "#775038"
           }
         }
       ]
@@ -227,6 +931,140 @@
         }
       ]
     },
+    "feVP7pst7vgPhoxLLiYtNHFwUprssLR8Nfn7wUU2WwA=": {
+      "description": "Margined Power Token sqTIA",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqtia"
+        },
+        {
+          "denom": "transfer/channel-4/sqtia",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqtia",
+      "display": "transfer/channel-4/sqtia",
+      "name": "TIA Squared",
+      "symbol": "sqTIA",
+      "penumbraAssetId": {
+        "inner": "feVP7pst7vgPhoxLLiYtNHFwUprssLR8Nfn7wUU2WwA="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg"
+        }
+      ]
+    },
+    "gO4qR7mYarC4AAPCck7XHhujNBUWGsaxRW6U3JkrSgM=": {
+      "description": "Rapture insurance is the first ever P2P insurance platform on $OSMO. Get rewarded to take care of peoples loved ones after the Rapture.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1279xudevmf5cw83vkhglct7jededp86k90k2le/RAPTR"
+        },
+        {
+          "denom": "transfer/channel-4/RAPTR",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1279xudevmf5cw83vkhglct7jededp86k90k2le/RAPTR",
+      "display": "transfer/channel-4/RAPTR",
+      "name": "RAPTR",
+      "symbol": "RAPTR",
+      "penumbraAssetId": {
+        "inner": "gO4qR7mYarC4AAPCck7XHhujNBUWGsaxRW6U3JkrSgM="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/RAPTR.png",
+          "theme": {
+            "primaryColorHex": "#e2b67d"
+          }
+        }
+      ]
+    },
+    "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs=": {
+      "description": "ERIS liquid staked OSMO",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1dv8wz09tckslr2wy5z86r46dxvegylhpt97r9yd6qc3kyc6tv42qa89dr9/ampOSMO"
+        },
+        {
+          "denom": "transfer/channel-4/ampOSMO",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1dv8wz09tckslr2wy5z86r46dxvegylhpt97r9yd6qc3kyc6tv42qa89dr9/ampOSMO",
+      "display": "transfer/channel-4/ampOSMO",
+      "name": "ERIS Amplified OSMO",
+      "symbol": "ampOSMO",
+      "penumbraAssetId": {
+        "inner": "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/amposmo.png",
+          "theme": {
+            "primaryColorHex": "#cfdbf1"
+          }
+        }
+      ]
+    },
+    "inEy5XNQBP5u7oz7eUcRLhuuBWiC1FTnJEfBhXIX7A8=": {
+      "description": "BackBone Labs Liquid Staked OSMO",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1s3l0lcqc7tu0vpj6wdjz9wqpxv8nk6eraevje4fuwkyjnwuy82qsx3lduv/boneOsmo"
+        },
+        {
+          "denom": "transfer/channel-4/bOSMO",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1s3l0lcqc7tu0vpj6wdjz9wqpxv8nk6eraevje4fuwkyjnwuy82qsx3lduv/boneOsmo",
+      "display": "transfer/channel-4/bOSMO",
+      "name": "BackBone Labs Liquid Staked OSMO",
+      "symbol": "bOSMO",
+      "penumbraAssetId": {
+        "inner": "inEy5XNQBP5u7oz7eUcRLhuuBWiC1FTnJEfBhXIX7A8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bOSMO.png",
+          "theme": {
+            "primaryColorHex": "#c68db5"
+          }
+        }
+      ]
+    },
+    "p6M59C5nGy2x3iJtRIPT5jA2ZhytFVTXX192/gTsHgA=": {
+      "description": "The Cosmos Network's premier self-hatred memecoin.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/shitmos"
+        },
+        {
+          "denom": "transfer/channel-4/SHITMOS",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/shitmos",
+      "display": "transfer/channel-4/SHITMOS",
+      "name": "Shitmos",
+      "symbol": "SHITMOS",
+      "penumbraAssetId": {
+        "inner": "p6M59C5nGy2x3iJtRIPT5jA2ZhytFVTXX192/gTsHgA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/shitmos.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/shitmos.svg",
+          "theme": {
+            "primaryColorHex": "#639BFF",
+            "circle": true
+          }
+        }
+      ]
+    },
     "pfhuSArfwYCRpRI+PY3bM3wWpmKdgqZlmxrqCPhrXhA=": {
       "description": "Frienzies are an IBC token redeemable exclusively for a physical asset issued by the Noble entity.",
       "denomUnits": [
@@ -251,6 +1089,252 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/frnz.svg",
           "theme": {
             "primaryColorHex": "#04041c"
+          }
+        }
+      ]
+    },
+    "qTadoyL6MJQ99tlXjmwjccuytSxSNByMLpVzZtVarQw=": {
+      "description": "Membrane's protocol token",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/umbrn"
+        },
+        {
+          "denom": "transfer/channel-4/mbrn",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/umbrn",
+      "display": "transfer/channel-4/mbrn",
+      "name": "Membrane",
+      "symbol": "MBRN",
+      "penumbraAssetId": {
+        "inner": "qTadoyL6MJQ99tlXjmwjccuytSxSNByMLpVzZtVarQw="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/MBRN.svg"
+        }
+      ]
+    },
+    "rvPy5azGrvxTK0dzmiLWAfzsGrlqV9WM7wfHQhPJiQE=": {
+      "description": "Jacob Haertnellez Turtle. Launched by Jake's Personally appointed TURD Cult Leader...\"NotSeanO'Riley.\" TURD is going to lead the shitcoins of Cosmos! Or Rug You. It will be Jake's Fault. ",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/turd"
+        },
+        {
+          "denom": "transfer/channel-4/TURD",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/turd",
+      "display": "transfer/channel-4/TURD",
+      "name": "TURDLE",
+      "symbol": "TURD",
+      "penumbraAssetId": {
+        "inner": "rvPy5azGrvxTK0dzmiLWAfzsGrlqV9WM7wfHQhPJiQE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/TURD.png"
+        }
+      ]
+    },
+    "tavJ/TAKws0M/Mguef8wxx0rqZQtKjAFTA8vM41+Sgc=": {
+      "description": "The memecoin built for the Celestia community",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro"
+        },
+        {
+          "denom": "transfer/channel-4/toro",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1nr8zfakf6jauye3uqa9lrmr5xumee5n42lv92z/toro",
+      "display": "transfer/channel-4/toro",
+      "name": "TORO",
+      "symbol": "TORO",
+      "penumbraAssetId": {
+        "inner": "tavJ/TAKws0M/Mguef8wxx0rqZQtKjAFTA8vM41+Sgc="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/toro.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/toro.svg",
+          "theme": {
+            "primaryColorHex": "#c39ccc"
+          }
+        }
+      ]
+    },
+    "tcjFeHt0h93dx5iEqq2iR+WKuxtn7nxUpAEOrPm+2wY=": {
+      "description": "ashLAB - Burned LAB",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1svj5kd8kzj7xxtrd6ftjk0856ffpyj4egz7f9pd9dge5wr4kwansmefq07/lab.ash"
+        },
+        {
+          "denom": "transfer/channel-4/ashLAB",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1svj5kd8kzj7xxtrd6ftjk0856ffpyj4egz7f9pd9dge5wr4kwansmefq07/lab.ash",
+      "display": "transfer/channel-4/ashLAB",
+      "name": "Burned LAB",
+      "symbol": "ashLAB",
+      "penumbraAssetId": {
+        "inner": "tcjFeHt0h93dx5iEqq2iR+WKuxtn7nxUpAEOrPm+2wY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ashLAB.png",
+          "theme": {
+            "primaryColorHex": "#ebb093"
+          }
+        }
+      ]
+    },
+    "tiqjoeiKwglZyFbvinYhCNpI8lpUQmxNlrsn7Q3m2gw=": {
+      "description": "Margined Power Token sqOSMO",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo"
+        },
+        {
+          "denom": "transfer/channel-4/sqosmo",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo",
+      "display": "transfer/channel-4/sqosmo",
+      "name": "OSMO Squared",
+      "symbol": "sqOSMO",
+      "penumbraAssetId": {
+        "inner": "tiqjoeiKwglZyFbvinYhCNpI8lpUQmxNlrsn7Q3m2gw="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqosmo.svg"
+        }
+      ]
+    },
+    "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0=": {
+      "description": "An alloy of USDT asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT"
+        },
+        {
+          "denom": "transfer/channel-4/allUSDT",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
+      "display": "transfer/channel-4/allUSDT",
+      "name": "Alloyed USDT",
+      "symbol": "allUSDT",
+      "penumbraAssetId": {
+        "inner": "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allUSDT.svg"
+        },
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg",
+          "theme": {
+            "primaryColorHex": "#009393",
+            "circle": true
+          }
+        }
+      ]
+    },
+    "vSCVmtndzw2C2RYuB2vcKWfkPVZRCP9GNN8MwB6QUAU=": {
+      "description": "Cosmus Cartol always get rich",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/coca"
+        },
+        {
+          "denom": "transfer/channel-4/COCA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/coca",
+      "display": "transfer/channel-4/COCA",
+      "name": "CosmusCartol",
+      "symbol": "COCA",
+      "penumbraAssetId": {
+        "inner": "vSCVmtndzw2C2RYuB2vcKWfkPVZRCP9GNN8MwB6QUAU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COCA.png",
+          "theme": {
+            "primaryColorHex": "#1e2029"
+          }
+        }
+      ]
+    },
+    "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4=": {
+      "description": "An alloy of ETH asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH"
+        },
+        {
+          "denom": "transfer/channel-4/allETH",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH",
+      "display": "transfer/channel-4/allETH",
+      "name": "Alloyed ETH",
+      "symbol": "allETH",
+      "penumbraAssetId": {
+        "inner": "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.svg"
+        },
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg",
+          "theme": {
+            "primaryColorHex": "#303030"
+          }
+        }
+      ]
+    },
+    "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk=": {
+      "description": "ION is the second native token of Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/uion"
+        },
+        {
+          "denom": "transfer/channel-4/ion",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/uion",
+      "display": "transfer/channel-4/ion",
+      "name": "Ion DAO",
+      "symbol": "ION",
+      "penumbraAssetId": {
+        "inner": "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg",
+          "theme": {
+            "primaryColorHex": "#4453c7"
           }
         }
       ]

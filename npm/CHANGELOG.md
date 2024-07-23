@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 10.1.0
+
+### Minor Changes
+
+- add osmosis channel
+
 ## 10.0.0
 
 ### Major Changes
