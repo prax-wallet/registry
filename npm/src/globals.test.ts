@@ -4,6 +4,7 @@ import { JsonGlobals } from './json';
 
 const testGlobals: JsonGlobals = {
   rpcs: [{ name: 'rpc1', images: [], url: 'http://rpc1.com' }],
+  websites: [{ name: 'frontend1', images: [], url: 'http://example.com' }],
   frontends: ['frontend1', 'frontend2', 'frontend3'],
   stakingAssetId: {
     inner: 'KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=',

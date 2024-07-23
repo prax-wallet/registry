@@ -1,6 +1,6 @@
 import * as Deimos8 from '../../registry/chains/penumbra-testnet-deimos-8.json';
 import * as Penumbra1 from '../../registry/chains/penumbra-1.json';
-import { Base64AssetId, Chain, Rpc } from './registry';
+import { Base64AssetId, Chain, Frontend, Rpc } from './registry';
 
 export interface JsonRegistry {
   chainId: string;
@@ -11,6 +11,7 @@ export interface JsonRegistry {
 
 export interface JsonGlobals {
   rpcs: Rpc[];
+  websites: Frontend[];
   frontends: string[];
   stakingAssetId: { inner: string };
 }

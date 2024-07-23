@@ -7,7 +7,7 @@ use crate::error::{AppError, AppResult};
 use crate::github::assetlist_schema::AssetTypeAsset;
 use crate::parser::{
     copy_globals, get_chain_configs, reset_registry_dir, ChainConfig, GlobalsInput, IbcInput,
-    Image, Rpc, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
+    Image, Rpc, Frontend, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
 };
 use crate::querier::query_github_assets;
 use crate::validator::generate_metadata_from_validators;
@@ -45,6 +45,7 @@ impl From<IbcInput> for Chain {
 #[serde(rename_all = "camelCase")]
 pub struct Globals {
     pub rpcs: Vec<Rpc>,
+    pub websites: Vec<Frontend>,
     pub frontends: Vec<String>,
     pub staking_asset_id: Id,
 }
@@ -55,6 +56,7 @@ impl TryFrom<GlobalsInput> for Globals {
     fn try_from(g: GlobalsInput) -> AppResult<Self> {
         Ok(Globals {
             rpcs: g.rpcs,
+            websites: g.websites,
             frontends: g.frontends,
             staking_asset_id: *STAKING_TOKEN_ASSET_ID,
         })

@@ -29,6 +29,12 @@ export interface Rpc {
   images: Image[];
 }
 
+export interface Frontend {
+  name: string;
+  url: string;
+  images: Image[];
+}
+
 export interface Image {
   png?: string;
   svg?: string;

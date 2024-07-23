@@ -12,6 +12,7 @@ use crate::processor::Globals;
 #[serde(rename_all = "camelCase")]
 pub struct GlobalsInput {
     pub rpcs: Vec<Rpc>,
+    pub websites: Vec<Frontend>,
     pub frontends: Vec<String>,
 }
 
@@ -27,6 +28,13 @@ pub struct ChainConfig {
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Rpc {
+    pub name: String,
+    pub url: String,
+    pub images: Vec<Image>,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Frontend {
     pub name: String,
     pub url: String,
     pub images: Vec<Image>,

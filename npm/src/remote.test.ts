@@ -57,5 +57,6 @@ describe('RemoteClient', () => {
     expect(registry.stakingAssetId.toJson()).toEqual(GlobalsJson.stakingAssetId);
     expect(registry.frontends).toEqual(GlobalsJson.frontends);
     expect(registry.rpcs).toEqual(GlobalsJson.rpcs);
+    expect(registry.websites).toEqual(GlobalsJson.websites);
   });
 });
