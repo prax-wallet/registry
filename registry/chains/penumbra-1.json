@@ -1,7 +1,88 @@
 {
   "chainId": "penumbra-1",
-  "ibcConnections": [],
+  "ibcConnections": [
+    {
+      "addressPrefix": "cosmos",
+      "chainId": "cosmoshub-4",
+      "channelId": "channel-0",
+      "counterpartyChannelId": "channel-940",
+      "displayName": "Cosmos Hub",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg"
+        }
+      ]
+    },
+    {
+      "addressPrefix": "dydx",
+      "chainId": "dydx-mainnet-1",
+      "channelId": "channel-1",
+      "counterpartyChannelId": "channel-70",
+      "displayName": "dYdX Protocol",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg"
+        }
+      ]
+    },
+    {
+      "addressPrefix": "noble",
+      "chainId": "noble-1",
+      "channelId": "channel-2",
+      "counterpartyChannelId": "channel-89",
+      "displayName": "Noble",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.svg"
+        }
+      ]
+    },
+    {
+      "addressPrefix": "celestia",
+      "chainId": "celestia",
+      "channelId": "channel-3",
+      "counterpartyChannelId": "channel-35",
+      "displayName": "Celestia",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg"
+        }
+      ]
+    }
+  ],
   "assetById": {
+    "B+9mATKkwyNfqyctQ9m5dSqDN7LRCFl6v/r/XyRtDw8=": {
+      "description": "ATOM is the native cryptocurrency of the Cosmos network, designed to facilitate interoperability between multiple blockchains through its innovative hub-and-spoke model.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-0/uatom"
+        },
+        {
+          "denom": "transfer/channel-0/atom",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-0/uatom",
+      "display": "transfer/channel-0/atom",
+      "name": "Cosmos Hub Atom",
+      "symbol": "ATOM",
+      "penumbraAssetId": {
+        "inner": "B+9mATKkwyNfqyctQ9m5dSqDN7LRCFl6v/r/XyRtDw8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg",
+          "theme": {
+            "primaryColorHex": "#272d45"
+          }
+        }
+      ]
+    },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "denomUnits": [
         {
@@ -25,6 +106,180 @@
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
+        }
+      ]
+    },
+    "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA=": {
+      "description": "The permissioned staking asset for Noble Chain",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-2/ustake"
+        },
+        {
+          "denom": "transfer/channel-2/stake",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-2/ustake",
+      "display": "transfer/channel-2/stake",
+      "name": "Stake",
+      "symbol": "STAKE",
+      "penumbraAssetId": {
+        "inner": "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.svg",
+          "theme": {
+            "primaryColorHex": "#a8bbfb"
+          }
+        }
+      ]
+    },
+    "QArMRIpyiMTawMktm5j53HfLNMrI8TIBQ2wqyCfgtQY=": {
+      "description": "DYDX is a decentralized trading platform focused on derivatives and perpetual contracts, offering a secure and efficient trading experience without intermediaries.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-1/adydx"
+        },
+        {
+          "denom": "transfer/channel-1/dydx",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-1/adydx",
+      "display": "transfer/channel-1/dydx",
+      "name": "dYdX",
+      "symbol": "DYDX",
+      "penumbraAssetId": {
+        "inner": "QArMRIpyiMTawMktm5j53HfLNMrI8TIBQ2wqyCfgtQY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg",
+          "theme": {
+            "primaryColorHex": "#21212f"
+          }
+        },
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx-circle.svg",
+          "theme": {
+            "circle": true
+          }
+        }
+      ]
+    },
+    "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE=": {
+      "description": "Celestia is a modular blockchain network focused on data availability, allowing developers to deploy their own customizable blockchains with ease.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-3/utia"
+        },
+        {
+          "denom": "transfer/channel-3/tia",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-3/utia",
+      "display": "transfer/channel-3/tia",
+      "name": "Celestia",
+      "symbol": "TIA",
+      "penumbraAssetId": {
+        "inner": "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg",
+          "theme": {
+            "primaryColorHex": "#7c2cfb"
+          }
+        }
+      ]
+    },
+    "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs=": {
+      "description": "USD Coin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-2/uusdc"
+        },
+        {
+          "denom": "transfer/channel-2/usdc",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-2/uusdc",
+      "display": "transfer/channel-2/usdc",
+      "name": "USDC",
+      "symbol": "USDC",
+      "penumbraAssetId": {
+        "inner": "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg",
+          "theme": {
+            "primaryColorHex": "#2474cc"
+          }
+        }
+      ]
+    },
+    "pfhuSArfwYCRpRI+PY3bM3wWpmKdgqZlmxrqCPhrXhA=": {
+      "description": "Frienzies are an IBC token redeemable exclusively for a physical asset issued by the Noble entity.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-2/ufrienzies"
+        },
+        {
+          "denom": "transfer/channel-2/frienzies",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-2/ufrienzies",
+      "display": "transfer/channel-2/frienzies",
+      "name": "Frienzies",
+      "symbol": "FRNZ",
+      "penumbraAssetId": {
+        "inner": "pfhuSArfwYCRpRI+PY3bM3wWpmKdgqZlmxrqCPhrXhA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/frnz.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/frnz.svg",
+          "theme": {
+            "primaryColorHex": "#04041c"
+          }
+        }
+      ]
+    },
+    "zA08nu8Mf/TiJeyoWjCUYDaR0omur0KKsNhzGa2TowI=": {
+      "description": "Ondo US Dollar Yield",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-2/ausdy"
+        },
+        {
+          "denom": "transfer/channel-2/usdy",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-2/ausdy",
+      "display": "transfer/channel-2/usdy",
+      "name": "Ondo US Dollar Yield",
+      "symbol": "USDY",
+      "penumbraAssetId": {
+        "inner": "zA08nu8Mf/TiJeyoWjCUYDaR0omur0KKsNhzGa2TowI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/usdy.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/usdy.svg",
+          "theme": {
+            "primaryColorHex": "#142c5c"
+          }
         }
       ]
     }
