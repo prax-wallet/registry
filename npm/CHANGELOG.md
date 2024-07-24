@@ -1,5 +1,15 @@
 # @penumbra-labs/registry
 
+## 11.0.0
+
+### Major Changes
+
+- 2a74e30: New frontends data structure w/ images
+
+### Patch Changes
+
+- b195bd3: Add support for local devnet chain IDs
+
 ## 10.1.0
 
 ### Minor Changes
