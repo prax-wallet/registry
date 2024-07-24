@@ -37,7 +37,11 @@
       ]
     }
   ],
-  "websites": [
+  "frontends": [
+    "https://penumbra.silentvalidator.com",
+    "https://stake.with.starlingcyber.net"
+  ],
+  "frontendsV2": [
     {
       "name": "Silent Validator",
       "url": "https://penumbra.silentvalidator.com",
@@ -56,10 +60,6 @@
         }
       ]
     }
-  ],
-  "frontends": [
-    "https://penumbra.silentvalidator.com",
-    "https://stake.with.starlingcyber.net"
   ],
   "stakingAssetId": {
     "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
