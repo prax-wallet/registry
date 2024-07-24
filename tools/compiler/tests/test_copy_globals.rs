@@ -1,5 +1,5 @@
 use penumbra_asset::STAKING_TOKEN_ASSET_ID;
-use penumbra_registry::parser::{copy_globals, GlobalsInput, Rpc, Frontend};
+use penumbra_registry::parser::{copy_globals, EntityMetadata, GlobalsInput};
 use penumbra_registry::processor::Globals;
 use std::fs::{self, File};
 use std::io::Write;
@@ -13,16 +13,17 @@ fn create_file_with_content(dir: &Path, file_name: &str, content: &str) {
 }
 
 #[test]
+#[allow(deprecated)]
 fn test_successful_copy() {
     let temp_input_dir = TempDir::new("").unwrap();
     let temp_output_dir = TempDir::new("").unwrap();
     let globals = GlobalsInput {
-        rpcs: vec![Rpc {
+        rpcs: vec![EntityMetadata {
             name: "cybernetics".to_string(),
             url: "http://api.zone".to_string(),
             images: vec![],
         }],
-        websites: vec![Frontend {
+        frontends_v2: vec![EntityMetadata {
             name: "cybernetics".to_string(),
             url: "http://api.zone".to_string(),
             images: vec![],
@@ -45,9 +46,8 @@ fn test_successful_copy() {
     let output_contents = fs::read_to_string(output_path).unwrap();
     let output_globals: Globals = serde_json::from_str(&output_contents).unwrap();
 
-    assert_eq!(output_globals.frontends, globals.frontends);
     assert_eq!(output_globals.rpcs, globals.rpcs);
-    assert_eq!(output_globals.websites, globals.websites);
+    assert_eq!(output_globals.frontends_v2, globals.frontends_v2);
     assert_eq!(output_globals.staking_asset_id, *STAKING_TOKEN_ASSET_ID);
 }
 

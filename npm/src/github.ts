@@ -1,11 +1,11 @@
-import { Base64AssetId, Chain, Registry, Rpc } from './registry';
+import { Base64AssetId, Chain, Registry, EntityMetadata } from './registry';
 import { JsonGlobals, JsonMetadata } from './json';
 import { RegistryGlobals } from './globals';
 
 export interface GithubRegistryResponse {
   chainId: string;
   ibcConnections: Chain[];
-  rpcs: Rpc[];
+  rpcs: EntityMetadata[];
   assetById: Record<Base64AssetId, JsonMetadata>;
   stakingAssetId: Base64AssetId;
   numeraires: Base64AssetId[];

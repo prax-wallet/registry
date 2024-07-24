@@ -1,6 +1,6 @@
 import * as Deimos8 from '../../registry/chains/penumbra-testnet-deimos-8.json';
 import * as Penumbra1 from '../../registry/chains/penumbra-1.json';
-import { Base64AssetId, Chain, Frontend, Rpc } from './registry';
+import { Base64AssetId, Chain, EntityMetadata } from './registry';
 
 export interface JsonRegistry {
   chainId: string;
@@ -10,10 +10,10 @@ export interface JsonRegistry {
 }
 
 export interface JsonGlobals {
-  rpcs: Rpc[];
-  websites: Frontend[];
-  /** @deprecated use `websites` instead */
+  rpcs: EntityMetadata[];
+  /** @deprecated use `frontendsV2` instead */
   frontends: string[];
+  frontendsV2: EntityMetadata[];
   stakingAssetId: { inner: string };
 }
 

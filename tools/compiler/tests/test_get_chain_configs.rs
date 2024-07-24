@@ -20,7 +20,7 @@ fn test_get_chain_configs_reads_configs_correctly() {
     let config_content = serde_json::json!({
         "chainId": "test-chain-1",
         "rpcs": [],
-        "websites": [],
+        "frontendsV2": [],
         "frontends": [],
         "ibcConnections": [],
         "validators": [],
@@ -42,7 +42,7 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
     let config_content_1 = serde_json::json!({
         "chainId": "test-chain-1",
         "rpcs": [],
-        "websites": [],
+        "frontendsV2": [],
         "frontends": [],
         "ibcConnections": [],
         "validators": [],
@@ -60,7 +60,7 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
     let config_content_2 = serde_json::json!({
         "chainId": "test-chain-2",
         "rpcs": [],
-        "websites": [],
+        "frontendsV2": [],
         "frontends": [],
         "ibcConnections": [],
         "validators": [],

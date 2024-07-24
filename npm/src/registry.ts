@@ -23,13 +23,7 @@ export interface Chain {
   displayName: string;
 }
 
-export interface Rpc {
-  name: string;
-  url: string;
-  images: Image[];
-}
-
-export interface Frontend {
+export interface EntityMetadata {
   name: string;
   url: string;
   images: Image[];
