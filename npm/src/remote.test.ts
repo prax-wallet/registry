@@ -55,7 +55,7 @@ describe('RemoteClient', () => {
 
     expect(fetchMock.called(endpoint)).toBe(true);
     expect(registry.stakingAssetId.toJson()).toEqual(GlobalsJson.stakingAssetId);
-    expect(registry.frontends).toEqual(GlobalsJson.frontends);
+    expect(registry.frontends).toEqual(GlobalsJson.frontendsV2);
     expect(registry.rpcs).toEqual(GlobalsJson.rpcs);
   });
 });

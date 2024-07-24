@@ -41,6 +41,26 @@
     "https://penumbra.silentvalidator.com",
     "https://stake.with.starlingcyber.net"
   ],
+  "frontendsV2": [
+    {
+      "name": "Silent Validator",
+      "url": "https://penumbra.silentvalidator.com",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/silent-validator.png"
+        }
+      ]
+    },
+    {
+      "name": "Starling Cybernetics",
+      "url": "https://stake.with.starlingcyber.net",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-cybernetics.svg"
+        }
+      ]
+    }
+  ],
   "stakingAssetId": {
     "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
   }

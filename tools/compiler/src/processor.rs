@@ -6,8 +6,8 @@ use std::path::Path;
 use crate::error::{AppError, AppResult};
 use crate::github::assetlist_schema::AssetTypeAsset;
 use crate::parser::{
-    copy_globals, get_chain_configs, reset_registry_dir, ChainConfig, GlobalsInput, IbcInput,
-    Image, Rpc, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
+    copy_globals, get_chain_configs, reset_registry_dir, ChainConfig, EntityMetadata, GlobalsInput,
+    IbcInput, Image, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
 };
 use crate::querier::query_github_assets;
 use crate::validator::generate_metadata_from_validators;
@@ -44,8 +44,10 @@ impl From<IbcInput> for Chain {
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Globals {
-    pub rpcs: Vec<Rpc>,
+    pub rpcs: Vec<EntityMetadata>,
+    #[deprecated]
     pub frontends: Vec<String>,
+    pub frontends_v2: Vec<EntityMetadata>,
     pub staking_asset_id: Id,
 }
 
@@ -53,9 +55,11 @@ impl TryFrom<GlobalsInput> for Globals {
     type Error = AppError;
 
     fn try_from(g: GlobalsInput) -> AppResult<Self> {
+        #![allow(deprecated)]
         Ok(Globals {
             rpcs: g.rpcs,
             frontends: g.frontends,
+            frontends_v2: g.frontends_v2,
             staking_asset_id: *STAKING_TOKEN_ASSET_ID,
         })
     }
