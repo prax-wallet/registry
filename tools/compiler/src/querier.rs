@@ -5,6 +5,7 @@ use crate::github::types::{AssetList, GitHubContent};
 use crate::parser::{ChainConfig, IbcInput};
 
 const GITHUB_API_BASE_URL: &str = "https://api.github.com/repos/cosmos/chain-registry/contents";
+const COMMIT: &str = "f4f1eeec5cf980aa351e18926a9dffe537ff65a6";
 
 /// Queries asset metadata from the cosmos asset registry
 pub async fn query_github_assets(
@@ -15,8 +16,8 @@ pub async fn query_github_assets(
 
     for ibc_asset in &chain_config.ibc_connections {
         let url = format!(
-            "{}/{}/assetlist.json",
-            GITHUB_API_BASE_URL, ibc_asset.cosmos_registry_dir
+            "{}/{}/assetlist.json?ref={}",
+            GITHUB_API_BASE_URL, ibc_asset.cosmos_registry_dir, COMMIT
         );
         let future = fetch_asset_list(&client, url, ibc_asset);
         futures.push(future);

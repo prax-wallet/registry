@@ -68,6 +68,30 @@
     }
   ],
   "assetById": {
+    "11ulh+zO2v206EDtb6L2SdB09q4ChrHcc+p1zHubzgU=": {
+      "description": "COOK is the governance token for Start.Cooking, the premier token factory on Cosmos.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK"
+        },
+        {
+          "denom": "transfer/channel-4/COOK",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK",
+      "display": "transfer/channel-4/COOK",
+      "name": "COOK",
+      "symbol": "COOK",
+      "penumbraAssetId": {
+        "inner": "11ulh+zO2v206EDtb6L2SdB09q4ChrHcc+p1zHubzgU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COOK.png"
+        }
+      ]
+    },
     "1b1489PiR06kGAYS4y4+J0baqVEdYYqLDlxkHLy5CwA=": {
       "description": "The governance and utility token of Yieldmos, the Interchain Automation Protocol",
       "denomUnits": [
