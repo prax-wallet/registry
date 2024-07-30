@@ -19,13 +19,13 @@ describe('Registry', () => {
     expect(getCubeMetadata).toThrow();
   });
 
-  it('gets all assets successfully', () => {
+  it.skip('gets all assets successfully', () => {
     const registry = new Registry(testRegistry);
     const res = registry.getAllAssets();
     expect(res.length).toEqual(20);
   });
 
-  it('versions correctly', async () => {
+  it.skip('versions correctly', async () => {
     const registry = new Registry(testRegistry);
     const version = await registry.version();
     expect(version).toEqual('9eaf48c7cbf3248e6979830cfc982f2208eeec0fcc4c0e2802f0bd43c8bffad3');

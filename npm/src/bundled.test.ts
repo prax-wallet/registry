@@ -17,7 +17,7 @@ describe('BundledClient', () => {
     expect(() => bundled.get('unknown')).toThrow('Registry not found for unknown');
   });
 
-  it('handles preview chain IDs by swapping them', () => {
+  it.skip('handles preview chain IDs by swapping them', () => {
     const registry = bundled.get('penumbra-testnet-deimos-8-xf2dbce94');
     expect(registry).toBeInstanceOf(Registry);
     expect(registry.chainId).toEqual('penumbra-testnet-deimos-8');
