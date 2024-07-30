@@ -1,11 +1,11 @@
 {
-  "chainId": "penumbra-testnet-deimos-8",
+  "chainId": "penumbra-testnet-deimos-8-x6de97e39",
   "ibcConnections": [
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
-      "channelId": "channel-9",
-      "counterpartyChannelId": "channel-8343",
+      "channelId": "channel-0",
+      "counterpartyChannelId": "channel-8568",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
@@ -17,8 +17,8 @@
     {
       "displayName": "Noble",
       "chainId": "grand-1",
-      "channelId": "channel-7",
-      "counterpartyChannelId": "channel-182",
+      "channelId": "channel-1",
+      "counterpartyChannelId": "channel-199",
       "addressPrefix": "noble",
       "cosmosRegistryDir": "testnets/nobletestnet",
       "images": [
@@ -31,28 +31,10 @@
   "validators": [
     {
       "name": "Penumbra Labs CI 1",
-      "base": "udelegation_penumbravalid1sqwq8p8fqxx4aflthtwmu6kte8je7sh4tj7pyd82qpvdap5ajgrsv0q0ja",
+      "base": "udelegation_penumbravalid1d3c0v5phydt7vdakajzxpw0mev7jcgurk7eeuw6z4cqqks2wxyrqu72gau",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    },
-    {
-      "name": "Penumbra Labs CI 2",
-      "base": "udelegation_penumbravalid173zelmfxtk7r5mhj0k9n96zh9amkr0aucjtsj9j7rdyuj05f4yyqqg5w63",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
-    },
-    {
-      "name": "Starling Cybernetics",
-      "base": "udelegation_penumbravalid1gjdvn0u85rgldqk5adfexn6n4y8d2m3tfla54sc4gu95xwpzssxsjutk7u",
-      "images": [
-        {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-cybernetics.svg"
         }
       ]
     }
@@ -268,6 +250,6 @@
   ],
   "canonicalNumeraires": [
     "wtest_usd",
-    "transfer/channel-7/uusdc"
+    "transfer/channel-1/uusdc"
   ]
 }
