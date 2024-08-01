@@ -38,7 +38,8 @@
     }
   ],
   "frontends": [
-    "https://stake.with.starlingcyber.net"
+    "https://stake.with.starlingcyber.net",
+    "https://penumbra.whispernode.com"
   ],
   "frontendsV2": [
     {
@@ -46,7 +47,16 @@
       "url": "https://stake.with.starlingcyber.net",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-cybernetics.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/starling-cybernetics.svg"
+        }
+      ]
+    },
+    {
+      "name": "Whisper Node",
+      "url": "https://penumbra.whispernode.com",
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/whisper-node.svg"
         }
       ]
     }
