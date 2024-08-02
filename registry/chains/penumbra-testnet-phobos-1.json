@@ -1,11 +1,11 @@
 {
-  "chainId": "penumbra-testnet-deimos-8-x6de97e39",
+  "chainId": "penumbra-testnet-phobos-1",
   "ibcConnections": [
     {
       "addressPrefix": "osmo",
       "chainId": "osmo-test-5",
       "channelId": "channel-0",
-      "counterpartyChannelId": "channel-8568",
+      "counterpartyChannelId": "channel-8660",
       "displayName": "Osmosis",
       "images": [
         {
@@ -17,7 +17,7 @@
       "addressPrefix": "noble",
       "chainId": "grand-1",
       "channelId": "channel-1",
-      "counterpartyChannelId": "channel-199",
+      "counterpartyChannelId": "channel-202",
       "displayName": "Noble",
       "images": [
         {
@@ -27,6 +27,32 @@
     }
   ],
   "assetById": {
+    "+9bJC2eD0enk2+gBQwoKL21f5YvmA2EHQFk8O0ZrFwY=": {
+      "denomUnits": [
+        {
+          "denom": "udelegation_penumbravalid1zs08uufzz0an35lmr0lm9dhk5z3vn0np7l827q0fjllx0yu2yvqqsj9ta3"
+        },
+        {
+          "denom": "mdelegation_penumbravalid1zs08uufzz0an35lmr0lm9dhk5z3vn0np7l827q0fjllx0yu2yvqqsj9ta3",
+          "exponent": 3
+        },
+        {
+          "denom": "delegation_penumbravalid1zs08uufzz0an35lmr0lm9dhk5z3vn0np7l827q0fjllx0yu2yvqqsj9ta3",
+          "exponent": 6
+        }
+      ],
+      "base": "udelegation_penumbravalid1zs08uufzz0an35lmr0lm9dhk5z3vn0np7l827q0fjllx0yu2yvqqsj9ta3",
+      "display": "delegation_penumbravalid1zs08uufzz0an35lmr0lm9dhk5z3vn0np7l827q0fjllx0yu2yvqqsj9ta3",
+      "symbol": "delUM(Penumbra Labs CI 1)",
+      "penumbraAssetId": {
+        "inner": "+9bJC2eD0enk2+gBQwoKL21f5YvmA2EHQFk8O0ZrFwY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
+        }
+      ]
+    },
     "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws=": {
       "denomUnits": [
         {
@@ -175,32 +201,6 @@
       "penumbraAssetId": {
         "inner": "VvnzHX2uGYbOLAf4etff37yf1EQAS/8RzdAS63FZuwI="
       }
-    },
-    "Y3SIJktGY/trlNV/VRPhMVyBA4RyXmubxjzs0BGsPQ0=": {
-      "denomUnits": [
-        {
-          "denom": "udelegation_penumbravalid1d3c0v5phydt7vdakajzxpw0mev7jcgurk7eeuw6z4cqqks2wxyrqu72gau"
-        },
-        {
-          "denom": "mdelegation_penumbravalid1d3c0v5phydt7vdakajzxpw0mev7jcgurk7eeuw6z4cqqks2wxyrqu72gau",
-          "exponent": 3
-        },
-        {
-          "denom": "delegation_penumbravalid1d3c0v5phydt7vdakajzxpw0mev7jcgurk7eeuw6z4cqqks2wxyrqu72gau",
-          "exponent": 6
-        }
-      ],
-      "base": "udelegation_penumbravalid1d3c0v5phydt7vdakajzxpw0mev7jcgurk7eeuw6z4cqqks2wxyrqu72gau",
-      "display": "delegation_penumbravalid1d3c0v5phydt7vdakajzxpw0mev7jcgurk7eeuw6z4cqqks2wxyrqu72gau",
-      "symbol": "delUM(Penumbra Labs CI 1)",
-      "penumbraAssetId": {
-        "inner": "Y3SIJktGY/trlNV/VRPhMVyBA4RyXmubxjzs0BGsPQ0="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
-        }
-      ]
     },
     "g128RUoEK9S9qg/E26hO/HqfS1x+alzMmC1TN7e9fgk=": {
       "description": "The controlled staking asset for Noble Chain",

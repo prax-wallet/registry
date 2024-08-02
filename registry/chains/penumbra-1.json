@@ -68,6 +68,30 @@
     }
   ],
   "assetById": {
+    "11ulh+zO2v206EDtb6L2SdB09q4ChrHcc+p1zHubzgU=": {
+      "description": "COOK is the governance token for Start.Cooking, the premier token factory on Cosmos.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK"
+        },
+        {
+          "denom": "transfer/channel-4/COOK",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/COOK",
+      "display": "transfer/channel-4/COOK",
+      "name": "COOK",
+      "symbol": "COOK",
+      "penumbraAssetId": {
+        "inner": "11ulh+zO2v206EDtb6L2SdB09q4ChrHcc+p1zHubzgU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COOK.png"
+        }
+      ]
+    },
     "1b1489PiR06kGAYS4y4+J0baqVEdYYqLDlxkHLy5CwA=": {
       "description": "The governance and utility token of Yieldmos, the Interchain Automation Protocol",
       "denomUnits": [
@@ -726,6 +750,35 @@
         }
       ]
     },
+    "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI=": {
+      "description": "TRONIX is the mainnet native token of the TRON Protocol issued by TRON DAO, known as TRX.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/TRX.rt"
+        },
+        {
+          "denom": "transfer/channel-4/trx",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/TRX.rt",
+      "display": "transfer/channel-4/trx",
+      "name": "Tronix",
+      "symbol": "TRX",
+      "penumbraAssetId": {
+        "inner": "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tron/images/trx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tron/images/trx.svg",
+          "theme": {
+            "primaryColorHex": "#FF060A",
+            "circle": true
+          }
+        }
+      ]
+    },
     "U3U0P+fV2U5EqU0+kgq7qd+sjCbVhGeB6F8ix421WAc=": {
       "description": "Memecoin for The International Brane Wave",
       "denomUnits": [
@@ -1275,6 +1328,35 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COCA.png",
           "theme": {
             "primaryColorHex": "#1e2029"
+          }
+        }
+      ]
+    },
+    "w5681cktB4+4eGef8ADtZ8fQSlt3IuLI7BtueUwVOg0=": {
+      "description": "USDT is the official stablecoin issued by Tether on the TRON network.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/USDT.rt"
+        },
+        {
+          "denom": "transfer/channel-4/usdt",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/USDT.rt",
+      "display": "transfer/channel-4/usdt",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "penumbraAssetId": {
+        "inner": "w5681cktB4+4eGef8ADtZ8fQSlt3IuLI7BtueUwVOg0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg",
+          "theme": {
+            "primaryColorHex": "#009393",
+            "circle": true
           }
         }
       ]

@@ -1,11 +1,11 @@
 {
-  "chainId": "penumbra-testnet-deimos-8-x6de97e39",
+  "chainId": "penumbra-testnet-phobos-1",
   "ibcConnections": [
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
       "channelId": "channel-0",
-      "counterpartyChannelId": "channel-8568",
+      "counterpartyChannelId": "channel-8660",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
@@ -18,7 +18,7 @@
       "displayName": "Noble",
       "chainId": "grand-1",
       "channelId": "channel-1",
-      "counterpartyChannelId": "channel-199",
+      "counterpartyChannelId": "channel-202",
       "addressPrefix": "noble",
       "cosmosRegistryDir": "testnets/nobletestnet",
       "images": [
@@ -31,7 +31,7 @@
   "validators": [
     {
       "name": "Penumbra Labs CI 1",
-      "base": "udelegation_penumbravalid1d3c0v5phydt7vdakajzxpw0mev7jcgurk7eeuw6z4cqqks2wxyrqu72gau",
+      "base": "udelegation_penumbravalid1zs08uufzz0an35lmr0lm9dhk5z3vn0np7l827q0fjllx0yu2yvqqsj9ta3",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
