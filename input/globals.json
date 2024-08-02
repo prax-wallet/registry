@@ -39,7 +39,8 @@
   ],
   "frontends": [
     "https://stake.with.starlingcyber.net",
-    "https://penumbra.whispernode.com"
+    "https://penumbra.whispernode.com",
+    "https://voids.cloud"
   ],
   "frontendsV2": [
     {
@@ -57,6 +58,15 @@
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/whisper-node.svg"
+        }
+      ]
+    },
+    {
+      "name": "⊤⊥",
+      "url": "https://voids.cloud",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/22a435.png"
         }
       ]
     }

@@ -1361,6 +1361,33 @@
         }
       ]
     },
+    "wK3qqrXW4tv5VvO2fyhpuzhKR2i1E9X7dFFm1qlXMwY=": {
+      "description": "The Representative factory token for Trump Kemistry",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP"
+        },
+        {
+          "denom": "transfer/channel-4/XTRUMP",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1hg0zf0c9can4tvtulh5gmmxe4jpflre3yewxjl/XTRUMP",
+      "display": "transfer/channel-4/XTRUMP",
+      "name": "XTRUMP",
+      "symbol": "XTRUMP",
+      "penumbraAssetId": {
+        "inner": "wK3qqrXW4tv5VvO2fyhpuzhKR2i1E9X7dFFm1qlXMwY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/XTRUMP.png",
+          "theme": {
+            "primaryColorHex": "#b02b27"
+          }
+        }
+      ]
+    },
     "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4=": {
       "description": "An alloy of ETH asset variants on Osmosis.",
       "denomUnits": [
