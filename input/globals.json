@@ -35,6 +35,15 @@
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/binary-builders.png"
         }
       ]
+    },
+    {
+      "name": "⊤⊥",
+      "url": "https://void.s9.gay",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/22a435.png"
+        }
+      ]
     }
   ],
   "frontends": [

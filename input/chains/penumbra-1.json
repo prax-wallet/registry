@@ -72,7 +72,17 @@
       ]
     }
   ],
-  "validators": [],
+  "validators": [
+    {
+      "name": "⊤⊥",
+      "base": "udelegation_penumbravalid1qttzflwwf76qsredmcmqdny3z2v35a3kklrzram6l7x9l69v7szslkuzy0",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/22a435.png"
+        }
+      ]
+    }
+  ],
   "nativeAssets": [
     {
       "denomUnits": [
