@@ -35,6 +35,15 @@
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/binary-builders.png"
         }
       ]
+    },
+    {
+      "name": "IONode Vietnam",
+      "url": "https://penumbra.ionode.online",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/ionode_88-1.png"
+        }
+      ]
     }
   ],
   "frontends": [
