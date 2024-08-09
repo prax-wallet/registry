@@ -40,7 +40,8 @@
   "frontends": [
     "https://stake.with.starlingcyber.net",
     "https://penumbra.whispernode.com",
-    "https://voids.cloud"
+    "https://voids.cloud",
+    "https://penumbra.zechub.org"
   ],
   "frontendsV2": [
     {
@@ -67,6 +68,15 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/22a435.png"
+        }
+      ]
+    },
+    {
+      "name": "ZecHub",
+      "url": "https://penumbra.zechub.org",
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/zec-hub.png"
         }
       ]
     }
