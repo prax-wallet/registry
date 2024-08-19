@@ -1,7 +1,4 @@
-import {
-  AssetId,
-  Metadata,
-} from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
+import { AssetId, Metadata } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { JsonRegistry } from './json';
 import { JsonValue } from '@bufbuild/protobuf';
 import { base64ToUint8Array, uint8ArrayToBase64 } from './utils/base64';
