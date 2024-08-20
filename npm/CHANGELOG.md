@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 11.1.0
+
+### Minor Changes
+
+- Update to latest bundle
+
 ## 11.0.0
 
 ### Major Changes

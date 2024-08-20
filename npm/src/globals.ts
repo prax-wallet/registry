@@ -1,5 +1,5 @@
 import { EntityMetadata } from './registry';
-import { AssetId } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
+import { AssetId } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { JsonGlobals } from './json';
 import { sha256Hash } from './utils/sha256';
 

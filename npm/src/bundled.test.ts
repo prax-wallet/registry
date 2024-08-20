@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { ChainRegistryClient } from './client';
 import { Registry } from './registry';
-import { AssetId } from '@buf/penumbra-zone_penumbra.bufbuild_es/penumbra/core/asset/v1/asset_pb';
+import { AssetId } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { base64ToUint8Array } from './utils/base64';
 
 describe('BundledClient', () => {
