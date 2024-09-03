@@ -1,5 +1,5 @@
 use anyhow::Context;
-use reqwest::Client;
+use reqwest::{Client, Response};
 
 use crate::error::AppResult;
 use crate::github::types::{AssetList, GitHubContent};
@@ -37,6 +37,27 @@ pub async fn query_github_assets(
     Ok(results)
 }
 
+/// Helper fn to perform HTTP GET via Github API, setting standard headers,
+/// including bearer authentication via the `GITHUB_TOKEN` env var, if set.
+async fn http_get(client: &Client, url: String) -> anyhow::Result<Response> {
+    // Build the request with a standard user agent.
+    let mut request = client
+        .get(&url)
+        .header(reqwest::header::USER_AGENT, "request");
+
+    // Add the GITHUB_TOKEN env var as bearer auth, if set.
+    if let Ok(github_token) = std::env::var("GITHUB_TOKEN") {
+        request = request.bearer_auth(github_token)
+    }
+
+    // Perform request, failing if non-200 HTTP status code is returned.
+    request
+        .send()
+        .await?
+        .error_for_status()
+        .context("failed to perform http get")
+}
+
 #[instrument(skip_all)]
 async fn fetch_asset_list(
     client: &Client,
@@ -45,17 +66,11 @@ async fn fetch_asset_list(
 ) -> AppResult<(IbcInput, AssetList)> {
     tracing::debug!(ibc_asset=?ibc_asset.display_name, url, "fetching asset info");
     // First obtain GithubContent, from which we'll extract a URL to download the asset list as JSON.
-    let res = client
-        .get(&url)
-        .header(reqwest::header::USER_AGENT, "request")
-        .send()
-        .await?
-        .error_for_status()
-        .map_err(|e| {
-            tracing::error!("failed to get asset list for '{}'", ibc_asset.display_name);
-            e
-        })?;
-    let github_content = res.json::<GitHubContent>().await.map_err(|e| {
+    let ghc_response = http_get(client, url).await.map_err(|e| {
+        tracing::error!("failed to get asset list for '{}'", ibc_asset.display_name);
+        e
+    })?;
+    let github_content = ghc_response.json::<GitHubContent>().await.map_err(|e| {
         tracing::error!(
             "failed to parse asset info for '{}' as GitHubContent",
             ibc_asset.display_name
@@ -63,15 +78,18 @@ async fn fetch_asset_list(
         e
     })?;
 
-    tracing::debug!(ibc_asset=?ibc_asset.display_name, url, "fetching asset list");
-    let res = client
-        .get(&github_content.download_url)
-        .header(reqwest::header::USER_AGENT, "request")
-        .send()
+    tracing::debug!(ibc_asset=?ibc_asset.display_name, url=github_content.download_url, "fetching asset list");
+    let assetlist_response = http_get(client, github_content.download_url.clone())
         .await
-        .context("failed to get the jawn")?;
+        .map_err(|e| {
+            tracing::error!(
+                "failed to download asset info from '{}'",
+                &github_content.download_url
+            );
+            e
+        })?;
 
-    let asset_list = res
+    let asset_list = assetlist_response
         .json::<AssetList>()
         .await
         // TODO: unpack this list so we can fail on specific asset
