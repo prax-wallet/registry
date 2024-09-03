@@ -2,6 +2,7 @@ use anyhow::anyhow;
 use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
+use tracing::instrument;
 
 use crate::error::{AppError, AppResult};
 use crate::github::assetlist_schema::AssetTypeAsset;
@@ -101,13 +102,14 @@ pub async fn generate_registry() -> AppResult<()> {
 
 /// Given `ibc_data` describing a channel and `source_asset` on the source chain,
 /// compute the metadata for the asset when it is transported along the channel onto a Penumbra chain.
+#[instrument(skip_all)]
 pub fn transport_metadata_along_channel(
     ibc_data: &IbcInput,
     source_asset: Metadata,
 ) -> AppResult<Metadata> {
     // The `Metadata` structure doesn't allow modifying the internals, so drop to raw proto data
     let mut pb_metadata: pb::Metadata = source_asset.into();
-    tracing::debug!(?pb_metadata, "original");
+    tracing::trace!(?pb_metadata, "original");
 
     let prefix_channel = |x: &mut String| {
         *x = format!("transfer/{}/{}", ibc_data.channel_id, x);
@@ -126,7 +128,7 @@ pub fn transport_metadata_along_channel(
     // Without this, decoding will fail because the asset ID won't match.
     pb_metadata.penumbra_asset_id = None;
 
-    tracing::debug!(?pb_metadata, "new");
+    tracing::trace!(?pb_metadata, "new");
     Ok(Metadata::try_from(pb_metadata)?)
 }
 

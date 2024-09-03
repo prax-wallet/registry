@@ -1,12 +1,15 @@
+use anyhow::Context;
 use reqwest::Client;
 
 use crate::error::AppResult;
 use crate::github::types::{AssetList, GitHubContent};
 use crate::parser::{ChainConfig, IbcInput};
+use tracing::instrument;
 
 const GITHUB_API_BASE_URL: &str = "https://api.github.com/repos/cosmos/chain-registry/contents";
 
 /// Queries asset metadata from the cosmos asset registry
+#[instrument(skip_all)]
 pub async fn query_github_assets(
     chain_config: &ChainConfig,
 ) -> AppResult<Vec<(IbcInput, AssetList)>> {
@@ -23,26 +26,48 @@ pub async fn query_github_assets(
     }
 
     let results = futures::future::try_join_all(futures).await?;
+    tracing::debug!("all assets fetched successfully");
     Ok(results)
 }
 
+#[instrument(skip_all)]
 async fn fetch_asset_list(
     client: &Client,
     url: String,
     ibc_asset: &IbcInput,
 ) -> AppResult<(IbcInput, AssetList)> {
+    tracing::debug!(ibc_asset=?ibc_asset.display_name, url, "fetching asset info");
+    // First obtain GithubContent, from which we'll extract a URL to download the asset list as JSON.
     let res = client
         .get(&url)
         .header(reqwest::header::USER_AGENT, "request")
         .send()
-        .await?;
-    let github_content = res.json::<GitHubContent>().await?;
+        .await?
+        .error_for_status()
+        .map_err(|e| {
+            tracing::error!("failed to get asset list for '{}'", ibc_asset.display_name);
+            e
+        })?;
+    let github_content = res.json::<GitHubContent>().await.map_err(|e| {
+        tracing::error!(
+            "failed to parse asset info for '{}' as GitHubContent",
+            ibc_asset.display_name
+        );
+        e
+    })?;
 
+    tracing::debug!(ibc_asset=?ibc_asset.display_name, url, "fetching asset list");
     let res = client
         .get(&github_content.download_url)
         .header(reqwest::header::USER_AGENT, "request")
         .send()
-        .await?;
-    let asset_list = res.json::<AssetList>().await?;
+        .await
+        .context("failed to get the jawn")?;
+
+    let asset_list = res
+        .json::<AssetList>()
+        .await
+        // TODO: unpack this list so we can fail on specific asset
+        .context("failed to convert the json")?;
     Ok((ibc_asset.clone(), asset_list))
 }
