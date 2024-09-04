@@ -6,7 +6,14 @@ use crate::github::types::{AssetList, GitHubContent};
 use crate::parser::{ChainConfig, IbcInput};
 use tracing::instrument;
 
+// URL for building API calls to Github, pointing to the Cosmos Chain Registry repo.
 const GITHUB_API_BASE_URL: &str = "https://api.github.com/repos/cosmos/chain-registry/contents";
+
+// Optional commit hash for looking up a specific version of the chain registry.
+// If empty, the lookup defaults to the most recent commit on the default branch.
+// If set, must be formatted as a URL param, e.g.
+// const GITHUB_API_GIT_REF: &str = "?ref=b2862cf7b8aea5634cdbe8a13e80db499409429f";
+const GITHUB_API_GIT_REF: &str = "";
 
 /// Queries asset metadata from the cosmos asset registry
 #[instrument(skip_all)]
@@ -18,8 +25,8 @@ pub async fn query_github_assets(
 
     for ibc_asset in &chain_config.ibc_connections {
         let url = format!(
-            "{}/{}/assetlist.json",
-            GITHUB_API_BASE_URL, ibc_asset.cosmos_registry_dir
+            "{}/{}/assetlist.json{}",
+            GITHUB_API_BASE_URL, ibc_asset.cosmos_registry_dir, GITHUB_API_GIT_REF,
         );
         let future = fetch_asset_list(&client, url, ibc_asset);
         futures.push(future);
