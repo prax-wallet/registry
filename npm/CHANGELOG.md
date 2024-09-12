@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 11.2.0
+
+### Minor Changes
+
+- c9bf54c: Update to latest cosmos registry
+
 ## 11.1.0
 
 ### Minor Changes

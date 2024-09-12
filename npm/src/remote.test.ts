@@ -3,7 +3,7 @@ import fetchMock from 'fetch-mock';
 import { RemoteClient } from './remote';
 import { REGISTRY_BASE_URL } from './github';
 import { ChainRegistryClient } from './client';
-import * as Deimos8 from '../../registry/chains/penumbra-testnet-deimos-8.json';
+import * as Deimos8 from '../../registry/chains/penumbra-testnet-deimos-8-x6de97e39.json';
 import * as GlobalsJson from '../../registry/globals.json';
 
 describe('RemoteClient', () => {

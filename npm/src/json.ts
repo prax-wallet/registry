@@ -1,4 +1,4 @@
-import * as Deimos8 from '../../registry/chains/penumbra-testnet-deimos-8.json';
+import * as Deimos8 from '../../registry/chains/penumbra-testnet-deimos-8-x6de97e39.json';
 import * as Penumbra1 from '../../registry/chains/penumbra-1.json';
 import * as Phobos1 from '../../registry/chains/penumbra-testnet-phobos-1.json';
 import { Base64AssetId, Chain, EntityMetadata } from './registry';

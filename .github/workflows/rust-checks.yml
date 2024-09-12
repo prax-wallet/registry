@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: 'true'
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
@@ -29,6 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: 'true'
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
@@ -44,6 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: 'true'
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
@@ -51,4 +57,25 @@ jobs:
           override: true
       - name: Run Tests
         run: cargo test
+        working-directory: tools/compiler
+
+  execute_and_check:
+    name: Generate registry and Check for Diffs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: 'true'
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+      - name: Generate registry
+        run: cargo run
+        env:
+          RUST_LOG: info
+        working-directory: tools/compiler
+      - name: Check for Uncommitted Changes
+        run: git diff --exit-code
         working-directory: tools/compiler

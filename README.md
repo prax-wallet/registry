@@ -38,7 +38,8 @@ field in the input JSON file.
 Let's say you want to add or edit an asset in the registry. Here are the steps you should take.
 
 1. Install pre-requisite deps: [Rust](https://www.rust-lang.org/tools/install) & [pnpm](https://pnpm.io/installation)
-2. Fork repository & clone it down locally
+2. Fork repository & clone it down locally with `git clone --recurse-submodules`
+    - If you've pulled the repo before, update the cosmos registry using `git submodule update --init --recursive`
 3. In `input/<chain_name>.json`, add your new asset or edit the metadata as needed
 4. In `tools/compiler/` directory run `cargo run`
 5. In `npm/` run `pnpm install` and `pnpm changeset`. Make a minor (if new chain added) or patch (add/edit to existing)

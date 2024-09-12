@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { Registry } from './registry';
 import { AssetId } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { base64ToUint8Array } from './utils/base64';
-import * as testRegistry from '../../registry/chains/penumbra-testnet-deimos-8.json';
+import * as testRegistry from '../../registry/chains/penumbra-testnet-deimos-8-x6de97e39.json';
 
 describe('Registry', () => {
   it('gets metadata successfully', () => {
