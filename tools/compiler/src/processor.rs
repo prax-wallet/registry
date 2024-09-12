@@ -4,19 +4,17 @@ use std::fs;
 use std::path::Path;
 use tracing::instrument;
 
+use crate::assetlist_schema::{AssetList, AssetTypeAsset};
 use crate::error::{AppError, AppResult};
-use crate::github::assetlist_schema::AssetTypeAsset;
 use crate::parser::{
     copy_globals, get_chain_configs, reset_registry_dir, ChainConfig, EntityMetadata, GlobalsInput,
     IbcInput, Image, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
 };
-use crate::querier::query_github_assets;
 use crate::validator::generate_metadata_from_validators;
 use penumbra_asset::asset::{Id, Metadata};
 use penumbra_asset::STAKING_TOKEN_ASSET_ID;
 use penumbra_proto::penumbra::core::asset::v1 as pb;
 use serde::{Deserialize, Serialize};
-use tokio::task;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -75,22 +73,16 @@ pub struct Registry {
     pub numeraires: Vec<String>,
 }
 
-pub async fn generate_registry() -> AppResult<()> {
+pub fn generate_registry() -> AppResult<()> {
     reset_registry_dir(LOCAL_REGISTRY_DIR)?;
     copy_globals(LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR)?;
 
     // Get local configs from /input directory
     let chain_configs = get_chain_configs(LOCAL_INPUT_DIR)?;
-    let mut tasks = Vec::new();
-    chain_configs.into_iter().for_each(|c| {
-        // Async fetch metadata for ibc assets from cosmos registry
-        let task = task::spawn(async move { process_chain_config(c).await });
-        tasks.push(task);
-    });
 
     // Take resulting registries and save to /registry
-    for task in tasks {
-        let registry = task.await??;
+    for c in chain_configs {
+        let registry = process_chain_config(c)?;
         let file_name = format!("{}.json", registry.chain_id);
         let output_path = Path::new(LOCAL_REGISTRY_DIR).join("chains").join(file_name);
         let output_json = serde_json::to_string_pretty(&registry)?;
@@ -142,16 +134,22 @@ pub fn base64_id(id: &Id) -> AppResult<String> {
     Ok(base64_str)
 }
 
-async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
+fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
     let mut all_metadata = Vec::new();
 
     all_metadata.extend(generate_metadata_from_validators(&chain_config.validators)?);
     all_metadata.extend(chain_config.native_assets.clone());
 
-    // For each ibc connection, fetch all metadata of native assets from the cosmos registry
-    let responses = query_github_assets(&chain_config).await?;
+    // For each ibc connection, grab all metadata of native assets from the cosmos registry
+    for ibc_input in &chain_config.ibc_connections {
+        let assetlist_path = Path::new("./src/chain-registry")
+            .join(&ibc_input.cosmos_registry_dir)
+            .join("assetlist.json");
 
-    for (ibc_data, asset_list) in responses {
+        // Parse the local JSON into the AssetList struct
+        let data = fs::read_to_string(assetlist_path)?;
+        let asset_list: AssetList = serde_json::from_str(&data)?;
+
         for source_asset in asset_list.assets {
             // ICS20 assets should be unwound through their native chains, we can skip
             if source_asset.type_asset == AssetTypeAsset::Ics20 {
@@ -161,7 +159,7 @@ async fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> 
             let asset_json = serde_json::to_string(&source_asset)?;
             let source_asset_metadata = serde_json::from_str(&asset_json)?;
             let transferred_asset =
-                transport_metadata_along_channel(&ibc_data, source_asset_metadata)?;
+                transport_metadata_along_channel(ibc_input, source_asset_metadata)?;
             all_metadata.push(transferred_asset);
         }
     }
