@@ -1,9 +1,11 @@
+use anyhow::Context;
 use std::fs;
 use std::path::Path;
 
 use penumbra_asset::asset::Metadata;
 use penumbra_proto::core::asset::v1::AssetImage;
 use serde::{Deserialize, Serialize};
+use tracing::instrument;
 
 use crate::error::AppResult;
 use crate::processor::Globals;
@@ -91,9 +93,10 @@ pub const LOCAL_INPUT_DIR: &str = "../../input";
 /// input/
 /// ├── penumbra-testnet-deimos-6.json
 /// └── mars-1.json
+#[instrument]
 pub fn get_chain_configs(input_dir: &str) -> AppResult<Vec<ChainConfig>> {
     let input_path = Path::new(input_dir).join("chains");
-    let chain_configs = fs::read_dir(input_path)?;
+    let chain_configs = fs::read_dir(input_path).context("failed to open chain config dir")?;
     Ok(chain_configs
         .into_iter()
         .map(|input| -> AppResult<ChainConfig> {
@@ -105,7 +108,7 @@ pub fn get_chain_configs(input_dir: &str) -> AppResult<Vec<ChainConfig>> {
         .filter_map(|result| match result {
             Ok(config) => Some(config),
             Err(e) => {
-                tracing::info!("{}", e.to_string());
+                tracing::error!("{}", e.to_string());
                 None
             }
         })
@@ -113,26 +116,30 @@ pub fn get_chain_configs(input_dir: &str) -> AppResult<Vec<ChainConfig>> {
 }
 
 // Validates globals and copies over to registry without change
+#[instrument]
 pub fn copy_globals(input_dir: &str, registry_dir: &str) -> AppResult<()> {
     let input_path = Path::new(input_dir).join("globals.json");
-    let json_data = fs::read_to_string(input_path)?;
+    tracing::debug!(?input_path, "reading globals json file");
+    let json_data = fs::read_to_string(input_path).context("failed to read globals json file")?;
     let globals_input: GlobalsInput = serde_json::from_str(&json_data)?;
     let globals: Globals = globals_input.try_into()?;
 
     // Write the validated JSON data to the output file
     let output_path = Path::new(registry_dir).join("globals.json");
     let output_json = serde_json::to_string_pretty::<Globals>(&globals)?;
-    fs::write(output_path, output_json)?;
+    fs::write(output_path, output_json).context("failed to write globals json")?;
 
     Ok(())
 }
 
-// Deletes and re-creates registry dir
+/// Deletes and re-creates registry dir
+#[instrument]
 pub fn reset_registry_dir(path: &str) -> AppResult<()> {
     let dir_path = Path::new(path);
 
     // Create the directory if it doesn't exist
     if !dir_path.exists() {
+        tracing::debug!("creating top-level registry dir");
         fs::create_dir_all(dir_path)?;
     }
 
@@ -148,6 +155,7 @@ pub fn reset_registry_dir(path: &str) -> AppResult<()> {
 
     // Create the "chains" directory inside
     let chains_dir = dir_path.join("chains");
+    tracing::debug!(?chains_dir, "creating chain dir");
     fs::create_dir(chains_dir)?;
 
     Ok(())

@@ -37,5 +37,6 @@ describe('testnet-preview helper', () => {
     expect(deriveTestnetChainIdFromPreview('penumbra-testnet-tethys12-b4d8f9a0')).toEqual(
       'penumbra-testnet-tethys12',
     );
+    expect(deriveTestnetChainIdFromPreview('penumbra-testnet-deimos-8')).toEqual('');
   });
 });
