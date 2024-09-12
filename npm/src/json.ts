@@ -41,6 +41,11 @@ interface PenumbraAssetId {
 interface Image {
   png?: string;
   svg?: string;
+  theme?: {
+    primaryColorHex?: string;
+    circle?: boolean;
+    darkMode?: boolean;
+  };
 }
 
 export const allJsonRegistries: Record<string, JsonRegistry> = {
