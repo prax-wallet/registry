@@ -18,9 +18,9 @@ jobs:
         working-directory: npm
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          submodules: 'true'
+          submodules: true
       - uses: pnpm/action-setup@v3
         with:
           version: 9
