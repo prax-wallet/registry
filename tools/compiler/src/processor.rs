@@ -16,6 +16,9 @@ use penumbra_asset::STAKING_TOKEN_ASSET_ID;
 use penumbra_proto::penumbra::core::asset::v1 as pb;
 use serde::{Deserialize, Serialize};
 
+// Location of the `cosmos/chain-registry` submodule directory
+const LOCAL_COSMOS_REGISTRY_DIR: &str = "./files/chain-registry/";
+
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Chain {
@@ -142,7 +145,8 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
 
     // For each ibc connection, grab all metadata of native assets from the cosmos registry
     for ibc_input in &chain_config.ibc_connections {
-        let assetlist_path = Path::new("./src/chain-registry")
+        // let assetlist_path = Path::new("./src/chain-registry")
+        let assetlist_path = Path::new(LOCAL_COSMOS_REGISTRY_DIR)
             .join(&ibc_input.cosmos_registry_dir)
             .join("assetlist.json");
 
