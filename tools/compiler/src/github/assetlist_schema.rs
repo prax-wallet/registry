@@ -1,5 +1,12 @@
 // Generated from cosmos assetlist schema: https://github.com/cosmos/chain-registry/blob/master/assetlist.schema.json
 // Via Typify: https://github.com/oxidecomputer/typify
+// === NOTE ===
+// Three manual edits have been made:
+// - This documentation at the top
+// - Removal of the if/then clause within the schema. Typify does not currently support it.
+// - Removing the few clippy allowances previously for #![allow(clippy::all)] as there are
+//   a number of things that get triggered.
+
 #![allow(clippy::all)]
 
 use serde::{Deserialize, Serialize};
@@ -47,15 +54,18 @@ pub mod error {
 #[doc = "  \"properties\": {"]
 #[doc = "    \"address\": {"]
 #[doc = "      \"description\": \"[OPTIONAL] The address of the asset. Only required for type_asset : cw20, snip20\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"base\": {"]
 #[doc = "      \"description\": \"The base unit of the asset. Must be in denom_units.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"coingecko_id\": {"]
 #[doc = "      \"description\": \"[OPTIONAL] The coingecko id to fetch asset data from coingecko v3 api. See https://api.coingecko.com/api/v3/coins/list\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"denom_units\": {"]
 #[doc = "      \"type\": \"array\","]
@@ -70,15 +80,18 @@ pub mod error {
 #[doc = "    },"]
 #[doc = "    \"description\": {"]
 #[doc = "      \"description\": \"[OPTIONAL] A short description of the asset\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"display\": {"]
 #[doc = "      \"description\": \"The human friendly unit of the asset. Must be in denom_units.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"extended_description\": {"]
 #[doc = "      \"description\": \"[OPTIONAL] A long description of the asset\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"ibc\": {"]
 #[doc = "      \"description\": \"[OPTIONAL] IBC Channel between src and dst between chain\","]
@@ -112,26 +125,37 @@ pub mod error {
 #[doc = "          \"png\": {"]
 #[doc = "            \"type\": \"string\","]
 #[doc = "            \"format\": \"uri-reference\","]
+#[doc = "            \"minLength\": 1,"]
 #[doc = "            \"pattern\": \"^https://raw\\\\.githubusercontent\\\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\\\.png$\""]
 #[doc = "          },"]
 #[doc = "          \"svg\": {"]
 #[doc = "            \"type\": \"string\","]
 #[doc = "            \"format\": \"uri-reference\","]
+#[doc = "            \"minLength\": 1,"]
 #[doc = "            \"pattern\": \"^https://raw\\\\.githubusercontent\\\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\\\.svg$\""]
 #[doc = "          },"]
 #[doc = "          \"theme\": {"]
 #[doc = "            \"type\": \"object\","]
 #[doc = "            \"minProperties\": 1,"]
 #[doc = "            \"properties\": {"]
+#[doc = "              \"background_color_hex\": {"]
+#[doc = "                \"type\": \"string\","]
+#[doc = "                \"minLength\": 1,"]
+#[doc = "                \"pattern\": \"^(#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})|none)$\""]
+#[doc = "              },"]
 #[doc = "              \"circle\": {"]
 #[doc = "                \"type\": \"boolean\""]
 #[doc = "              },"]
 #[doc = "              \"dark_mode\": {"]
 #[doc = "                \"type\": \"boolean\""]
 #[doc = "              },"]
+#[doc = "              \"monochrome\": {"]
+#[doc = "                \"type\": \"boolean\""]
+#[doc = "              },"]
 #[doc = "              \"primary_color_hex\": {"]
 #[doc = "                \"type\": \"string\","]
-#[doc = "                \"pattern\": \"^#[0-9a-fA-F]{6}$\""]
+#[doc = "                \"minLength\": 1,"]
+#[doc = "                \"pattern\": \"^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$\""]
 #[doc = "              }"]
 #[doc = "            },"]
 #[doc = "            \"additionalProperties\": false"]
@@ -144,7 +168,8 @@ pub mod error {
 #[doc = "    \"keywords\": {"]
 #[doc = "      \"type\": \"array\","]
 #[doc = "      \"items\": {"]
-#[doc = "        \"type\": \"string\""]
+#[doc = "        \"type\": \"string\","]
+#[doc = "        \"minLength\": 1"]
 #[doc = "      },"]
 #[doc = "      \"maxContains\": 20,"]
 #[doc = "      \"minContains\": 1"]
@@ -155,11 +180,13 @@ pub mod error {
 #[doc = "        \"png\": {"]
 #[doc = "          \"type\": \"string\","]
 #[doc = "          \"format\": \"uri-reference\","]
+#[doc = "          \"minLength\": 1,"]
 #[doc = "          \"pattern\": \"^https://raw\\\\.githubusercontent\\\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\\\.png$\""]
 #[doc = "        },"]
 #[doc = "        \"svg\": {"]
 #[doc = "          \"type\": \"string\","]
 #[doc = "          \"format\": \"uri-reference\","]
+#[doc = "          \"minLength\": 1,"]
 #[doc = "          \"pattern\": \"^https://raw\\\\.githubusercontent\\\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\\\.svg$\""]
 #[doc = "        }"]
 #[doc = "      },"]
@@ -168,7 +195,8 @@ pub mod error {
 #[doc = "    \"name\": {"]
 #[doc = "      \"description\": \"The project name of the asset. For example Bitcoin.\","]
 #[doc = "      \"type\": \"string\","]
-#[doc = "      \"maxLength\": 42"]
+#[doc = "      \"maxLength\": 42,"]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"socials\": {"]
 #[doc = "      \"type\": \"object\","]
@@ -176,17 +204,20 @@ pub mod error {
 #[doc = "      \"properties\": {"]
 #[doc = "        \"twitter\": {"]
 #[doc = "          \"type\": \"string\","]
-#[doc = "          \"format\": \"uri\""]
+#[doc = "          \"format\": \"uri\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        },"]
 #[doc = "        \"website\": {"]
 #[doc = "          \"type\": \"string\","]
-#[doc = "          \"format\": \"uri\""]
+#[doc = "          \"format\": \"uri\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        }"]
 #[doc = "      }"]
 #[doc = "    },"]
 #[doc = "    \"symbol\": {"]
 #[doc = "      \"description\": \"The symbol of an asset. For example BTC.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"traces\": {"]
 #[doc = "      \"description\": \"The origin of the asset, starting with the index, and capturing all transitions in form and location.\","]
@@ -198,6 +229,9 @@ pub mod error {
 #[doc = "          },"]
 #[doc = "          {"]
 #[doc = "            \"$ref\": \"#/$defs/ibc_cw20_transition\""]
+#[doc = "          },"]
+#[doc = "          {"]
+#[doc = "            \"$ref\": \"#/$defs/ibc_bridge_transition\""]
 #[doc = "          },"]
 #[doc = "          {"]
 #[doc = "            \"$ref\": \"#/$defs/non_ibc_transition\""]
@@ -220,8 +254,10 @@ pub mod error {
 #[doc = "        \"bitcoin-like\","]
 #[doc = "        \"evm-base\","]
 #[doc = "        \"svm-base\","]
-#[doc = "        \"substrate\""]
-#[doc = "      ]"]
+#[doc = "        \"substrate\","]
+#[doc = "        \"unknown\""]
+#[doc = "      ],"]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -229,33 +265,34 @@ pub mod error {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct Asset {
     #[doc = "[OPTIONAL] The address of the asset. Only required for type_asset : cw20, snip20"]
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub address: Option<String>,
+    pub address: Option<AssetAddress>,
     #[doc = "The base unit of the asset. Must be in denom_units."]
-    pub base: String,
+    pub base: AssetBase,
     #[doc = "[OPTIONAL] The coingecko id to fetch asset data from coingecko v3 api. See https://api.coingecko.com/api/v3/coins/list"]
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub coingecko_id: Option<String>,
+    pub coingecko_id: Option<AssetCoingeckoId>,
     pub denom_units: Vec<DenomUnit>,
     #[doc = "[OPTIONAL] Whether the asset has been deprecated for use. For readability, it is best to omit this property unless TRUE."]
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub deprecated: Option<bool>,
     #[doc = "[OPTIONAL] A short description of the asset"]
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub description: Option<String>,
+    pub description: Option<AssetDescription>,
     #[doc = "The human friendly unit of the asset. Must be in denom_units."]
-    pub display: String,
+    pub display: AssetDisplay,
     #[doc = "[OPTIONAL] A long description of the asset"]
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub extended_description: Option<String>,
+    pub extended_description: Option<AssetExtendedDescription>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub ibc: Option<AssetIbc>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub images: Vec<AssetImagesItem>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
-    pub keywords: Vec<String>,
+    pub keywords: Vec<AssetKeywordsItem>,
     #[serde(rename = "logo_URIs", default, skip_serializing_if = "Option::is_none")]
     pub logo_ur_is: Option<AssetLogoUrIs>,
     #[doc = "The project name of the asset. For example Bitcoin."]
@@ -263,7 +300,7 @@ pub struct Asset {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub socials: Option<AssetSocials>,
     #[doc = "The symbol of an asset. For example BTC."]
-    pub symbol: String,
+    pub symbol: AssetSymbol,
     #[doc = "The origin of the asset, starting with the index, and capturing all transitions in form and location."]
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub traces: Vec<AssetTracesItem>,
@@ -279,6 +316,420 @@ impl From<&Asset> for Asset {
 impl Asset {
     pub fn builder() -> builder::Asset {
         Default::default()
+    }
+}
+#[doc = "[OPTIONAL] The address of the asset. Only required for type_asset : cw20, snip20"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"[OPTIONAL] The address of the asset. Only required for type_asset : cw20, snip20\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetAddress(String);
+impl std::ops::Deref for AssetAddress {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetAddress> for String {
+    fn from(value: AssetAddress) -> Self {
+        value.0
+    }
+}
+impl From<&AssetAddress> for AssetAddress {
+    fn from(value: &AssetAddress) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetAddress {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetAddress {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetAddress {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetAddress {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetAddress {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The base unit of the asset. Must be in denom_units."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The base unit of the asset. Must be in denom_units.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetBase(String);
+impl std::ops::Deref for AssetBase {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetBase> for String {
+    fn from(value: AssetBase) -> Self {
+        value.0
+    }
+}
+impl From<&AssetBase> for AssetBase {
+    fn from(value: &AssetBase) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetBase {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetBase {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetBase {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetBase {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetBase {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "[OPTIONAL] The coingecko id to fetch asset data from coingecko v3 api. See https://api.coingecko.com/api/v3/coins/list"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"[OPTIONAL] The coingecko id to fetch asset data from coingecko v3 api. See https://api.coingecko.com/api/v3/coins/list\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetCoingeckoId(String);
+impl std::ops::Deref for AssetCoingeckoId {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetCoingeckoId> for String {
+    fn from(value: AssetCoingeckoId) -> Self {
+        value.0
+    }
+}
+impl From<&AssetCoingeckoId> for AssetCoingeckoId {
+    fn from(value: &AssetCoingeckoId) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetCoingeckoId {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetCoingeckoId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetCoingeckoId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetCoingeckoId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetCoingeckoId {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "[OPTIONAL] A short description of the asset"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"[OPTIONAL] A short description of the asset\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetDescription(String);
+impl std::ops::Deref for AssetDescription {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetDescription> for String {
+    fn from(value: AssetDescription) -> Self {
+        value.0
+    }
+}
+impl From<&AssetDescription> for AssetDescription {
+    fn from(value: &AssetDescription) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetDescription {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetDescription {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetDescription {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetDescription {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetDescription {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The human friendly unit of the asset. Must be in denom_units."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The human friendly unit of the asset. Must be in denom_units.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetDisplay(String);
+impl std::ops::Deref for AssetDisplay {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetDisplay> for String {
+    fn from(value: AssetDisplay) -> Self {
+        value.0
+    }
+}
+impl From<&AssetDisplay> for AssetDisplay {
+    fn from(value: &AssetDisplay) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetDisplay {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetDisplay {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetDisplay {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetDisplay {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetDisplay {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "[OPTIONAL] A long description of the asset"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"[OPTIONAL] A long description of the asset\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetExtendedDescription(String);
+impl std::ops::Deref for AssetExtendedDescription {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetExtendedDescription> for String {
+    fn from(value: AssetExtendedDescription) -> Self {
+        value.0
+    }
+}
+impl From<&AssetExtendedDescription> for AssetExtendedDescription {
+    fn from(value: &AssetExtendedDescription) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetExtendedDescription {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetExtendedDescription {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetExtendedDescription {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetExtendedDescription {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetExtendedDescription {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
     }
 }
 #[doc = "[OPTIONAL] IBC Channel between src and dst between chain"]
@@ -310,6 +761,7 @@ impl Asset {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct AssetIbc {
     pub dst_channel: String,
     pub source_channel: String,
@@ -339,26 +791,37 @@ impl AssetIbc {
 #[doc = "    \"png\": {"]
 #[doc = "      \"type\": \"string\","]
 #[doc = "      \"format\": \"uri-reference\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^https://raw\\\\.githubusercontent\\\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\\\.png$\""]
 #[doc = "    },"]
 #[doc = "    \"svg\": {"]
 #[doc = "      \"type\": \"string\","]
 #[doc = "      \"format\": \"uri-reference\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^https://raw\\\\.githubusercontent\\\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\\\.svg$\""]
 #[doc = "    },"]
 #[doc = "    \"theme\": {"]
 #[doc = "      \"type\": \"object\","]
 #[doc = "      \"minProperties\": 1,"]
 #[doc = "      \"properties\": {"]
+#[doc = "        \"background_color_hex\": {"]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1,"]
+#[doc = "          \"pattern\": \"^(#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})|none)$\""]
+#[doc = "        },"]
 #[doc = "        \"circle\": {"]
 #[doc = "          \"type\": \"boolean\""]
 #[doc = "        },"]
 #[doc = "        \"dark_mode\": {"]
 #[doc = "          \"type\": \"boolean\""]
 #[doc = "        },"]
+#[doc = "        \"monochrome\": {"]
+#[doc = "          \"type\": \"boolean\""]
+#[doc = "        },"]
 #[doc = "        \"primary_color_hex\": {"]
 #[doc = "          \"type\": \"string\","]
-#[doc = "          \"pattern\": \"^#[0-9a-fA-F]{6}$\""]
+#[doc = "          \"minLength\": 1,"]
+#[doc = "          \"pattern\": \"^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$\""]
 #[doc = "        }"]
 #[doc = "      },"]
 #[doc = "      \"additionalProperties\": false"]
@@ -369,6 +832,7 @@ impl AssetIbc {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct AssetImagesItem {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub image_sync: Option<Pointer>,
@@ -398,15 +862,24 @@ impl AssetImagesItem {
 #[doc = "  \"type\": \"object\","]
 #[doc = "  \"minProperties\": 1,"]
 #[doc = "  \"properties\": {"]
+#[doc = "    \"background_color_hex\": {"]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1,"]
+#[doc = "      \"pattern\": \"^(#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})|none)$\""]
+#[doc = "    },"]
 #[doc = "    \"circle\": {"]
 #[doc = "      \"type\": \"boolean\""]
 #[doc = "    },"]
 #[doc = "    \"dark_mode\": {"]
 #[doc = "      \"type\": \"boolean\""]
 #[doc = "    },"]
+#[doc = "    \"monochrome\": {"]
+#[doc = "      \"type\": \"boolean\""]
+#[doc = "    },"]
 #[doc = "    \"primary_color_hex\": {"]
 #[doc = "      \"type\": \"string\","]
-#[doc = "      \"pattern\": \"^#[0-9a-fA-F]{6}$\""]
+#[doc = "      \"minLength\": 1,"]
+#[doc = "      \"pattern\": \"^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$\""]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -414,11 +887,16 @@ impl AssetImagesItem {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct AssetImagesItemTheme {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub background_color_hex: Option<AssetImagesItemThemeBackgroundColorHex>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub circle: Option<bool>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub dark_mode: Option<bool>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub monochrome: Option<bool>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub primary_color_hex: Option<AssetImagesItemThemePrimaryColorHex>,
 }
@@ -432,6 +910,84 @@ impl AssetImagesItemTheme {
         Default::default()
     }
 }
+#[doc = "AssetImagesItemThemeBackgroundColorHex"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1,"]
+#[doc = "  \"pattern\": \"^(#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})|none)$\""]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetImagesItemThemeBackgroundColorHex(String);
+impl std::ops::Deref for AssetImagesItemThemeBackgroundColorHex {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetImagesItemThemeBackgroundColorHex> for String {
+    fn from(value: AssetImagesItemThemeBackgroundColorHex) -> Self {
+        value.0
+    }
+}
+impl From<&AssetImagesItemThemeBackgroundColorHex> for AssetImagesItemThemeBackgroundColorHex {
+    fn from(value: &AssetImagesItemThemeBackgroundColorHex) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetImagesItemThemeBackgroundColorHex {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        if regress::Regex::new("^(#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})|none)$")
+            .unwrap()
+            .find(value)
+            .is_none()
+        {
+            return Err(
+                "doesn't match pattern \"^(#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})|none)$\"".into(),
+            );
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetImagesItemThemeBackgroundColorHex {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetImagesItemThemeBackgroundColorHex {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetImagesItemThemeBackgroundColorHex {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetImagesItemThemeBackgroundColorHex {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = "AssetImagesItemThemePrimaryColorHex"]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
@@ -439,7 +995,8 @@ impl AssetImagesItemTheme {
 #[doc = r" ```json"]
 #[doc = "{"]
 #[doc = "  \"type\": \"string\","]
-#[doc = "  \"pattern\": \"^#[0-9a-fA-F]{6}$\""]
+#[doc = "  \"minLength\": 1,"]
+#[doc = "  \"pattern\": \"^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$\""]
 #[doc = "}"]
 #[doc = r" ```"]
 #[doc = r" </details>"]
@@ -464,12 +1021,15 @@ impl From<&AssetImagesItemThemePrimaryColorHex> for AssetImagesItemThemePrimaryC
 impl std::str::FromStr for AssetImagesItemThemePrimaryColorHex {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
-        if regress::Regex::new("^#[0-9a-fA-F]{6}$")
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        if regress::Regex::new("^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$")
             .unwrap()
             .find(value)
             .is_none()
         {
-            return Err("doesn't match pattern \"^#[0-9a-fA-F]{6}$\"".into());
+            return Err("doesn't match pattern \"^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$\"".into());
         }
         Ok(Self(value.to_string()))
     }
@@ -504,6 +1064,74 @@ impl<'de> serde::Deserialize<'de> for AssetImagesItemThemePrimaryColorHex {
             })
     }
 }
+#[doc = "AssetKeywordsItem"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetKeywordsItem(String);
+impl std::ops::Deref for AssetKeywordsItem {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetKeywordsItem> for String {
+    fn from(value: AssetKeywordsItem) -> Self {
+        value.0
+    }
+}
+impl From<&AssetKeywordsItem> for AssetKeywordsItem {
+    fn from(value: &AssetKeywordsItem) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetKeywordsItem {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetKeywordsItem {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetKeywordsItem {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetKeywordsItem {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetKeywordsItem {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = "Asset lists are a similar mechanism to allow frontends and other UIs to fetch metadata associated with Cosmos SDK denoms, especially for assets sent over IBC."]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
@@ -511,7 +1139,7 @@ impl<'de> serde::Deserialize<'de> for AssetImagesItemThemePrimaryColorHex {
 #[doc = r" ```json"]
 #[doc = "{"]
 #[doc = "  \"$id\": \"https://osmosis.zone/assetlists.schema.json\","]
-#[doc = "  \"title\": \"Asset Lists\","]
+#[doc = "  \"title\": \"AssetList\","]
 #[doc = "  \"description\": \"Asset lists are a similar mechanism to allow frontends and other UIs to fetch metadata associated with Cosmos SDK denoms, especially for assets sent over IBC.\","]
 #[doc = "  \"type\": \"object\","]
 #[doc = "  \"required\": ["]
@@ -521,6 +1149,7 @@ impl<'de> serde::Deserialize<'de> for AssetImagesItemThemePrimaryColorHex {
 #[doc = "  \"properties\": {"]
 #[doc = "    \"$schema\": {"]
 #[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^(\\\\.\\\\./)+assetlist\\\\.schema\\\\.json$\""]
 #[doc = "    },"]
 #[doc = "    \"assets\": {"]
@@ -531,7 +1160,8 @@ impl<'de> serde::Deserialize<'de> for AssetImagesItemThemePrimaryColorHex {
 #[doc = "      \"minContains\": 1"]
 #[doc = "    },"]
 #[doc = "    \"chain_name\": {"]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -539,54 +1169,127 @@ impl<'de> serde::Deserialize<'de> for AssetImagesItemThemePrimaryColorHex {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
-pub struct AssetLists {
+#[serde(deny_unknown_fields)]
+pub struct AssetList {
     pub assets: Vec<Asset>,
-    pub chain_name: String,
+    pub chain_name: AssetListChainName,
     #[serde(rename = "$schema", default, skip_serializing_if = "Option::is_none")]
-    pub schema: Option<AssetListsSchema>,
+    pub schema: Option<AssetListSchema>,
 }
-impl From<&AssetLists> for AssetLists {
-    fn from(value: &AssetLists) -> Self {
+impl From<&AssetList> for AssetList {
+    fn from(value: &AssetList) -> Self {
         value.clone()
     }
 }
-impl AssetLists {
-    pub fn builder() -> builder::AssetLists {
+impl AssetList {
+    pub fn builder() -> builder::AssetList {
         Default::default()
     }
 }
-#[doc = "AssetListsSchema"]
+#[doc = "AssetListChainName"]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
 #[doc = r""]
 #[doc = r" ```json"]
 #[doc = "{"]
 #[doc = "  \"type\": \"string\","]
-#[doc = "  \"pattern\": \"^(\\\\.\\\\./)+assetlist\\\\.schema\\\\.json$\""]
+#[doc = "  \"minLength\": 1"]
 #[doc = "}"]
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
-pub struct AssetListsSchema(String);
-impl std::ops::Deref for AssetListsSchema {
+pub struct AssetListChainName(String);
+impl std::ops::Deref for AssetListChainName {
     type Target = String;
     fn deref(&self) -> &String {
         &self.0
     }
 }
-impl From<AssetListsSchema> for String {
-    fn from(value: AssetListsSchema) -> Self {
+impl From<AssetListChainName> for String {
+    fn from(value: AssetListChainName) -> Self {
         value.0
     }
 }
-impl From<&AssetListsSchema> for AssetListsSchema {
-    fn from(value: &AssetListsSchema) -> Self {
+impl From<&AssetListChainName> for AssetListChainName {
+    fn from(value: &AssetListChainName) -> Self {
         value.clone()
     }
 }
-impl std::str::FromStr for AssetListsSchema {
+impl std::str::FromStr for AssetListChainName {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetListChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetListChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetListChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetListChainName {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "AssetListSchema"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1,"]
+#[doc = "  \"pattern\": \"^(\\\\.\\\\./)+assetlist\\\\.schema\\\\.json$\""]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetListSchema(String);
+impl std::ops::Deref for AssetListSchema {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetListSchema> for String {
+    fn from(value: AssetListSchema) -> Self {
+        value.0
+    }
+}
+impl From<&AssetListSchema> for AssetListSchema {
+    fn from(value: &AssetListSchema) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetListSchema {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
         if regress::Regex::new("^(\\.\\./)+assetlist\\.schema\\.json$")
             .unwrap()
             .find(value)
@@ -597,25 +1300,25 @@ impl std::str::FromStr for AssetListsSchema {
         Ok(Self(value.to_string()))
     }
 }
-impl std::convert::TryFrom<&str> for AssetListsSchema {
+impl std::convert::TryFrom<&str> for AssetListSchema {
     type Error = self::error::ConversionError;
     fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
         value.parse()
     }
 }
-impl std::convert::TryFrom<&String> for AssetListsSchema {
+impl std::convert::TryFrom<&String> for AssetListSchema {
     type Error = self::error::ConversionError;
     fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
         value.parse()
     }
 }
-impl std::convert::TryFrom<String> for AssetListsSchema {
+impl std::convert::TryFrom<String> for AssetListSchema {
     type Error = self::error::ConversionError;
     fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
         value.parse()
     }
 }
-impl<'de> serde::Deserialize<'de> for AssetListsSchema {
+impl<'de> serde::Deserialize<'de> for AssetListSchema {
     fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
     where
         D: serde::Deserializer<'de>,
@@ -638,11 +1341,13 @@ impl<'de> serde::Deserialize<'de> for AssetListsSchema {
 #[doc = "    \"png\": {"]
 #[doc = "      \"type\": \"string\","]
 #[doc = "      \"format\": \"uri-reference\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^https://raw\\\\.githubusercontent\\\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\\\.png$\""]
 #[doc = "    },"]
 #[doc = "    \"svg\": {"]
 #[doc = "      \"type\": \"string\","]
 #[doc = "      \"format\": \"uri-reference\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^https://raw\\\\.githubusercontent\\\\.com/cosmos/chain-registry/master/(|testnets/|_non-cosmos/)[a-z0-9]+/images/.+\\\\.svg$\""]
 #[doc = "    }"]
 #[doc = "  },"]
@@ -651,6 +1356,7 @@ impl<'de> serde::Deserialize<'de> for AssetListsSchema {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct AssetLogoUrIs {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub png: Option<String>,
@@ -675,7 +1381,8 @@ impl AssetLogoUrIs {
 #[doc = "{"]
 #[doc = "  \"description\": \"The project name of the asset. For example Bitcoin.\","]
 #[doc = "  \"type\": \"string\","]
-#[doc = "  \"maxLength\": 42"]
+#[doc = "  \"maxLength\": 42,"]
+#[doc = "  \"minLength\": 1"]
 #[doc = "}"]
 #[doc = r" ```"]
 #[doc = r" </details>"]
@@ -702,6 +1409,9 @@ impl std::str::FromStr for AssetName {
     fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
         if value.len() > 42usize {
             return Err("longer than 42 characters".into());
+        }
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
         }
         Ok(Self(value.to_string()))
     }
@@ -747,11 +1457,13 @@ impl<'de> serde::Deserialize<'de> for AssetName {
 #[doc = "  \"properties\": {"]
 #[doc = "    \"twitter\": {"]
 #[doc = "      \"type\": \"string\","]
-#[doc = "      \"format\": \"uri\""]
+#[doc = "      \"format\": \"uri\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"website\": {"]
 #[doc = "      \"type\": \"string\","]
-#[doc = "      \"format\": \"uri\""]
+#[doc = "      \"format\": \"uri\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  }"]
 #[doc = "}"]
@@ -774,6 +1486,75 @@ impl AssetSocials {
         Default::default()
     }
 }
+#[doc = "The symbol of an asset. For example BTC."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The symbol of an asset. For example BTC.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct AssetSymbol(String);
+impl std::ops::Deref for AssetSymbol {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<AssetSymbol> for String {
+    fn from(value: AssetSymbol) -> Self {
+        value.0
+    }
+}
+impl From<&AssetSymbol> for AssetSymbol {
+    fn from(value: &AssetSymbol) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for AssetSymbol {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for AssetSymbol {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for AssetSymbol {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for AssetSymbol {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for AssetSymbol {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = "AssetTracesItem"]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
@@ -788,6 +1569,9 @@ impl AssetSocials {
 #[doc = "      \"$ref\": \"#/$defs/ibc_cw20_transition\""]
 #[doc = "    },"]
 #[doc = "    {"]
+#[doc = "      \"$ref\": \"#/$defs/ibc_bridge_transition\""]
+#[doc = "    },"]
+#[doc = "    {"]
 #[doc = "      \"$ref\": \"#/$defs/non_ibc_transition\""]
 #[doc = "    }"]
 #[doc = "  ]"]
@@ -795,30 +1579,24 @@ impl AssetSocials {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
-#[serde(untagged)]
-pub enum AssetTracesItem {
-    IbcTransition(IbcTransition),
-    IbcCw20Transition(IbcCw20Transition),
-    NonIbcTransition(NonIbcTransition),
+pub struct AssetTracesItem {
+    #[serde(flatten, default, skip_serializing_if = "Option::is_none")]
+    pub subtype_0: Option<IbcTransition>,
+    #[serde(flatten, default, skip_serializing_if = "Option::is_none")]
+    pub subtype_1: Option<IbcCw20Transition>,
+    #[serde(flatten, default, skip_serializing_if = "Option::is_none")]
+    pub subtype_2: Option<IbcBridgeTransition>,
+    #[serde(flatten, default, skip_serializing_if = "Option::is_none")]
+    pub subtype_3: Option<NonIbcTransition>,
 }
 impl From<&AssetTracesItem> for AssetTracesItem {
     fn from(value: &AssetTracesItem) -> Self {
         value.clone()
     }
 }
-impl From<IbcTransition> for AssetTracesItem {
-    fn from(value: IbcTransition) -> Self {
-        Self::IbcTransition(value)
-    }
-}
-impl From<IbcCw20Transition> for AssetTracesItem {
-    fn from(value: IbcCw20Transition) -> Self {
-        Self::IbcCw20Transition(value)
-    }
-}
-impl From<NonIbcTransition> for AssetTracesItem {
-    fn from(value: NonIbcTransition) -> Self {
-        Self::NonIbcTransition(value)
+impl AssetTracesItem {
+    pub fn builder() -> builder::AssetTracesItem {
+        Default::default()
     }
 }
 #[doc = "[OPTIONAL] The potential options for type of asset. By default, assumes sdk.coin"]
@@ -840,8 +1618,10 @@ impl From<NonIbcTransition> for AssetTracesItem {
 #[doc = "    \"bitcoin-like\","]
 #[doc = "    \"evm-base\","]
 #[doc = "    \"svm-base\","]
-#[doc = "    \"substrate\""]
-#[doc = "  ]"]
+#[doc = "    \"substrate\","]
+#[doc = "    \"unknown\""]
+#[doc = "  ],"]
+#[doc = "  \"minLength\": 1"]
 #[doc = "}"]
 #[doc = r" ```"]
 #[doc = r" </details>"]
@@ -867,6 +1647,8 @@ pub enum AssetTypeAsset {
     SvmBase,
     #[serde(rename = "substrate")]
     Substrate,
+    #[serde(rename = "unknown")]
+    Unknown,
 }
 impl From<&AssetTypeAsset> for AssetTypeAsset {
     fn from(value: &AssetTypeAsset) -> Self {
@@ -886,6 +1668,7 @@ impl ToString for AssetTypeAsset {
             Self::EvmBase => "evm-base".to_string(),
             Self::SvmBase => "svm-base".to_string(),
             Self::Substrate => "substrate".to_string(),
+            Self::Unknown => "unknown".to_string(),
         }
     }
 }
@@ -903,6 +1686,7 @@ impl std::str::FromStr for AssetTypeAsset {
             "evm-base" => Ok(Self::EvmBase),
             "svm-base" => Ok(Self::SvmBase),
             "substrate" => Ok(Self::Substrate),
+            "unknown" => Ok(Self::Unknown),
             _ => Err("invalid value".into()),
         }
     }
@@ -945,12 +1729,14 @@ impl Default for AssetTypeAsset {
 #[doc = "    \"aliases\": {"]
 #[doc = "      \"type\": \"array\","]
 #[doc = "      \"items\": {"]
-#[doc = "        \"type\": \"string\""]
+#[doc = "        \"type\": \"string\","]
+#[doc = "        \"minLength\": 1"]
 #[doc = "      },"]
 #[doc = "      \"minContains\": 1"]
 #[doc = "    },"]
 #[doc = "    \"denom\": {"]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"exponent\": {"]
 #[doc = "      \"type\": \"integer\""]
@@ -961,11 +1747,12 @@ impl Default for AssetTypeAsset {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct DenomUnit {
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
-    pub aliases: Vec<String>,
-    pub denom: String,
-    pub exponent: u32,
+    pub aliases: Vec<DenomUnitAliasesItem>,
+    pub denom: DenomUnitDenom,
+    pub exponent: i64,
 }
 impl From<&DenomUnit> for DenomUnit {
     fn from(value: &DenomUnit) -> Self {
@@ -975,6 +1762,993 @@ impl From<&DenomUnit> for DenomUnit {
 impl DenomUnit {
     pub fn builder() -> builder::DenomUnit {
         Default::default()
+    }
+}
+#[doc = "DenomUnitAliasesItem"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct DenomUnitAliasesItem(String);
+impl std::ops::Deref for DenomUnitAliasesItem {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<DenomUnitAliasesItem> for String {
+    fn from(value: DenomUnitAliasesItem) -> Self {
+        value.0
+    }
+}
+impl From<&DenomUnitAliasesItem> for DenomUnitAliasesItem {
+    fn from(value: &DenomUnitAliasesItem) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for DenomUnitAliasesItem {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for DenomUnitAliasesItem {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for DenomUnitAliasesItem {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for DenomUnitAliasesItem {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for DenomUnitAliasesItem {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "DenomUnitDenom"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct DenomUnitDenom(String);
+impl std::ops::Deref for DenomUnitDenom {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<DenomUnitDenom> for String {
+    fn from(value: DenomUnitDenom) -> Self {
+        value.0
+    }
+}
+impl From<&DenomUnitDenom> for DenomUnitDenom {
+    fn from(value: &DenomUnitDenom) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for DenomUnitDenom {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for DenomUnitDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for DenomUnitDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for DenomUnitDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for DenomUnitDenom {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "IbcBridgeTransition"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"object\","]
+#[doc = "  \"required\": ["]
+#[doc = "    \"chain\","]
+#[doc = "    \"counterparty\","]
+#[doc = "    \"provider\","]
+#[doc = "    \"type\""]
+#[doc = "  ],"]
+#[doc = "  \"properties\": {"]
+#[doc = "    \"chain\": {"]
+#[doc = "      \"type\": \"object\","]
+#[doc = "      \"required\": ["]
+#[doc = "        \"channel_id\","]
+#[doc = "        \"path\""]
+#[doc = "      ],"]
+#[doc = "      \"properties\": {"]
+#[doc = "        \"channel_id\": {"]
+#[doc = "          \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1,"]
+#[doc = "          \"pattern\": \"^channel-\\\\d+$\""]
+#[doc = "        },"]
+#[doc = "        \"path\": {"]
+#[doc = "          \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
+#[doc = "        },"]
+#[doc = "        \"port\": {"]
+#[doc = "          \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
+#[doc = "        }"]
+#[doc = "      },"]
+#[doc = "      \"additionalProperties\": false"]
+#[doc = "    },"]
+#[doc = "    \"counterparty\": {"]
+#[doc = "      \"type\": \"object\","]
+#[doc = "      \"required\": ["]
+#[doc = "        \"base_denom\","]
+#[doc = "        \"chain_name\","]
+#[doc = "        \"channel_id\""]
+#[doc = "      ],"]
+#[doc = "      \"properties\": {"]
+#[doc = "        \"base_denom\": {"]
+#[doc = "          \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
+#[doc = "        },"]
+#[doc = "        \"chain_name\": {"]
+#[doc = "          \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
+#[doc = "        },"]
+#[doc = "        \"channel_id\": {"]
+#[doc = "          \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1,"]
+#[doc = "          \"pattern\": \"^channel-\\\\d+$\""]
+#[doc = "        },"]
+#[doc = "        \"port\": {"]
+#[doc = "          \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
+#[doc = "        }"]
+#[doc = "      },"]
+#[doc = "      \"additionalProperties\": false"]
+#[doc = "    },"]
+#[doc = "    \"provider\": {"]
+#[doc = "      \"description\": \"The entity offering the service. E.g., 'Gravity Bridge' [Network] or 'Tether' [Company].\","]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
+#[doc = "    },"]
+#[doc = "    \"type\": {"]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"enum\": ["]
+#[doc = "        \"ibc-bridge\""]
+#[doc = "      ],"]
+#[doc = "      \"minLength\": 1"]
+#[doc = "    }"]
+#[doc = "  },"]
+#[doc = "  \"additionalProperties\": false"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct IbcBridgeTransition {
+    pub chain: IbcBridgeTransitionChain,
+    pub counterparty: IbcBridgeTransitionCounterparty,
+    #[doc = "The entity offering the service. E.g., 'Gravity Bridge' [Network] or 'Tether' [Company]."]
+    pub provider: IbcBridgeTransitionProvider,
+    #[serde(rename = "type")]
+    pub type_: IbcBridgeTransitionType,
+}
+impl From<&IbcBridgeTransition> for IbcBridgeTransition {
+    fn from(value: &IbcBridgeTransition) -> Self {
+        value.clone()
+    }
+}
+impl IbcBridgeTransition {
+    pub fn builder() -> builder::IbcBridgeTransition {
+        Default::default()
+    }
+}
+#[doc = "IbcBridgeTransitionChain"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"object\","]
+#[doc = "  \"required\": ["]
+#[doc = "    \"channel_id\","]
+#[doc = "    \"path\""]
+#[doc = "  ],"]
+#[doc = "  \"properties\": {"]
+#[doc = "    \"channel_id\": {"]
+#[doc = "      \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1,"]
+#[doc = "      \"pattern\": \"^channel-\\\\d+$\""]
+#[doc = "    },"]
+#[doc = "    \"path\": {"]
+#[doc = "      \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
+#[doc = "    },"]
+#[doc = "    \"port\": {"]
+#[doc = "      \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
+#[doc = "    }"]
+#[doc = "  },"]
+#[doc = "  \"additionalProperties\": false"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct IbcBridgeTransitionChain {
+    #[doc = "The chain's IBC transfer channel(, e.g., 'channel-1')."]
+    pub channel_id: IbcBridgeTransitionChainChannelId,
+    #[doc = "The port/channel/denom input string that generates the 'ibc/...' denom."]
+    pub path: IbcBridgeTransitionChainPath,
+    #[doc = "The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers."]
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub port: Option<IbcBridgeTransitionChainPort>,
+}
+impl From<&IbcBridgeTransitionChain> for IbcBridgeTransitionChain {
+    fn from(value: &IbcBridgeTransitionChain) -> Self {
+        value.clone()
+    }
+}
+impl IbcBridgeTransitionChain {
+    pub fn builder() -> builder::IbcBridgeTransitionChain {
+        Default::default()
+    }
+}
+#[doc = "The chain's IBC transfer channel(, e.g., 'channel-1')."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1,"]
+#[doc = "  \"pattern\": \"^channel-\\\\d+$\""]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcBridgeTransitionChainChannelId(String);
+impl std::ops::Deref for IbcBridgeTransitionChainChannelId {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcBridgeTransitionChainChannelId> for String {
+    fn from(value: IbcBridgeTransitionChainChannelId) -> Self {
+        value.0
+    }
+}
+impl From<&IbcBridgeTransitionChainChannelId> for IbcBridgeTransitionChainChannelId {
+    fn from(value: &IbcBridgeTransitionChainChannelId) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionChainChannelId {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        if regress::Regex::new("^channel-\\d+$")
+            .unwrap()
+            .find(value)
+            .is_none()
+        {
+            return Err("doesn't match pattern \"^channel-\\d+$\"".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionChainChannelId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionChainChannelId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionChainChannelId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcBridgeTransitionChainChannelId {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The port/channel/denom input string that generates the 'ibc/...' denom."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcBridgeTransitionChainPath(String);
+impl std::ops::Deref for IbcBridgeTransitionChainPath {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcBridgeTransitionChainPath> for String {
+    fn from(value: IbcBridgeTransitionChainPath) -> Self {
+        value.0
+    }
+}
+impl From<&IbcBridgeTransitionChainPath> for IbcBridgeTransitionChainPath {
+    fn from(value: &IbcBridgeTransitionChainPath) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionChainPath {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcBridgeTransitionChainPath {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcBridgeTransitionChainPort(String);
+impl std::ops::Deref for IbcBridgeTransitionChainPort {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcBridgeTransitionChainPort> for String {
+    fn from(value: IbcBridgeTransitionChainPort) -> Self {
+        value.0
+    }
+}
+impl From<&IbcBridgeTransitionChainPort> for IbcBridgeTransitionChainPort {
+    fn from(value: &IbcBridgeTransitionChainPort) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionChainPort {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionChainPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionChainPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionChainPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcBridgeTransitionChainPort {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "IbcBridgeTransitionCounterparty"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"object\","]
+#[doc = "  \"required\": ["]
+#[doc = "    \"base_denom\","]
+#[doc = "    \"chain_name\","]
+#[doc = "    \"channel_id\""]
+#[doc = "  ],"]
+#[doc = "  \"properties\": {"]
+#[doc = "    \"base_denom\": {"]
+#[doc = "      \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
+#[doc = "    },"]
+#[doc = "    \"chain_name\": {"]
+#[doc = "      \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
+#[doc = "    },"]
+#[doc = "    \"channel_id\": {"]
+#[doc = "      \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1,"]
+#[doc = "      \"pattern\": \"^channel-\\\\d+$\""]
+#[doc = "    },"]
+#[doc = "    \"port\": {"]
+#[doc = "      \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
+#[doc = "    }"]
+#[doc = "  },"]
+#[doc = "  \"additionalProperties\": false"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
+pub struct IbcBridgeTransitionCounterparty {
+    #[doc = "The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."]
+    pub base_denom: IbcBridgeTransitionCounterpartyBaseDenom,
+    #[doc = "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"]
+    pub chain_name: IbcBridgeTransitionCounterpartyChainName,
+    #[doc = "The counterparty IBC transfer channel(, e.g., 'channel-1')."]
+    pub channel_id: IbcBridgeTransitionCounterpartyChannelId,
+    #[doc = "The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers."]
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub port: Option<IbcBridgeTransitionCounterpartyPort>,
+}
+impl From<&IbcBridgeTransitionCounterparty> for IbcBridgeTransitionCounterparty {
+    fn from(value: &IbcBridgeTransitionCounterparty) -> Self {
+        value.clone()
+    }
+}
+impl IbcBridgeTransitionCounterparty {
+    pub fn builder() -> builder::IbcBridgeTransitionCounterparty {
+        Default::default()
+    }
+}
+#[doc = "The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcBridgeTransitionCounterpartyBaseDenom(String);
+impl std::ops::Deref for IbcBridgeTransitionCounterpartyBaseDenom {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcBridgeTransitionCounterpartyBaseDenom> for String {
+    fn from(value: IbcBridgeTransitionCounterpartyBaseDenom) -> Self {
+        value.0
+    }
+}
+impl From<&IbcBridgeTransitionCounterpartyBaseDenom> for IbcBridgeTransitionCounterpartyBaseDenom {
+    fn from(value: &IbcBridgeTransitionCounterpartyBaseDenom) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionCounterpartyBaseDenom {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcBridgeTransitionCounterpartyBaseDenom {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcBridgeTransitionCounterpartyChainName(String);
+impl std::ops::Deref for IbcBridgeTransitionCounterpartyChainName {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcBridgeTransitionCounterpartyChainName> for String {
+    fn from(value: IbcBridgeTransitionCounterpartyChainName) -> Self {
+        value.0
+    }
+}
+impl From<&IbcBridgeTransitionCounterpartyChainName> for IbcBridgeTransitionCounterpartyChainName {
+    fn from(value: &IbcBridgeTransitionCounterpartyChainName) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionCounterpartyChainName {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcBridgeTransitionCounterpartyChainName {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The counterparty IBC transfer channel(, e.g., 'channel-1')."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1,"]
+#[doc = "  \"pattern\": \"^channel-\\\\d+$\""]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcBridgeTransitionCounterpartyChannelId(String);
+impl std::ops::Deref for IbcBridgeTransitionCounterpartyChannelId {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcBridgeTransitionCounterpartyChannelId> for String {
+    fn from(value: IbcBridgeTransitionCounterpartyChannelId) -> Self {
+        value.0
+    }
+}
+impl From<&IbcBridgeTransitionCounterpartyChannelId> for IbcBridgeTransitionCounterpartyChannelId {
+    fn from(value: &IbcBridgeTransitionCounterpartyChannelId) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionCounterpartyChannelId {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        if regress::Regex::new("^channel-\\d+$")
+            .unwrap()
+            .find(value)
+            .is_none()
+        {
+            return Err("doesn't match pattern \"^channel-\\d+$\"".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionCounterpartyChannelId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionCounterpartyChannelId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionCounterpartyChannelId {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcBridgeTransitionCounterpartyChannelId {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcBridgeTransitionCounterpartyPort(String);
+impl std::ops::Deref for IbcBridgeTransitionCounterpartyPort {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcBridgeTransitionCounterpartyPort> for String {
+    fn from(value: IbcBridgeTransitionCounterpartyPort) -> Self {
+        value.0
+    }
+}
+impl From<&IbcBridgeTransitionCounterpartyPort> for IbcBridgeTransitionCounterpartyPort {
+    fn from(value: &IbcBridgeTransitionCounterpartyPort) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionCounterpartyPort {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionCounterpartyPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionCounterpartyPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionCounterpartyPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcBridgeTransitionCounterpartyPort {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The entity offering the service. E.g., 'Gravity Bridge' [Network] or 'Tether' [Company]."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The entity offering the service. E.g., 'Gravity Bridge' [Network] or 'Tether' [Company].\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcBridgeTransitionProvider(String);
+impl std::ops::Deref for IbcBridgeTransitionProvider {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcBridgeTransitionProvider> for String {
+    fn from(value: IbcBridgeTransitionProvider) -> Self {
+        value.0
+    }
+}
+impl From<&IbcBridgeTransitionProvider> for IbcBridgeTransitionProvider {
+    fn from(value: &IbcBridgeTransitionProvider) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionProvider {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionProvider {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionProvider {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionProvider {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcBridgeTransitionProvider {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "IbcBridgeTransitionType"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"enum\": ["]
+#[doc = "    \"ibc-bridge\""]
+#[doc = "  ],"]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Copy, Debug, Deserialize, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub enum IbcBridgeTransitionType {
+    #[serde(rename = "ibc-bridge")]
+    IbcBridge,
+}
+impl From<&IbcBridgeTransitionType> for IbcBridgeTransitionType {
+    fn from(value: &IbcBridgeTransitionType) -> Self {
+        value.clone()
+    }
+}
+impl ToString for IbcBridgeTransitionType {
+    fn to_string(&self) -> String {
+        match *self {
+            Self::IbcBridge => "ibc-bridge".to_string(),
+        }
+    }
+}
+impl std::str::FromStr for IbcBridgeTransitionType {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        match value {
+            "ibc-bridge" => Ok(Self::IbcBridge),
+            _ => Err("invalid value".into()),
+        }
+    }
+}
+impl std::convert::TryFrom<&str> for IbcBridgeTransitionType {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcBridgeTransitionType {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcBridgeTransitionType {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
     }
 }
 #[doc = "IbcCw20Transition"]
@@ -1001,15 +2775,18 @@ impl DenomUnit {
 #[doc = "        \"channel_id\": {"]
 #[doc = "          \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1,"]
 #[doc = "          \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "        },"]
 #[doc = "        \"path\": {"]
 #[doc = "          \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        },"]
 #[doc = "        \"port\": {"]
 #[doc = "          \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        }"]
 #[doc = "      },"]
 #[doc = "      \"additionalProperties\": false"]
@@ -1025,20 +2802,24 @@ impl DenomUnit {
 #[doc = "      \"properties\": {"]
 #[doc = "        \"base_denom\": {"]
 #[doc = "          \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        },"]
 #[doc = "        \"chain_name\": {"]
 #[doc = "          \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        },"]
 #[doc = "        \"channel_id\": {"]
 #[doc = "          \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1,"]
 #[doc = "          \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "        },"]
 #[doc = "        \"port\": {"]
 #[doc = "          \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        }"]
 #[doc = "      },"]
 #[doc = "      \"additionalProperties\": false"]
@@ -1047,7 +2828,8 @@ impl DenomUnit {
 #[doc = "      \"type\": \"string\","]
 #[doc = "      \"enum\": ["]
 #[doc = "        \"ibc-cw20\""]
-#[doc = "      ]"]
+#[doc = "      ],"]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -1055,6 +2837,7 @@ impl DenomUnit {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct IbcCw20Transition {
     pub chain: IbcCw20TransitionChain,
     pub counterparty: IbcCw20TransitionCounterparty,
@@ -1087,15 +2870,18 @@ impl IbcCw20Transition {
 #[doc = "    \"channel_id\": {"]
 #[doc = "      \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "    },"]
 #[doc = "    \"path\": {"]
 #[doc = "      \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"port\": {"]
 #[doc = "      \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -1103,13 +2889,14 @@ impl IbcCw20Transition {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct IbcCw20TransitionChain {
     #[doc = "The chain's IBC transfer channel(, e.g., 'channel-1')."]
     pub channel_id: IbcCw20TransitionChainChannelId,
     #[doc = "The port/channel/denom input string that generates the 'ibc/...' denom."]
-    pub path: String,
+    pub path: IbcCw20TransitionChainPath,
     #[doc = "The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers."]
-    pub port: String,
+    pub port: IbcCw20TransitionChainPort,
 }
 impl From<&IbcCw20TransitionChain> for IbcCw20TransitionChain {
     fn from(value: &IbcCw20TransitionChain) -> Self {
@@ -1129,6 +2916,7 @@ impl IbcCw20TransitionChain {
 #[doc = "{"]
 #[doc = "  \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1,"]
 #[doc = "  \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "}"]
 #[doc = r" ```"]
@@ -1154,6 +2942,9 @@ impl From<&IbcCw20TransitionChainChannelId> for IbcCw20TransitionChainChannelId 
 impl std::str::FromStr for IbcCw20TransitionChainChannelId {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
         if regress::Regex::new("^channel-\\d+$")
             .unwrap()
             .find(value)
@@ -1194,6 +2985,144 @@ impl<'de> serde::Deserialize<'de> for IbcCw20TransitionChainChannelId {
             })
     }
 }
+#[doc = "The port/channel/denom input string that generates the 'ibc/...' denom."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcCw20TransitionChainPath(String);
+impl std::ops::Deref for IbcCw20TransitionChainPath {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcCw20TransitionChainPath> for String {
+    fn from(value: IbcCw20TransitionChainPath) -> Self {
+        value.0
+    }
+}
+impl From<&IbcCw20TransitionChainPath> for IbcCw20TransitionChainPath {
+    fn from(value: &IbcCw20TransitionChainPath) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcCw20TransitionChainPath {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcCw20TransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcCw20TransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcCw20TransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcCw20TransitionChainPath {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcCw20TransitionChainPort(String);
+impl std::ops::Deref for IbcCw20TransitionChainPort {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcCw20TransitionChainPort> for String {
+    fn from(value: IbcCw20TransitionChainPort) -> Self {
+        value.0
+    }
+}
+impl From<&IbcCw20TransitionChainPort> for IbcCw20TransitionChainPort {
+    fn from(value: &IbcCw20TransitionChainPort) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcCw20TransitionChainPort {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcCw20TransitionChainPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcCw20TransitionChainPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcCw20TransitionChainPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcCw20TransitionChainPort {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = "IbcCw20TransitionCounterparty"]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
@@ -1210,20 +3139,24 @@ impl<'de> serde::Deserialize<'de> for IbcCw20TransitionChainChannelId {
 #[doc = "  \"properties\": {"]
 #[doc = "    \"base_denom\": {"]
 #[doc = "      \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"chain_name\": {"]
 #[doc = "      \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"channel_id\": {"]
 #[doc = "      \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "    },"]
 #[doc = "    \"port\": {"]
 #[doc = "      \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -1231,15 +3164,16 @@ impl<'de> serde::Deserialize<'de> for IbcCw20TransitionChainChannelId {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct IbcCw20TransitionCounterparty {
     #[doc = "The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."]
-    pub base_denom: String,
+    pub base_denom: IbcCw20TransitionCounterpartyBaseDenom,
     #[doc = "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"]
-    pub chain_name: String,
+    pub chain_name: IbcCw20TransitionCounterpartyChainName,
     #[doc = "The counterparty IBC transfer channel(, e.g., 'channel-1')."]
     pub channel_id: IbcCw20TransitionCounterpartyChannelId,
     #[doc = "The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers."]
-    pub port: String,
+    pub port: IbcCw20TransitionCounterpartyPort,
 }
 impl From<&IbcCw20TransitionCounterparty> for IbcCw20TransitionCounterparty {
     fn from(value: &IbcCw20TransitionCounterparty) -> Self {
@@ -1251,6 +3185,144 @@ impl IbcCw20TransitionCounterparty {
         Default::default()
     }
 }
+#[doc = "The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcCw20TransitionCounterpartyBaseDenom(String);
+impl std::ops::Deref for IbcCw20TransitionCounterpartyBaseDenom {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcCw20TransitionCounterpartyBaseDenom> for String {
+    fn from(value: IbcCw20TransitionCounterpartyBaseDenom) -> Self {
+        value.0
+    }
+}
+impl From<&IbcCw20TransitionCounterpartyBaseDenom> for IbcCw20TransitionCounterpartyBaseDenom {
+    fn from(value: &IbcCw20TransitionCounterpartyBaseDenom) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcCw20TransitionCounterpartyBaseDenom {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcCw20TransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcCw20TransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcCw20TransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcCw20TransitionCounterpartyBaseDenom {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcCw20TransitionCounterpartyChainName(String);
+impl std::ops::Deref for IbcCw20TransitionCounterpartyChainName {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcCw20TransitionCounterpartyChainName> for String {
+    fn from(value: IbcCw20TransitionCounterpartyChainName) -> Self {
+        value.0
+    }
+}
+impl From<&IbcCw20TransitionCounterpartyChainName> for IbcCw20TransitionCounterpartyChainName {
+    fn from(value: &IbcCw20TransitionCounterpartyChainName) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcCw20TransitionCounterpartyChainName {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcCw20TransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcCw20TransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcCw20TransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcCw20TransitionCounterpartyChainName {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = "The counterparty IBC transfer channel(, e.g., 'channel-1')."]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
@@ -1259,6 +3331,7 @@ impl IbcCw20TransitionCounterparty {
 #[doc = "{"]
 #[doc = "  \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1,"]
 #[doc = "  \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "}"]
 #[doc = r" ```"]
@@ -1284,6 +3357,9 @@ impl From<&IbcCw20TransitionCounterpartyChannelId> for IbcCw20TransitionCounterp
 impl std::str::FromStr for IbcCw20TransitionCounterpartyChannelId {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
         if regress::Regex::new("^channel-\\d+$")
             .unwrap()
             .find(value)
@@ -1324,6 +3400,75 @@ impl<'de> serde::Deserialize<'de> for IbcCw20TransitionCounterpartyChannelId {
             })
     }
 }
+#[doc = "The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The port used to transfer IBC assets; often 'transfer', but sometimes varies, e.g., for outgoing cw20 transfers.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcCw20TransitionCounterpartyPort(String);
+impl std::ops::Deref for IbcCw20TransitionCounterpartyPort {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcCw20TransitionCounterpartyPort> for String {
+    fn from(value: IbcCw20TransitionCounterpartyPort) -> Self {
+        value.0
+    }
+}
+impl From<&IbcCw20TransitionCounterpartyPort> for IbcCw20TransitionCounterpartyPort {
+    fn from(value: &IbcCw20TransitionCounterpartyPort) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcCw20TransitionCounterpartyPort {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcCw20TransitionCounterpartyPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcCw20TransitionCounterpartyPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcCw20TransitionCounterpartyPort {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcCw20TransitionCounterpartyPort {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = "IbcCw20TransitionType"]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
@@ -1333,7 +3478,8 @@ impl<'de> serde::Deserialize<'de> for IbcCw20TransitionCounterpartyChannelId {
 #[doc = "  \"type\": \"string\","]
 #[doc = "  \"enum\": ["]
 #[doc = "    \"ibc-cw20\""]
-#[doc = "  ]"]
+#[doc = "  ],"]
+#[doc = "  \"minLength\": 1"]
 #[doc = "}"]
 #[doc = r" ```"]
 #[doc = r" </details>"]
@@ -1404,11 +3550,13 @@ impl std::convert::TryFrom<String> for IbcCw20TransitionType {
 #[doc = "        \"channel_id\": {"]
 #[doc = "          \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1,"]
 #[doc = "          \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "        },"]
 #[doc = "        \"path\": {"]
 #[doc = "          \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        }"]
 #[doc = "      },"]
 #[doc = "      \"additionalProperties\": false"]
@@ -1423,15 +3571,18 @@ impl std::convert::TryFrom<String> for IbcCw20TransitionType {
 #[doc = "      \"properties\": {"]
 #[doc = "        \"base_denom\": {"]
 #[doc = "          \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        },"]
 #[doc = "        \"chain_name\": {"]
 #[doc = "          \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        },"]
 #[doc = "        \"channel_id\": {"]
 #[doc = "          \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1,"]
 #[doc = "          \"pattern\": \"^channel-(JEnb|\\\\d+)$\""]
 #[doc = "        }"]
 #[doc = "      },"]
@@ -1441,7 +3592,8 @@ impl std::convert::TryFrom<String> for IbcCw20TransitionType {
 #[doc = "      \"type\": \"string\","]
 #[doc = "      \"enum\": ["]
 #[doc = "        \"ibc\""]
-#[doc = "      ]"]
+#[doc = "      ],"]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -1449,6 +3601,7 @@ impl std::convert::TryFrom<String> for IbcCw20TransitionType {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct IbcTransition {
     pub chain: IbcTransitionChain,
     pub counterparty: IbcTransitionCounterparty,
@@ -1480,11 +3633,13 @@ impl IbcTransition {
 #[doc = "    \"channel_id\": {"]
 #[doc = "      \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "    },"]
 #[doc = "    \"path\": {"]
 #[doc = "      \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -1492,11 +3647,12 @@ impl IbcTransition {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct IbcTransitionChain {
     #[doc = "The chain's IBC transfer channel(, e.g., 'channel-1')."]
     pub channel_id: IbcTransitionChainChannelId,
     #[doc = "The port/channel/denom input string that generates the 'ibc/...' denom."]
-    pub path: String,
+    pub path: IbcTransitionChainPath,
 }
 impl From<&IbcTransitionChain> for IbcTransitionChain {
     fn from(value: &IbcTransitionChain) -> Self {
@@ -1516,6 +3672,7 @@ impl IbcTransitionChain {
 #[doc = "{"]
 #[doc = "  \"description\": \"The chain's IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1,"]
 #[doc = "  \"pattern\": \"^channel-\\\\d+$\""]
 #[doc = "}"]
 #[doc = r" ```"]
@@ -1541,6 +3698,9 @@ impl From<&IbcTransitionChainChannelId> for IbcTransitionChainChannelId {
 impl std::str::FromStr for IbcTransitionChainChannelId {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
         if regress::Regex::new("^channel-\\d+$")
             .unwrap()
             .find(value)
@@ -1581,6 +3741,75 @@ impl<'de> serde::Deserialize<'de> for IbcTransitionChainChannelId {
             })
     }
 }
+#[doc = "The port/channel/denom input string that generates the 'ibc/...' denom."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The port/channel/denom input string that generates the 'ibc/...' denom.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcTransitionChainPath(String);
+impl std::ops::Deref for IbcTransitionChainPath {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcTransitionChainPath> for String {
+    fn from(value: IbcTransitionChainPath) -> Self {
+        value.0
+    }
+}
+impl From<&IbcTransitionChainPath> for IbcTransitionChainPath {
+    fn from(value: &IbcTransitionChainPath) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcTransitionChainPath {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcTransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcTransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcTransitionChainPath {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcTransitionChainPath {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = "IbcTransitionCounterparty"]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
@@ -1596,15 +3825,18 @@ impl<'de> serde::Deserialize<'de> for IbcTransitionChainChannelId {
 #[doc = "  \"properties\": {"]
 #[doc = "    \"base_denom\": {"]
 #[doc = "      \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"chain_name\": {"]
 #[doc = "      \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"channel_id\": {"]
 #[doc = "      \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1,"]
 #[doc = "      \"pattern\": \"^channel-(JEnb|\\\\d+)$\""]
 #[doc = "    }"]
 #[doc = "  },"]
@@ -1613,11 +3845,12 @@ impl<'de> serde::Deserialize<'de> for IbcTransitionChainChannelId {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct IbcTransitionCounterparty {
     #[doc = "The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."]
-    pub base_denom: String,
+    pub base_denom: IbcTransitionCounterpartyBaseDenom,
     #[doc = "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"]
-    pub chain_name: String,
+    pub chain_name: IbcTransitionCounterpartyChainName,
     #[doc = "The counterparty IBC transfer channel(, e.g., 'channel-1')."]
     pub channel_id: IbcTransitionCounterpartyChannelId,
 }
@@ -1631,6 +3864,144 @@ impl IbcTransitionCounterparty {
         Default::default()
     }
 }
+#[doc = "The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The base unit of the asset on its source platform. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcTransitionCounterpartyBaseDenom(String);
+impl std::ops::Deref for IbcTransitionCounterpartyBaseDenom {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcTransitionCounterpartyBaseDenom> for String {
+    fn from(value: IbcTransitionCounterpartyBaseDenom) -> Self {
+        value.0
+    }
+}
+impl From<&IbcTransitionCounterpartyBaseDenom> for IbcTransitionCounterpartyBaseDenom {
+    fn from(value: &IbcTransitionCounterpartyBaseDenom) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcTransitionCounterpartyBaseDenom {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcTransitionCounterpartyBaseDenom {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The name of the counterparty chain. (must match exactly the chain name used in the Chain Registry)\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct IbcTransitionCounterpartyChainName(String);
+impl std::ops::Deref for IbcTransitionCounterpartyChainName {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<IbcTransitionCounterpartyChainName> for String {
+    fn from(value: IbcTransitionCounterpartyChainName) -> Self {
+        value.0
+    }
+}
+impl From<&IbcTransitionCounterpartyChainName> for IbcTransitionCounterpartyChainName {
+    fn from(value: &IbcTransitionCounterpartyChainName) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for IbcTransitionCounterpartyChainName {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for IbcTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for IbcTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for IbcTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for IbcTransitionCounterpartyChainName {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = "The counterparty IBC transfer channel(, e.g., 'channel-1')."]
 #[doc = r""]
 #[doc = r" <details><summary>JSON schema</summary>"]
@@ -1639,6 +4010,7 @@ impl IbcTransitionCounterparty {
 #[doc = "{"]
 #[doc = "  \"description\": \"The counterparty IBC transfer channel(, e.g., 'channel-1').\","]
 #[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1,"]
 #[doc = "  \"pattern\": \"^channel-(JEnb|\\\\d+)$\""]
 #[doc = "}"]
 #[doc = r" ```"]
@@ -1664,6 +4036,9 @@ impl From<&IbcTransitionCounterpartyChannelId> for IbcTransitionCounterpartyChan
 impl std::str::FromStr for IbcTransitionCounterpartyChannelId {
     type Err = self::error::ConversionError;
     fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
         if regress::Regex::new("^channel-(JEnb|\\d+)$")
             .unwrap()
             .find(value)
@@ -1713,7 +4088,8 @@ impl<'de> serde::Deserialize<'de> for IbcTransitionCounterpartyChannelId {
 #[doc = "  \"type\": \"string\","]
 #[doc = "  \"enum\": ["]
 #[doc = "    \"ibc\""]
-#[doc = "  ]"]
+#[doc = "  ],"]
+#[doc = "  \"minLength\": 1"]
 #[doc = "}"]
 #[doc = r" ```"]
 #[doc = r" </details>"]
@@ -1782,7 +4158,8 @@ impl std::convert::TryFrom<String> for IbcTransitionType {
 #[doc = "      \"properties\": {"]
 #[doc = "        \"contract\": {"]
 #[doc = "          \"description\": \"The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain.\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        }"]
 #[doc = "      },"]
 #[doc = "      \"additionalProperties\": false"]
@@ -1795,22 +4172,26 @@ impl std::convert::TryFrom<String> for IbcTransitionType {
 #[doc = "      ],"]
 #[doc = "      \"properties\": {"]
 #[doc = "        \"base_denom\": {"]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        },"]
 #[doc = "        \"chain_name\": {"]
 #[doc = "          \"description\": \"The chain or platform from which the asset originates. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        },"]
 #[doc = "        \"contract\": {"]
 #[doc = "          \"description\": \"The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain.\","]
-#[doc = "          \"type\": \"string\""]
+#[doc = "          \"type\": \"string\","]
+#[doc = "          \"minLength\": 1"]
 #[doc = "        }"]
 #[doc = "      },"]
 #[doc = "      \"additionalProperties\": false"]
 #[doc = "    },"]
 #[doc = "    \"provider\": {"]
 #[doc = "      \"description\": \"The entity offering the service. E.g., 'Gravity Bridge' [Network] or 'Tether' [Company].\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"type\": {"]
 #[doc = "      \"type\": \"string\","]
@@ -1820,8 +4201,10 @@ impl std::convert::TryFrom<String> for IbcTransitionType {
 #[doc = "        \"synthetic\","]
 #[doc = "        \"wrapped\","]
 #[doc = "        \"additional-mintage\","]
-#[doc = "        \"test-mintage\""]
-#[doc = "      ]"]
+#[doc = "        \"test-mintage\","]
+#[doc = "        \"legacy-mintage\""]
+#[doc = "      ],"]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -1829,12 +4212,13 @@ impl std::convert::TryFrom<String> for IbcTransitionType {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct NonIbcTransition {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub chain: Option<NonIbcTransitionChain>,
     pub counterparty: NonIbcTransitionCounterparty,
     #[doc = "The entity offering the service. E.g., 'Gravity Bridge' [Network] or 'Tether' [Company]."]
-    pub provider: String,
+    pub provider: NonIbcTransitionProvider,
     #[serde(rename = "type")]
     pub type_: NonIbcTransitionType,
 }
@@ -1861,7 +4245,8 @@ impl NonIbcTransition {
 #[doc = "  \"properties\": {"]
 #[doc = "    \"contract\": {"]
 #[doc = "      \"description\": \"The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -1869,9 +4254,10 @@ impl NonIbcTransition {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct NonIbcTransitionChain {
     #[doc = "The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain."]
-    pub contract: String,
+    pub contract: NonIbcTransitionChainContract,
 }
 impl From<&NonIbcTransitionChain> for NonIbcTransitionChain {
     fn from(value: &NonIbcTransitionChain) -> Self {
@@ -1881,6 +4267,75 @@ impl From<&NonIbcTransitionChain> for NonIbcTransitionChain {
 impl NonIbcTransitionChain {
     pub fn builder() -> builder::NonIbcTransitionChain {
         Default::default()
+    }
+}
+#[doc = "The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct NonIbcTransitionChainContract(String);
+impl std::ops::Deref for NonIbcTransitionChainContract {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<NonIbcTransitionChainContract> for String {
+    fn from(value: NonIbcTransitionChainContract) -> Self {
+        value.0
+    }
+}
+impl From<&NonIbcTransitionChainContract> for NonIbcTransitionChainContract {
+    fn from(value: &NonIbcTransitionChainContract) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for NonIbcTransitionChainContract {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for NonIbcTransitionChainContract {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for NonIbcTransitionChainContract {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for NonIbcTransitionChainContract {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for NonIbcTransitionChainContract {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
     }
 }
 #[doc = "NonIbcTransitionCounterparty"]
@@ -1896,15 +4351,18 @@ impl NonIbcTransitionChain {
 #[doc = "  ],"]
 #[doc = "  \"properties\": {"]
 #[doc = "    \"base_denom\": {"]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"chain_name\": {"]
 #[doc = "      \"description\": \"The chain or platform from which the asset originates. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"contract\": {"]
 #[doc = "      \"description\": \"The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -1912,13 +4370,14 @@ impl NonIbcTransitionChain {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct NonIbcTransitionCounterparty {
-    pub base_denom: String,
+    pub base_denom: NonIbcTransitionCounterpartyBaseDenom,
     #[doc = "The chain or platform from which the asset originates. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'"]
-    pub chain_name: String,
+    pub chain_name: NonIbcTransitionCounterpartyChainName,
     #[doc = "The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain."]
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub contract: Option<String>,
+    pub contract: Option<NonIbcTransitionCounterpartyContract>,
 }
 impl From<&NonIbcTransitionCounterparty> for NonIbcTransitionCounterparty {
     fn from(value: &NonIbcTransitionCounterparty) -> Self {
@@ -1928,6 +4387,281 @@ impl From<&NonIbcTransitionCounterparty> for NonIbcTransitionCounterparty {
 impl NonIbcTransitionCounterparty {
     pub fn builder() -> builder::NonIbcTransitionCounterparty {
         Default::default()
+    }
+}
+#[doc = "NonIbcTransitionCounterpartyBaseDenom"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct NonIbcTransitionCounterpartyBaseDenom(String);
+impl std::ops::Deref for NonIbcTransitionCounterpartyBaseDenom {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<NonIbcTransitionCounterpartyBaseDenom> for String {
+    fn from(value: NonIbcTransitionCounterpartyBaseDenom) -> Self {
+        value.0
+    }
+}
+impl From<&NonIbcTransitionCounterpartyBaseDenom> for NonIbcTransitionCounterpartyBaseDenom {
+    fn from(value: &NonIbcTransitionCounterpartyBaseDenom) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for NonIbcTransitionCounterpartyBaseDenom {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for NonIbcTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for NonIbcTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for NonIbcTransitionCounterpartyBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for NonIbcTransitionCounterpartyBaseDenom {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The chain or platform from which the asset originates. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The chain or platform from which the asset originates. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct NonIbcTransitionCounterpartyChainName(String);
+impl std::ops::Deref for NonIbcTransitionCounterpartyChainName {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<NonIbcTransitionCounterpartyChainName> for String {
+    fn from(value: NonIbcTransitionCounterpartyChainName) -> Self {
+        value.0
+    }
+}
+impl From<&NonIbcTransitionCounterpartyChainName> for NonIbcTransitionCounterpartyChainName {
+    fn from(value: &NonIbcTransitionCounterpartyChainName) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for NonIbcTransitionCounterpartyChainName {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for NonIbcTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for NonIbcTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for NonIbcTransitionCounterpartyChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for NonIbcTransitionCounterpartyChainName {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The contract address where the transition takes place, where applicable. E.g., The Ethereum contract that locks up the asset while it's minted on another chain.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct NonIbcTransitionCounterpartyContract(String);
+impl std::ops::Deref for NonIbcTransitionCounterpartyContract {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<NonIbcTransitionCounterpartyContract> for String {
+    fn from(value: NonIbcTransitionCounterpartyContract) -> Self {
+        value.0
+    }
+}
+impl From<&NonIbcTransitionCounterpartyContract> for NonIbcTransitionCounterpartyContract {
+    fn from(value: &NonIbcTransitionCounterpartyContract) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for NonIbcTransitionCounterpartyContract {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for NonIbcTransitionCounterpartyContract {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for NonIbcTransitionCounterpartyContract {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for NonIbcTransitionCounterpartyContract {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for NonIbcTransitionCounterpartyContract {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The entity offering the service. E.g., 'Gravity Bridge' [Network] or 'Tether' [Company]."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The entity offering the service. E.g., 'Gravity Bridge' [Network] or 'Tether' [Company].\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct NonIbcTransitionProvider(String);
+impl std::ops::Deref for NonIbcTransitionProvider {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<NonIbcTransitionProvider> for String {
+    fn from(value: NonIbcTransitionProvider) -> Self {
+        value.0
+    }
+}
+impl From<&NonIbcTransitionProvider> for NonIbcTransitionProvider {
+    fn from(value: &NonIbcTransitionProvider) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for NonIbcTransitionProvider {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for NonIbcTransitionProvider {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for NonIbcTransitionProvider {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for NonIbcTransitionProvider {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for NonIbcTransitionProvider {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
     }
 }
 #[doc = "NonIbcTransitionType"]
@@ -1943,8 +4677,10 @@ impl NonIbcTransitionCounterparty {
 #[doc = "    \"synthetic\","]
 #[doc = "    \"wrapped\","]
 #[doc = "    \"additional-mintage\","]
-#[doc = "    \"test-mintage\""]
-#[doc = "  ]"]
+#[doc = "    \"test-mintage\","]
+#[doc = "    \"legacy-mintage\""]
+#[doc = "  ],"]
+#[doc = "  \"minLength\": 1"]
 #[doc = "}"]
 #[doc = r" ```"]
 #[doc = r" </details>"]
@@ -1962,6 +4698,8 @@ pub enum NonIbcTransitionType {
     AdditionalMintage,
     #[serde(rename = "test-mintage")]
     TestMintage,
+    #[serde(rename = "legacy-mintage")]
+    LegacyMintage,
 }
 impl From<&NonIbcTransitionType> for NonIbcTransitionType {
     fn from(value: &NonIbcTransitionType) -> Self {
@@ -1977,6 +4715,7 @@ impl ToString for NonIbcTransitionType {
             Self::Wrapped => "wrapped".to_string(),
             Self::AdditionalMintage => "additional-mintage".to_string(),
             Self::TestMintage => "test-mintage".to_string(),
+            Self::LegacyMintage => "legacy-mintage".to_string(),
         }
     }
 }
@@ -1990,6 +4729,7 @@ impl std::str::FromStr for NonIbcTransitionType {
             "wrapped" => Ok(Self::Wrapped),
             "additional-mintage" => Ok(Self::AdditionalMintage),
             "test-mintage" => Ok(Self::TestMintage),
+            "legacy-mintage" => Ok(Self::LegacyMintage),
             _ => Err("invalid value".into()),
         }
     }
@@ -2026,11 +4766,13 @@ impl std::convert::TryFrom<String> for NonIbcTransitionType {
 #[doc = "  \"properties\": {"]
 #[doc = "    \"base_denom\": {"]
 #[doc = "      \"description\": \"The base denom of the asset from which the object originates. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    },"]
 #[doc = "    \"chain_name\": {"]
 #[doc = "      \"description\": \"The chain name or platform from which the object resides. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'\","]
-#[doc = "      \"type\": \"string\""]
+#[doc = "      \"type\": \"string\","]
+#[doc = "      \"minLength\": 1"]
 #[doc = "    }"]
 #[doc = "  },"]
 #[doc = "  \"additionalProperties\": false"]
@@ -2038,12 +4780,13 @@ impl std::convert::TryFrom<String> for NonIbcTransitionType {
 #[doc = r" ```"]
 #[doc = r" </details>"]
 #[derive(Clone, Debug, Deserialize, Serialize)]
+#[serde(deny_unknown_fields)]
 pub struct Pointer {
     #[doc = "The base denom of the asset from which the object originates. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."]
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub base_denom: Option<String>,
+    pub base_denom: Option<PointerBaseDenom>,
     #[doc = "The chain name or platform from which the object resides. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'"]
-    pub chain_name: String,
+    pub chain_name: PointerChainName,
 }
 impl From<&Pointer> for Pointer {
     fn from(value: &Pointer) -> Self {
@@ -2055,25 +4798,163 @@ impl Pointer {
         Default::default()
     }
 }
+#[doc = "The base denom of the asset from which the object originates. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform."]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The base denom of the asset from which the object originates. E.g., when describing ATOM from Cosmos Hub, specify 'uatom', NOT 'atom' nor 'ATOM'; base units are unique per platform.\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct PointerBaseDenom(String);
+impl std::ops::Deref for PointerBaseDenom {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<PointerBaseDenom> for String {
+    fn from(value: PointerBaseDenom) -> Self {
+        value.0
+    }
+}
+impl From<&PointerBaseDenom> for PointerBaseDenom {
+    fn from(value: &PointerBaseDenom) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for PointerBaseDenom {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for PointerBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for PointerBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for PointerBaseDenom {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for PointerBaseDenom {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
+#[doc = "The chain name or platform from which the object resides. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'"]
+#[doc = r""]
+#[doc = r" <details><summary>JSON schema</summary>"]
+#[doc = r""]
+#[doc = r" ```json"]
+#[doc = "{"]
+#[doc = "  \"description\": \"The chain name or platform from which the object resides. E.g., 'cosmoshub', 'ethereum', 'forex', or 'nasdaq'\","]
+#[doc = "  \"type\": \"string\","]
+#[doc = "  \"minLength\": 1"]
+#[doc = "}"]
+#[doc = r" ```"]
+#[doc = r" </details>"]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+pub struct PointerChainName(String);
+impl std::ops::Deref for PointerChainName {
+    type Target = String;
+    fn deref(&self) -> &String {
+        &self.0
+    }
+}
+impl From<PointerChainName> for String {
+    fn from(value: PointerChainName) -> Self {
+        value.0
+    }
+}
+impl From<&PointerChainName> for PointerChainName {
+    fn from(value: &PointerChainName) -> Self {
+        value.clone()
+    }
+}
+impl std::str::FromStr for PointerChainName {
+    type Err = self::error::ConversionError;
+    fn from_str(value: &str) -> Result<Self, self::error::ConversionError> {
+        if value.len() < 1usize {
+            return Err("shorter than 1 characters".into());
+        }
+        Ok(Self(value.to_string()))
+    }
+}
+impl std::convert::TryFrom<&str> for PointerChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &str) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<&String> for PointerChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: &String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl std::convert::TryFrom<String> for PointerChainName {
+    type Error = self::error::ConversionError;
+    fn try_from(value: String) -> Result<Self, self::error::ConversionError> {
+        value.parse()
+    }
+}
+impl<'de> serde::Deserialize<'de> for PointerChainName {
+    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
+    where
+        D: serde::Deserializer<'de>,
+    {
+        String::deserialize(deserializer)?
+            .parse()
+            .map_err(|e: self::error::ConversionError| {
+                <D::Error as serde::de::Error>::custom(e.to_string())
+            })
+    }
+}
 #[doc = r" Types for composing complex structures."]
 pub mod builder {
     #[derive(Clone, Debug)]
     pub struct Asset {
-        address: Result<Option<String>, String>,
-        base: Result<String, String>,
-        coingecko_id: Result<Option<String>, String>,
+        address: Result<Option<super::AssetAddress>, String>,
+        base: Result<super::AssetBase, String>,
+        coingecko_id: Result<Option<super::AssetCoingeckoId>, String>,
         denom_units: Result<Vec<super::DenomUnit>, String>,
         deprecated: Result<Option<bool>, String>,
-        description: Result<Option<String>, String>,
-        display: Result<String, String>,
-        extended_description: Result<Option<String>, String>,
+        description: Result<Option<super::AssetDescription>, String>,
+        display: Result<super::AssetDisplay, String>,
+        extended_description: Result<Option<super::AssetExtendedDescription>, String>,
         ibc: Result<Option<super::AssetIbc>, String>,
         images: Result<Vec<super::AssetImagesItem>, String>,
-        keywords: Result<Vec<String>, String>,
+        keywords: Result<Vec<super::AssetKeywordsItem>, String>,
         logo_ur_is: Result<Option<super::AssetLogoUrIs>, String>,
         name: Result<super::AssetName, String>,
         socials: Result<Option<super::AssetSocials>, String>,
-        symbol: Result<String, String>,
+        symbol: Result<super::AssetSymbol, String>,
         traces: Result<Vec<super::AssetTracesItem>, String>,
         type_asset: Result<super::AssetTypeAsset, String>,
     }
@@ -2103,7 +4984,7 @@ pub mod builder {
     impl Asset {
         pub fn address<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Option<String>>,
+            T: std::convert::TryInto<Option<super::AssetAddress>>,
             T::Error: std::fmt::Display,
         {
             self.address = value
@@ -2113,7 +4994,7 @@ pub mod builder {
         }
         pub fn base<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::AssetBase>,
             T::Error: std::fmt::Display,
         {
             self.base = value
@@ -2123,7 +5004,7 @@ pub mod builder {
         }
         pub fn coingecko_id<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Option<String>>,
+            T: std::convert::TryInto<Option<super::AssetCoingeckoId>>,
             T::Error: std::fmt::Display,
         {
             self.coingecko_id = value
@@ -2153,7 +5034,7 @@ pub mod builder {
         }
         pub fn description<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Option<String>>,
+            T: std::convert::TryInto<Option<super::AssetDescription>>,
             T::Error: std::fmt::Display,
         {
             self.description = value
@@ -2163,7 +5044,7 @@ pub mod builder {
         }
         pub fn display<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::AssetDisplay>,
             T::Error: std::fmt::Display,
         {
             self.display = value
@@ -2173,7 +5054,7 @@ pub mod builder {
         }
         pub fn extended_description<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Option<String>>,
+            T: std::convert::TryInto<Option<super::AssetExtendedDescription>>,
             T::Error: std::fmt::Display,
         {
             self.extended_description = value.try_into().map_err(|e| {
@@ -2206,7 +5087,7 @@ pub mod builder {
         }
         pub fn keywords<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Vec<String>>,
+            T: std::convert::TryInto<Vec<super::AssetKeywordsItem>>,
             T::Error: std::fmt::Display,
         {
             self.keywords = value
@@ -2246,7 +5127,7 @@ pub mod builder {
         }
         pub fn symbol<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::AssetSymbol>,
             T::Error: std::fmt::Display,
         {
             self.symbol = value
@@ -2470,20 +5351,37 @@ pub mod builder {
     }
     #[derive(Clone, Debug)]
     pub struct AssetImagesItemTheme {
+        background_color_hex: Result<Option<super::AssetImagesItemThemeBackgroundColorHex>, String>,
         circle: Result<Option<bool>, String>,
         dark_mode: Result<Option<bool>, String>,
+        monochrome: Result<Option<bool>, String>,
         primary_color_hex: Result<Option<super::AssetImagesItemThemePrimaryColorHex>, String>,
     }
     impl Default for AssetImagesItemTheme {
         fn default() -> Self {
             Self {
+                background_color_hex: Ok(Default::default()),
                 circle: Ok(Default::default()),
                 dark_mode: Ok(Default::default()),
+                monochrome: Ok(Default::default()),
                 primary_color_hex: Ok(Default::default()),
             }
         }
     }
     impl AssetImagesItemTheme {
+        pub fn background_color_hex<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<Option<super::AssetImagesItemThemeBackgroundColorHex>>,
+            T::Error: std::fmt::Display,
+        {
+            self.background_color_hex = value.try_into().map_err(|e| {
+                format!(
+                    "error converting supplied value for background_color_hex: {}",
+                    e
+                )
+            });
+            self
+        }
         pub fn circle<T>(mut self, value: T) -> Self
         where
             T: std::convert::TryInto<Option<bool>>,
@@ -2504,6 +5402,16 @@ pub mod builder {
                 .map_err(|e| format!("error converting supplied value for dark_mode: {}", e));
             self
         }
+        pub fn monochrome<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<Option<bool>>,
+            T::Error: std::fmt::Display,
+        {
+            self.monochrome = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for monochrome: {}", e));
+            self
+        }
         pub fn primary_color_hex<T>(mut self, value: T) -> Self
         where
             T: std::convert::TryInto<Option<super::AssetImagesItemThemePrimaryColorHex>>,
@@ -2522,8 +5430,10 @@ pub mod builder {
         type Error = super::error::ConversionError;
         fn try_from(value: AssetImagesItemTheme) -> Result<Self, super::error::ConversionError> {
             Ok(Self {
+                background_color_hex: value.background_color_hex?,
                 circle: value.circle?,
                 dark_mode: value.dark_mode?,
+                monochrome: value.monochrome?,
                 primary_color_hex: value.primary_color_hex?,
             })
         }
@@ -2531,19 +5441,21 @@ pub mod builder {
     impl From<super::AssetImagesItemTheme> for AssetImagesItemTheme {
         fn from(value: super::AssetImagesItemTheme) -> Self {
             Self {
+                background_color_hex: Ok(value.background_color_hex),
                 circle: Ok(value.circle),
                 dark_mode: Ok(value.dark_mode),
+                monochrome: Ok(value.monochrome),
                 primary_color_hex: Ok(value.primary_color_hex),
             }
         }
     }
     #[derive(Clone, Debug)]
-    pub struct AssetLists {
+    pub struct AssetList {
         assets: Result<Vec<super::Asset>, String>,
-        chain_name: Result<String, String>,
-        schema: Result<Option<super::AssetListsSchema>, String>,
+        chain_name: Result<super::AssetListChainName, String>,
+        schema: Result<Option<super::AssetListSchema>, String>,
     }
-    impl Default for AssetLists {
+    impl Default for AssetList {
         fn default() -> Self {
             Self {
                 assets: Err("no value supplied for assets".to_string()),
@@ -2552,7 +5464,7 @@ pub mod builder {
             }
         }
     }
-    impl AssetLists {
+    impl AssetList {
         pub fn assets<T>(mut self, value: T) -> Self
         where
             T: std::convert::TryInto<Vec<super::Asset>>,
@@ -2565,7 +5477,7 @@ pub mod builder {
         }
         pub fn chain_name<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::AssetListChainName>,
             T::Error: std::fmt::Display,
         {
             self.chain_name = value
@@ -2575,7 +5487,7 @@ pub mod builder {
         }
         pub fn schema<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Option<super::AssetListsSchema>>,
+            T: std::convert::TryInto<Option<super::AssetListSchema>>,
             T::Error: std::fmt::Display,
         {
             self.schema = value
@@ -2584,9 +5496,9 @@ pub mod builder {
             self
         }
     }
-    impl std::convert::TryFrom<AssetLists> for super::AssetLists {
+    impl std::convert::TryFrom<AssetList> for super::AssetList {
         type Error = super::error::ConversionError;
-        fn try_from(value: AssetLists) -> Result<Self, super::error::ConversionError> {
+        fn try_from(value: AssetList) -> Result<Self, super::error::ConversionError> {
             Ok(Self {
                 assets: value.assets?,
                 chain_name: value.chain_name?,
@@ -2594,8 +5506,8 @@ pub mod builder {
             })
         }
     }
-    impl From<super::AssetLists> for AssetLists {
-        fn from(value: super::AssetLists) -> Self {
+    impl From<super::AssetList> for AssetList {
+        fn from(value: super::AssetList) -> Self {
             Self {
                 assets: Ok(value.assets),
                 chain_name: Ok(value.chain_name),
@@ -2708,10 +5620,90 @@ pub mod builder {
         }
     }
     #[derive(Clone, Debug)]
+    pub struct AssetTracesItem {
+        subtype_0: Result<Option<super::IbcTransition>, String>,
+        subtype_1: Result<Option<super::IbcCw20Transition>, String>,
+        subtype_2: Result<Option<super::IbcBridgeTransition>, String>,
+        subtype_3: Result<Option<super::NonIbcTransition>, String>,
+    }
+    impl Default for AssetTracesItem {
+        fn default() -> Self {
+            Self {
+                subtype_0: Ok(Default::default()),
+                subtype_1: Ok(Default::default()),
+                subtype_2: Ok(Default::default()),
+                subtype_3: Ok(Default::default()),
+            }
+        }
+    }
+    impl AssetTracesItem {
+        pub fn subtype_0<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<Option<super::IbcTransition>>,
+            T::Error: std::fmt::Display,
+        {
+            self.subtype_0 = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for subtype_0: {}", e));
+            self
+        }
+        pub fn subtype_1<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<Option<super::IbcCw20Transition>>,
+            T::Error: std::fmt::Display,
+        {
+            self.subtype_1 = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for subtype_1: {}", e));
+            self
+        }
+        pub fn subtype_2<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<Option<super::IbcBridgeTransition>>,
+            T::Error: std::fmt::Display,
+        {
+            self.subtype_2 = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for subtype_2: {}", e));
+            self
+        }
+        pub fn subtype_3<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<Option<super::NonIbcTransition>>,
+            T::Error: std::fmt::Display,
+        {
+            self.subtype_3 = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for subtype_3: {}", e));
+            self
+        }
+    }
+    impl std::convert::TryFrom<AssetTracesItem> for super::AssetTracesItem {
+        type Error = super::error::ConversionError;
+        fn try_from(value: AssetTracesItem) -> Result<Self, super::error::ConversionError> {
+            Ok(Self {
+                subtype_0: value.subtype_0?,
+                subtype_1: value.subtype_1?,
+                subtype_2: value.subtype_2?,
+                subtype_3: value.subtype_3?,
+            })
+        }
+    }
+    impl From<super::AssetTracesItem> for AssetTracesItem {
+        fn from(value: super::AssetTracesItem) -> Self {
+            Self {
+                subtype_0: Ok(value.subtype_0),
+                subtype_1: Ok(value.subtype_1),
+                subtype_2: Ok(value.subtype_2),
+                subtype_3: Ok(value.subtype_3),
+            }
+        }
+    }
+    #[derive(Clone, Debug)]
     pub struct DenomUnit {
-        aliases: Result<Vec<String>, String>,
-        denom: Result<String, String>,
-        exponent: Result<u32, String>,
+        aliases: Result<Vec<super::DenomUnitAliasesItem>, String>,
+        denom: Result<super::DenomUnitDenom, String>,
+        exponent: Result<i64, String>,
     }
     impl Default for DenomUnit {
         fn default() -> Self {
@@ -2725,7 +5717,7 @@ pub mod builder {
     impl DenomUnit {
         pub fn aliases<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Vec<String>>,
+            T: std::convert::TryInto<Vec<super::DenomUnitAliasesItem>>,
             T::Error: std::fmt::Display,
         {
             self.aliases = value
@@ -2735,7 +5727,7 @@ pub mod builder {
         }
         pub fn denom<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::DenomUnitDenom>,
             T::Error: std::fmt::Display,
         {
             self.denom = value
@@ -2745,7 +5737,7 @@ pub mod builder {
         }
         pub fn exponent<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<u32>,
+            T: std::convert::TryInto<i64>,
             T::Error: std::fmt::Display,
         {
             self.exponent = value
@@ -2770,6 +5762,238 @@ pub mod builder {
                 aliases: Ok(value.aliases),
                 denom: Ok(value.denom),
                 exponent: Ok(value.exponent),
+            }
+        }
+    }
+    #[derive(Clone, Debug)]
+    pub struct IbcBridgeTransition {
+        chain: Result<super::IbcBridgeTransitionChain, String>,
+        counterparty: Result<super::IbcBridgeTransitionCounterparty, String>,
+        provider: Result<super::IbcBridgeTransitionProvider, String>,
+        type_: Result<super::IbcBridgeTransitionType, String>,
+    }
+    impl Default for IbcBridgeTransition {
+        fn default() -> Self {
+            Self {
+                chain: Err("no value supplied for chain".to_string()),
+                counterparty: Err("no value supplied for counterparty".to_string()),
+                provider: Err("no value supplied for provider".to_string()),
+                type_: Err("no value supplied for type_".to_string()),
+            }
+        }
+    }
+    impl IbcBridgeTransition {
+        pub fn chain<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionChain>,
+            T::Error: std::fmt::Display,
+        {
+            self.chain = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for chain: {}", e));
+            self
+        }
+        pub fn counterparty<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionCounterparty>,
+            T::Error: std::fmt::Display,
+        {
+            self.counterparty = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for counterparty: {}", e));
+            self
+        }
+        pub fn provider<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionProvider>,
+            T::Error: std::fmt::Display,
+        {
+            self.provider = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for provider: {}", e));
+            self
+        }
+        pub fn type_<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionType>,
+            T::Error: std::fmt::Display,
+        {
+            self.type_ = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for type_: {}", e));
+            self
+        }
+    }
+    impl std::convert::TryFrom<IbcBridgeTransition> for super::IbcBridgeTransition {
+        type Error = super::error::ConversionError;
+        fn try_from(value: IbcBridgeTransition) -> Result<Self, super::error::ConversionError> {
+            Ok(Self {
+                chain: value.chain?,
+                counterparty: value.counterparty?,
+                provider: value.provider?,
+                type_: value.type_?,
+            })
+        }
+    }
+    impl From<super::IbcBridgeTransition> for IbcBridgeTransition {
+        fn from(value: super::IbcBridgeTransition) -> Self {
+            Self {
+                chain: Ok(value.chain),
+                counterparty: Ok(value.counterparty),
+                provider: Ok(value.provider),
+                type_: Ok(value.type_),
+            }
+        }
+    }
+    #[derive(Clone, Debug)]
+    pub struct IbcBridgeTransitionChain {
+        channel_id: Result<super::IbcBridgeTransitionChainChannelId, String>,
+        path: Result<super::IbcBridgeTransitionChainPath, String>,
+        port: Result<Option<super::IbcBridgeTransitionChainPort>, String>,
+    }
+    impl Default for IbcBridgeTransitionChain {
+        fn default() -> Self {
+            Self {
+                channel_id: Err("no value supplied for channel_id".to_string()),
+                path: Err("no value supplied for path".to_string()),
+                port: Ok(Default::default()),
+            }
+        }
+    }
+    impl IbcBridgeTransitionChain {
+        pub fn channel_id<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionChainChannelId>,
+            T::Error: std::fmt::Display,
+        {
+            self.channel_id = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for channel_id: {}", e));
+            self
+        }
+        pub fn path<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionChainPath>,
+            T::Error: std::fmt::Display,
+        {
+            self.path = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for path: {}", e));
+            self
+        }
+        pub fn port<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<Option<super::IbcBridgeTransitionChainPort>>,
+            T::Error: std::fmt::Display,
+        {
+            self.port = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for port: {}", e));
+            self
+        }
+    }
+    impl std::convert::TryFrom<IbcBridgeTransitionChain> for super::IbcBridgeTransitionChain {
+        type Error = super::error::ConversionError;
+        fn try_from(
+            value: IbcBridgeTransitionChain,
+        ) -> Result<Self, super::error::ConversionError> {
+            Ok(Self {
+                channel_id: value.channel_id?,
+                path: value.path?,
+                port: value.port?,
+            })
+        }
+    }
+    impl From<super::IbcBridgeTransitionChain> for IbcBridgeTransitionChain {
+        fn from(value: super::IbcBridgeTransitionChain) -> Self {
+            Self {
+                channel_id: Ok(value.channel_id),
+                path: Ok(value.path),
+                port: Ok(value.port),
+            }
+        }
+    }
+    #[derive(Clone, Debug)]
+    pub struct IbcBridgeTransitionCounterparty {
+        base_denom: Result<super::IbcBridgeTransitionCounterpartyBaseDenom, String>,
+        chain_name: Result<super::IbcBridgeTransitionCounterpartyChainName, String>,
+        channel_id: Result<super::IbcBridgeTransitionCounterpartyChannelId, String>,
+        port: Result<Option<super::IbcBridgeTransitionCounterpartyPort>, String>,
+    }
+    impl Default for IbcBridgeTransitionCounterparty {
+        fn default() -> Self {
+            Self {
+                base_denom: Err("no value supplied for base_denom".to_string()),
+                chain_name: Err("no value supplied for chain_name".to_string()),
+                channel_id: Err("no value supplied for channel_id".to_string()),
+                port: Ok(Default::default()),
+            }
+        }
+    }
+    impl IbcBridgeTransitionCounterparty {
+        pub fn base_denom<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionCounterpartyBaseDenom>,
+            T::Error: std::fmt::Display,
+        {
+            self.base_denom = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for base_denom: {}", e));
+            self
+        }
+        pub fn chain_name<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionCounterpartyChainName>,
+            T::Error: std::fmt::Display,
+        {
+            self.chain_name = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for chain_name: {}", e));
+            self
+        }
+        pub fn channel_id<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<super::IbcBridgeTransitionCounterpartyChannelId>,
+            T::Error: std::fmt::Display,
+        {
+            self.channel_id = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for channel_id: {}", e));
+            self
+        }
+        pub fn port<T>(mut self, value: T) -> Self
+        where
+            T: std::convert::TryInto<Option<super::IbcBridgeTransitionCounterpartyPort>>,
+            T::Error: std::fmt::Display,
+        {
+            self.port = value
+                .try_into()
+                .map_err(|e| format!("error converting supplied value for port: {}", e));
+            self
+        }
+    }
+    impl std::convert::TryFrom<IbcBridgeTransitionCounterparty>
+        for super::IbcBridgeTransitionCounterparty
+    {
+        type Error = super::error::ConversionError;
+        fn try_from(
+            value: IbcBridgeTransitionCounterparty,
+        ) -> Result<Self, super::error::ConversionError> {
+            Ok(Self {
+                base_denom: value.base_denom?,
+                chain_name: value.chain_name?,
+                channel_id: value.channel_id?,
+                port: value.port?,
+            })
+        }
+    }
+    impl From<super::IbcBridgeTransitionCounterparty> for IbcBridgeTransitionCounterparty {
+        fn from(value: super::IbcBridgeTransitionCounterparty) -> Self {
+            Self {
+                base_denom: Ok(value.base_denom),
+                chain_name: Ok(value.chain_name),
+                channel_id: Ok(value.channel_id),
+                port: Ok(value.port),
             }
         }
     }
@@ -2842,8 +6066,8 @@ pub mod builder {
     #[derive(Clone, Debug)]
     pub struct IbcCw20TransitionChain {
         channel_id: Result<super::IbcCw20TransitionChainChannelId, String>,
-        path: Result<String, String>,
-        port: Result<String, String>,
+        path: Result<super::IbcCw20TransitionChainPath, String>,
+        port: Result<super::IbcCw20TransitionChainPort, String>,
     }
     impl Default for IbcCw20TransitionChain {
         fn default() -> Self {
@@ -2867,7 +6091,7 @@ pub mod builder {
         }
         pub fn path<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::IbcCw20TransitionChainPath>,
             T::Error: std::fmt::Display,
         {
             self.path = value
@@ -2877,7 +6101,7 @@ pub mod builder {
         }
         pub fn port<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::IbcCw20TransitionChainPort>,
             T::Error: std::fmt::Display,
         {
             self.port = value
@@ -2907,10 +6131,10 @@ pub mod builder {
     }
     #[derive(Clone, Debug)]
     pub struct IbcCw20TransitionCounterparty {
-        base_denom: Result<String, String>,
-        chain_name: Result<String, String>,
+        base_denom: Result<super::IbcCw20TransitionCounterpartyBaseDenom, String>,
+        chain_name: Result<super::IbcCw20TransitionCounterpartyChainName, String>,
         channel_id: Result<super::IbcCw20TransitionCounterpartyChannelId, String>,
-        port: Result<String, String>,
+        port: Result<super::IbcCw20TransitionCounterpartyPort, String>,
     }
     impl Default for IbcCw20TransitionCounterparty {
         fn default() -> Self {
@@ -2925,7 +6149,7 @@ pub mod builder {
     impl IbcCw20TransitionCounterparty {
         pub fn base_denom<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::IbcCw20TransitionCounterpartyBaseDenom>,
             T::Error: std::fmt::Display,
         {
             self.base_denom = value
@@ -2935,7 +6159,7 @@ pub mod builder {
         }
         pub fn chain_name<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::IbcCw20TransitionCounterpartyChainName>,
             T::Error: std::fmt::Display,
         {
             self.chain_name = value
@@ -2955,7 +6179,7 @@ pub mod builder {
         }
         pub fn port<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::IbcCw20TransitionCounterpartyPort>,
             T::Error: std::fmt::Display,
         {
             self.port = value
@@ -3056,7 +6280,7 @@ pub mod builder {
     #[derive(Clone, Debug)]
     pub struct IbcTransitionChain {
         channel_id: Result<super::IbcTransitionChainChannelId, String>,
-        path: Result<String, String>,
+        path: Result<super::IbcTransitionChainPath, String>,
     }
     impl Default for IbcTransitionChain {
         fn default() -> Self {
@@ -3079,7 +6303,7 @@ pub mod builder {
         }
         pub fn path<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::IbcTransitionChainPath>,
             T::Error: std::fmt::Display,
         {
             self.path = value
@@ -3107,8 +6331,8 @@ pub mod builder {
     }
     #[derive(Clone, Debug)]
     pub struct IbcTransitionCounterparty {
-        base_denom: Result<String, String>,
-        chain_name: Result<String, String>,
+        base_denom: Result<super::IbcTransitionCounterpartyBaseDenom, String>,
+        chain_name: Result<super::IbcTransitionCounterpartyChainName, String>,
         channel_id: Result<super::IbcTransitionCounterpartyChannelId, String>,
     }
     impl Default for IbcTransitionCounterparty {
@@ -3123,7 +6347,7 @@ pub mod builder {
     impl IbcTransitionCounterparty {
         pub fn base_denom<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::IbcTransitionCounterpartyBaseDenom>,
             T::Error: std::fmt::Display,
         {
             self.base_denom = value
@@ -3133,7 +6357,7 @@ pub mod builder {
         }
         pub fn chain_name<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::IbcTransitionCounterpartyChainName>,
             T::Error: std::fmt::Display,
         {
             self.chain_name = value
@@ -3177,7 +6401,7 @@ pub mod builder {
     pub struct NonIbcTransition {
         chain: Result<Option<super::NonIbcTransitionChain>, String>,
         counterparty: Result<super::NonIbcTransitionCounterparty, String>,
-        provider: Result<String, String>,
+        provider: Result<super::NonIbcTransitionProvider, String>,
         type_: Result<super::NonIbcTransitionType, String>,
     }
     impl Default for NonIbcTransition {
@@ -3213,7 +6437,7 @@ pub mod builder {
         }
         pub fn provider<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::NonIbcTransitionProvider>,
             T::Error: std::fmt::Display,
         {
             self.provider = value
@@ -3255,7 +6479,7 @@ pub mod builder {
     }
     #[derive(Clone, Debug)]
     pub struct NonIbcTransitionChain {
-        contract: Result<String, String>,
+        contract: Result<super::NonIbcTransitionChainContract, String>,
     }
     impl Default for NonIbcTransitionChain {
         fn default() -> Self {
@@ -3267,7 +6491,7 @@ pub mod builder {
     impl NonIbcTransitionChain {
         pub fn contract<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::NonIbcTransitionChainContract>,
             T::Error: std::fmt::Display,
         {
             self.contract = value
@@ -3293,9 +6517,9 @@ pub mod builder {
     }
     #[derive(Clone, Debug)]
     pub struct NonIbcTransitionCounterparty {
-        base_denom: Result<String, String>,
-        chain_name: Result<String, String>,
-        contract: Result<Option<String>, String>,
+        base_denom: Result<super::NonIbcTransitionCounterpartyBaseDenom, String>,
+        chain_name: Result<super::NonIbcTransitionCounterpartyChainName, String>,
+        contract: Result<Option<super::NonIbcTransitionCounterpartyContract>, String>,
     }
     impl Default for NonIbcTransitionCounterparty {
         fn default() -> Self {
@@ -3309,7 +6533,7 @@ pub mod builder {
     impl NonIbcTransitionCounterparty {
         pub fn base_denom<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::NonIbcTransitionCounterpartyBaseDenom>,
             T::Error: std::fmt::Display,
         {
             self.base_denom = value
@@ -3319,7 +6543,7 @@ pub mod builder {
         }
         pub fn chain_name<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::NonIbcTransitionCounterpartyChainName>,
             T::Error: std::fmt::Display,
         {
             self.chain_name = value
@@ -3329,7 +6553,7 @@ pub mod builder {
         }
         pub fn contract<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Option<String>>,
+            T: std::convert::TryInto<Option<super::NonIbcTransitionCounterpartyContract>>,
             T::Error: std::fmt::Display,
         {
             self.contract = value
@@ -3361,8 +6585,8 @@ pub mod builder {
     }
     #[derive(Clone, Debug)]
     pub struct Pointer {
-        base_denom: Result<Option<String>, String>,
-        chain_name: Result<String, String>,
+        base_denom: Result<Option<super::PointerBaseDenom>, String>,
+        chain_name: Result<super::PointerChainName, String>,
     }
     impl Default for Pointer {
         fn default() -> Self {
@@ -3375,7 +6599,7 @@ pub mod builder {
     impl Pointer {
         pub fn base_denom<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<Option<String>>,
+            T: std::convert::TryInto<Option<super::PointerBaseDenom>>,
             T::Error: std::fmt::Display,
         {
             self.base_denom = value
@@ -3385,7 +6609,7 @@ pub mod builder {
         }
         pub fn chain_name<T>(mut self, value: T) -> Self
         where
-            T: std::convert::TryInto<String>,
+            T: std::convert::TryInto<super::PointerChainName>,
             T::Error: std::fmt::Display,
         {
             self.chain_name = value
