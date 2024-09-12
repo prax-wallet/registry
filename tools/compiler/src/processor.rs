@@ -76,6 +76,7 @@ pub struct Registry {
     pub numeraires: Vec<String>,
 }
 
+#[instrument]
 pub fn generate_registry() -> AppResult<()> {
     reset_registry_dir(LOCAL_REGISTRY_DIR)?;
     copy_globals(LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR)?;
@@ -137,6 +138,7 @@ pub fn base64_id(id: &Id) -> AppResult<String> {
     Ok(base64_str)
 }
 
+#[tracing::instrument(skip_all)]
 fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
     let mut all_metadata = Vec::new();
 
@@ -145,7 +147,6 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
 
     // For each ibc connection, grab all metadata of native assets from the cosmos registry
     for ibc_input in &chain_config.ibc_connections {
-        // let assetlist_path = Path::new("./src/chain-registry")
         let assetlist_path = Path::new(LOCAL_COSMOS_REGISTRY_DIR)
             .join(&ibc_input.cosmos_registry_dir)
             .join("assetlist.json");
