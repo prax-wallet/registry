@@ -66,27 +66,27 @@ async fn fetch_asset_list(
 ) -> AppResult<(IbcInput, AssetList)> {
     tracing::debug!(ibc_asset=?ibc_asset.display_name, url, "fetching asset info");
     // First obtain GithubContent, from which we'll extract a URL to download the asset list as JSON.
-    let ghc_response = http_get(client, url).await.map_err(|e| {
+    let ghc_response = http_get(client, url).await.inspect_err(|_| {
         tracing::error!("failed to get asset list for '{}'", ibc_asset.display_name);
-        e
     })?;
-    let github_content = ghc_response.json::<GitHubContent>().await.map_err(|e| {
-        tracing::error!(
-            "failed to parse asset info for '{}' as GitHubContent",
-            ibc_asset.display_name
-        );
-        e
-    })?;
+    let github_content = ghc_response
+        .json::<GitHubContent>()
+        .await
+        .inspect_err(|_| {
+            tracing::error!(
+                "failed to parse asset info for '{}' as GitHubContent",
+                ibc_asset.display_name
+            );
+        })?;
 
     tracing::debug!(ibc_asset=?ibc_asset.display_name, url=github_content.download_url, "fetching asset list");
     let assetlist_response = http_get(client, github_content.download_url.clone())
         .await
-        .map_err(|e| {
+        .inspect_err(|_| {
             tracing::error!(
                 "failed to download asset info from '{}'",
                 &github_content.download_url
             );
-            e
         })?;
 
     let asset_list = assetlist_response
