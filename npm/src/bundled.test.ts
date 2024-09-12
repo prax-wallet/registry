@@ -17,10 +17,20 @@ describe('BundledClient', () => {
     expect(() => bundled.get('unknown')).toThrow('Registry not found for unknown');
   });
 
-  it.skip('handles preview chain IDs by swapping them', () => {
-    const registry = bundled.get('penumbra-testnet-deimos-8-xf2dbce94');
+  it('returns a random suffix chain ID if available', () => {
+    const registry = bundled.get('penumbra-testnet-deimos-8-x6de97e39');
     expect(registry).toBeInstanceOf(Registry);
-    expect(registry.chainId).toEqual('penumbra-testnet-deimos-8');
+    expect(registry.chainId).toEqual('penumbra-testnet-deimos-8-x6de97e39');
+  });
+
+  it('swaps a random suffix chain ID by swapping them if it is not present', () => {
+    const registry = bundled.get('penumbra-testnet-phobos-1-xf2dbce94');
+    expect(registry).toBeInstanceOf(Registry);
+    expect(registry.chainId).toEqual('penumbra-testnet-phobos-1');
+  });
+
+  it('fails if swapped random suffix chain ID is not present', () => {
+    expect(() => bundled.get('penumbra-testnet-jupiter-1-xf2dbce94')).toThrow();
   });
 
   it('returns staking asset global as expected', () => {

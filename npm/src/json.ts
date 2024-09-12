@@ -49,7 +49,7 @@ interface Image {
 }
 
 export const allJsonRegistries: Record<string, JsonRegistry> = {
-  'penumbra-testnet-deimos-8': Deimos8,
+  'penumbra-testnet-deimos-8-x6de97e39': Deimos8,
   'penumbra-1': Penumbra1,
   'penumbra-testnet-phobos-1': Phobos1,
 };

@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- c9bf54c: Update to latest cosmos registry
+- c9bf54c: Updating testnet chain id fallback logic
 
 ## 11.1.0
 
