@@ -76,6 +76,15 @@ jobs:
         env:
           RUST_LOG: info
         working-directory: tools/compiler
+
       - name: Check for Uncommitted Changes
-        run: git diff --exit-code
-        working-directory: tools/compiler
+        shell: bash
+        run: |
+          s="$(git status --porcelain)"
+          if [[ -n "$s" ]]; then
+              >&2 echo "ERROR: run tools/compiler to generate new outputs"
+              echo "$s"
+              exit 1
+          else
+              echo "OK: no changes required to registry outputs"
+          fi
