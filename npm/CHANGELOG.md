@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 11.3.0
+
+### Minor Changes
+
+- Bundling new phobos registries
+
 ## 11.2.0
 
 ### Minor Changes
