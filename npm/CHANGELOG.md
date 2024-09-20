@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 11.3.1
+
+### Patch Changes
+
+- bundle phobos-2 registry, missing from v11.3.0
+
 ## 11.3.0
 
 ### Minor Changes
