@@ -551,6 +551,33 @@
         }
       ]
     },
+    "Hx6+G77CU22yfExfD7X8TO31QpqcABYAYzXScadLhgU=": {
+      "description": "Fractionalized Geckies",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fGECK"
+        },
+        {
+          "denom": "transfer/channel-4/fGECK",
+          "exponent": 9
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fGECK",
+      "display": "transfer/channel-4/fGECK",
+      "name": "fGECK",
+      "symbol": "fGECK",
+      "penumbraAssetId": {
+        "inner": "Hx6+G77CU22yfExfD7X8TO31QpqcABYAYzXScadLhgU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fGECK.png",
+          "theme": {
+            "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
     "J4w9rlk4Hx6VpVLI/kqtxf+KcxEwyGNkTtzxYUpKqwY=": {
       "description": "Margined Power Token sqATOM",
       "denomUnits": [
@@ -714,8 +741,14 @@
           "theme": {}
         },
         {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL_circle.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL_circle.svg",
+          "theme": {}
+        },
+        {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.svg",
+          "theme": {}
         }
       ]
     },
@@ -887,6 +920,60 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WIHA.png",
           "theme": {
             "primaryColorHex": "#f2f2ec"
+          }
+        }
+      ]
+    },
+    "Orc48lgn3n+fPgKZEvsioa5NyosT8XFQdOr1o1fisA0=": {
+      "description": "Fractionalized Atlas DAO",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fATLAS"
+        },
+        {
+          "denom": "transfer/channel-4/fATLAS",
+          "exponent": 9
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fATLAS",
+      "display": "transfer/channel-4/fATLAS",
+      "name": "fATLAS",
+      "symbol": "fATLAS",
+      "penumbraAssetId": {
+        "inner": "Orc48lgn3n+fPgKZEvsioa5NyosT8XFQdOr1o1fisA0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fATLAS.png",
+          "theme": {
+            "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
+    "PT6qKy4Pi7Npzcs3e2BUthWie179C/rpQvtlrcSQhwU=": {
+      "description": "Fractionalized Cryptonium Maker",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fCRYPTONIUM"
+        },
+        {
+          "denom": "transfer/channel-4/fCRYPTONIUM",
+          "exponent": 9
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fCRYPTONIUM",
+      "display": "transfer/channel-4/fCRYPTONIUM",
+      "name": "fCRYPTONIUM",
+      "symbol": "fCRYPTONIUM",
+      "penumbraAssetId": {
+        "inner": "PT6qKy4Pi7Npzcs3e2BUthWie179C/rpQvtlrcSQhwU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fCRYPTONIUM.png",
+          "theme": {
+            "primaryColorHex": "#639BFF"
           }
         }
       ]
@@ -1295,6 +1382,34 @@
         }
       ]
     },
+    "ZpIbxFwvlU4udh9mutG/2hLBIpdNXhat3TCRbs1kbgI=": {
+      "description": "Roostock BTC bridged via Router.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/BTC.rt"
+        },
+        {
+          "denom": "transfer/channel-4/rbtc",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/BTC.rt",
+      "display": "transfer/channel-4/rbtc",
+      "name": "Rootstock Smart Bitcoin",
+      "symbol": "RBTC",
+      "penumbraAssetId": {
+        "inner": "ZpIbxFwvlU4udh9mutG/2hLBIpdNXhat3TCRbs1kbgI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/rootstock/images/rbtc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/rootstock/images/rbtc.svg",
+          "theme": {
+            "primaryColorHex": "#FF9931"
+          }
+        }
+      ]
+    },
     "d2/yBdjkz//htrQwHYXVx3XN2QILdZoS5ickDAcRWgs=": {
       "description": "Beer Is Good for You!",
       "denomUnits": [
@@ -1351,6 +1466,33 @@
         }
       ]
     },
+    "f/IAN065Ou6XwYdWe3m3SgiLFDYOAY47vphr9y+bowQ=": {
+      "description": "Fractionalized Pixel Wizards",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fWIZ"
+        },
+        {
+          "denom": "transfer/channel-4/fWIZ",
+          "exponent": 9
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fWIZ",
+      "display": "transfer/channel-4/fWIZ",
+      "name": "fWIZ",
+      "symbol": "fWIZ",
+      "penumbraAssetId": {
+        "inner": "f/IAN065Ou6XwYdWe3m3SgiLFDYOAY47vphr9y+bowQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fWIZ.png",
+          "theme": {
+            "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
     "feVP7pst7vgPhoxLLiYtNHFwUprssLR8Nfn7wUU2WwA=": {
       "description": "Margined Power Token sqTIA",
       "denomUnits": [
@@ -1372,6 +1514,35 @@
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg"
+        }
+      ]
+    },
+    "g4mop84SBeLOfjiHNEpnMKUpP2SY7BAoCXfCxY7wsgI=": {
+      "description": "EURe is a Euro-backed stablecoin issued by Monerium on Noble.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-2/ueure"
+        },
+        {
+          "denom": "transfer/channel-2/eure",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-2/ueure",
+      "display": "transfer/channel-2/eure",
+      "name": "Monerium EUR emoney",
+      "symbol": "EURe",
+      "penumbraAssetId": {
+        "inner": "g4mop84SBeLOfjiHNEpnMKUpP2SY7BAoCXfCxY7wsgI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eure.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eure.svg",
+          "theme": {
+            "primaryColorHex": "#0095D7",
+            "circle": true
+          }
         }
       ]
     },
@@ -1589,6 +1760,33 @@
         }
       ]
     },
+    "n3badZGZ/y5sAyi3tnYYVuJX+squzic2GOVV9Fr1bBA=": {
+      "description": "Fractionalized Rekt Bulls",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fBULLS"
+        },
+        {
+          "denom": "transfer/channel-4/fBULLS",
+          "exponent": 9
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fBULLS",
+      "display": "transfer/channel-4/fBULLS",
+      "name": "fBULLS",
+      "symbol": "fBULLS",
+      "penumbraAssetId": {
+        "inner": "n3badZGZ/y5sAyi3tnYYVuJX+squzic2GOVV9Fr1bBA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fBULLS.png",
+          "theme": {
+            "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
     "p6M59C5nGy2x3iJtRIPT5jA2ZhytFVTXX192/gTsHgA=": {
       "description": "The Cosmos Network's premier self-hatred memecoin.",
       "denomUnits": [
@@ -1642,6 +1840,33 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/frnz.svg",
           "theme": {
             "primaryColorHex": "#04041c"
+          }
+        }
+      ]
+    },
+    "q+QdsB0j6GY5ZcgysYJYWfgOfEzUJ2lJXXf7gDiw0AA=": {
+      "description": "Fractionalized Pixel Witches",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fWITCH"
+        },
+        {
+          "denom": "transfer/channel-4/fWITCH",
+          "exponent": 9
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1dywfmhyc8y0wga7qpzej0x0mgwqg25fj4eccp494w8yafzdpgamsx9ryyv/fWITCH",
+      "display": "transfer/channel-4/fWITCH",
+      "name": "fWITCH",
+      "symbol": "fWITCH",
+      "penumbraAssetId": {
+        "inner": "q+QdsB0j6GY5ZcgysYJYWfgOfEzUJ2lJXXf7gDiw0AA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fWITCH.png",
+          "theme": {
+            "primaryColorHex": "#639BFF"
           }
         }
       ]
@@ -2038,5 +2263,7 @@
       ]
     }
   },
-  "numeraires": []
+  "numeraires": [
+    "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="
+  ]
 }
