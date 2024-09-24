@@ -101,5 +101,7 @@
       ]
     }
   ],
-  "canonicalNumeraires": []
+  "canonicalNumeraires": [
+    "transfer/channel-2/uusdc"
+  ]
 }
