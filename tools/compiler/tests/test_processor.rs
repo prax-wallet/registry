@@ -52,6 +52,13 @@ fn test_transport_metadata_along_channel() {
     "#;
     let input_metadata = serde_json::from_str(input_json).unwrap();
 
+    let priority_scores_by_base = r#"
+        {
+          "transfer/channel-123/ugm": "7"
+        }
+    "#;
+    let priority_scores_by_base_json = serde_json::from_str(priority_scores_by_base).unwrap();
+
     let output_json = r#"
         {
           "denomUnits": [
@@ -68,11 +75,12 @@ fn test_transport_metadata_along_channel() {
           "symbol": "GM",
           "penumbraAssetId": {
             "inner": "YGObCaxvA7dR5tg6FeoNDxIGbwl9HK5eYr7jFho/GwQ="
-          }
+          },
+          "priorityScore": "7"
         }
     "#;
     let output_metadata = serde_json::from_str(output_json).unwrap();
 
-    let result = transport_metadata_along_channel(&ibc_data, input_metadata).unwrap();
+    let result = transport_metadata_along_channel(&ibc_data, input_metadata, &priority_scores_by_base_json).unwrap();
     assert_eq!(result, output_metadata);
 }
