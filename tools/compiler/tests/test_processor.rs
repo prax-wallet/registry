@@ -81,6 +81,8 @@ fn test_transport_metadata_along_channel() {
     "#;
     let output_metadata = serde_json::from_str(output_json).unwrap();
 
-    let result = transport_metadata_along_channel(&ibc_data, input_metadata, &priority_scores_by_base_json).unwrap();
+    let result =
+        transport_metadata_along_channel(&ibc_data, input_metadata, &priority_scores_by_base_json)
+            .unwrap();
     assert_eq!(result, output_metadata);
 }
