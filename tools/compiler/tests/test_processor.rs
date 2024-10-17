@@ -57,7 +57,7 @@ fn test_transport_metadata_along_channel() {
           "transfer/channel-123/ugm": 7
         }
     "#;
-    
+
     let priority_scores_by_base_json = serde_json::from_str(priority_scores_by_base).unwrap();
 
     let output_json = r#"
