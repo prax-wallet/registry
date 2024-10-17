@@ -172,12 +172,11 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
             let asset_json = serde_json::to_string(&source_asset)?;
             let source_asset_metadata = serde_json::from_str(&asset_json)?;
 
-            let transferred_asset =
-                transport_metadata_along_channel(
-                    ibc_input,
-                    source_asset_metadata,
-                    &chain_config.priority_scores_by_base,
-                )?;
+            let transferred_asset = transport_metadata_along_channel(
+                ibc_input,
+                source_asset_metadata,
+                &chain_config.priority_scores_by_base,
+            )?;
             all_metadata.push(transferred_asset);
         }
     }
