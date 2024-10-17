@@ -1,6 +1,7 @@
 use anyhow::Context;
 use std::fs;
 use std::path::Path;
+use std::collections::HashMap;
 
 use penumbra_asset::asset::Metadata;
 use penumbra_proto::core::asset::v1::AssetImage;
@@ -27,6 +28,7 @@ pub struct ChainConfig {
     pub ibc_connections: Vec<IbcInput>,
     pub native_assets: Vec<Metadata>,
     pub canonical_numeraires: Vec<String>,
+    pub priority_scores_by_base: HashMap<String, u64>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
