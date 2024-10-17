@@ -1,15 +1,6 @@
-use std::collections::HashMap;
 use penumbra_asset::asset::Metadata;
 use penumbra_registry::parser::IbcInput;
 use penumbra_registry::processor::{base64_id, transport_metadata_along_channel};
-
-fn convert_to_u64_map(input: HashMap<String, String>) -> HashMap<String, u64> {
-  input.into_iter()
-      .filter_map(|(key, value)| {
-          value.parse::<u64>().ok().map(|parsed_value| (key, parsed_value))
-      })
-      .collect()
-}
 
 #[test]
 fn base64_id_extracts_correctly() {
@@ -63,12 +54,11 @@ fn test_transport_metadata_along_channel() {
 
     let priority_scores_by_base = r#"
         {
-          "transfer/channel-123/ugm": "7"
+          "transfer/channel-123/ugm": 7
         }
     "#;
     
     let priority_scores_by_base_json = serde_json::from_str(priority_scores_by_base).unwrap();
-    let priority_scores_by_base_json_parsed = convert_to_u64_map(priority_scores_by_base_json);
 
     let output_json = r#"
         {
@@ -93,7 +83,7 @@ fn test_transport_metadata_along_channel() {
     let output_metadata = serde_json::from_str(output_json).unwrap();
 
     let result =
-        transport_metadata_along_channel(&ibc_data, input_metadata, &priority_scores_by_base_json_parsed)
+        transport_metadata_along_channel(&ibc_data, input_metadata, &priority_scores_by_base_json)
             .unwrap();
     assert_eq!(result, output_metadata);
 }
