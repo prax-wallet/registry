@@ -1,5 +1,6 @@
 use anyhow::anyhow;
 use std::collections::BTreeMap;
+use std::collections::HashMap;
 use std::fs;
 use std::path::Path;
 use tracing::instrument;
@@ -102,6 +103,7 @@ pub fn generate_registry() -> AppResult<()> {
 pub fn transport_metadata_along_channel(
     ibc_data: &IbcInput,
     source_asset: Metadata,
+    priority_scores_by_base: &HashMap<String, u64>,
 ) -> AppResult<Metadata> {
     // The `Metadata` structure doesn't allow modifying the internals, so drop to raw proto data
     let mut pb_metadata: pb::Metadata = source_asset.into();
@@ -123,6 +125,11 @@ pub fn transport_metadata_along_channel(
     // Delete the asset ID, so that it will be recomputed with the adjusted base denom.
     // Without this, decoding will fail because the asset ID won't match.
     pb_metadata.penumbra_asset_id = None;
+
+    // Add priority score if available
+    if let Some(score) = priority_scores_by_base.get(&pb_metadata.base) {
+        pb_metadata.priority_score = *score;
+    }
 
     tracing::trace!(?pb_metadata, "new");
     Ok(Metadata::try_from(pb_metadata)?)
@@ -163,8 +170,12 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
             // Turn the asset back into JSON so we can deserialize it as a penumbra Metadata
             let asset_json = serde_json::to_string(&source_asset)?;
             let source_asset_metadata = serde_json::from_str(&asset_json)?;
-            let transferred_asset =
-                transport_metadata_along_channel(ibc_input, source_asset_metadata)?;
+
+            let transferred_asset = transport_metadata_along_channel(
+                ibc_input,
+                source_asset_metadata,
+                &chain_config.priority_scores_by_base,
+            )?;
             all_metadata.push(transferred_asset);
         }
     }

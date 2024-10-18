@@ -1,4 +1,5 @@
 use anyhow::Context;
+use std::collections::HashMap;
 use std::fs;
 use std::path::Path;
 
@@ -19,6 +20,8 @@ pub struct GlobalsInput {
     pub frontends_v2: Vec<EntityMetadata>,
 }
 
+type BaseDenom = String;
+
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ChainConfig {
@@ -27,6 +30,7 @@ pub struct ChainConfig {
     pub ibc_connections: Vec<IbcInput>,
     pub native_assets: Vec<Metadata>,
     pub canonical_numeraires: Vec<String>,
+    pub priority_scores_by_base: HashMap<BaseDenom, u64>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
