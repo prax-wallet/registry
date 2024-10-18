@@ -126,11 +126,10 @@ pub fn transport_metadata_along_channel(
     // Without this, decoding will fail because the asset ID won't match.
     pb_metadata.penumbra_asset_id = None;
 
-    // Add priority score
-    pb_metadata.priority_score = priority_scores_by_base
-        .get(&pb_metadata.base)
-        .copied()
-        .unwrap_or(1);
+    // Add priority score if available
+    if let Some(score) = priority_scores_by_base.get(&pb_metadata.base) {
+        pb_metadata.priority_score = *score;
+    }
 
     tracing::trace!(?pb_metadata, "new");
     Ok(Metadata::try_from(pb_metadata)?)

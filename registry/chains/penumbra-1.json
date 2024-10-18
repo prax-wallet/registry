@@ -90,8 +90,7 @@
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COOK.png"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "1KnnW2hZa5VOGRlXSDgexDY72QOjuWa2if43is7ldwE=": {
       "description": "Fractionalized Celestine Sloth Society",
@@ -118,8 +117,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "1b1489PiR06kGAYS4y4+J0baqVEdYYqLDlxkHLy5CwA=": {
       "description": "The governance and utility token of Yieldmos, the Interchain Automation Protocol",
@@ -146,8 +144,7 @@
             "primaryColorHex": "#2c3554"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "2EG6vOq/2YXCYlhzeSQEwXIIVvoroVvMse0e3Hc4PAE=": {
       "description": "The first native memecoin on Osmosis. Crafted by the deftest of hands in the lab of lunacy. It's scientifically anarchic, professionally foolish, and your ticket to the madhouse.",
@@ -175,7 +172,7 @@
           }
         }
       ],
-      "priorityScore": "14"
+      "priorityScore": "10000"
     },
     "4oyjsrIftezXMm5xBVMef2Pn+dhkEx1GFwIOniiPnQw=": {
       "description": "wLibra is a bridged version of Libra Coin from 0L Network via LibraBridge.",
@@ -203,8 +200,7 @@
             "primaryColorHex": "#e45c5c"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "4rBRD1He9RNXc+6+KOw1vCKG7ZsLWqOVL4NRWdbKDQc=": {
       "description": "TRONIX is the mainnet native token of the TRON Protocol issued by TRON DAO, known as TRX.",
@@ -242,7 +238,7 @@
           }
         }
       ],
-      "priorityScore": "18"
+      "priorityScore": "100000000"
     },
     "5B0jxWP9LX+U4uD7aU9OVsIk0U385uD2q+a2eEerHg0=": {
       "description": "Cosmos Airdrop Chat",
@@ -269,8 +265,7 @@
             "primaryColorHex": "#160542"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "5QjC25GYK9LOU39kjHGYTS9tJSAiPNuDl/RDnNLxaBE=": {
       "description": "Uhm, Power Bottom",
@@ -297,8 +292,7 @@
             "primaryColorHex": "#f21313"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "6zEm1cTHN1PsueimuNxC+6S/t6uDYRdhbitgkUV9IxE=": {
       "description": "MilkyWay's liquid staked TIA",
@@ -326,8 +320,7 @@
             "primaryColorHex": "#d18dfc"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "9K0nhsHG5pn/MpmxYDkGyIHbVXh2aZm3eknCYy9auws=": {
       "description": "A group of french boulanger who wanna bring fun and baguette on cosmos",
@@ -354,8 +347,7 @@
             "primaryColorHex": "#a07042"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "9Z2H/H4MCnYH8evt2Q6kMCTFSYe88EtWn7131rmwgAA=": {
       "description": "LAB - Everything is an Experiment",
@@ -382,8 +374,7 @@
             "primaryColorHex": "#bcdd76"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "9sKDSVM9qU0G3ASpZted8wJB8fhdadAtzxZxE5tJMxI=": {
       "description": "An alloy of ARB asset variants on Osmosis.",
@@ -419,7 +410,7 @@
           }
         }
       ],
-      "priorityScore": "18"
+      "priorityScore": "100000000"
     },
     "AdlT67pUDx0wsIFBC4opbslYEOk6+QDIzWUcVtQlXgQ=": {
       "description": "Chain-key Bitcoin bridged via Omnity Network.",
@@ -448,8 +439,7 @@
             "circle": true
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "Ar6MhFcFk9QWltJ2omSY3xgXpextuXXTsQsubmSy7gk=": {
       "description": "Sail DAO is a liquidity deployment and management DAO built as a collaboration between the Osmosis and Migaloo Blockchains.",
@@ -476,8 +466,7 @@
             "primaryColorHex": "#1e264f"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "B+9mATKkwyNfqyctQ9m5dSqDN7LRCFl6v/r/XyRtDw8=": {
       "description": "ATOM is the native cryptocurrency of the Cosmos network, designed to facilitate interoperability between multiple blockchains through its innovative hub-and-spoke model.",
@@ -506,7 +495,7 @@
           }
         }
       ],
-      "priorityScore": "18"
+      "priorityScore": "100000000"
     },
     "BK/Hz826s94tKv7AxSPTGqojgzTnZSsZjpUTYupkZws=": {
       "description": "An alloy of TON asset variants on Osmosis.",
@@ -543,7 +532,7 @@
           }
         }
       ],
-      "priorityScore": "18"
+      "priorityScore": "100000000"
     },
     "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc=": {
       "description": "Margined Power Token sqBTC",
@@ -567,8 +556,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqbtc.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "HiMfbhLbTTAP0bDI1spwmkZUDAl658X8/8WptethTww=": {
       "denomUnits": [
@@ -595,8 +583,7 @@
             "primaryColorHex": "#e40474"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "Hx6+G77CU22yfExfD7X8TO31QpqcABYAYzXScadLhgU=": {
       "description": "Fractionalized Geckies",
@@ -623,8 +610,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "J4w9rlk4Hx6VpVLI/kqtxf+KcxEwyGNkTtzxYUpKqwY=": {
       "description": "Margined Power Token sqATOM",
@@ -649,7 +635,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqatom.svg"
         }
       ],
-      "priorityScore": "17"
+      "priorityScore": "10000000"
     },
     "JfJc35xgtUPmKfidDjgHDnIYQ2klmu8x4N8lbKryDwY=": {
       "description": "For th",
@@ -676,8 +662,7 @@
             "primaryColorHex": "#040404"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc=": {
       "description": "The native token of Osmosis",
@@ -706,7 +691,7 @@
           }
         }
       ],
-      "priorityScore": "14"
+      "priorityScore": "10000"
     },
     "KTJ9iZ/eNN42V2hhzs6Nlgb8zzdJmlBZZvKfCc4GiAw=": {
       "description": "A clan of 11y bad kids crafting chaos on the Cosmos eco. One bad memecoin to rule them all  $BADKID. Airdropped to Badkids NFT holders and $STARS stakers. It's so bad, your wallet's throwing a tantrum for it.",
@@ -733,8 +718,7 @@
             "primaryColorHex": "#57443f"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "denomUnits": [
@@ -803,7 +787,7 @@
           "theme": {}
         }
       ],
-      "priorityScore": "20"
+      "priorityScore": "10000000000"
     },
     "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE=": {
       "description": "Levana Well-funded Perps is a protocol for perpetual swaps, which are leveraged trading contracts.",
@@ -831,8 +815,7 @@
             "primaryColorHex": "#4c146c"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "McCafoNb60lBtL1I77ADhx0GII9EHH8iCqmpGro3Pgk=": {
       "description": "An alloy of PEPE asset variants on Osmosis.",
@@ -867,8 +850,7 @@
             "circle": true
           }
         }
-      ],
-      "priorityScore": "18"
+      ]
     },
     "Md6xXujgk0jvdUPhlf/05wvTeXDEh8X/bDurrVJw2gU=": {
       "description": "Banana Vault Token - Peelworks Factory II",
@@ -895,8 +877,7 @@
             "primaryColorHex": "#203135"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA=": {
       "description": "The permissioned staking asset for Noble Chain",
@@ -924,8 +905,7 @@
             "primaryColorHex": "#a8bbfb"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "NOESp7JdfFAbqjvjFqMAk/lwF+eIii+VIU5ZjCj62Qo=": {
       "description": "Fractionalized Mad Scientists",
@@ -952,8 +932,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "OUcXG7YEx8a5Nld/wCMK1aOKARlvoJtGpXHkju4LVgQ=": {
       "description": "Coin to support the real world in Wilhelmshall im Huy",
@@ -980,8 +959,7 @@
             "primaryColorHex": "#f2f2ec"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "Orc48lgn3n+fPgKZEvsioa5NyosT8XFQdOr1o1fisA0=": {
       "description": "Fractionalized Atlas DAO",
@@ -1008,8 +986,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "PT6qKy4Pi7Npzcs3e2BUthWie179C/rpQvtlrcSQhwU=": {
       "description": "Fractionalized Cryptonium Maker",
@@ -1036,8 +1013,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "Px1BjGEeaPvgSPZX/8gDwHwwn2BWD+fjMrdu5/ZhLhI=": {
       "description": "Bernese Mountain Dog. Thematic dog token to have fun and be friends with all other dog tokens. Fixed supply 132M",
@@ -1064,8 +1040,7 @@
             "primaryColorHex": "#e7754f"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "QArMRIpyiMTawMktm5j53HfLNMrI8TIBQ2wqyCfgtQY=": {
       "description": "DYDX is a decentralized trading platform focused on derivatives and perpetual contracts, offering a secure and efficient trading experience without intermediaries.",
@@ -1100,7 +1075,7 @@
           }
         }
       ],
-      "priorityScore": "15"
+      "priorityScore": "10000000"
     },
     "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA=": {
       "description": "An alloy of BTC asset variants on Osmosis.",
@@ -1133,7 +1108,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBTC.svg"
         }
       ],
-      "priorityScore": "20"
+      "priorityScore": "10000000000"
     },
     "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE=": {
       "description": "An alloy of OP asset variants on Osmosis.",
@@ -1169,7 +1144,7 @@
           }
         }
       ],
-      "priorityScore": "18"
+      "priorityScore": "100000000"
     },
     "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE=": {
       "description": "An alloy of DOT asset variants on Osmosis.",
@@ -1213,7 +1188,7 @@
           }
         }
       ],
-      "priorityScore": "19"
+      "priorityScore": "1000000000"
     },
     "SChNnza9qDQMNGqwSoQMzB2x2M5nmEBtST1EoSy29gM=": {
       "description": "An alloy of UNI asset variants on Osmosis.",
@@ -1237,8 +1212,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI=": {
       "description": "TRONIX is the mainnet native token of the TRON Protocol issued by TRON DAO, known as TRX.",
@@ -1267,8 +1241,7 @@
             "circle": true
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "U3U0P+fV2U5EqU0+kgq7qd+sjCbVhGeB6F8ix421WAc=": {
       "description": "Memecoin for The International Brane Wave",
@@ -1288,8 +1261,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BRNZ.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "UWEI0NC7o/duH5gtCnzeEYgzMHsDwM1My5TogrU8Hw8=": {
       "description": "Wrapped Bitcoin (WBTC) is an ERC20 token backed 1:1 with Bitcoin. Completely transparent. 100% verifiable. Community led.",
@@ -1318,7 +1290,7 @@
           }
         }
       ],
-      "priorityScore": "20"
+      "priorityScore": "10000000000"
     },
     "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE=": {
       "description": "Celestia is a modular blockchain network focused on data availability, allowing developers to deploy their own customizable blockchains with ease.",
@@ -1347,7 +1319,7 @@
           }
         }
       ],
-      "priorityScore": "16"
+      "priorityScore": "100000000"
     },
     "V572bV9yiK9nJWMM9/P5mwCeiGfT4JbMy6j2RUi93g4=": {
       "description": "Fractionalized Bad Kids",
@@ -1374,8 +1346,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "VDEYVUZ8ZKlhsAT2nr6NgdNdi7jREsKmFUV0U5uUxwU=": {
       "description": "OnE mEmEcOiN tO cOnNeCt oL ImBeCiles - aNd in Da Cosmos BiNd DeM",
@@ -1402,8 +1373,7 @@
             "primaryColorHex": "#040404"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "WdHeHDmklWKxFf0g86MiYy6Mt6lUQza5g+NfNuK2oAE=": {
       "description": "Membrane's CDP-style stablecoin called CDT",
@@ -1427,8 +1397,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CDT.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "ZAf0vwfQdMjLyJH6OIQrt6t2y6VU37rzXBm8XeF6dQY=": {
       "denomUnits": [
@@ -1451,8 +1420,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibcx.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "ZMvzNe0oaoRjhBIPf0KgUGH0EVaE6der5FavRNfMbgQ=": {
       "description": "Fractionalized DAONuts",
@@ -1479,8 +1447,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "ZpIbxFwvlU4udh9mutG/2hLBIpdNXhat3TCRbs1kbgI=": {
       "description": "Roostock BTC bridged via Router.",
@@ -1508,8 +1475,7 @@
             "primaryColorHex": "#FF9931"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "d2/yBdjkz//htrQwHYXVx3XN2QILdZoS5ickDAcRWgs=": {
       "description": "Beer Is Good for You!",
@@ -1536,8 +1502,7 @@
             "primaryColorHex": "#775038"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs=": {
       "description": "USD Coin",
@@ -1567,7 +1532,7 @@
           }
         }
       ],
-      "priorityScore": "21"
+      "priorityScore": "100000000000"
     },
     "f/IAN065Ou6XwYdWe3m3SgiLFDYOAY47vphr9y+bowQ=": {
       "description": "Fractionalized Pixel Wizards",
@@ -1594,8 +1559,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "feVP7pst7vgPhoxLLiYtNHFwUprssLR8Nfn7wUU2WwA=": {
       "description": "Margined Power Token sqTIA",
@@ -1620,7 +1584,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg"
         }
       ],
-      "priorityScore": "15"
+      "priorityScore": "10000000"
     },
     "g4mop84SBeLOfjiHNEpnMKUpP2SY7BAoCXfCxY7wsgI=": {
       "description": "EURe is a Euro-backed stablecoin issued by Monerium on Noble.",
@@ -1649,8 +1613,7 @@
             "circle": true
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "gO4qR7mYarC4AAPCck7XHhujNBUWGsaxRW6U3JkrSgM=": {
       "description": "Rapture insurance is the first ever P2P insurance platform on $OSMO. Get rewarded to take care of peoples loved ones after the Rapture.",
@@ -1677,8 +1640,7 @@
             "primaryColorHex": "#e2b67d"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "h4c+OAGonGVREC9ZaYzLbrpnSkUpl0JhHqHwBogeXw0=": {
       "description": "An alloy of LINK asset variants on Osmosis.",
@@ -1715,7 +1677,7 @@
           }
         }
       ],
-      "priorityScore": "19"
+      "priorityScore": "1000000000"
     },
     "hOnMqQbpe5Abe7vvfHYda77fg3Zit88fatqDfPO1bgQ=": {
       "description": "An alloy of SHIB asset variants on Osmosis.",
@@ -1751,7 +1713,7 @@
           }
         }
       ],
-      "priorityScore": "18"
+      "priorityScore": "100000000"
     },
     "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs=": {
       "description": "ERIS liquid staked OSMO",
@@ -1779,7 +1741,7 @@
           }
         }
       ],
-      "priorityScore": "14"
+      "priorityScore": "10000"
     },
     "inEy5XNQBP5u7oz7eUcRLhuuBWiC1FTnJEfBhXIX7A8=": {
       "description": "BackBone Labs Liquid Staked OSMO",
@@ -1807,7 +1769,7 @@
           }
         }
       ],
-      "priorityScore": "14"
+      "priorityScore": "10000"
     },
     "k2flRuIwi8IAvyDasAL/9fjl8mGpPCPCMhYmsh8AlQQ=": {
       "description": "CosmoUSD",
@@ -1835,7 +1797,7 @@
           }
         }
       ],
-      "priorityScore": "14"
+      "priorityScore": "10000"
     },
     "laTqmqV0r3PERHERkPSyNu7d697F4C8mupKyfsKnjAo=": {
       "description": "Avail is a web3 infrastructure layer that allows modular execution layers to scale and interoperate in a trust minimized way.",
@@ -1870,8 +1832,7 @@
             "primaryColorHex": "#2B80D7"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "n3badZGZ/y5sAyi3tnYYVuJX+squzic2GOVV9Fr1bBA=": {
       "description": "Fractionalized Rekt Bulls",
@@ -1898,8 +1859,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "p6M59C5nGy2x3iJtRIPT5jA2ZhytFVTXX192/gTsHgA=": {
       "description": "The Cosmos Network's premier self-hatred memecoin.",
@@ -1928,8 +1888,7 @@
             "circle": true
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "pfhuSArfwYCRpRI+PY3bM3wWpmKdgqZlmxrqCPhrXhA=": {
       "description": "Frienzies are an IBC token redeemable exclusively for a physical asset issued by the Noble entity.",
@@ -1957,8 +1916,7 @@
             "primaryColorHex": "#04041c"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "q+QdsB0j6GY5ZcgysYJYWfgOfEzUJ2lJXXf7gDiw0AA=": {
       "description": "Fractionalized Pixel Witches",
@@ -1985,8 +1943,7 @@
             "primaryColorHex": "#639BFF"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "qTadoyL6MJQ99tlXjmwjccuytSxSNByMLpVzZtVarQw=": {
       "description": "Membrane's protocol token",
@@ -2010,8 +1967,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/MBRN.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "rNNsvEj1LBheBJ3R4rJg+gmG6YXVGA6xmHCFVy0CPgM=": {
       "description": "USDC supplied on Mars looped using Membrane by a vault",
@@ -2030,8 +1986,7 @@
       "symbol": "loopedUSDCmars",
       "penumbraAssetId": {
         "inner": "rNNsvEj1LBheBJ3R4rJg+gmG6YXVGA6xmHCFVy0CPgM="
-      },
-      "priorityScore": "1"
+      }
     },
     "rvPy5azGrvxTK0dzmiLWAfzsGrlqV9WM7wfHQhPJiQE=": {
       "description": "Jacob Haertnellez Turtle. Launched by Jake's Personally appointed TURD Cult Leader...\"NotSeanO'Riley.\" TURD is going to lead the shitcoins of Cosmos! Or Rug You. It will be Jake's Fault. ",
@@ -2055,8 +2010,7 @@
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/TURD.png"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "tavJ/TAKws0M/Mguef8wxx0rqZQtKjAFTA8vM41+Sgc=": {
       "description": "The memecoin built for the Celestia community",
@@ -2084,8 +2038,7 @@
             "primaryColorHex": "#c39ccc"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "tcjFeHt0h93dx5iEqq2iR+WKuxtn7nxUpAEOrPm+2wY=": {
       "description": "ashLAB - Burned LAB",
@@ -2112,8 +2065,7 @@
             "primaryColorHex": "#ebb093"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "tiqjoeiKwglZyFbvinYhCNpI8lpUQmxNlrsn7Q3m2gw=": {
       "description": "Margined Power Token sqOSMO",
@@ -2138,7 +2090,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqosmo.svg"
         }
       ],
-      "priorityScore": "14"
+      "priorityScore": "10000"
     },
     "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0=": {
       "description": "An alloy of USDT asset variants on Osmosis.",
@@ -2178,7 +2130,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allUSDT.svg"
         }
       ],
-      "priorityScore": "20"
+      "priorityScore": "10000000000"
     },
     "vSCVmtndzw2C2RYuB2vcKWfkPVZRCP9GNN8MwB6QUAU=": {
       "description": "Cosmus Cartol always get rich",
@@ -2205,8 +2157,7 @@
             "primaryColorHex": "#1e2029"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "w5681cktB4+4eGef8ADtZ8fQSlt3IuLI7BtueUwVOg0=": {
       "description": "A synthetic version of USDT issued by Router, which can be unwrapped to USDT on several chains.",
@@ -2243,8 +2194,7 @@
             "circle": true
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "wK3qqrXW4tv5VvO2fyhpuzhKR2i1E9X7dFFm1qlXMwY=": {
       "description": "The Representative factory token for Trump Kemistry",
@@ -2271,8 +2221,7 @@
             "primaryColorHex": "#b02b27"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4=": {
       "description": "An alloy of ETH asset variants on Osmosis.",
@@ -2305,7 +2254,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.svg"
         }
       ],
-      "priorityScore": "20"
+      "priorityScore": "10000000000"
     },
     "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk=": {
       "description": "ION is the second native token of Osmosis.",
@@ -2333,8 +2282,7 @@
             "primaryColorHex": "#4453c7"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "zA08nu8Mf/TiJeyoWjCUYDaR0omur0KKsNhzGa2TowI=": {
       "description": "Ondo US Dollar Yield",
@@ -2362,8 +2310,7 @@
             "primaryColorHex": "#142c5c"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "za/OmxtGVAwvXWiizJSHIjT/PBzQ6Xh2lXtBbMv8UxE=": {
       "description": "Banana Vault Token - Banana Beach (🍹,🌴) II",
@@ -2390,8 +2337,7 @@
             "primaryColorHex": "#00bdc3"
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     }
   },
   "numeraires": [

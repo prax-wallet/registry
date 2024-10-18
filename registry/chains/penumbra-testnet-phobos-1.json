@@ -136,8 +136,7 @@
             "circle": true
           }
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "KX8cjRGFpZUkZCwCtUX8Pi2lEyO5g0oPVr8WhsLgkwg=": {
       "denomUnits": [
@@ -161,8 +160,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "denomUnits": [
@@ -207,8 +205,7 @@
       "symbol": "LOVE",
       "penumbraAssetId": {
         "inner": "VvnzHX2uGYbOLAf4etff37yf1EQAS/8RzdAS63FZuwI="
-      },
-      "priorityScore": "1"
+      }
     },
     "g128RUoEK9S9qg/E26hO/HqfS1x+alzMmC1TN7e9fgk=": {
       "description": "The controlled staking asset for Noble Chain",
@@ -227,8 +224,7 @@
       "symbol": "STAKE",
       "penumbraAssetId": {
         "inner": "g128RUoEK9S9qg/E26hO/HqfS1x+alzMmC1TN7e9fgk="
-      },
-      "priorityScore": "1"
+      }
     },
     "j0fAr5g+SxQguIafcYD1ifc+q9jE2m2dZ+u6YrsPdAU=": {
       "description": "Ondo US Dollar Yield",
@@ -253,8 +249,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "jIowYEpoMr+LQYqjDVEnQO6hyzb9raVxbO1GLyDxlhI=": {
       "description": "The native token of Osmosis",
@@ -279,8 +274,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "nDjzm+ldIrNMJha1anGMDVxpA5cLCPnUYQ1clmHF1gw=": {
       "denomUnits": [
@@ -386,8 +380,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
         }
-      ],
-      "priorityScore": "1"
+      ]
     },
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=": {
       "denomUnits": [
