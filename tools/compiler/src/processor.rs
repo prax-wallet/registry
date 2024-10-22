@@ -164,17 +164,18 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
             let asset_json = serde_json::to_string(&source_asset)?;
             let source_asset_metadata = serde_json::from_str(&asset_json)?;
 
-            let transferred_asset = transport_metadata_along_channel(
-                ibc_input,
-                source_asset_metadata,
-            )?;
+            let transferred_asset =
+                transport_metadata_along_channel(ibc_input, source_asset_metadata)?;
             all_metadata.push(transferred_asset);
         }
     }
 
     // add priority score if available
     for metadata in &mut all_metadata {
-        if let Some(score) = chain_config.priority_scores_by_base.get(&metadata.base_denom().denom) {
+        if let Some(score) = chain_config
+            .priority_scores_by_base
+            .get(&metadata.base_denom().denom)
+        {
             let mut pb_metadata: pb::Metadata = metadata.clone().into();
             pb_metadata.priority_score = *score;
             *metadata = Metadata::try_from(pb_metadata)?;
