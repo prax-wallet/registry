@@ -152,6 +152,14 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
     all_metadata.extend(generate_metadata_from_validators(&chain_config.validators)?);
     all_metadata.extend(chain_config.native_assets.clone());
 
+    for metadata in &mut all_metadata {
+        if let Some(score) = chain_config.priority_scores_by_base.get(&metadata.base_denom().denom) {
+            let mut pb_metadata: pb::Metadata = metadata.clone().into();
+            pb_metadata.priority_score = *score;
+            *metadata = Metadata::try_from(pb_metadata)?;
+        }
+    }
+
     // For each ibc connection, grab all metadata of native assets from the cosmos registry
     for ibc_input in &chain_config.ibc_connections {
         let assetlist_path = Path::new(LOCAL_COSMOS_REGISTRY_DIR)
