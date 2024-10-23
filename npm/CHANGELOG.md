@@ -1,5 +1,12 @@
 # @penumbra-labs/registry
 
+## 11.4.0
+
+### Minor Changes
+
+- Add fallible tryGetMetadata method to registry
+- 4a563c9: Add priority scores
+
 ## 11.3.1
 
 ### Patch Changes
