@@ -47,11 +47,22 @@ export class Registry {
     this.numeraires = r.numeraires.map(a => new AssetId({ inner: base64ToUint8Array(a) }));
   }
 
+  // Throws an error if not in registry
   getMetadata(id: AssetId): Metadata {
     const key = uint8ArrayToBase64(id.inner);
     const metadata = this.assetById[key];
     if (!metadata) {
       throw new Error(`No metadata in registry for asset id: ${key}`);
+    }
+    return metadata;
+  }
+
+  // Returns undefined if not in registry
+  tryGetMetadata(id: AssetId): Metadata | undefined {
+    const key = uint8ArrayToBase64(id.inner);
+    const metadata = this.assetById[key];
+    if (!metadata) {
+      return undefined;
     }
     return metadata;
   }

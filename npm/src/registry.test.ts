@@ -19,6 +19,13 @@ describe('Registry', () => {
     expect(getCubeMetadata).toThrow();
   });
 
+  it('returns undefined when using try method', () => {
+    const registry = new Registry(testRegistry);
+    const cubeId = base64ToUint8Array('aGVsbG8gd29ybGQ=');
+    const result = registry.tryGetMetadata(new AssetId({ inner: cubeId }));
+    expect(result).toBeUndefined();
+  });
+
   it('gets all assets successfully', () => {
     const registry = new Registry(testRegistry);
     const res = registry.getAllAssets();
