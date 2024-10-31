@@ -249,5 +249,6 @@
     }
   ],
   "canonicalNumeraires": ["wtest_usd", "transfer/channel-1/uusdc"],
-  "priorityScoresByBase": {}
+  "priorityScoresByBase": {},
+  "badgesByBase": {}
 }

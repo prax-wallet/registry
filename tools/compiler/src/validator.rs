@@ -1,5 +1,4 @@
 use crate::error::AppResult;
-use crate::parser::IntoPbImages;
 
 use crate::parser::ValidatorInput;
 use penumbra_asset::asset::Metadata;
@@ -18,7 +17,7 @@ pub fn generate_metadata_from_validators(
             let pb_metadata = pb::Metadata {
                 symbol: format!("delUM({})", v.name),
                 base: v.base.clone(),
-                images: v.images.clone().into_pb_images(),
+                images: v.images.clone(),
                 display: display_denom.clone(),
                 denom_units: vec![
                     DenomUnit {
