@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.0.0
+
+### Major Changes
+
+- Forward compatible Metadata deserialization
+
 ## 11.5.0
 
 ### Minor Changes
