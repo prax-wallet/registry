@@ -16,6 +16,16 @@ describe('Registry', () => {
     );
   });
 
+  it('gets metadata without badges', () => {
+    const registry = new Registry(testRegistry);
+    const usdcId = base64ToUint8Array('ra98J77CX10Us2s6+d7bebfpm1Q3+UOycPfaaEeeuAY=');
+    const res = registry.getMetadata(new AssetId({ inner: usdcId }));
+    expect(res.base).toEqual(
+      'transfer/channel-0/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz',
+    );
+    expect(res.badges.length).toEqual(0);
+  });
+
   it('throws when searching for metadata that does not exist', () => {
     const registry = new Registry(testRegistry);
     const cubeId = base64ToUint8Array('aGVsbG8gd29ybGQ=');

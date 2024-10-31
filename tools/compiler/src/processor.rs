@@ -190,7 +190,16 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
             .get(&metadata.base_denom().denom)
         {
             let mut pb_metadata: pb::Metadata = metadata.clone().into();
-            pb_metadata.badges = badges.clone();
+            pb_metadata.badges = badges
+                .iter()
+                .map(|b| {
+                    chain_config
+                        .badges
+                        .get(b)
+                        .ok_or_else(|| anyhow::anyhow!("Badge not found: {}", b))
+                        .cloned()
+                })
+                .collect::<Result<Vec<_>, _>>()?;
             *metadata = Metadata::try_from(pb_metadata)?;
         }
     }

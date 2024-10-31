@@ -21,6 +21,7 @@ pub struct GlobalsInput {
 }
 
 type BaseDenom = String;
+type BadgeName = String;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -31,7 +32,8 @@ pub struct ChainConfig {
     pub native_assets: Vec<Metadata>,
     pub canonical_numeraires: Vec<String>,
     pub priority_scores_by_base: HashMap<BaseDenom, u64>,
-    pub badges_by_base: HashMap<BaseDenom, Vec<AssetImage>>,
+    pub badges: HashMap<BadgeName, AssetImage>,
+    pub badges_by_base: HashMap<BaseDenom, Vec<BadgeName>>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]

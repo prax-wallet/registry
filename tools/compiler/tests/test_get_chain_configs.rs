@@ -27,6 +27,7 @@ fn test_get_chain_configs_reads_configs_correctly() {
         "nativeAssets": [],
         "canonicalNumeraires": [],
         "priorityScoresByBase": {},
+        "badges": {},
         "badgesByBase": {},
     })
     .to_string();
@@ -51,6 +52,7 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
         "nativeAssets": [],
         "canonicalNumeraires": [],
         "priorityScoresByBase": {},
+        "badges": {},
         "badgesByBase": {},
     })
     .to_string();
@@ -70,6 +72,7 @@ fn test_get_chain_configs_reads_multiple_configs_correctly() {
         "nativeAssets": [],
         "canonicalNumeraires": [],
         "priorityScoresByBase": {},
+        "badges": {},
         "badgesByBase": {},
     })
     .to_string();
