@@ -1,4 +1,4 @@
-import { it, describe, expect, beforeEach, afterAll } from 'vitest';
+import { it, describe, expect, beforeEach, afterEach } from 'vitest';
 import fetchMock from 'fetch-mock';
 import { RemoteClient } from './remote';
 import { REGISTRY_BASE_URL } from './github';
@@ -15,7 +15,9 @@ describe('RemoteClient', () => {
     fetchMock.mockGlobal();
   });
 
-  afterAll(() => {
+  afterEach(() => {
+    fetchMock.removeRoutes();
+    fetchMock.clearHistory();
     fetchMock.unmockGlobal();
   });
 
