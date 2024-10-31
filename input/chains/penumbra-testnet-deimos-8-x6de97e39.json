@@ -258,9 +258,5 @@
       "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
     }
   },
-  "badgesByBase": {
-    "wtest_usd": [
-      "penumbra"
-    ]
-  }
+  "badgesByBase": {}
 }
