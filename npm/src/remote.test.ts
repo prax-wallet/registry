@@ -12,24 +12,24 @@ describe('RemoteClient', () => {
   beforeEach(() => {
     const client = new ChainRegistryClient();
     rClient = client.remote;
-    fetchMock.reset();
+    fetchMock.mockGlobal();
   });
 
   afterAll(() => {
-    fetchMock.restore();
+    fetchMock.unmockGlobal();
   });
 
   it('should fetch registry remotely and parse it', async () => {
     const chainId = 'test-chain-7';
     const endpoint = `${REGISTRY_BASE_URL}/chains/${chainId}.json`;
-    fetchMock.mock(endpoint, {
+    fetchMock.get(endpoint, {
       status: 200,
       body: Phobos1,
     });
 
     const registry = await rClient.get(chainId);
 
-    expect(fetchMock.called(endpoint)).toBe(true);
+    expect(fetchMock.callHistory.called(endpoint)).toBe(true);
     expect(registry.chainId).toEqual(Phobos1.chainId);
     expect(registry.ibcConnections).toEqual(Phobos1.ibcConnections);
     expect(registry.getAllAssets().length).toEqual(Object.keys(Phobos1.assetById).length);
@@ -38,7 +38,7 @@ describe('RemoteClient', () => {
   it('should throw if there is not a remote version', async () => {
     const chainId = 'test-not-real-3242';
     const endpoint = `${REGISTRY_BASE_URL}/chains/${chainId}.json`;
-    fetchMock.mock(endpoint, {
+    fetchMock.get(endpoint, {
       status: 404,
     });
     await expect(rClient.get(chainId)).rejects.toThrow(`Failed to fetch from: ${endpoint}`);
@@ -46,14 +46,14 @@ describe('RemoteClient', () => {
 
   it('should fetch globals remotely and parse it', async () => {
     const endpoint = `${REGISTRY_BASE_URL}/globals.json`;
-    fetchMock.mock(endpoint, {
+    fetchMock.get(endpoint, {
       status: 200,
       body: GlobalsJson,
     });
 
     const registry = await rClient.globals();
 
-    expect(fetchMock.called(endpoint)).toBe(true);
+    expect(fetchMock.callHistory.called(endpoint)).toBe(true);
     expect(registry.stakingAssetId.toJson()).toEqual(GlobalsJson.stakingAssetId);
     expect(registry.frontends).toEqual(GlobalsJson.frontendsV2);
     expect(registry.rpcs).toEqual(GlobalsJson.rpcs);
@@ -63,20 +63,20 @@ describe('RemoteClient', () => {
     it('fetches falls back if available', async () => {
       const testnetPreviewChainId = 'penumbra-testnet-phobos-1-x6de97e39';
       const firstCall = `${REGISTRY_BASE_URL}/chains/${testnetPreviewChainId}.json`;
-      fetchMock.mock(firstCall, {
+      fetchMock.get(firstCall, {
         status: 404,
       });
       const fallbackChainId = 'penumbra-testnet-phobos-1';
       const secondCall = `${REGISTRY_BASE_URL}/chains/${fallbackChainId}.json`;
-      fetchMock.mock(secondCall, {
+      fetchMock.get(secondCall, {
         status: 200,
         body: Phobos1,
       });
 
       const registry = await rClient.get(testnetPreviewChainId);
 
-      expect(fetchMock.called(firstCall)).toBe(true);
-      expect(fetchMock.called(secondCall)).toBe(true);
+      expect(fetchMock.callHistory.called(firstCall)).toBe(true);
+      expect(fetchMock.callHistory.called(secondCall)).toBe(true);
       expect(registry.chainId).toEqual(Phobos1.chainId);
       expect(registry.ibcConnections).toEqual(Phobos1.ibcConnections);
       expect(registry.getAllAssets().length).toEqual(Object.keys(Phobos1.assetById).length);
@@ -85,12 +85,12 @@ describe('RemoteClient', () => {
     it('throws if falls back not available', async () => {
       const testnetPreviewChainId = 'penumbra-testnet-phobos-1-x6de97e39';
       const firstCall = `${REGISTRY_BASE_URL}/chains/${testnetPreviewChainId}.json`;
-      fetchMock.mock(firstCall, {
+      fetchMock.get(firstCall, {
         status: 404,
       });
       const fallbackChainId = 'penumbra-testnet-phobos-1';
       const secondCall = `${REGISTRY_BASE_URL}/chains/${fallbackChainId}.json`;
-      fetchMock.mock(secondCall, {
+      fetchMock.get(secondCall, {
         status: 404,
       });
 
@@ -98,8 +98,8 @@ describe('RemoteClient', () => {
         `Failed to fetch from: ${secondCall}`,
       );
 
-      expect(fetchMock.called(firstCall)).toBe(true);
-      expect(fetchMock.called(secondCall)).toBe(true);
+      expect(fetchMock.callHistory.called(firstCall)).toBe(true);
+      expect(fetchMock.callHistory.called(secondCall)).toBe(true);
     });
   });
 
@@ -107,14 +107,14 @@ describe('RemoteClient', () => {
     it('fetches remote when available', async () => {
       const chainId = 'test-chain-7';
       const endpoint = `${REGISTRY_BASE_URL}/chains/${chainId}.json`;
-      fetchMock.mock(endpoint, {
+      fetchMock.get(endpoint, {
         status: 200,
         body: Phobos1,
       });
 
       const registry = await rClient.getWithBundledBackup(chainId);
 
-      expect(fetchMock.called(endpoint)).toBe(true);
+      expect(fetchMock.callHistory.called(endpoint)).toBe(true);
       expect(registry.chainId).toEqual(Phobos1.chainId);
       expect(registry.ibcConnections).toEqual(Phobos1.ibcConnections);
       expect(registry.getAllAssets().length).toEqual(Object.keys(Phobos1.assetById).length);
@@ -123,13 +123,13 @@ describe('RemoteClient', () => {
     it('fetches bundled when available', async () => {
       const chainId = 'penumbra-testnet-phobos-1';
       const endpoint = `${REGISTRY_BASE_URL}/chains/${chainId}.json`;
-      fetchMock.mock(endpoint, {
+      fetchMock.get(endpoint, {
         status: 404,
       });
 
       const registry = await rClient.getWithBundledBackup(chainId);
 
-      expect(fetchMock.called(endpoint)).toBe(true);
+      expect(fetchMock.callHistory.called(endpoint)).toBe(true);
       expect(registry.chainId).toEqual(Phobos1.chainId);
       expect(registry.ibcConnections).toEqual(Phobos1.ibcConnections);
       expect(registry.getAllAssets().length).toEqual(Object.keys(Phobos1.assetById).length);

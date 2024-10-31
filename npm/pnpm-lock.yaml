@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@bufbuild/protobuf':
-        specifier: ^2.2.1
-        version: 2.2.1
+        specifier: ^1.10.0
+        version: 1.10.0
       '@changesets/cli':
         specifier: ^2.27.9
         version: 2.27.9
@@ -22,7 +22,7 @@ importers:
         version: 9.13.0
       '@penumbra-zone/protobuf':
         specifier: ^6.3.0
-        version: 6.3.0(@bufbuild/protobuf@2.2.1)
+        version: 6.3.0(@bufbuild/protobuf@1.10.0)
       eslint:
         specifier: ^9.13.0
         version: 9.13.0
@@ -74,8 +74,8 @@ packages:
     resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
     engines: {node: '>=6.9.0'}
 
-  '@bufbuild/protobuf@2.2.1':
-    resolution: {integrity: sha512-gdWzq7eX017a1kZCU/bP/sbk4e0GZ6idjsXOcMrQwODCb/rx985fHJJ8+hCu79KpuG7PfZh7bo3BBjPH37JuZw==}
+  '@bufbuild/protobuf@1.10.0':
+    resolution: {integrity: sha512-QDdVFLoN93Zjg36NoQPZfsVH9tZew7wKDKyV5qRdj8ntT4wQCOradQjRaTdwMhWUYsgKsvCINKKm87FdEk96Ag==}
 
   '@changesets/apply-release-plan@7.0.5':
     resolution: {integrity: sha512-1cWCk+ZshEkSVEZrm2fSj1Gz8sYvxgUL4Q78+1ZZqeqfuevPTPk033/yUZ3df8BKMohkqqHfzj0HOOrG0KtXTw==}
@@ -1940,7 +1940,7 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@bufbuild/protobuf@2.2.1': {}
+  '@bufbuild/protobuf@1.10.0': {}
 
   '@changesets/apply-release-plan@7.0.5':
     dependencies:
@@ -2364,9 +2364,9 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@penumbra-zone/protobuf@6.3.0(@bufbuild/protobuf@2.2.1)':
+  '@penumbra-zone/protobuf@6.3.0(@bufbuild/protobuf@1.10.0)':
     dependencies:
-      '@bufbuild/protobuf': 2.2.1
+      '@bufbuild/protobuf': 1.10.0
 
   '@pkgjs/parseargs@0.11.0':
     optional: true

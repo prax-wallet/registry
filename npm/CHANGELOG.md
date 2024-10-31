@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 11.5.0
+
+### Minor Changes
+
+- Adding badge support for metadata
+
 ## 11.4.0
 
 ### Minor Changes
