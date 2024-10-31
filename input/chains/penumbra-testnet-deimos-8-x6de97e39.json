@@ -248,6 +248,19 @@
       }
     }
   ],
-  "canonicalNumeraires": ["wtest_usd", "transfer/channel-1/uusdc"],
-  "priorityScoresByBase": {}
+  "canonicalNumeraires": [
+    "wtest_usd",
+    "transfer/channel-1/uusdc"
+  ],
+  "priorityScoresByBase": {},
+  "badges": {
+    "penumbra": {
+      "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
+    }
+  },
+  "badgesByBase": {
+    "wtest_usd": [
+      "penumbra"
+    ]
+  }
 }

@@ -8,11 +8,12 @@ use crate::assetlist_schema::{AssetList, AssetTypeAsset};
 use crate::error::{AppError, AppResult};
 use crate::parser::{
     copy_globals, get_chain_configs, reset_registry_dir, ChainConfig, EntityMetadata, GlobalsInput,
-    IbcInput, Image, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
+    IbcInput, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
 };
 use crate::validator::generate_metadata_from_validators;
 use penumbra_asset::asset::{Id, Metadata};
 use penumbra_asset::STAKING_TOKEN_ASSET_ID;
+use penumbra_proto::core::asset::v1::AssetImage;
 use penumbra_proto::penumbra::core::asset::v1 as pb;
 use serde::{Deserialize, Serialize};
 
@@ -27,7 +28,7 @@ pub struct Chain {
     pub channel_id: String,
     pub counterparty_channel_id: String,
     pub display_name: String,
-    pub images: Vec<Image>,
+    pub images: Vec<AssetImage>,
 }
 
 impl From<IbcInput> for Chain {
@@ -178,6 +179,27 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
         {
             let mut pb_metadata: pb::Metadata = metadata.clone().into();
             pb_metadata.priority_score = *score;
+            *metadata = Metadata::try_from(pb_metadata)?;
+        }
+    }
+
+    // add badges if available
+    for metadata in &mut all_metadata {
+        if let Some(badges) = chain_config
+            .badges_by_base
+            .get(&metadata.base_denom().denom)
+        {
+            let mut pb_metadata: pb::Metadata = metadata.clone().into();
+            pb_metadata.badges = badges
+                .iter()
+                .map(|b| {
+                    chain_config
+                        .badges
+                        .get(b)
+                        .ok_or_else(|| anyhow::anyhow!("Badge not found: {}", b))
+                        .cloned()
+                })
+                .collect::<Result<Vec<_>, _>>()?;
             *metadata = Metadata::try_from(pb_metadata)?;
         }
     }

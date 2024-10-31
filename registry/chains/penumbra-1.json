@@ -238,7 +238,13 @@
           }
         }
       ],
-      "priorityScore": "200000000"
+      "priorityScore": "200000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "5B0jxWP9LX+U4uD7aU9OVsIk0U385uD2q+a2eEerHg0=": {
       "description": "Cosmos Airdrop Chat",
@@ -410,7 +416,13 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "100000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "AdlT67pUDx0wsIFBC4opbslYEOk6+QDIzWUcVtQlXgQ=": {
       "description": "Chain-key Bitcoin bridged via Omnity Network.",
@@ -532,7 +544,13 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "100000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc=": {
       "description": "Margined Power Token sqBTC",
@@ -788,7 +806,13 @@
           "theme": {}
         }
       ],
-      "priorityScore": "50000000000"
+      "priorityScore": "50000000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE=": {
       "description": "Levana Well-funded Perps is a protocol for perpetual swaps, which are leveraged trading contracts.",
@@ -850,6 +874,12 @@
             "primaryColorHex": "#549C44",
             "circle": true
           }
+        }
+      ],
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
       ]
     },
@@ -1109,7 +1139,13 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBTC.svg"
         }
       ],
-      "priorityScore": "70000000000"
+      "priorityScore": "70000000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE=": {
       "description": "An alloy of OP asset variants on Osmosis.",
@@ -1145,7 +1181,13 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "100000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE=": {
       "description": "An alloy of DOT asset variants on Osmosis.",
@@ -1189,7 +1231,13 @@
           }
         }
       ],
-      "priorityScore": "3000000000"
+      "priorityScore": "3000000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "SChNnza9qDQMNGqwSoQMzB2x2M5nmEBtST1EoSy29gM=": {
       "description": "An alloy of UNI asset variants on Osmosis.",
@@ -1212,6 +1260,12 @@
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg"
+        }
+      ],
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
       ]
     },
@@ -1291,7 +1345,13 @@
           }
         }
       ],
-      "priorityScore": "70000000000"
+      "priorityScore": "70000000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE=": {
       "description": "Celestia is a modular blockchain network focused on data availability, allowing developers to deploy their own customizable blockchains with ease.",
@@ -1678,7 +1738,13 @@
           }
         }
       ],
-      "priorityScore": "4000000000"
+      "priorityScore": "4000000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "hOnMqQbpe5Abe7vvfHYda77fg3Zit88fatqDfPO1bgQ=": {
       "description": "An alloy of SHIB asset variants on Osmosis.",
@@ -1714,7 +1780,13 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "100000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs=": {
       "description": "ERIS liquid staked OSMO",
@@ -2131,7 +2203,13 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allUSDT.svg"
         }
       ],
-      "priorityScore": "100000000000"
+      "priorityScore": "100000000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "vSCVmtndzw2C2RYuB2vcKWfkPVZRCP9GNN8MwB6QUAU=": {
       "description": "Cosmus Cartol always get rich",
@@ -2255,7 +2333,13 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.svg"
         }
       ],
-      "priorityScore": "60000000000"
+      "priorityScore": "60000000000",
+      "badges": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
     },
     "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk=": {
       "description": "ION is the second native token of Osmosis.",
