@@ -42,7 +42,7 @@ export class Registry {
     this.chainId = r.chainId;
     this.ibcConnections = r.ibcConnections;
     this.assetById = mapObjectValues(r.assetById, jsonMetadata =>
-      Metadata.fromJson(jsonMetadata as unknown as JsonValue),
+      Metadata.fromJson(jsonMetadata as unknown as JsonValue, { ignoreUnknownFields: true }),
     );
     this.numeraires = r.numeraires.map(a => new AssetId({ inner: base64ToUint8Array(a) }));
   }
