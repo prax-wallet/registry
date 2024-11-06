@@ -261,7 +261,14 @@
     "wtest_usd",
     "transfer/channel-1/uusdc"
   ],
-  "priorityScoresByBase": {},
+  "priorityScoresByBase": {
+    "upenumbra": 999999999999,
+    "wtest_usd": 1000,
+    "ugm": 900,
+    "ugn": 900,
+    "transfer/channel-0/uosmo": 800,
+    "transfer/channel-3/uusdc": 800
+  },
   "badges": {},
   "badgesByBase": {}
 }
