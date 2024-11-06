@@ -93,7 +93,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "priorityScore": "800"
     },
     "HLkKbVfA72oQaMdYFroWQ1qoSyl/KLHZiOMJhL2y9w0=": {
       "denomUnits": [
@@ -136,7 +137,8 @@
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/full-moon-face.svg"
         }
-      ]
+      ],
+      "priorityScore": "900"
     },
     "Hqn6gTCqE7mCBsVa4agsTFmrO0Rip5xmLcipnGKH9AI=": {
       "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
@@ -205,7 +207,8 @@
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
         }
-      ]
+      ],
+      "priorityScore": "999999999999"
     },
     "VDuTDzoFOg4mMrNeyqCEC1L4lSjtJUJ5jJ2D6SQsRgM=": {
       "description": "Ondo US Dollar Yield",
@@ -274,7 +277,8 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
-      ]
+      ],
+      "priorityScore": "800"
     },
     "nDjzm+ldIrNMJha1anGMDVxpA5cLCPnUYQ1clmHF1gw=": {
       "denomUnits": [
@@ -344,7 +348,8 @@
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/new-moon-face.svg"
         }
-      ]
+      ],
+      "priorityScore": "900"
     },
     "o2gZdbhCH70Ry+7iBhkSeHC/PB1LZhgkn7LHC2kEhQc=": {
       "denomUnits": [
@@ -428,7 +433,8 @@
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/test-usd.svg"
         }
-      ]
+      ],
+      "priorityScore": "1000"
     },
     "ypUT1AOtjfwMOKMATACoD9RSvi8jY/YnYGi46CZ/6Q8=": {
       "denomUnits": [
