@@ -171,8 +171,7 @@
             "primaryColorHex": "#edd5ee"
           }
         }
-      ],
-      "priorityScore": "10000"
+      ]
     },
     "4oyjsrIftezXMm5xBVMef2Pn+dhkEx1GFwIOniiPnQw=": {
       "description": "wLibra is a bridged version of Libra Coin from 0L Network via LibraBridge.",
@@ -238,7 +237,7 @@
           }
         }
       ],
-      "priorityScore": "200000000"
+      "priorityScore": "400000000000"
     },
     "5B0jxWP9LX+U4uD7aU9OVsIk0U385uD2q+a2eEerHg0=": {
       "description": "Cosmos Airdrop Chat",
@@ -410,7 +409,7 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "500000000000"
     },
     "AdlT67pUDx0wsIFBC4opbslYEOk6+QDIzWUcVtQlXgQ=": {
       "description": "Chain-key Bitcoin bridged via Omnity Network.",
@@ -495,7 +494,7 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "800000000098"
     },
     "BK/Hz826s94tKv7AxSPTGqojgzTnZSsZjpUTYupkZws=": {
       "description": "An alloy of TON asset variants on Osmosis.",
@@ -532,7 +531,7 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "400000000000"
     },
     "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc=": {
       "description": "Margined Power Token sqBTC",
@@ -634,8 +633,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqatom.svg"
         }
-      ],
-      "priorityScore": "10000000"
+      ]
     },
     "JfJc35xgtUPmKfidDjgHDnIYQ2klmu8x4N8lbKryDwY=": {
       "description": "For th",
@@ -691,7 +689,7 @@
           }
         }
       ],
-      "priorityScore": "10000"
+      "priorityScore": "800000000099"
     },
     "KTJ9iZ/eNN42V2hhzs6Nlgb8zzdJmlBZZvKfCc4GiAw=": {
       "description": "A clan of 11y bad kids crafting chaos on the Cosmos eco. One bad memecoin to rule them all  $BADKID. Airdropped to Badkids NFT holders and $STARS stakers. It's so bad, your wallet's throwing a tantrum for it.",
@@ -788,7 +786,7 @@
           "theme": {}
         }
       ],
-      "priorityScore": "50000000000"
+      "priorityScore": "600000000000"
     },
     "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE=": {
       "description": "Levana Well-funded Perps is a protocol for perpetual swaps, which are leveraged trading contracts.",
@@ -1076,7 +1074,7 @@
           }
         }
       ],
-      "priorityScore": "10000000"
+      "priorityScore": "600000000000"
     },
     "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA=": {
       "description": "An alloy of BTC asset variants on Osmosis.",
@@ -1109,7 +1107,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBTC.svg"
         }
       ],
-      "priorityScore": "70000000000"
+      "priorityScore": "600000000000"
     },
     "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE=": {
       "description": "An alloy of OP asset variants on Osmosis.",
@@ -1145,7 +1143,7 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "500000000000"
     },
     "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE=": {
       "description": "An alloy of DOT asset variants on Osmosis.",
@@ -1188,8 +1186,7 @@
             "primaryColorHex": "#e4047c"
           }
         }
-      ],
-      "priorityScore": "3000000000"
+      ]
     },
     "SChNnza9qDQMNGqwSoQMzB2x2M5nmEBtST1EoSy29gM=": {
       "description": "An alloy of UNI asset variants on Osmosis.",
@@ -1291,7 +1288,7 @@
           }
         }
       ],
-      "priorityScore": "70000000000"
+      "priorityScore": "600000000000"
     },
     "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE=": {
       "description": "Celestia is a modular blockchain network focused on data availability, allowing developers to deploy their own customizable blockchains with ease.",
@@ -1320,7 +1317,7 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "800000000097"
     },
     "V572bV9yiK9nJWMM9/P5mwCeiGfT4JbMy6j2RUi93g4=": {
       "description": "Fractionalized Bad Kids",
@@ -1533,7 +1530,7 @@
           }
         }
       ],
-      "priorityScore": "100000000000"
+      "priorityScore": "800000000100"
     },
     "f/IAN065Ou6XwYdWe3m3SgiLFDYOAY47vphr9y+bowQ=": {
       "description": "Fractionalized Pixel Wizards",
@@ -1584,8 +1581,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg"
         }
-      ],
-      "priorityScore": "10000000"
+      ]
     },
     "g4mop84SBeLOfjiHNEpnMKUpP2SY7BAoCXfCxY7wsgI=": {
       "description": "EURe is a Euro-backed stablecoin issued by Monerium on Noble.",
@@ -1677,8 +1673,7 @@
             "circle": true
           }
         }
-      ],
-      "priorityScore": "4000000000"
+      ]
     },
     "hOnMqQbpe5Abe7vvfHYda77fg3Zit88fatqDfPO1bgQ=": {
       "description": "An alloy of SHIB asset variants on Osmosis.",
@@ -1714,7 +1709,7 @@
           }
         }
       ],
-      "priorityScore": "100000000"
+      "priorityScore": "500000000000"
     },
     "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs=": {
       "description": "ERIS liquid staked OSMO",
@@ -1741,8 +1736,7 @@
             "primaryColorHex": "#cfdbf1"
           }
         }
-      ],
-      "priorityScore": "10000"
+      ]
     },
     "inEy5XNQBP5u7oz7eUcRLhuuBWiC1FTnJEfBhXIX7A8=": {
       "description": "BackBone Labs Liquid Staked OSMO",
@@ -1769,8 +1763,7 @@
             "primaryColorHex": "#c68db5"
           }
         }
-      ],
-      "priorityScore": "10000"
+      ]
     },
     "k2flRuIwi8IAvyDasAL/9fjl8mGpPCPCMhYmsh8AlQQ=": {
       "description": "CosmoUSD",
@@ -1797,8 +1790,7 @@
             "primaryColorHex": "#343169"
           }
         }
-      ],
-      "priorityScore": "10000"
+      ]
     },
     "laTqmqV0r3PERHERkPSyNu7d697F4C8mupKyfsKnjAo=": {
       "description": "Avail is a web3 infrastructure layer that allows modular execution layers to scale and interoperate in a trust minimized way.",
@@ -1889,7 +1881,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "priorityScore": "800000000096"
     },
     "pfhuSArfwYCRpRI+PY3bM3wWpmKdgqZlmxrqCPhrXhA=": {
       "description": "Frienzies are an IBC token redeemable exclusively for a physical asset issued by the Noble entity.",
@@ -2090,8 +2083,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqosmo.svg"
         }
-      ],
-      "priorityScore": "10000"
+      ]
     },
     "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0=": {
       "description": "An alloy of USDT asset variants on Osmosis.",
@@ -2131,7 +2123,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allUSDT.svg"
         }
       ],
-      "priorityScore": "100000000000"
+      "priorityScore": "700000000000"
     },
     "vSCVmtndzw2C2RYuB2vcKWfkPVZRCP9GNN8MwB6QUAU=": {
       "description": "Cosmus Cartol always get rich",
@@ -2255,7 +2247,7 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.svg"
         }
       ],
-      "priorityScore": "60000000000"
+      "priorityScore": "600000000000"
     },
     "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk=": {
       "description": "ION is the second native token of Osmosis.",
@@ -2311,7 +2303,8 @@
             "primaryColorHex": "#142c5c"
           }
         }
-      ]
+      ],
+      "priorityScore": "800000000095"
     },
     "za/OmxtGVAwvXWiizJSHIjT/PBzQ6Xh2lXtBbMv8UxE=": {
       "description": "Banana Vault Token - Banana Beach (🍹,🌴) II",
