@@ -87,16 +87,112 @@ pub fn generate_registry() -> AppResult<()> {
 
     // Take resulting registries and save to /registry
     for c in chain_configs {
+        // Generate and save JSON registry
         let registry = process_chain_config(c)?;
         let file_name = format!("{}.json", registry.chain_id);
         let output_path = Path::new(LOCAL_REGISTRY_DIR).join("chains").join(file_name);
         let output_json = serde_json::to_string_pretty(&registry)?;
         fs::write(output_path, output_json)?;
+
+        // Generate and save Ledger registry
+        let ledger_output = registry.generate_ledger_output()?;
+        let ledger_file_name = format!("{}_ledger.h", registry.chain_id);
+        let ledger_output_path = Path::new(LOCAL_REGISTRY_DIR)
+            .join("chains")
+            .join(ledger_file_name);
+        fs::write(ledger_output_path, ledger_output)?;
     }
 
     Ok(())
 }
 
+/// Represents an asset in the Ledger-compatible format
+#[derive(Debug, Clone)]
+struct LedgerAssetInfo {
+    /// Asset ID as a 32-byte array
+    asset_id: [u8; 32],
+    /// Symbol of the asset
+    symbol: String,
+    /// Name of the asset
+    name: String,
+    /// Number of decimal places
+    decimals: u8,
+}
+
+impl Registry {
+    fn generate_ledger_output(&self) -> AppResult<String> {
+        // Convert asset_by_id entries into LedgerAssetInfo structs
+        let mut assets: Vec<LedgerAssetInfo> = self
+            .asset_by_id
+            .values()
+            .map(|metadata| {
+                let id_bytes = metadata.id().to_bytes();
+                let base_unit = metadata.base_unit();
+                // Get the symbol from the base unit
+                let symbol = base_unit.to_string();
+                let decimals = base_unit.exponent();
+                // TODO(jen): do we really need this and how big can it be?
+                let name = metadata.base_denom().denom;
+
+                LedgerAssetInfo {
+                    asset_id: id_bytes,
+                    symbol,
+                    name,
+                    decimals,
+                }
+            })
+            .collect();
+
+        // Sort by asset ID bytes for binary search capability instead of linear scan
+        assets.sort_by(|a, b| a.asset_id.cmp(&b.asset_id));
+
+        // Generate C header file content
+        let mut output = String::new();
+        output.push_str("#pragma once\n\n");
+        output.push_str("#include <stdint.h>\n\n");
+        output.push_str("#define ASSET_ID_LEN 32\n");
+        output.push_str(&format!(
+            "#define NUM_SUPPORTED_ASSETS {}\n\n",
+            assets.len()
+        ));
+
+        output.push_str("typedef struct {\n");
+        output.push_str("    uint8_t asset_id[ASSET_ID_LEN];\n");
+        output.push_str("    const char symbol[40];\n");
+        output.push_str("    const char name[120];\n");
+        output.push_str("    uint8_t decimals;\n");
+        output.push_str("} asset_info_t;\n\n");
+
+        output.push_str("static const asset_info_t supported_assets[NUM_SUPPORTED_ASSETS] = {\n");
+
+        for (i, asset) in assets.iter().enumerate() {
+            let id_hex = asset
+                .asset_id
+                .chunks(16)
+                .map(|chunk| {
+                    chunk
+                        .iter()
+                        .map(|b| format!("0x{:02X}", b))
+                        .collect::<Vec<_>>()
+                        .join(", ")
+                })
+                .collect::<Vec<_>>()
+                .join(",\n        ");
+
+            output.push_str(&format!(
+                "    {{{{{}}},\n     \"{}\", \"{}\", {}}}{}",
+                id_hex,
+                asset.symbol,
+                asset.name,
+                asset.decimals,
+                if i < assets.len() - 1 { ",\n" } else { "\n" }
+            ));
+        }
+
+        output.push_str("};\n");
+        Ok(output)
+    }
+}
 /// Given `ibc_data` describing a channel and `source_asset` on the source chain,
 /// compute the metadata for the asset when it is transported along the channel onto a Penumbra chain.
 #[instrument(skip_all)]
