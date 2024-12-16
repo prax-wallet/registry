@@ -128,7 +128,7 @@ impl Registry {
             .map(|metadata| {
                 let id_bytes = metadata.id().to_bytes();
                 let base_unit = metadata.base_unit();
-                // Get the symbol from the base unit
+                // Get the symbol from the base unit that will be displayed on the Ledger
                 let symbol = base_unit.to_string();
                 let decimals = base_unit.exponent();
                 // TODO(jen): do we really need this and how big can it be?
@@ -158,7 +158,7 @@ impl Registry {
 
         output.push_str("typedef struct {\n");
         output.push_str("    uint8_t asset_id[ASSET_ID_LEN];\n");
-        output.push_str("    const char symbol[40];\n");
+        output.push_str("    const char symbol[80];\n");
         output.push_str("    const char name[120];\n");
         output.push_str("    uint8_t decimals;\n");
         output.push_str("} asset_info_t;\n\n");

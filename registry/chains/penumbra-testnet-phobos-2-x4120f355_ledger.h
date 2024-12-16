@@ -7,7 +7,7 @@
 
 typedef struct {
     uint8_t asset_id[ASSET_ID_LEN];
-    const char symbol[40];
+    const char symbol[80];
     const char name[120];
     uint8_t decimals;
 } asset_info_t;
