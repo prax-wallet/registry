@@ -153,6 +153,8 @@
       "base": "upenumbra",
       "display": "penumbra",
       "symbol": "UM",
+      "name": "Penumbra",
+      "description": "The native token of Penumbra",
       "penumbraAssetId": {
         "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
       },
