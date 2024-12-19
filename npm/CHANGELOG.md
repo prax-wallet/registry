@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.0.1
+
+### Patch Changes
+
+- a2db6c4: Updates the channels for penumbra testnet
+
 ## 12.0.0
 
 ### Major Changes
