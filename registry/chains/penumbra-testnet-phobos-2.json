@@ -165,6 +165,7 @@
       "priorityScore": "900"
     },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
+      "description": "The native token of Penumbra",
       "denomUnits": [
         {
           "denom": "penumbra",
@@ -180,6 +181,7 @@
       ],
       "base": "upenumbra",
       "display": "penumbra",
+      "name": "Penumbra",
       "symbol": "UM",
       "penumbraAssetId": {
         "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
