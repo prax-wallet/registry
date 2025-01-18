@@ -88,10 +88,7 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COOK.png",
-          "theme": {
-            "primaryColorHex": "#f7bca7"
-          }
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COOK.png"
         }
       ]
     },
@@ -556,10 +553,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqbtc.svg",
-          "theme": {
-            "primaryColorHex": "#bae343"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqbtc.svg"
         }
       ]
     },
@@ -748,10 +742,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg",
-          "theme": {
-            "primaryColorHex": "#c9a975"
-          }
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
         }
       ],
       "priorityScore": "999999999999"
@@ -784,23 +775,17 @@
         },
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol.svg",
-          "theme": {
-            "primaryColorHex": "#5da1ca"
-          }
+          "theme": {}
         },
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL_circle.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL_circle.svg",
-          "theme": {
-            "primaryColorHex": "#36c7bc"
-          }
+          "theme": {}
         },
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.svg",
-          "theme": {
-            "primaryColorHex": "#48b6c1"
-          }
+          "theme": {}
         }
       ],
       "priorityScore": "600000000000"
@@ -1121,10 +1106,7 @@
           }
         },
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBTC.svg",
-          "theme": {
-            "primaryColorHex": "#f3931b"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBTC.svg"
         }
       ],
       "priorityScore": "600000000000"
@@ -1228,10 +1210,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg",
-          "theme": {
-            "primaryColorHex": "#fc047c"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg"
         }
       ]
     },
@@ -1280,10 +1259,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BRNZ.svg",
-          "theme": {
-            "primaryColorHex": "#ea049a"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BRNZ.svg"
         }
       ]
     },
@@ -1419,10 +1395,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CDT.svg",
-          "theme": {
-            "primaryColorHex": "#5a9ce2"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CDT.svg"
         }
       ]
     },
@@ -1445,10 +1418,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibcx.svg",
-          "theme": {
-            "primaryColorHex": "#c1dafb"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibcx.svg"
         }
       ]
     },
@@ -1611,10 +1581,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg",
-          "theme": {
-            "primaryColorHex": "#bbe446"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg"
         }
       ]
     },
@@ -1994,10 +1961,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/MBRN.svg",
-          "theme": {
-            "primaryColorHex": "#6ca0da"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/MBRN.svg"
         }
       ]
     },
@@ -2040,10 +2004,7 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/TURD.png",
-          "theme": {
-            "primaryColorHex": "#c1eb89"
-          }
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/TURD.png"
         }
       ]
     },
@@ -2161,10 +2122,7 @@
           }
         },
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allUSDT.svg",
-          "theme": {
-            "primaryColorHex": "#50AF95"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allUSDT.svg"
         }
       ],
       "priorityScore": "700000000000"

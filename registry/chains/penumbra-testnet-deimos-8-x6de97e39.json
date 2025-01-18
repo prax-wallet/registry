@@ -79,10 +79,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/full-moon-face.svg",
-          "theme": {
-            "primaryColorHex": "#ac9454"
-          }
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/full-moon-face.svg"
         }
       ]
     },
@@ -135,10 +132,7 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg",
-          "theme": {
-            "primaryColorHex": "#a4d1e5"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
         }
       ]
     },
@@ -166,10 +160,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg",
-          "theme": {
-            "primaryColorHex": "#c9a975"
-          }
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
         }
       ]
     },
@@ -258,10 +249,7 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg",
-          "theme": {
-            "primaryColorHex": "#142c5c"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg"
         }
       ]
     },
@@ -286,10 +274,7 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg",
-          "theme": {
-            "primaryColorHex": "#d0b6e3"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
       ]
     },
@@ -307,10 +292,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/pizza.svg",
-          "theme": {
-            "primaryColorHex": "#ab1221"
-          }
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/pizza.svg"
         }
       ]
     },
@@ -336,10 +318,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/new-moon-face.svg",
-          "theme": {
-            "primaryColorHex": "#546068"
-          }
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/new-moon-face.svg"
         }
       ]
     },
@@ -401,10 +380,7 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg",
-          "theme": {
-            "primaryColorHex": "#e5bc82"
-          }
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
         }
       ]
     },
@@ -426,10 +402,7 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/test-usd.svg",
-          "theme": {
-            "primaryColorHex": "#14833b"
-          }
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/test-usd.svg"
         }
       ]
     },
