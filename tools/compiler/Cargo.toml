@@ -8,11 +8,20 @@ edition = "2021"
 penumbra-asset = { git = "https://github.com/penumbra-zone/penumbra.git", rev = "37f604fcf24653e5777d9a8d4bddb468e889560a", package = "penumbra-asset" }
 penumbra-proto = { git = "https://github.com/penumbra-zone/penumbra.git", rev = "37f604fcf24653e5777d9a8d4bddb468e889560a", package = "penumbra-proto", default-features = false }
 
-anyhow = "1.0.91"
-serde = { version = "1.0.214", features = ["derive"] }
-serde_json = "1.0.132"
+anyhow = "1.0.75"
+serde = { version = "1.0.188", features = ["derive"] }
+serde_json = { version = "1.0.107", features = ["preserve_order", "raw_value"] }
 regress = "0.10.1"
 tempdir = "0.3.7"
 thiserror = "1.0.65"
 tracing-subscriber = "0.3.18"
 tracing = "0.1.40"
+reqwest = { version = "0.12.12", features = ["blocking", "json"] }
+image = "0.25.5"
+color-thief = "0.2.2"
+resvg = "0.44.0"
+tiny-skia = "0.11.2"
+
+[[bin]]
+name = "color_processor"
+path = "src/bin/color_processor.rs"
