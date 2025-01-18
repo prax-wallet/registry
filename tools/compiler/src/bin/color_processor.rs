@@ -122,7 +122,7 @@ fn get_dominant_color_from_svg(url: &str) -> Result<Color> {
     let raw_pixels = pixmap.data();
 
     // Get dominant color using color-thief
-    let dominant = color_thief::get_palette(&raw_pixels, ColorFormat::Rgba, 1, 10)
+    let dominant = color_thief::get_palette(raw_pixels, ColorFormat::Rgba, 1, 10)
         .map_err(|_| anyhow::anyhow!("Failed to get dominant color"))?
         .into_iter()
         .next()

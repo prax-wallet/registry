@@ -1,5 +1,4 @@
 {
-    "rust-analyzer.linkedProjects": [
-        "tools/compiler/Cargo.toml"
-    ]
+  "rust-analyzer.linkedProjects": ["tools/compiler/Cargo.toml"],
+  "rust-analyzer.checkOnSave": true
 }
