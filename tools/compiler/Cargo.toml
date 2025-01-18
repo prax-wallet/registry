@@ -2,6 +2,7 @@
 name = "penumbra-registry"
 version = "2.0.0"
 edition = "2021"
+default-run = "penumbra-registry"
 
 [dependencies]
 # Commit dep until badges update to Metadata is shipped in a point release
