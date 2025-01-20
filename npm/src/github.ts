@@ -11,7 +11,7 @@ export interface GithubRegistryResponse {
   numeraires: Base64AssetId[];
 }
 
-const DEFAULT_REGISTRY_BASE_URL =
+export const DEFAULT_REGISTRY_BASE_URL =
   'https://raw.githubusercontent.com/prax-wallet/registry/main/registry';
 
 type ChainId = string;

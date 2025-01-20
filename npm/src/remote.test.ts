@@ -1,7 +1,7 @@
 import { it, describe, expect, beforeEach, afterEach } from 'vitest';
 import fetchMock from 'fetch-mock';
 import { RemoteClient } from './remote';
-import { REGISTRY_BASE_URL } from './github';
+import { DEFAULT_REGISTRY_BASE_URL } from './github';
 import { ChainRegistryClient } from './client';
 import * as Phobos1 from '../../registry/chains/penumbra-testnet-phobos-1.json';
 import * as GlobalsJson from '../../registry/globals.json';
@@ -23,7 +23,7 @@ describe('RemoteClient', () => {
 
   it('should fetch registry remotely and parse it', async () => {
     const chainId = 'test-chain-7';
-    const endpoint = `${REGISTRY_BASE_URL}/chains/${chainId}.json`;
+    const endpoint = `${DEFAULT_REGISTRY_BASE_URL}/chains/${chainId}.json`;
     fetchMock.get(endpoint, {
       status: 200,
       body: Phobos1,
@@ -39,7 +39,7 @@ describe('RemoteClient', () => {
 
   it('should throw if there is not a remote version', async () => {
     const chainId = 'test-not-real-3242';
-    const endpoint = `${REGISTRY_BASE_URL}/chains/${chainId}.json`;
+    const endpoint = `${DEFAULT_REGISTRY_BASE_URL}/chains/${chainId}.json`;
     fetchMock.get(endpoint, {
       status: 404,
     });
@@ -47,7 +47,7 @@ describe('RemoteClient', () => {
   });
 
   it('should fetch globals remotely and parse it', async () => {
-    const endpoint = `${REGISTRY_BASE_URL}/globals.json`;
+    const endpoint = `${DEFAULT_REGISTRY_BASE_URL}/globals.json`;
     fetchMock.get(endpoint, {
       status: 200,
       body: GlobalsJson,
@@ -64,12 +64,12 @@ describe('RemoteClient', () => {
   describe('testnet preview', () => {
     it('fetches falls back if available', async () => {
       const testnetPreviewChainId = 'penumbra-testnet-phobos-1-x6de97e39';
-      const firstCall = `${REGISTRY_BASE_URL}/chains/${testnetPreviewChainId}.json`;
+      const firstCall = `${DEFAULT_REGISTRY_BASE_URL}/chains/${testnetPreviewChainId}.json`;
       fetchMock.get(firstCall, {
         status: 404,
       });
       const fallbackChainId = 'penumbra-testnet-phobos-1';
-      const secondCall = `${REGISTRY_BASE_URL}/chains/${fallbackChainId}.json`;
+      const secondCall = `${DEFAULT_REGISTRY_BASE_URL}/chains/${fallbackChainId}.json`;
       fetchMock.get(secondCall, {
         status: 200,
         body: Phobos1,
@@ -86,12 +86,12 @@ describe('RemoteClient', () => {
 
     it('throws if falls back not available', async () => {
       const testnetPreviewChainId = 'penumbra-testnet-phobos-1-x6de97e39';
-      const firstCall = `${REGISTRY_BASE_URL}/chains/${testnetPreviewChainId}.json`;
+      const firstCall = `${DEFAULT_REGISTRY_BASE_URL}/chains/${testnetPreviewChainId}.json`;
       fetchMock.get(firstCall, {
         status: 404,
       });
       const fallbackChainId = 'penumbra-testnet-phobos-1';
-      const secondCall = `${REGISTRY_BASE_URL}/chains/${fallbackChainId}.json`;
+      const secondCall = `${DEFAULT_REGISTRY_BASE_URL}/chains/${fallbackChainId}.json`;
       fetchMock.get(secondCall, {
         status: 404,
       });
@@ -108,7 +108,7 @@ describe('RemoteClient', () => {
   describe('getWithBundledBackup', () => {
     it('fetches remote when available', async () => {
       const chainId = 'test-chain-7';
-      const endpoint = `${REGISTRY_BASE_URL}/chains/${chainId}.json`;
+      const endpoint = `${DEFAULT_REGISTRY_BASE_URL}/chains/${chainId}.json`;
       fetchMock.get(endpoint, {
         status: 200,
         body: Phobos1,
@@ -124,7 +124,7 @@ describe('RemoteClient', () => {
 
     it('fetches bundled when available', async () => {
       const chainId = 'penumbra-testnet-phobos-1';
-      const endpoint = `${REGISTRY_BASE_URL}/chains/${chainId}.json`;
+      const endpoint = `${DEFAULT_REGISTRY_BASE_URL}/chains/${chainId}.json`;
       fetchMock.get(endpoint, {
         status: 404,
       });
