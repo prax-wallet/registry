@@ -49,7 +49,10 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png"
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png",
+          "theme": {
+            "primaryColorHex": "#1d1e1d"
+          }
         }
       ]
     },
@@ -105,7 +108,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/full-moon-face.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/full-moon-face.svg",
+          "theme": {
+            "primaryColorHex": "#ac9454"
+          }
         }
       ]
     },
@@ -158,7 +164,10 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg",
+          "theme": {
+            "primaryColorHex": "#a4d1e5"
+          }
         }
       ]
     },
@@ -186,7 +195,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg",
+          "theme": {
+            "primaryColorHex": "#c9a975"
+          }
         }
       ]
     },
@@ -249,7 +261,10 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg",
+          "theme": {
+            "primaryColorHex": "#142c5c"
+          }
         }
       ]
     },
@@ -274,7 +289,10 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg",
+          "theme": {
+            "primaryColorHex": "#d0b6e3"
+          }
         }
       ]
     },
@@ -292,7 +310,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/pizza.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/pizza.svg",
+          "theme": {
+            "primaryColorHex": "#ab1221"
+          }
         }
       ]
     },
@@ -318,7 +339,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/new-moon-face.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/new-moon-face.svg",
+          "theme": {
+            "primaryColorHex": "#546068"
+          }
         }
       ]
     },
@@ -380,7 +404,10 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg",
+          "theme": {
+            "primaryColorHex": "#e5bc82"
+          }
         }
       ]
     },
@@ -402,7 +429,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/test-usd.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/test-usd.svg",
+          "theme": {
+            "primaryColorHex": "#14833b"
+          }
         }
       ]
     },
