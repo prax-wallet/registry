@@ -137,7 +137,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.svg",
           "theme": {
-            "primaryColorHex": "#a4d1e5"
+            "primaryColorHex": "#90cfde"
           }
         }
       ]
@@ -292,7 +292,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg",
           "theme": {
-            "primaryColorHex": "#142c5c"
+            "primaryColorHex": "#142b5b"
           }
         }
       ]
@@ -320,7 +320,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg",
           "theme": {
-            "primaryColorHex": "#d0b6e3"
+            "primaryColorHex": "#6b0db7"
           }
         }
       ]
@@ -435,7 +435,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg",
           "theme": {
-            "primaryColorHex": "#e5bc82"
+            "primaryColorHex": "#e4bc82"
           }
         }
       ]

@@ -782,8 +782,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol_circle.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol_circle.svg",
           "theme": {
-            "circle": true,
-            "primaryColorHex": "#1c1c1c"
+            "primaryColorHex": "#54b3c4"
           }
         },
         {
@@ -803,7 +802,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.svg",
           "theme": {
-            "primaryColorHex": "#48b6c1"
+            "primaryColorHex": "#658cc5"
           }
         }
       ],
@@ -1091,7 +1090,6 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx-circle.svg",
           "theme": {
-            "circle": true,
             "primaryColorHex": "#d0d0d3"
           }
         }
@@ -2298,7 +2296,7 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.svg",
           "theme": {
-            "primaryColorHex": "#080808"
+            "primaryColorHex": "#343434"
           }
         }
       ],

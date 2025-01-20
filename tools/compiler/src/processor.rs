@@ -11,10 +11,18 @@ use crate::parser::{
     IbcInput, LOCAL_INPUT_DIR, LOCAL_REGISTRY_DIR,
 };
 use crate::validator::generate_metadata_from_validators;
+use color_thief::{Color, ColorFormat};
+use image;
 use penumbra_asset::asset::{Id, Metadata};
 use penumbra_asset::STAKING_TOKEN_ASSET_ID;
-use penumbra_proto::core::asset::v1::AssetImage;
+use penumbra_proto::core::asset::v1::{asset_image::Theme, AssetImage};
 use penumbra_proto::penumbra::core::asset::v1 as pb;
+use reqwest;
+use resvg::{
+    render,
+    tiny_skia::Pixmap,
+    usvg::{Options, Transform, Tree},
+};
 use serde::{Deserialize, Serialize};
 
 // Location of the `cosmos/chain-registry` submodule directory
@@ -139,6 +147,104 @@ pub fn base64_id(id: &Id) -> AppResult<String> {
     Ok(base64_str)
 }
 
+/// Process images in the registry to extract and add dominant colors
+pub fn process_registry_images(registry: &mut Registry) -> AppResult<()> {
+    for metadata in registry.asset_by_id.values_mut() {
+        let mut pb_metadata: pb::Metadata = metadata.clone().into();
+
+        for image in pb_metadata.images.iter_mut() {
+            // Skip if we already have a color
+            if image
+                .theme
+                .as_ref()
+                .map(|t| !t.primary_color_hex.is_empty())
+                .unwrap_or(false)
+            {
+                continue;
+            }
+
+            let color = if !image.svg.is_empty() {
+                get_dominant_color_from_svg(&image.svg)
+                    .map_err(|e| anyhow!("Failed to process SVG: {}", e))?
+            } else if !image.png.is_empty() {
+                get_dominant_color_from_png(&image.png)
+                    .map_err(|e| anyhow!("Failed to process PNG: {}", e))?
+            } else {
+                continue;
+            };
+
+            let hex = format!("#{:02x}{:02x}{:02x}", color.r, color.g, color.b);
+
+            // Create or update theme
+            image.theme = Some(Theme {
+                primary_color_hex: hex,
+                ..Default::default()
+            });
+        }
+
+        // Update the metadata with the new image data
+        *metadata = Metadata::try_from(pb_metadata)?;
+    }
+    Ok(())
+}
+
+fn get_dominant_color_from_svg(url: &str) -> Result<Color, anyhow::Error> {
+    // Download the SVG content
+    let response =
+        reqwest::blocking::get(url).map_err(|e| anyhow!("Failed to download SVG: {}", e))?;
+    let svg_content = response
+        .text()
+        .map_err(|e| anyhow!("Failed to read SVG content: {}", e))?;
+
+    // Parse SVG into a usvg tree
+    let options = Options::default();
+    let rtree = Tree::from_data(svg_content.as_bytes(), &options)
+        .map_err(|e| anyhow!("Failed to parse SVG: {}", e))?;
+
+    // Create a pixel buffer with dimensions from the SVG
+    let view_box = rtree.size();
+    let mut pixmap = Pixmap::new(view_box.width() as u32, view_box.height() as u32)
+        .ok_or_else(|| anyhow!("Failed to create pixmap"))?;
+
+    // Render the SVG to the pixel buffer
+    render(&rtree, Transform::default(), &mut pixmap.as_mut());
+
+    // Convert pixmap to RGB format for color-thief
+    let raw_pixels = pixmap.data();
+
+    // Get dominant color using color-thief
+    let dominant = color_thief::get_palette(raw_pixels, ColorFormat::Rgba, 1, 10)
+        .map_err(|_| anyhow!("Failed to get dominant color"))?
+        .into_iter()
+        .next()
+        .ok_or_else(|| anyhow!("No dominant color found"))?;
+
+    Ok(dominant)
+}
+
+fn get_dominant_color_from_png(url: &str) -> Result<Color, anyhow::Error> {
+    // Download the image
+    let response =
+        reqwest::blocking::get(url).map_err(|e| anyhow!("Failed to download PNG: {}", e))?;
+    let img_bytes = response
+        .bytes()
+        .map_err(|e| anyhow!("Failed to read PNG bytes: {}", e))?;
+    let img =
+        image::load_from_memory(&img_bytes).map_err(|e| anyhow!("Failed to load PNG: {}", e))?;
+
+    // Convert image to RGB pixels
+    let pixels: Vec<u8> = img.to_rgb8().into_raw();
+
+    // Get dominant color using color-thief
+    let dominant = color_thief::get_palette(&pixels, ColorFormat::Rgb, 1, 10)
+        .map_err(|_| anyhow!("Failed to get dominant color"))?
+        .into_iter()
+        .next()
+        .ok_or_else(|| anyhow!("No dominant color found"))?;
+
+    Ok(dominant)
+}
+
 #[tracing::instrument(skip_all)]
 fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
     let mut all_metadata = Vec::new();
@@ -204,7 +310,7 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
         }
     }
 
-    Ok(Registry {
+    let mut registry = Registry {
         chain_id: chain_config.chain_id,
         ibc_connections: chain_config
             .ibc_connections
@@ -228,5 +334,10 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
             })
             .filter_map(|m| base64_id(&m.id()).ok())
             .collect(),
-    })
+    };
+
+    // Process images to add dominant colors
+    process_registry_images(&mut registry)?;
+
+    Ok(registry)
 }

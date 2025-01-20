@@ -22,7 +22,3 @@ image = "0.25.5"
 color-thief = "0.2.2"
 resvg = "0.44.0"
 tiny-skia = "0.11.2"
-
-[[bin]]
-name = "color_processor"
-path = "src/bin/color_processor.rs"
