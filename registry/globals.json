@@ -41,7 +41,8 @@
     "https://stake.with.starlingcyber.net",
     "https://penumbra.whispernode.com",
     "https://voids.cloud",
-    "https://penumbra.zechub.org"
+    "https://penumbra.zechub.org",
+    "https://app.penumbra.zone/",
   ],
   "frontendsV2": [
     {
@@ -77,6 +78,15 @@
       "images": [
         {
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/zec-hub.png"
+        }
+      ]
+    },
+    {
+      "name": "Radiant Commons",
+      "url": "https://app.penumbra.zone",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/radiant-emblem-light.png"
         }
       ]
     }
