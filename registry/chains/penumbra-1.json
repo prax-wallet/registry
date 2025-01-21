@@ -88,7 +88,10 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COOK.png"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/COOK.png",
+          "theme": {
+            "primaryColorHex": "#f7bca7"
+          }
         }
       ]
     },
@@ -553,7 +556,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqbtc.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqbtc.svg",
+          "theme": {
+            "primaryColorHex": "#bae343"
+          }
         }
       ]
     },
@@ -631,7 +637,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqatom.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqatom.svg",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
         }
       ]
     },
@@ -742,7 +751,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
+          "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg",
+          "theme": {
+            "primaryColorHex": "#c9a975"
+          }
         }
       ],
       "priorityScore": "999999999999"
@@ -770,22 +782,28 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol_circle.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol_circle.svg",
           "theme": {
-            "circle": true
+            "primaryColorHex": "#54b3c4"
           }
         },
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol.svg",
-          "theme": {}
+          "theme": {
+            "primaryColorHex": "#5da1ca"
+          }
         },
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL_circle.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL_circle.svg",
-          "theme": {}
+          "theme": {
+            "primaryColorHex": "#36c7bc"
+          }
         },
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allSOL.svg",
-          "theme": {}
+          "theme": {
+            "primaryColorHex": "#658cc5"
+          }
         }
       ],
       "priorityScore": "600000000000"
@@ -1072,7 +1090,7 @@
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx-circle.svg",
           "theme": {
-            "circle": true
+            "primaryColorHex": "#d0d0d3"
           }
         }
       ],
@@ -1106,7 +1124,10 @@
           }
         },
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBTC.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBTC.svg",
+          "theme": {
+            "primaryColorHex": "#f3931b"
+          }
         }
       ],
       "priorityScore": "600000000000"
@@ -1210,7 +1231,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg",
+          "theme": {
+            "primaryColorHex": "#fc047c"
+          }
         }
       ]
     },
@@ -1259,7 +1283,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BRNZ.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BRNZ.svg",
+          "theme": {
+            "primaryColorHex": "#ea049a"
+          }
         }
       ]
     },
@@ -1395,7 +1422,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CDT.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CDT.svg",
+          "theme": {
+            "primaryColorHex": "#5a9ce2"
+          }
         }
       ]
     },
@@ -1418,7 +1448,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibcx.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibcx.svg",
+          "theme": {
+            "primaryColorHex": "#c1dafb"
+          }
         }
       ]
     },
@@ -1581,7 +1614,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg",
+          "theme": {
+            "primaryColorHex": "#bbe446"
+          }
         }
       ]
     },
@@ -1961,7 +1997,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/MBRN.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/MBRN.svg",
+          "theme": {
+            "primaryColorHex": "#6ca0da"
+          }
         }
       ]
     },
@@ -2004,7 +2043,10 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/TURD.png"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/TURD.png",
+          "theme": {
+            "primaryColorHex": "#c1eb89"
+          }
         }
       ]
     },
@@ -2083,7 +2125,10 @@
       },
       "images": [
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqosmo.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqosmo.svg",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
         }
       ]
     },
@@ -2122,7 +2167,10 @@
           }
         },
         {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allUSDT.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allUSDT.svg",
+          "theme": {
+            "primaryColorHex": "#b8e0e0"
+          }
         }
       ],
       "priorityScore": "700000000000"
@@ -2246,7 +2294,10 @@
         },
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.svg"
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allETH.svg",
+          "theme": {
+            "primaryColorHex": "#343434"
+          }
         }
       ],
       "priorityScore": "600000000000"

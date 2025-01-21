@@ -1,6 +1,6 @@
 use penumbra_asset::asset::Metadata;
 use penumbra_registry::parser::IbcInput;
-use penumbra_registry::processor::{base64_id, transport_metadata_along_channel};
+use penumbra_registry::processor::{base64_id, transport_metadata_along_channel, Registry};
 
 #[test]
 fn base64_id_extracts_correctly() {
@@ -75,4 +75,162 @@ fn test_transport_metadata_along_channel() {
 
     let result = transport_metadata_along_channel(&ibc_data, input_metadata).unwrap();
     assert_eq!(result, output_metadata);
+}
+
+#[test]
+fn test_process_registry_images() {
+    let mut registry = Registry {
+        chain_id: "test-1".to_string(),
+        ibc_connections: vec![],
+        asset_by_id: Default::default(),
+        numeraires: vec![],
+    };
+
+    // Create a test metadata with both SVG and PNG images
+    let metadata_json = r##"{
+        "base": "test",
+        "display": "test",
+        "name": "Test Token",
+        "symbol": "TEST",
+        "denomUnits": [
+            {
+                "denom": "test",
+                "exponent": 6
+            }
+        ],
+        "images": [
+            {
+                "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png",
+                "svg": ""
+            },
+            {
+                "png": "",
+                "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg"
+            },
+            {
+                "png": "",
+                "svg": "",
+                "theme": {
+                    "primaryColorHex": "#123456"
+                }
+            }
+        ]
+    }"##;
+
+    let metadata: Metadata = serde_json::from_str(metadata_json).unwrap();
+    let id = base64_id(&metadata.id()).unwrap();
+    registry.asset_by_id.insert(id, metadata);
+
+    // Process the images
+    penumbra_registry::processor::process_registry_images(&mut registry).unwrap();
+
+    // Get the processed metadata
+    let processed_metadata = registry.asset_by_id.values().next().unwrap();
+    let pb_metadata: penumbra_proto::penumbra::core::asset::v1::Metadata =
+        processed_metadata.clone().into();
+
+    // Check that colors were added to images without themes
+    assert!(pb_metadata.images[0].theme.is_some());
+    assert!(pb_metadata.images[1].theme.is_some());
+
+    // Check that existing theme was preserved
+    assert_eq!(
+        pb_metadata.images[2]
+            .theme
+            .as_ref()
+            .unwrap()
+            .primary_color_hex,
+        "#123456"
+    );
+
+    // Verify the color format
+    let color_hex = &pb_metadata.images[0]
+        .theme
+        .as_ref()
+        .unwrap()
+        .primary_color_hex;
+    assert!(color_hex.starts_with('#'));
+    assert_eq!(color_hex.len(), 7); // #RRGGBB format
+    assert!(color_hex.chars().skip(1).all(|c| c.is_ascii_hexdigit()));
+}
+
+#[test]
+fn test_process_registry_images_with_invalid_urls() {
+    let mut registry = Registry {
+        chain_id: "test-1".to_string(),
+        ibc_connections: vec![],
+        asset_by_id: Default::default(),
+        numeraires: vec![],
+    };
+
+    // Create a test metadata with invalid image URLs
+    let metadata_json = r#"{
+        "base": "test",
+        "display": "test",
+        "name": "Test Token",
+        "symbol": "TEST",
+        "denomUnits": [
+            {
+                "denom": "test",
+                "exponent": 6
+            }
+        ],
+        "images": [
+            {
+                "png": "https://invalid-url/image.png",
+                "svg": ""
+            },
+            {
+                "png": "",
+                "svg": "https://invalid-url/image.svg"
+            }
+        ]
+    }"#;
+
+    let metadata: Metadata = serde_json::from_str(metadata_json).unwrap();
+    let id = base64_id(&metadata.id()).unwrap();
+    registry.asset_by_id.insert(id, metadata);
+
+    // Process should fail gracefully
+    let result = penumbra_registry::processor::process_registry_images(&mut registry);
+    assert!(result.is_err());
+}
+
+#[test]
+fn test_process_registry_images_empty_urls() {
+    let mut registry = Registry {
+        chain_id: "test-1".to_string(),
+        ibc_connections: vec![],
+        asset_by_id: Default::default(),
+        numeraires: vec![],
+    };
+
+    // Create a test metadata with empty image URLs
+    let metadata_json = r#"{
+        "base": "test",
+        "display": "test",
+        "name": "Test Token",
+        "symbol": "TEST",
+        "denomUnits": [
+            {
+                "denom": "test",
+                "exponent": 6
+            }
+        ],
+        "images": [
+            {
+                "png": "",
+                "svg": ""
+            }
+        ]
+    }"#;
+
+    let metadata: Metadata = serde_json::from_str(metadata_json).unwrap();
+    let id = base64_id(&metadata.id()).unwrap();
+    let id_clone = id.clone();
+    registry.asset_by_id.insert(id, metadata.clone());
+
+    // Process should succeed but not modify the metadata
+    penumbra_registry::processor::process_registry_images(&mut registry).unwrap();
+    assert_eq!(registry.asset_by_id[&id_clone], metadata);
 }
