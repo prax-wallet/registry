@@ -10,6 +10,21 @@ describe('Registry', () => {
     const usdcId = base64ToUint8Array('reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=');
     const res = registry.getMetadata(new AssetId({ inner: usdcId }));
     expect(res.base).toEqual('wtest_usd');
+    // TODO: Renable when badges fixed in minifront
+    // expect(res.badges.length).toEqual(1);
+    // expect(res.badges[0]?.png).toEqual(
+    //   'https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png',
+    // );
+  });
+
+  it('gets metadata without badges', () => {
+    const registry = new Registry(testRegistry);
+    const usdcId = base64ToUint8Array('ra98J77CX10Us2s6+d7bebfpm1Q3+UOycPfaaEeeuAY=');
+    const res = registry.getMetadata(new AssetId({ inner: usdcId }));
+    expect(res.base).toEqual(
+      'transfer/channel-0/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz',
+    );
+    expect(res.badges.length).toEqual(0);
   });
 
   it('throws when searching for metadata that does not exist', () => {
@@ -17,6 +32,13 @@ describe('Registry', () => {
     const cubeId = base64ToUint8Array('aGVsbG8gd29ybGQ=');
     const getCubeMetadata = () => registry.getMetadata(new AssetId({ inner: cubeId }));
     expect(getCubeMetadata).toThrow();
+  });
+
+  it('returns undefined when using try method', () => {
+    const registry = new Registry(testRegistry);
+    const cubeId = base64ToUint8Array('aGVsbG8gd29ybGQ=');
+    const result = registry.tryGetMetadata(new AssetId({ inner: cubeId }));
+    expect(result).toBeUndefined();
   });
 
   it('gets all assets successfully', () => {

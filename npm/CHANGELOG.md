@@ -1,10 +1,33 @@
 # @penumbra-labs/registry
 
-## 11.4.0
+## 12.0.2
 
 ### Minor Changes
 
+- Add fallible tryGetMetadata method to registry
 - 4a563c9: Add priority scores
+
+## 12.0.1
+
+### Patch Changes
+
+- fb2bff8: add primary colors to all assets, add script for auto coloring
+- 6bcb0a9: add primary hex colors for all assets on all chains
+- a174c49: Add name and description fields to native Penumbra token in the registry
+- adb6ee2: add rc to registry's frontend list
+- a2db6c4: Updates the channels for penumbra testnet
+
+## 12.0.0
+
+### Major Changes
+
+- Forward compatible Metadata deserialization
+
+## 11.5.0
+
+### Minor Changes
+
+- Adding badge support for metadata
 
 ## 11.3.1
 

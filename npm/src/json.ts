@@ -28,6 +28,7 @@ export interface JsonMetadata {
   symbol: string;
   penumbraAssetId: PenumbraAssetId;
   images?: Image[];
+  badges?: Image[];
 }
 
 interface DenomUnit {

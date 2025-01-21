@@ -91,6 +91,8 @@
       "base": "upenumbra",
       "display": "penumbra",
       "symbol": "UM",
+      "name": "Penumbra",
+      "description": "The native token of Penumbra",
       "penumbraAssetId": {
         "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
       },
@@ -101,32 +103,36 @@
       ]
     }
   ],
-  "canonicalNumeraires": ["transfer/channel-2/uusdc"],
+  "canonicalNumeraires": [
+    "transfer/channel-2/uusdc"
+  ],
   "priorityScoresByBase": {
     "upenumbra": 999999999999,
-    "transfer/channel-2/uusdc": 100000000000,
-    "transfer/channel-4/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT": 100000000000,
-    "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC": 70000000000,
-    "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc": 70000000000,
-    "transfer/channel-4/factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH": 60000000000,
-    "transfer/channel-4/factory/osmo1n3n75av8awcnw4jl62n3l48e6e4sxqmaf97w5ua6ddu4s475q5qq9udvx4/alloyed/allSOL": 50000000000,
-    "transfer/channel-4/factory/osmo18zdw5yvs6gfp95rp74qqwug9yduw2fyr8kplk2xgs726s9axc5usa2vpgw/alloyed/allLINK": 4000000000,
-    "transfer/channel-4/factory/osmo1r53fx9fvcdzncrs7zkn4gw5vfelx5gk8k5wc6wqha2jpkh992rusr5tk02/alloyed/allDOT": 3000000000,
-    "transfer/channel-4/factory/osmo14mafhhp337yjj2aujplawz0tks6jd2lel4hkwz4agyzhvvztzaqsqzjq8x/alloyed/allTRX": 200000000,
-    "transfer/channel-4/factory/osmo1p7x454ex08s4f9ztmm7wfv7lvtgdkfztj2u7v7fezfcauy85q35qmqrdpk/alloyed/allARB": 100000000,
-    "transfer/channel-4/factory/osmo1nufyzqlm8qhu2w7lm0l4rrax0ec8rsk69mga4tel8eare7c7ljaqpk2lyg/alloyed/allOP": 100000000,
-    "transfer/channel-4/factory/osmo12lnwf54yd30p6amzaged2atln8k0l32n7ncxf04ctg7u7ymnsy7qkqgsw4/alloyed/allTON": 100000000,
-    "transfer/channel-4/factory/osmo1f588gk9dazpsueevdl2w6wfkmfmhg5gdvg2uerdlzl0atkasqhsq59qc6a/alloyed/allSHIB": 100000000,
-    "transfer/channel-0/uatom": 100000000,
-    "transfer/channel-3/utia": 100000000,
-    "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqatom": 10000000,
-    "transfer/channel-1/adydx": 10000000,
-    "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqtia": 10000000,
-    "transfer/channel-4/uosmo": 10000,
-    "transfer/channel-4/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO": 10000,
-    "transfer/channel-4/factory/osmo1dv8wz09tckslr2wy5z86r46dxvegylhpt97r9yd6qc3kyc6tv42qa89dr9/ampOSMO": 10000,
-    "transfer/channel-4/factory/osmo1s3l0lcqc7tu0vpj6wdjz9wqpxv8nk6eraevje4fuwkyjnwuy82qsx3lduv/boneOsmo": 10000,
-    "transfer/channel-4/factory/osmo104jtrwcljnxfljhml8mxrw7qetcsdmqvy3sprw/ucosmousd": 10000,
-    "transfer/channel-4/factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/squosmo": 10000
-  }
+    "transfer/channel-2/uusdc": 800000000100,
+    "transfer/channel-4/uosmo": 800000000099,
+    "transfer/channel-0/uatom": 800000000098,
+    "transfer/channel-3/utia": 800000000097,
+    "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/shitmos": 800000000096,
+    "transfer/channel-2/ausdy": 800000000095,
+    "transfer/channel-4/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT": 700000000000,
+    "transfer/channel-1/adydx": 600000000000,
+    "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC": 600000000000,
+    "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc": 600000000000,
+    "transfer/channel-4/factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH": 600000000000,
+    "transfer/channel-4/factory/osmo1n3n75av8awcnw4jl62n3l48e6e4sxqmaf97w5ua6ddu4s475q5qq9udvx4/alloyed/allSOL": 600000000000,
+    "transfer/channel-4/factory/osmo1p7x454ex08s4f9ztmm7wfv7lvtgdkfztj2u7v7fezfcauy85q35qmqrdpk/alloyed/allARB": 500000000000,
+    "transfer/channel-4/factory/osmo1nufyzqlm8qhu2w7lm0l4rrax0ec8rsk69mga4tel8eare7c7ljaqpk2lyg/alloyed/allOP": 500000000000,
+    "transfer/channel-4/factory/osmo1f588gk9dazpsueevdl2w6wfkmfmhg5gdvg2uerdlzl0atkasqhsq59qc6a/alloyed/allSHIB": 500000000000,
+    "transfer/channel-4/factory/osmo14mafhhp337yjj2aujplawz0tks6jd2lel4hkwz4agyzhvvztzaqsqzjq8x/alloyed/allTRX": 400000000000,
+    "transfer/channel-4/factory/osmo12lnwf54yd30p6amzaged2atln8k0l32n7ncxf04ctg7u7ymnsy7qkqgsw4/alloyed/allTON": 400000000000
+  },
+  "badges": {
+    "osmosis": {
+      "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+      "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+    }
+  },
+  "badgesByBase": {}
 }
+
+

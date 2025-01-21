@@ -11,7 +11,7 @@ export class RegistryGlobals {
   constructor(json: JsonGlobals) {
     this.rpcs = json.rpcs;
     this.frontends = json.frontendsV2;
-    this.stakingAssetId = AssetId.fromJson(json.stakingAssetId);
+    this.stakingAssetId = AssetId.fromJson(json.stakingAssetId, { ignoreUnknownFields: true });
   }
 
   async version(): Promise<string> {

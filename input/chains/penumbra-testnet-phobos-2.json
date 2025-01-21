@@ -4,8 +4,8 @@
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
-      "channelId": "channel-0",
-      "counterpartyChannelId": "channel-8880",
+      "channelId": "channel-27",
+      "counterpartyChannelId": "channel-9836",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
@@ -17,13 +17,26 @@
     {
       "displayName": "Noble",
       "chainId": "grand-1",
-      "channelId": "channel-3",
-      "counterpartyChannelId": "channel-221",
+      "channelId": "channel-28",
+      "counterpartyChannelId": "channel-289",
       "addressPrefix": "noble",
       "cosmosRegistryDir": "testnets/nobletestnet",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/2ca39d0e4eaf3431cca13991948e099801f02e46/noble/images/stake.svg"
+        }
+      ]
+    },
+    {
+      "displayName": "Duke",
+      "chainId": "duke-1",
+      "channelId": "channel-26",
+      "counterpartyChannelId": "channel-8",
+      "addressPrefix": "noble",
+      "cosmosRegistryDir": "testnets/nobletestnet",
+      "images": [
+        {
+          "svg": ""
         }
       ]
     }
@@ -66,6 +79,8 @@
       "base": "upenumbra",
       "display": "penumbra",
       "symbol": "UM",
+      "name": "Penumbra",
+      "description": "The native token of Penumbra",
       "penumbraAssetId": {
         "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
       },
@@ -257,6 +272,20 @@
       }
     }
   ],
-  "canonicalNumeraires": ["wtest_usd", "transfer/channel-1/uusdc"],
-  "priorityScoresByBase": {}
+  "canonicalNumeraires": [
+    "wtest_usd",
+    "transfer/channel-26/uusdc",
+    "transfer/channel-28/uusdc"
+  ],
+  "priorityScoresByBase": {
+    "upenumbra": 999999999999,
+    "wtest_usd": 1000,
+    "ugm": 900,
+    "ugn": 900,
+    "transfer/channel-0/uosmo": 800,
+    "transfer/channel-3/uusdc": 800
+  },
+  "badges": {},
+  "badgesByBase": {}
 }
+

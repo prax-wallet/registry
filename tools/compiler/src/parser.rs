@@ -21,6 +21,7 @@ pub struct GlobalsInput {
 }
 
 type BaseDenom = String;
+type BadgeName = String;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -31,41 +32,15 @@ pub struct ChainConfig {
     pub native_assets: Vec<Metadata>,
     pub canonical_numeraires: Vec<String>,
     pub priority_scores_by_base: HashMap<BaseDenom, u64>,
+    pub badges: HashMap<BadgeName, AssetImage>,
+    pub badges_by_base: HashMap<BaseDenom, Vec<BadgeName>>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct EntityMetadata {
     pub name: String,
     pub url: String,
-    pub images: Vec<Image>,
-}
-
-#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub struct Image {
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub png: Option<String>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub svg: Option<String>,
-}
-
-impl From<Image> for AssetImage {
-    fn from(image: Image) -> Self {
-        AssetImage {
-            png: image.png.unwrap_or_default(),
-            svg: image.svg.unwrap_or_default(),
-            theme: None,
-        }
-    }
-}
-
-pub trait IntoPbImages {
-    fn into_pb_images(self) -> Vec<AssetImage>;
-}
-
-impl IntoPbImages for Vec<Image> {
-    fn into_pb_images(self) -> Vec<AssetImage> {
-        self.into_iter().map(AssetImage::from).collect()
-    }
+    pub images: Vec<AssetImage>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -77,7 +52,7 @@ pub struct IbcInput {
     pub address_prefix: String,
     pub cosmos_registry_dir: String,
     pub display_name: String,
-    pub images: Vec<Image>,
+    pub images: Vec<AssetImage>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -85,7 +60,7 @@ pub struct IbcInput {
 pub struct ValidatorInput {
     pub name: String,
     pub base: String,
-    pub images: Vec<Image>,
+    pub images: Vec<AssetImage>,
 }
 
 pub const LOCAL_REGISTRY_DIR: &str = "../../registry";
