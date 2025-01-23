@@ -1,6 +1,6 @@
 # @penumbra-labs/registry
 
-## 12.0.2
+## 12.1.0
 
 ### Minor Changes
 
