@@ -1,5 +1,12 @@
 # @penumbra-labs/registry
 
+## 12.1.0
+
+### Minor Changes
+
+- Add fallible tryGetMetadata method to registry
+- 4a563c9: Add priority scores
+
 ## 12.0.1
 
 ### Patch Changes
@@ -21,13 +28,6 @@
 ### Minor Changes
 
 - Adding badge support for metadata
-
-## 11.4.0
-
-### Minor Changes
-
-- Add fallible tryGetMetadata method to registry
-- 4a563c9: Add priority scores
 
 ## 11.3.1
 
