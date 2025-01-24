@@ -34,6 +34,7 @@ pub struct ChainConfig {
     pub priority_scores_by_base: HashMap<BaseDenom, u64>,
     pub badges: HashMap<BadgeName, AssetImage>,
     pub badges_by_base: HashMap<BaseDenom, Vec<BadgeName>>,
+    pub coingecko_id_by_base: HashMap<BaseDenom, String>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]

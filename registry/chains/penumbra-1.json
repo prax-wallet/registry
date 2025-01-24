@@ -488,7 +488,6 @@
       "penumbraAssetId": {
         "inner": "B+9mATKkwyNfqyctQ9m5dSqDN7LRCFl6v/r/XyRtDw8="
       },
-      "coingeckoId": "cosmos",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png",
@@ -690,7 +689,6 @@
       "penumbraAssetId": {
         "inner": "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc="
       },
-      "coingeckoId": "osmosis",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
@@ -1116,7 +1114,6 @@
       "penumbraAssetId": {
         "inner": "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA="
       },
-      "coingeckoId": "bitcoin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/bitcoin/images/btc.png",
@@ -1311,7 +1308,6 @@
       "penumbraAssetId": {
         "inner": "UWEI0NC7o/duH5gtCnzeEYgzMHsDwM1My5TogrU8Hw8="
       },
-      "coingeckoId": "wrapped-bitcoin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png",
@@ -1341,7 +1337,6 @@
       "penumbraAssetId": {
         "inner": "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE="
       },
-      "coingeckoId": "celestia",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png",
@@ -1560,7 +1555,6 @@
       "penumbraAssetId": {
         "inner": "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="
       },
-      "coingeckoId": "usd-coin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.png",
@@ -2290,7 +2284,6 @@
       "penumbraAssetId": {
         "inner": "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4="
       },
-      "coingeckoId": "ethereum",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.png",
@@ -2394,5 +2387,7 @@
       ]
     }
   },
-  "numeraires": ["drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="]
+  "numeraires": [
+    "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="
+  ]
 }

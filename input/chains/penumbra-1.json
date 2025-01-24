@@ -103,9 +103,7 @@
       ]
     }
   ],
-  "canonicalNumeraires": [
-    "transfer/channel-2/uusdc"
-  ],
+  "canonicalNumeraires": ["transfer/channel-2/uusdc"],
   "priorityScoresByBase": {
     "upenumbra": 999999999999,
     "transfer/channel-2/uusdc": 800000000100,
@@ -132,7 +130,14 @@
       "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
     }
   },
-  "badgesByBase": {}
+  "badgesByBase": {},
+  "coingeckoIdByBase": {
+    "transfer/channel-0/uatom": "cosmos",
+    "transfer/channel-4/factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH": "ethereum",
+    "transfer/channel-3/utia": "celestia",
+    "transfer/channel-4/uosmo": "osmosis",
+    "transfer/channel-2/uusdc": "usd-coin",
+    "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc": "wrapped-bitcoin",
+    "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC": "bitcoin"
+  }
 }
-
-

@@ -310,6 +310,18 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
         }
     }
 
+    // add coingecko id if available
+    for metadata in &mut all_metadata {
+        if let Some(coingecko_id) = chain_config
+            .coingecko_id_by_base
+            .get(&metadata.base_denom().denom)
+        {
+            let mut pb_metadata: pb::Metadata = metadata.clone().into();
+            pb_metadata.coingecko_id = *coingecko_id;
+            *metadata = Metadata::try_from(pb_metadata)?;
+        }
+    }
+
     let mut registry = Registry {
         chain_id: chain_config.chain_id,
         ibc_connections: chain_config
