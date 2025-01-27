@@ -222,7 +222,6 @@
       "penumbraAssetId": {
         "inner": "4rBRD1He9RNXc+6+KOw1vCKG7ZsLWqOVL4NRWdbKDQc="
       },
-      "coingecko_id": "trx",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tron/images/trx.png",
@@ -241,7 +240,8 @@
           }
         }
       ],
-      "priorityScore": "400000000000"
+      "priorityScore": "400000000000",
+      "coingeckoId": "trx"
     },
     "5B0jxWP9LX+U4uD7aU9OVsIk0U385uD2q+a2eEerHg0=": {
       "description": "Cosmos Airdrop Chat",
@@ -315,7 +315,6 @@
       "penumbraAssetId": {
         "inner": "6zEm1cTHN1PsueimuNxC+6S/t6uDYRdhbitgkUV9IxE="
       },
-      "coingecko_id": "milktia",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.png",
@@ -324,7 +323,8 @@
             "primaryColorHex": "#d18dfc"
           }
         }
-      ]
+      ],
+      "coingeckoId": "milktia"
     },
     "9K0nhsHG5pn/MpmxYDkGyIHbVXh2aZm3eknCYy9auws=": {
       "description": "A group of french boulanger who wanna bring fun and baguette on cosmos",
@@ -378,7 +378,8 @@
             "primaryColorHex": "#bcdd76"
           }
         }
-      ]
+      ],
+      "coingeckoId": "mad-scientists"
     },
     "9sKDSVM9qU0G3ASpZted8wJB8fhdadAtzxZxE5tJMxI=": {
       "description": "An alloy of ARB asset variants on Osmosis.",
@@ -398,7 +399,6 @@
       "penumbraAssetId": {
         "inner": "9sKDSVM9qU0G3ASpZted8wJB8fhdadAtzxZxE5tJMxI="
       },
-      "coingecko_id": "arbitrum",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/arbitrum/images/arb.png",
@@ -415,7 +415,8 @@
           }
         }
       ],
-      "priorityScore": "500000000000"
+      "priorityScore": "500000000000",
+      "coingeckoId": "arbitrum"
     },
     "AdlT67pUDx0wsIFBC4opbslYEOk6+QDIzWUcVtQlXgQ=": {
       "description": "Chain-key Bitcoin bridged via Omnity Network.",
@@ -435,7 +436,6 @@
       "penumbraAssetId": {
         "inner": "AdlT67pUDx0wsIFBC4opbslYEOk6+QDIzWUcVtQlXgQ="
       },
-      "coingecko_id": "chain-key-bitcoin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/internetcomputer/images/ckbtc.png",
@@ -445,7 +445,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "coingeckoId": "chain-key-bitcoin"
     },
     "Ar6MhFcFk9QWltJ2omSY3xgXpextuXXTsQsubmSy7gk=": {
       "description": "Sail DAO is a liquidity deployment and management DAO built as a collaboration between the Osmosis and Migaloo Blockchains.",
@@ -472,7 +473,8 @@
             "primaryColorHex": "#1e264f"
           }
         }
-      ]
+      ],
+      "coingeckoId": "sail-dao"
     },
     "B+9mATKkwyNfqyctQ9m5dSqDN7LRCFl6v/r/XyRtDw8=": {
       "description": "ATOM is the native cryptocurrency of the Cosmos network, designed to facilitate interoperability between multiple blockchains through its innovative hub-and-spoke model.",
@@ -502,7 +504,7 @@
         }
       ],
       "priorityScore": "800000000098",
-      "coingecko_id": "cosmos"
+      "coingeckoId": "cosmos"
     },
     "BK/Hz826s94tKv7AxSPTGqojgzTnZSsZjpUTYupkZws=": {
       "description": "An alloy of TON asset variants on Osmosis.",
@@ -522,7 +524,6 @@
       "penumbraAssetId": {
         "inner": "BK/Hz826s94tKv7AxSPTGqojgzTnZSsZjpUTYupkZws="
       },
-      "coingecko_id": "the-open-network",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ton/images/ton.png",
@@ -540,7 +541,8 @@
           }
         }
       ],
-      "priorityScore": "400000000000"
+      "priorityScore": "400000000000",
+      "coingeckoId": "the-open-network"
     },
     "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc=": {
       "description": "Margined Power Token sqBTC",
@@ -695,7 +697,6 @@
       "penumbraAssetId": {
         "inner": "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc="
       },
-      "coingecko_id": "osmosis",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
@@ -705,7 +706,8 @@
           }
         }
       ],
-      "priorityScore": "800000000099"
+      "priorityScore": "800000000099",
+      "coingeckoId": "osmosis"
     },
     "KTJ9iZ/eNN42V2hhzs6Nlgb8zzdJmlBZZvKfCc4GiAw=": {
       "description": "A clan of 11y bad kids crafting chaos on the Cosmos eco. One bad memecoin to rule them all  $BADKID. Airdropped to Badkids NFT holders and $STARS stakers. It's so bad, your wallet's throwing a tantrum for it.",
@@ -756,7 +758,6 @@
       "penumbraAssetId": {
         "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
       },
-      "coingecko_id": "penumbra",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg",
@@ -765,7 +766,8 @@
           }
         }
       ],
-      "priorityScore": "999999999999"
+      "priorityScore": "999999999999",
+      "coingeckoId": "penumbra"
     },
     "LdexCcIS7h5jbSjieMV+MoC2IB1XmuKxzNNeRgq4QAQ=": {
       "description": "An alloy of SOL asset variants on Osmosis.",
@@ -785,7 +787,6 @@
       "penumbraAssetId": {
         "inner": "LdexCcIS7h5jbSjieMV+MoC2IB1XmuKxzNNeRgq4QAQ="
       },
-      "coingecko_id": "osmosis-allsol",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol_circle.png",
@@ -815,7 +816,8 @@
           }
         }
       ],
-      "priorityScore": "600000000000"
+      "priorityScore": "600000000000",
+      "coingeckoId": "osmosis-allsol"
     },
     "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE=": {
       "description": "Levana Well-funded Perps is a protocol for perpetual swaps, which are leveraged trading contracts.",
@@ -835,7 +837,6 @@
       "penumbraAssetId": {
         "inner": "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE="
       },
-      "coingecko_id": "levana-protocol",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/levana.png",
@@ -844,7 +845,8 @@
             "primaryColorHex": "#4c146c"
           }
         }
-      ]
+      ],
+      "coingeckoId": "levana-protocol"
     },
     "McCafoNb60lBtL1I77ADhx0GII9EHH8iCqmpGro3Pgk=": {
       "description": "An alloy of PEPE asset variants on Osmosis.",
@@ -864,7 +866,6 @@
       "penumbraAssetId": {
         "inner": "McCafoNb60lBtL1I77ADhx0GII9EHH8iCqmpGro3Pgk="
       },
-      "coingecko_id": "osmosis-allpepe",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.png",
@@ -880,7 +881,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "coingeckoId": "osmosis-allpepe"
     },
     "Md6xXujgk0jvdUPhlf/05wvTeXDEh8X/bDurrVJw2gU=": {
       "description": "Banana Vault Token - Peelworks Factory II",
@@ -1090,7 +1092,6 @@
       "penumbraAssetId": {
         "inner": "QArMRIpyiMTawMktm5j53HfLNMrI8TIBQ2wqyCfgtQY="
       },
-      "coingecko_id": "dydx",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
@@ -1106,7 +1107,8 @@
           }
         }
       ],
-      "priorityScore": "600000000000"
+      "priorityScore": "600000000000",
+      "coingeckoId": "dydx"
     },
     "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA=": {
       "description": "An alloy of BTC asset variants on Osmosis.",
@@ -1126,7 +1128,6 @@
       "penumbraAssetId": {
         "inner": "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA="
       },
-      "coingecko_id": "osmosis-allbtc",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/bitcoin/images/btc.png",
@@ -1143,7 +1144,8 @@
           }
         }
       ],
-      "priorityScore": "600000000000"
+      "priorityScore": "600000000000",
+      "coingeckoId": "osmosis-allbtc"
     },
     "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE=": {
       "description": "An alloy of OP asset variants on Osmosis.",
@@ -1163,7 +1165,6 @@
       "penumbraAssetId": {
         "inner": "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE="
       },
-      "coingecko_id": "osmosis-allop",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/optimism/images/op.png",
@@ -1180,7 +1181,8 @@
           }
         }
       ],
-      "priorityScore": "500000000000"
+      "priorityScore": "500000000000",
+      "coingeckoId": "osmosis-allop"
     },
     "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE=": {
       "description": "An alloy of DOT asset variants on Osmosis.",
@@ -1200,7 +1202,6 @@
       "penumbraAssetId": {
         "inner": "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE="
       },
-      "coingecko_id": "osmosis-alldot",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.png",
@@ -1224,7 +1225,8 @@
             "primaryColorHex": "#e4047c"
           }
         }
-      ]
+      ],
+      "coingeckoId": "osmosis-alldot"
     },
     "SChNnza9qDQMNGqwSoQMzB2x2M5nmEBtST1EoSy29gM=": {
       "description": "An alloy of UNI asset variants on Osmosis.",
@@ -1244,7 +1246,6 @@
       "penumbraAssetId": {
         "inner": "SChNnza9qDQMNGqwSoQMzB2x2M5nmEBtST1EoSy29gM="
       },
-      "coingecko_id": "uniswap",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg",
@@ -1252,7 +1253,8 @@
             "primaryColorHex": "#fc047c"
           }
         }
-      ]
+      ],
+      "coingeckoId": "uniswap"
     },
     "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI=": {
       "description": "TRONIX is the mainnet native token of the TRON Protocol issued by TRON DAO, known as TRX.",
@@ -1272,7 +1274,6 @@
       "penumbraAssetId": {
         "inner": "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI="
       },
-      "coingecko_id": "tron",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tron/images/trx.png",
@@ -1282,7 +1283,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "coingeckoId": "tron"
     },
     "U3U0P+fV2U5EqU0+kgq7qd+sjCbVhGeB6F8ix421WAc=": {
       "description": "Memecoin for The International Brane Wave",
@@ -1325,7 +1327,6 @@
       "penumbraAssetId": {
         "inner": "UWEI0NC7o/duH5gtCnzeEYgzMHsDwM1My5TogrU8Hw8="
       },
-      "coingecko_id": "wrapped-bitcoin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png",
@@ -1335,7 +1336,8 @@
           }
         }
       ],
-      "priorityScore": "600000000000"
+      "priorityScore": "600000000000",
+      "coingeckoId": "wrapped-bitcoin"
     },
     "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE=": {
       "description": "Celestia is a modular blockchain network focused on data availability, allowing developers to deploy their own customizable blockchains with ease.",
@@ -1355,7 +1357,6 @@
       "penumbraAssetId": {
         "inner": "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE="
       },
-      "coingecko_id": "celestia",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png",
@@ -1365,7 +1366,8 @@
           }
         }
       ],
-      "priorityScore": "800000000097"
+      "priorityScore": "800000000097",
+      "coingeckoId": "celestia"
     },
     "V572bV9yiK9nJWMM9/P5mwCeiGfT4JbMy6j2RUi93g4=": {
       "description": "Fractionalized Bad Kids",
@@ -1439,7 +1441,6 @@
       "penumbraAssetId": {
         "inner": "WdHeHDmklWKxFf0g86MiYy6Mt6lUQza5g+NfNuK2oAE="
       },
-      "coingecko_id": "collateralized-debt-token",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CDT.svg",
@@ -1447,7 +1448,8 @@
             "primaryColorHex": "#5a9ce2"
           }
         }
-      ]
+      ],
+      "coingeckoId": "collateralized-debt-token"
     },
     "ZAf0vwfQdMjLyJH6OIQrt6t2y6VU37rzXBm8XeF6dQY=": {
       "denomUnits": [
@@ -1473,7 +1475,8 @@
             "primaryColorHex": "#c1dafb"
           }
         }
-      ]
+      ],
+      "coingeckoId": "ibc-index"
     },
     "ZMvzNe0oaoRjhBIPf0KgUGH0EVaE6der5FavRNfMbgQ=": {
       "description": "Fractionalized DAONuts",
@@ -1520,7 +1523,6 @@
       "penumbraAssetId": {
         "inner": "ZpIbxFwvlU4udh9mutG/2hLBIpdNXhat3TCRbs1kbgI="
       },
-      "coingecko_id": "rootstock",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/rootstock/images/rbtc.png",
@@ -1529,7 +1531,8 @@
             "primaryColorHex": "#FF9931"
           }
         }
-      ]
+      ],
+      "coingeckoId": "rootstock"
     },
     "d2/yBdjkz//htrQwHYXVx3XN2QILdZoS5ickDAcRWgs=": {
       "description": "Beer Is Good for You!",
@@ -1576,7 +1579,6 @@
       "penumbraAssetId": {
         "inner": "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="
       },
-      "coingecko_id": "usd-coin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.png",
@@ -1587,7 +1589,8 @@
           }
         }
       ],
-      "priorityScore": "800000000100"
+      "priorityScore": "800000000100",
+      "coingeckoId": "usd-coin"
     },
     "f/IAN065Ou6XwYdWe3m3SgiLFDYOAY47vphr9y+bowQ=": {
       "description": "Fractionalized Pixel Wizards",
@@ -1661,7 +1664,6 @@
       "penumbraAssetId": {
         "inner": "g4mop84SBeLOfjiHNEpnMKUpP2SY7BAoCXfCxY7wsgI="
       },
-      "coingecko_id": "monerium-eur-money",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eure.png",
@@ -1671,7 +1673,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "coingeckoId": "monerium-eur-money"
     },
     "gO4qR7mYarC4AAPCck7XHhujNBUWGsaxRW6U3JkrSgM=": {
       "description": "Rapture insurance is the first ever P2P insurance platform on $OSMO. Get rewarded to take care of peoples loved ones after the Rapture.",
@@ -1718,7 +1721,6 @@
       "penumbraAssetId": {
         "inner": "h4c+OAGonGVREC9ZaYzLbrpnSkUpl0JhHqHwBogeXw0="
       },
-      "coingecko_id": "osmosis-alllink",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/link.png",
@@ -1735,7 +1737,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "coingeckoId": "osmosis-alllink"
     },
     "hOnMqQbpe5Abe7vvfHYda77fg3Zit88fatqDfPO1bgQ=": {
       "description": "An alloy of SHIB asset variants on Osmosis.",
@@ -1755,7 +1758,6 @@
       "penumbraAssetId": {
         "inner": "hOnMqQbpe5Abe7vvfHYda77fg3Zit88fatqDfPO1bgQ="
       },
-      "coingecko_id": "osmosis-allshib",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/shib.svg",
@@ -1772,7 +1774,8 @@
           }
         }
       ],
-      "priorityScore": "500000000000"
+      "priorityScore": "500000000000",
+      "coingeckoId": "osmosis-allshib"
     },
     "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs=": {
       "description": "ERIS liquid staked OSMO",
@@ -1792,7 +1795,6 @@
       "penumbraAssetId": {
         "inner": "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs="
       },
-      "coingecko_id": "eris-amplified-osmo",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/amposmo.png",
@@ -1800,7 +1802,8 @@
             "primaryColorHex": "#cfdbf1"
           }
         }
-      ]
+      ],
+      "coingeckoId": "eris-amplified-osmo"
     },
     "inEy5XNQBP5u7oz7eUcRLhuuBWiC1FTnJEfBhXIX7A8=": {
       "description": "BackBone Labs Liquid Staked OSMO",
@@ -1820,7 +1823,6 @@
       "penumbraAssetId": {
         "inner": "inEy5XNQBP5u7oz7eUcRLhuuBWiC1FTnJEfBhXIX7A8="
       },
-      "coingecko_id": "backbone-staked-osmo",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bOSMO.png",
@@ -1828,7 +1830,8 @@
             "primaryColorHex": "#c68db5"
           }
         }
-      ]
+      ],
+      "coingeckoId": "backbone-staked-osmo"
     },
     "k2flRuIwi8IAvyDasAL/9fjl8mGpPCPCMhYmsh8AlQQ=": {
       "description": "CosmoUSD",
@@ -1875,7 +1878,6 @@
       "penumbraAssetId": {
         "inner": "laTqmqV0r3PERHERkPSyNu7d697F4C8mupKyfsKnjAo="
       },
-      "coingecko_id": "avail",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/avail.eth.rt.png",
@@ -1891,7 +1893,8 @@
             "primaryColorHex": "#2B80D7"
           }
         }
-      ]
+      ],
+      "coingeckoId": "avail"
     },
     "n3badZGZ/y5sAyi3tnYYVuJX+squzic2GOVV9Fr1bBA=": {
       "description": "Fractionalized Rekt Bulls",
@@ -2023,7 +2026,6 @@
       "penumbraAssetId": {
         "inner": "qTadoyL6MJQ99tlXjmwjccuytSxSNByMLpVzZtVarQw="
       },
-      "coingecko_id": "membrane",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/MBRN.svg",
@@ -2031,7 +2033,8 @@
             "primaryColorHex": "#6ca0da"
           }
         }
-      ]
+      ],
+      "coingeckoId": "membrane"
     },
     "rNNsvEj1LBheBJ3R4rJg+gmG6YXVGA6xmHCFVy0CPgM=": {
       "description": "USDC supplied on Mars looped using Membrane by a vault",
@@ -2179,7 +2182,6 @@
       "penumbraAssetId": {
         "inner": "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0="
       },
-      "coingecko_id": "osmosis-allusdt",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
@@ -2203,7 +2205,8 @@
           }
         }
       ],
-      "priorityScore": "700000000000"
+      "priorityScore": "700000000000",
+      "coingeckoId": "osmosis-allusdt"
     },
     "vSCVmtndzw2C2RYuB2vcKWfkPVZRCP9GNN8MwB6QUAU=": {
       "description": "Cosmus Cartol always get rich",
@@ -2314,7 +2317,6 @@
       "penumbraAssetId": {
         "inner": "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4="
       },
-      "coingecko_id": "osmosis-alleth",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.png",
@@ -2331,7 +2333,8 @@
           }
         }
       ],
-      "priorityScore": "600000000000"
+      "priorityScore": "600000000000",
+      "coingeckoId": "osmosis-alleth"
     },
     "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk=": {
       "description": "ION is the second native token of Osmosis.",
@@ -2351,7 +2354,6 @@
       "penumbraAssetId": {
         "inner": "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk="
       },
-      "coingecko_id": "ion",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
@@ -2360,7 +2362,8 @@
             "primaryColorHex": "#4453c7"
           }
         }
-      ]
+      ],
+      "coingeckoId": "ion"
     },
     "zA08nu8Mf/TiJeyoWjCUYDaR0omur0KKsNhzGa2TowI=": {
       "description": "Ondo US Dollar Yield",
@@ -2380,7 +2383,6 @@
       "penumbraAssetId": {
         "inner": "zA08nu8Mf/TiJeyoWjCUYDaR0omur0KKsNhzGa2TowI="
       },
-      "coingecko_id": "ondo-us-dollar-yield",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/usdy.png",
@@ -2390,7 +2392,8 @@
           }
         }
       ],
-      "priorityScore": "800000000095"
+      "priorityScore": "800000000095",
+      "coingeckoId": "ondo-us-dollar-yield"
     },
     "za/OmxtGVAwvXWiizJSHIjT/PBzQ6Xh2lXtBbMv8UxE=": {
       "description": "Banana Vault Token - Banana Beach (🍹,🌴) II",

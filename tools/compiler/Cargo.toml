@@ -6,8 +6,10 @@ default-run = "penumbra-registry"
 
 [dependencies]
 # Commit dep until badges update to Metadata is shipped in a point release
-penumbra-asset = { git = "https://github.com/penumbra-zone/penumbra.git", rev = "871551badcd71f2bafd15f3dbb90ac54a6639449", package = "penumbra-sdk-asset" }
-penumbra-proto = { git = "https://github.com/penumbra-zone/penumbra.git", rev = "871551badcd71f2bafd15f3dbb90ac54a6639449", package = "penumbra-sdk-proto", default-features = false }
+# penumbra-asset = { git = "https://github.com/penumbra-zone/penumbra.git", branch = "main", package = "penumbra-sdk-asset" }
+# penumbra-proto = { git = "https://github.com/penumbra-zone/penumbra.git",  = "main", package = "penumbra-sdk-proto", default-features = false }
+penumbra-asset = { path = "/Users/vacekj/Programming/penumbra/crates/core/asset", package = "penumbra-sdk-asset" }
+penumbra-proto = { path = "/Users/vacekj/Programming/penumbra/crates/proto", package = "penumbra-sdk-proto", default-features = false }
 
 anyhow = "1.0.75"
 serde = { version = "1.0.188", features = ["derive"] }

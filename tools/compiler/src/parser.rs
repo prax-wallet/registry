@@ -25,11 +25,20 @@ type BadgeName = String;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
+pub struct IbcAsset {
+    pub base: String,
+    pub coingecko_id: Option<String>,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct ChainConfig {
     pub chain_id: String,
     pub validators: Vec<ValidatorInput>,
     pub ibc_connections: Vec<IbcInput>,
     pub native_assets: Vec<Metadata>,
+    #[serde(default)]
+    pub ibc_assets: Vec<IbcAsset>,
     pub canonical_numeraires: Vec<String>,
     pub priority_scores_by_base: HashMap<BaseDenom, u64>,
     pub badges: HashMap<BadgeName, AssetImage>,

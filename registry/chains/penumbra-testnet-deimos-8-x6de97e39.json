@@ -140,7 +140,8 @@
             "primaryColorHex": "#90cfde"
           }
         }
-      ]
+      ],
+      "coingeckoId": "ion"
     },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "description": "The native token of Penumbra",
@@ -294,7 +295,8 @@
             "primaryColorHex": "#6b0db7"
           }
         }
-      ]
+      ],
+      "coingeckoId": "osmosis"
     },
     "nDjzm+ldIrNMJha1anGMDVxpA5cLCPnUYQ1clmHF1gw=": {
       "denomUnits": [
