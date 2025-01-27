@@ -222,6 +222,7 @@
       "penumbraAssetId": {
         "inner": "4rBRD1He9RNXc+6+KOw1vCKG7ZsLWqOVL4NRWdbKDQc="
       },
+      "coingecko_id": "trx",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tron/images/trx.png",
@@ -314,6 +315,7 @@
       "penumbraAssetId": {
         "inner": "6zEm1cTHN1PsueimuNxC+6S/t6uDYRdhbitgkUV9IxE="
       },
+      "coingecko_id": "milktia",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.png",
@@ -396,6 +398,7 @@
       "penumbraAssetId": {
         "inner": "9sKDSVM9qU0G3ASpZted8wJB8fhdadAtzxZxE5tJMxI="
       },
+      "coingecko_id": "arbitrum",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/arbitrum/images/arb.png",
@@ -432,6 +435,7 @@
       "penumbraAssetId": {
         "inner": "AdlT67pUDx0wsIFBC4opbslYEOk6+QDIzWUcVtQlXgQ="
       },
+      "coingecko_id": "chain-key-bitcoin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/internetcomputer/images/ckbtc.png",
@@ -497,7 +501,8 @@
           }
         }
       ],
-      "priorityScore": "800000000098"
+      "priorityScore": "800000000098",
+      "coingecko_id": "cosmos"
     },
     "BK/Hz826s94tKv7AxSPTGqojgzTnZSsZjpUTYupkZws=": {
       "description": "An alloy of TON asset variants on Osmosis.",
@@ -517,6 +522,7 @@
       "penumbraAssetId": {
         "inner": "BK/Hz826s94tKv7AxSPTGqojgzTnZSsZjpUTYupkZws="
       },
+      "coingecko_id": "the-open-network",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ton/images/ton.png",
@@ -689,6 +695,7 @@
       "penumbraAssetId": {
         "inner": "KSOgqHs6JCHxZcyFPb9zqb2vtdoNlIVktgWcsCF8RAc="
       },
+      "coingecko_id": "osmosis",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
@@ -749,6 +756,7 @@
       "penumbraAssetId": {
         "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
       },
+      "coingecko_id": "penumbra",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg",
@@ -777,6 +785,7 @@
       "penumbraAssetId": {
         "inner": "LdexCcIS7h5jbSjieMV+MoC2IB1XmuKxzNNeRgq4QAQ="
       },
+      "coingecko_id": "osmosis-allsol",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol_circle.png",
@@ -826,6 +835,7 @@
       "penumbraAssetId": {
         "inner": "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE="
       },
+      "coingecko_id": "levana-protocol",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/levana.png",
@@ -854,6 +864,7 @@
       "penumbraAssetId": {
         "inner": "McCafoNb60lBtL1I77ADhx0GII9EHH8iCqmpGro3Pgk="
       },
+      "coingecko_id": "osmosis-allpepe",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.png",
@@ -1079,6 +1090,7 @@
       "penumbraAssetId": {
         "inner": "QArMRIpyiMTawMktm5j53HfLNMrI8TIBQ2wqyCfgtQY="
       },
+      "coingecko_id": "dydx",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
@@ -1114,6 +1126,7 @@
       "penumbraAssetId": {
         "inner": "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA="
       },
+      "coingecko_id": "osmosis-allbtc",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/bitcoin/images/btc.png",
@@ -1150,6 +1163,7 @@
       "penumbraAssetId": {
         "inner": "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE="
       },
+      "coingecko_id": "osmosis-allop",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/optimism/images/op.png",
@@ -1186,6 +1200,7 @@
       "penumbraAssetId": {
         "inner": "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE="
       },
+      "coingecko_id": "osmosis-alldot",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.png",
@@ -1229,6 +1244,7 @@
       "penumbraAssetId": {
         "inner": "SChNnza9qDQMNGqwSoQMzB2x2M5nmEBtST1EoSy29gM="
       },
+      "coingecko_id": "uniswap",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg",
@@ -1256,6 +1272,7 @@
       "penumbraAssetId": {
         "inner": "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI="
       },
+      "coingecko_id": "tron",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tron/images/trx.png",
@@ -1308,6 +1325,7 @@
       "penumbraAssetId": {
         "inner": "UWEI0NC7o/duH5gtCnzeEYgzMHsDwM1My5TogrU8Hw8="
       },
+      "coingecko_id": "wrapped-bitcoin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png",
@@ -1337,6 +1355,7 @@
       "penumbraAssetId": {
         "inner": "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE="
       },
+      "coingecko_id": "celestia",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png",
@@ -1420,6 +1439,7 @@
       "penumbraAssetId": {
         "inner": "WdHeHDmklWKxFf0g86MiYy6Mt6lUQza5g+NfNuK2oAE="
       },
+      "coingecko_id": "collateralized-debt-token",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CDT.svg",
@@ -1500,6 +1520,7 @@
       "penumbraAssetId": {
         "inner": "ZpIbxFwvlU4udh9mutG/2hLBIpdNXhat3TCRbs1kbgI="
       },
+      "coingecko_id": "rootstock",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/rootstock/images/rbtc.png",
@@ -1555,6 +1576,7 @@
       "penumbraAssetId": {
         "inner": "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs="
       },
+      "coingecko_id": "usd-coin",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.png",
@@ -1639,6 +1661,7 @@
       "penumbraAssetId": {
         "inner": "g4mop84SBeLOfjiHNEpnMKUpP2SY7BAoCXfCxY7wsgI="
       },
+      "coingecko_id": "monerium-eur-money",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eure.png",
@@ -1695,6 +1718,7 @@
       "penumbraAssetId": {
         "inner": "h4c+OAGonGVREC9ZaYzLbrpnSkUpl0JhHqHwBogeXw0="
       },
+      "coingecko_id": "osmosis-alllink",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/link.png",
@@ -1731,6 +1755,7 @@
       "penumbraAssetId": {
         "inner": "hOnMqQbpe5Abe7vvfHYda77fg3Zit88fatqDfPO1bgQ="
       },
+      "coingecko_id": "osmosis-allshib",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/shib.svg",
@@ -1767,6 +1792,7 @@
       "penumbraAssetId": {
         "inner": "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs="
       },
+      "coingecko_id": "eris-amplified-osmo",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/amposmo.png",
@@ -1794,6 +1820,7 @@
       "penumbraAssetId": {
         "inner": "inEy5XNQBP5u7oz7eUcRLhuuBWiC1FTnJEfBhXIX7A8="
       },
+      "coingecko_id": "backbone-staked-osmo",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bOSMO.png",
@@ -1848,6 +1875,7 @@
       "penumbraAssetId": {
         "inner": "laTqmqV0r3PERHERkPSyNu7d697F4C8mupKyfsKnjAo="
       },
+      "coingecko_id": "avail",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/avail.eth.rt.png",
@@ -1995,6 +2023,7 @@
       "penumbraAssetId": {
         "inner": "qTadoyL6MJQ99tlXjmwjccuytSxSNByMLpVzZtVarQw="
       },
+      "coingecko_id": "membrane",
       "images": [
         {
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/MBRN.svg",
@@ -2150,6 +2179,7 @@
       "penumbraAssetId": {
         "inner": "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0="
       },
+      "coingecko_id": "osmosis-allusdt",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
@@ -2284,6 +2314,7 @@
       "penumbraAssetId": {
         "inner": "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4="
       },
+      "coingecko_id": "osmosis-alleth",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.png",
@@ -2320,6 +2351,7 @@
       "penumbraAssetId": {
         "inner": "xNdg/Pc2CvrtawUX41EBLTlgj83RTenRJaBFXxsSTwk="
       },
+      "coingecko_id": "ion",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ion.png",
@@ -2348,6 +2380,7 @@
       "penumbraAssetId": {
         "inner": "zA08nu8Mf/TiJeyoWjCUYDaR0omur0KKsNhzGa2TowI="
       },
+      "coingecko_id": "ondo-us-dollar-yield",
       "images": [
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/usdy.png",
