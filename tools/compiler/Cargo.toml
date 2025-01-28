@@ -5,10 +5,8 @@ edition = "2021"
 default-run = "penumbra-registry"
 
 [dependencies]
-# Commit dep until badges update to Metadata is shipped in a point release
-penumbra-asset = { git = "https://github.com/penumbra-zone/penumbra.git", rev = "37f604fcf24653e5777d9a8d4bddb468e889560a", package = "penumbra-asset" }
-penumbra-proto = { git = "https://github.com/penumbra-zone/penumbra.git", rev = "37f604fcf24653e5777d9a8d4bddb468e889560a", package = "penumbra-proto", default-features = false }
-
+penumbra-proto = { git = "https://github.com/penumbra-zone/penumbra.git", rev = "8463d632fd12257d7c0a7df76587cef60eb01615", package = "penumbra-sdk-proto", default-features = false }
+penumbra-asset = { git = "https://github.com/penumbra-zone/penumbra.git", rev = "8463d632fd12257d7c0a7df76587cef60eb01615", package = "penumbra-sdk-asset" }
 anyhow = "1.0.75"
 serde = { version = "1.0.188", features = ["derive"] }
 serde_json = { version = "1.0.107", features = ["preserve_order", "raw_value"] }

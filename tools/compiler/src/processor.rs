@@ -289,6 +289,20 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
         }
     }
 
+    // add coingecko_id if available
+    for metadata in &mut all_metadata {
+        if let Some(coingecko_id) = chain_config
+            .ibc_assets
+            .iter()
+            .find(|asset| asset.base.eq(&metadata.base_denom().denom))
+            .and_then(|asset| asset.coingecko_id.clone())
+        {
+            let mut pb_metadata: pb::Metadata = metadata.clone().into();
+            pb_metadata.coingecko_id = coingecko_id;
+            *metadata = Metadata::try_from(pb_metadata)?;
+        }
+    }
+
     // add badges if available
     for metadata in &mut all_metadata {
         if let Some(badges) = chain_config

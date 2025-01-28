@@ -93,6 +93,7 @@
       "symbol": "UM",
       "name": "Penumbra",
       "description": "The native token of Penumbra",
+      "coingeckoId": "penumbra",
       "penumbraAssetId": {
         "inner": "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA="
       },
@@ -101,6 +102,140 @@
           "svg": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/um.svg"
         }
       ]
+    }
+  ],
+  "ibcAssets": [
+    {
+      "base": "transfer/channel-4/factory/osmo14mafhhp337yjj2aujplawz0tks6jd2lel4hkwz4agyzhvvztzaqsqzjq8x/alloyed/allTRX",
+      "coingeckoId": "trx"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA",
+      "coingeckoId": "milktia"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1p7x454ex08s4f9ztmm7wfv7lvtgdkfztj2u7v7fezfcauy85q35qmqrdpk/alloyed/allARB",
+      "coingeckoId": "arbitrum"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo10c4y9csfs8q7mtvfg4p9gd8d0acx0hpc2mte9xqzthd7rd3348tsfhaesm/sICP-icrc-ckBTC",
+      "coingeckoId": "chain-key-bitcoin"
+    },
+    {
+      "base": "transfer/channel-0/uatom",
+      "coingeckoId": "cosmos"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo12lnwf54yd30p6amzaged2atln8k0l32n7ncxf04ctg7u7ymnsy7qkqgsw4/alloyed/allTON",
+      "coingeckoId": "the-open-network"
+    },
+    {
+      "base": "transfer/channel-4/uosmo",
+      "coingeckoId": "osmosis"
+    },
+    {
+      "base": "upenumbra",
+      "coingeckoId": "penumbra"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1n3n75av8awcnw4jl62n3l48e6e4sxqmaf97w5ua6ddu4s475q5qq9udvx4/alloyed/allSOL",
+      "coingeckoId": "osmosis-allsol"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1mlng7pz4pnyxtpq0akfwall37czyk9lukaucsrn30ameplhhshtqdvfm5c/ulvn",
+      "coingeckoId": "levana-protocol"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1nnlxegt0scm9qkzys9c874t0ntapv4epfjy2w49c0xdrp3dr0v4ssmelzx/alloyed/allPEPE",
+      "coingeckoId": "osmosis-allpepe"
+    },
+    {
+      "base": "transfer/channel-1/adydx",
+      "coingeckoId": "dydx"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC",
+      "coingeckoId": "osmosis-allbtc"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1nufyzqlm8qhu2w7lm0l4rrax0ec8rsk69mga4tel8eare7c7ljaqpk2lyg/alloyed/allOP",
+      "coingeckoId": "osmosis-allop"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1r53fx9fvcdzncrs7zkn4gw5vfelx5gk8k5wc6wqha2jpkh992rusr5tk02/alloyed/allDOT",
+      "coingeckoId": "osmosis-alldot"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1eqjda4pc6e09jtxzxggf6jl3jye2yn453ja58we5gxwzmf5ah28qvlnaz8/alloyed/allUNI",
+      "coingeckoId": "uniswap"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/TRX.rt",
+      "coingeckoId": "tron"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc",
+      "coingeckoId": "wrapped-bitcoin"
+    },
+    {
+      "base": "transfer/channel-3/utia",
+      "coingeckoId": "celestia"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/ucdt",
+      "coingeckoId": "collateralized-debt-token"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/BTC.rt",
+      "coingeckoId": "rootstock"
+    },
+    {
+      "base": "transfer/channel-2/uusdc",
+      "coingeckoId": "usd-coin"
+    },
+    {
+      "base": "transfer/channel-2/ueure",
+      "coingeckoId": "monerium-eur-money"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo18zdw5yvs6gfp95rp74qqwug9yduw2fyr8kplk2xgs726s9axc5usa2vpgw/alloyed/allLINK",
+      "coingeckoId": "osmosis-alllink"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1f588gk9dazpsueevdl2w6wfkmfmhg5gdvg2uerdlzl0atkasqhsq59qc6a/alloyed/allSHIB",
+      "coingeckoId": "osmosis-allshib"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1dv8wz09tckslr2wy5z86r46dxvegylhpt97r9yd6qc3kyc6tv42qa89dr9/ampOSMO",
+      "coingeckoId": "eris-amplified-osmo"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1s3l0lcqc7tu0vpj6wdjz9wqpxv8nk6eraevje4fuwkyjnwuy82qsx3lduv/boneOsmo",
+      "coingeckoId": "backbone-staked-osmo"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/AVAIL.rt",
+      "coingeckoId": "avail"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1s794h9rxggytja3a4pmwul53u98k06zy2qtrdvjnfuxruh7s8yjs6cyxgd/umbrn",
+      "coingeckoId": "membrane"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
+      "coingeckoId": "osmosis-allusdt"
+    },
+    {
+      "base": "transfer/channel-4/factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH",
+      "coingeckoId": "osmosis-alleth"
+    },
+    {
+      "base": "transfer/channel-4/uion",
+      "coingeckoId": "ion"
+    },
+    {
+      "base": "transfer/channel-2/ausdy",
+      "coingeckoId": "ondo-us-dollar-yield"
     }
   ],
   "canonicalNumeraires": [
@@ -134,5 +269,3 @@
   },
   "badgesByBase": {}
 }
-
-
