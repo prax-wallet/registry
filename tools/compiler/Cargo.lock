@@ -795,6 +795,7 @@ dependencies = [
 [[package]]
 name = "decaf377-fmd"
 version = "1.0.0"
+source = "git+https://github.com/penumbra-zone/penumbra.git?rev=8463d632fd12257d7c0a7df76587cef60eb01615#8463d632fd12257d7c0a7df76587cef60eb01615"
 dependencies = [
  "ark-ff",
  "ark-serialize",
@@ -2499,6 +2500,7 @@ dependencies = [
 [[package]]
 name = "penumbra-sdk-asset"
 version = "1.0.0"
+source = "git+https://github.com/penumbra-zone/penumbra.git?rev=8463d632fd12257d7c0a7df76587cef60eb01615#8463d632fd12257d7c0a7df76587cef60eb01615"
 dependencies = [
  "anyhow",
  "ark-ff",
@@ -2537,6 +2539,7 @@ dependencies = [
 [[package]]
 name = "penumbra-sdk-num"
 version = "1.0.0"
+source = "git+https://github.com/penumbra-zone/penumbra.git?rev=8463d632fd12257d7c0a7df76587cef60eb01615#8463d632fd12257d7c0a7df76587cef60eb01615"
 dependencies = [
  "anyhow",
  "ark-ff",
@@ -2572,6 +2575,7 @@ dependencies = [
 [[package]]
 name = "penumbra-sdk-proto"
 version = "1.0.0"
+source = "git+https://github.com/penumbra-zone/penumbra.git?rev=8463d632fd12257d7c0a7df76587cef60eb01615#8463d632fd12257d7c0a7df76587cef60eb01615"
 dependencies = [
  "anyhow",
  "async-trait",
