@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.1.1
+
+### Patch Changes
+
+- adds coingecko ids to assets
+
 ## 12.1.0
 
 ### Minor Changes
