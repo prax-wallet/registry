@@ -20,8 +20,8 @@ importers:
         specifier: ^9.13.0
         version: 9.13.0
       '@penumbra-zone/protobuf':
-        specifier: ^6.3.0
-        version: 6.3.0(@bufbuild/protobuf@1.10.0)
+        specifier: ^7.1.0
+        version: 7.1.0(@bufbuild/protobuf@1.10.0)
       eslint:
         specifier: ^9.13.0
         version: 9.13.0
@@ -809,10 +809,10 @@ packages:
       }
     engines: { node: '>= 8' }
 
-  '@penumbra-zone/protobuf@6.3.0':
+  '@penumbra-zone/protobuf@7.1.0':
     resolution:
       {
-        integrity: sha512-ZaApZtsXrX3GeAJEdMuKPPqnvxp74qFmL5ugOz7srP78Y6udZmLj6Gzo16bIL4JflXFYq99n+kB2jtWidPWSyQ==,
+        integrity: sha512-pjqghT4MICesZDQhF0O3UAYQka7uj1rSzINh0S1pEE8d7jevy7/HiM9o+jMYfzySfOLyV0qEhbcV8ttHWxOdMQ==,
       }
     peerDependencies:
       '@bufbuild/protobuf': ^1.10.0
@@ -3642,7 +3642,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@penumbra-zone/protobuf@6.3.0(@bufbuild/protobuf@1.10.0)':
+  '@penumbra-zone/protobuf@7.1.0(@bufbuild/protobuf@1.10.0)':
     dependencies:
       '@bufbuild/protobuf': 1.10.0
 

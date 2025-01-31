@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.1.2
+
+### Patch Changes
+
+- fix protobuf pkg version
+
 ## 12.1.1
 
 ### Patch Changes
