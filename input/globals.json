@@ -26,15 +26,6 @@
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/silent-validator.png"
         }
       ]
-    },
-    {
-      "name": "Binary Builders",
-      "url": "https://penumbra.stakewith.binary.builders",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/binary-builders.png"
-        }
-      ]
     }
   ],
   "frontends": [
