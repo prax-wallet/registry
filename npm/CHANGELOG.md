@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.2.0
+
+### Minor Changes
+
+- 47cae42: update testnet channels and rpc providers list
+
 ## 12.1.3
 
 ### Patch Changes
