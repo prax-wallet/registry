@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.1.3
+
+### Patch Changes
+
+- 40cd591: rpc: remove binary builders from registry
+
 ## 12.1.2
 
 ### Patch Changes
