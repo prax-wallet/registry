@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.3.0
+
+### Minor Changes
+
+- f1feced: update testnet channels and rpc providers list
+
 ## 12.2.0
 
 ### Minor Changes
