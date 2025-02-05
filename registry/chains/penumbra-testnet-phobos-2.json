@@ -16,8 +16,8 @@
     {
       "addressPrefix": "noble",
       "chainId": "grand-1",
-      "channelId": "channel-28",
-      "counterpartyChannelId": "channel-289",
+      "channelId": "channel-37",
+      "counterpartyChannelId": "channel-313",
       "displayName": "Noble",
       "images": [
         {
@@ -37,24 +37,34 @@
     }
   ],
   "assetById": {
-    "0hAk0K57Yu2IEaJoiiYk+aUNDO1ozN3UDHPiuDOZSgo=": {
-      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
+    "/DEKwGJvF1Y64y4yvAXOpQWcRICh9fDvfGeaouK5jg4=": {
+      "description": "USD Coin",
       "denomUnits": [
         {
-          "denom": "transfer/channel-28/ulove"
+          "denom": "transfer/channel-37/uusdc"
         },
         {
-          "denom": "transfer/channel-28/love",
+          "denom": "transfer/channel-37/usdc",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-28/ulove",
-      "display": "transfer/channel-28/love",
-      "name": "Love",
-      "symbol": "LOVE",
+      "base": "transfer/channel-37/uusdc",
+      "display": "transfer/channel-37/usdc",
+      "name": "USD Coin",
+      "symbol": "USDC",
       "penumbraAssetId": {
-        "inner": "0hAk0K57Yu2IEaJoiiYk+aUNDO1ozN3UDHPiuDOZSgo="
-      }
+        "inner": "/DEKwGJvF1Y64y4yvAXOpQWcRICh9fDvfGeaouK5jg4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg",
+          "theme": {
+            "primaryColorHex": "#2775CA",
+            "circle": true
+          }
+        }
+      ]
     },
     "3ErXVnp08wv5lSOfwIi2MjWSTKUa7NQI94Rvh3ua1gU=": {
       "denomUnits": [
@@ -81,6 +91,34 @@
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png",
           "theme": {
             "primaryColorHex": "#1d1e1d"
+          }
+        }
+      ]
+    },
+    "45ebKrg3UZ1ax8TH8aNKA+kgZF7KlUhi+FSPyz2V3A4=": {
+      "description": "Ondo US Dollar Yield",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-37/ausdy"
+        },
+        {
+          "denom": "transfer/channel-37/usdy",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-37/ausdy",
+      "display": "transfer/channel-37/usdy",
+      "name": "Ondo US Dollar Yield",
+      "symbol": "USDY",
+      "penumbraAssetId": {
+        "inner": "45ebKrg3UZ1ax8TH8aNKA+kgZF7KlUhi+FSPyz2V3A4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg",
+          "theme": {
+            "primaryColorHex": "#142b5b"
           }
         }
       ]
@@ -261,6 +299,25 @@
       ],
       "priorityScore": "999999999999"
     },
+    "Pu2BHCnQ1Ic8JJwpsro6CSkTdUexz4rFcEL2E3lCNQk=": {
+      "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-37/ulove"
+        },
+        {
+          "denom": "transfer/channel-37/love",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-37/ulove",
+      "display": "transfer/channel-37/love",
+      "name": "Love",
+      "symbol": "LOVE",
+      "penumbraAssetId": {
+        "inner": "Pu2BHCnQ1Ic8JJwpsro6CSkTdUexz4rFcEL2E3lCNQk="
+      }
+    },
     "QgWMtbtgehzQ+hJJHmr1TOpLlqAE1xqrU4gqSKrIlwo=": {
       "denomUnits": [
         {
@@ -289,6 +346,25 @@
       ],
       "coingeckoId": "ion"
     },
+    "WtziAvD/jyAd+Jfjm0DBx5aXNkXfK3mebyf8m4yy4gY=": {
+      "description": "The controlled staking asset for Noble Chain",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-37/ustake"
+        },
+        {
+          "denom": "transfer/channel-37/stake",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-37/ustake",
+      "display": "transfer/channel-37/stake",
+      "name": "Stake",
+      "symbol": "STAKE",
+      "penumbraAssetId": {
+        "inner": "WtziAvD/jyAd+Jfjm0DBx5aXNkXfK3mebyf8m4yy4gY="
+      }
+    },
     "dwcobY1Emez10NWXoQsgNDfMO8esIkw4sDob0xVe1A8=": {
       "description": "USD Coin",
       "denomUnits": [
@@ -306,35 +382,6 @@
       "symbol": "USDC",
       "penumbraAssetId": {
         "inner": "dwcobY1Emez10NWXoQsgNDfMO8esIkw4sDob0xVe1A8="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg",
-          "theme": {
-            "primaryColorHex": "#2775CA",
-            "circle": true
-          }
-        }
-      ]
-    },
-    "hiATS5ZxgGDUwaOj+80T1D6o2W5EwmysqgDLb4XTJA8=": {
-      "description": "USD Coin",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-28/uusdc"
-        },
-        {
-          "denom": "transfer/channel-28/usdc",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-28/uusdc",
-      "display": "transfer/channel-28/usdc",
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "penumbraAssetId": {
-        "inner": "hiATS5ZxgGDUwaOj+80T1D6o2W5EwmysqgDLb4XTJA8="
       },
       "images": [
         {
@@ -484,34 +531,6 @@
         "inner": "pmpygqUf4DL+z849rGPpudpdK/+FAv8qQ01U2C73kAw="
       }
     },
-    "qxscGm9hX6RwRx2eMJJjDgjuNtHJ5crsSa2FB6E+MwA=": {
-      "description": "Ondo US Dollar Yield",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-28/ausdy"
-        },
-        {
-          "denom": "transfer/channel-28/usdy",
-          "exponent": 18
-        }
-      ],
-      "base": "transfer/channel-28/ausdy",
-      "display": "transfer/channel-28/usdy",
-      "name": "Ondo US Dollar Yield",
-      "symbol": "USDY",
-      "penumbraAssetId": {
-        "inner": "qxscGm9hX6RwRx2eMJJjDgjuNtHJ5crsSa2FB6E+MwA="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdy.svg",
-          "theme": {
-            "primaryColorHex": "#142b5b"
-          }
-        }
-      ]
-    },
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=": {
       "denomUnits": [
         {
@@ -577,30 +596,10 @@
       "penumbraAssetId": {
         "inner": "ypUT1AOtjfwMOKMATACoD9RSvi8jY/YnYGi46CZ/6Q8="
       }
-    },
-    "zis2zThU1h0IGuHHWXdqXaNcMFwTs4n6ceAfMBcFgQU=": {
-      "description": "The controlled staking asset for Noble Chain",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-28/ustake"
-        },
-        {
-          "denom": "transfer/channel-28/stake",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-28/ustake",
-      "display": "transfer/channel-28/stake",
-      "name": "Stake",
-      "symbol": "STAKE",
-      "penumbraAssetId": {
-        "inner": "zis2zThU1h0IGuHHWXdqXaNcMFwTs4n6ceAfMBcFgQU="
-      }
     }
   },
   "numeraires": [
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=",
-    "hiATS5ZxgGDUwaOj+80T1D6o2W5EwmysqgDLb4XTJA8=",
     "dwcobY1Emez10NWXoQsgNDfMO8esIkw4sDob0xVe1A8="
   ]
 }
