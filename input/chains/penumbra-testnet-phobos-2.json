@@ -4,8 +4,8 @@
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
-      "channelId": "channel-27",
-      "counterpartyChannelId": "channel-9836",
+      "channelId": "channel-34",
+      "counterpartyChannelId": "channel-10070",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
