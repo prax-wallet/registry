@@ -1,4 +1,4 @@
-use anyhow::anyhow;
+use anyhow::{anyhow, Context};
 use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
@@ -259,7 +259,8 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
             .join("assetlist.json");
 
         // Parse the local JSON into the AssetList struct
-        let data = fs::read_to_string(assetlist_path)?;
+        let data = fs::read_to_string(assetlist_path.clone()).context(
+            "failed to read cosmos asset info; did you remember to clone the repo with submodules enabled?")?;
         let asset_list: AssetList = serde_json::from_str(&data)?;
 
         for source_asset in asset_list.assets {
