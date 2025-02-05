@@ -4,8 +4,8 @@
     {
       "addressPrefix": "osmo",
       "chainId": "osmo-test-5",
-      "channelId": "channel-27",
-      "counterpartyChannelId": "channel-9836",
+      "channelId": "channel-34",
+      "counterpartyChannelId": "channel-10070",
       "displayName": "Osmosis",
       "images": [
         {
@@ -98,6 +98,35 @@
         "inner": "6KBVsPINa8gWSHhfH+kAFJC4afEJA3EtuB2HyCqJUws="
       }
     },
+    "7uMQrRBpSmITdxfs5FKsMxmV0VsDoD21y9Ao5nDQlQ0=": {
+      "description": "The native token of Osmosis",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-34/uosmo"
+        },
+        {
+          "denom": "transfer/channel-34/osmo",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-34/uosmo",
+      "display": "transfer/channel-34/osmo",
+      "name": "Osmosis Testnet",
+      "symbol": "OSMO",
+      "penumbraAssetId": {
+        "inner": "7uMQrRBpSmITdxfs5FKsMxmV0VsDoD21y9Ao5nDQlQ0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg",
+          "theme": {
+            "primaryColorHex": "#6b0db7"
+          }
+        }
+      ],
+      "coingeckoId": "osmosis"
+    },
     "Dfd6xgFCU9AKO1Ik+GHhunVNRSAApSrASdOUJIIWgA0=": {
       "description": "Ondo US Dollar Yield",
       "denomUnits": [
@@ -173,6 +202,33 @@
       ],
       "priorityScore": "900"
     },
+    "HbLk6ohhBpsDMbQsE7w6xp2kOx2ONziU0VfR5JLZMAI=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-34/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
+        },
+        {
+          "denom": "transfer/channel-34/willyz",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-34/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
+      "display": "transfer/channel-34/willyz",
+      "name": "Willyz",
+      "symbol": "WILLYZ",
+      "penumbraAssetId": {
+        "inner": "HbLk6ohhBpsDMbQsE7w6xp2kOx2ONziU0VfR5JLZMAI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg",
+          "theme": {
+            "primaryColorHex": "#e4bc82"
+          }
+        }
+      ]
+    },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "description": "The native token of Penumbra",
       "denomUnits": [
@@ -205,22 +261,22 @@
       ],
       "priorityScore": "999999999999"
     },
-    "LvLsttQzw6W+ylncrtIenaUsyN+RzxEWFfAte0pzTQQ=": {
+    "QgWMtbtgehzQ+hJJHmr1TOpLlqAE1xqrU4gqSKrIlwo=": {
       "denomUnits": [
         {
-          "denom": "transfer/channel-27/uion"
+          "denom": "transfer/channel-34/uion"
         },
         {
-          "denom": "transfer/channel-27/ion",
+          "denom": "transfer/channel-34/ion",
           "exponent": 6
         }
       ],
-      "base": "transfer/channel-27/uion",
-      "display": "transfer/channel-27/ion",
+      "base": "transfer/channel-34/uion",
+      "display": "transfer/channel-34/ion",
       "name": "Ion",
       "symbol": "ION",
       "penumbraAssetId": {
-        "inner": "LvLsttQzw6W+ylncrtIenaUsyN+RzxEWFfAte0pzTQQ="
+        "inner": "QgWMtbtgehzQ+hJJHmr1TOpLlqAE1xqrU4gqSKrIlwo="
       },
       "images": [
         {
@@ -232,33 +288,6 @@
         }
       ],
       "coingeckoId": "ion"
-    },
-    "P80w2iA/7oKcB/sgc/iGH/ioleWRe2bZfK76M4L1MAM=": {
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-27/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz"
-        },
-        {
-          "denom": "transfer/channel-27/willyz",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-27/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz",
-      "display": "transfer/channel-27/willyz",
-      "name": "Willyz",
-      "symbol": "WILLYZ",
-      "penumbraAssetId": {
-        "inner": "P80w2iA/7oKcB/sgc/iGH/ioleWRe2bZfK76M4L1MAM="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg",
-          "theme": {
-            "primaryColorHex": "#e4bc82"
-          }
-        }
-      ]
     },
     "dwcobY1Emez10NWXoQsgNDfMO8esIkw4sDob0xVe1A8=": {
       "description": "USD Coin",
@@ -482,35 +511,6 @@
           }
         }
       ]
-    },
-    "r6r5xiQvs+2TDSxEpnghztB/O+zUYs5iJOEDSYv6GQE=": {
-      "description": "The native token of Osmosis",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-27/uosmo"
-        },
-        {
-          "denom": "transfer/channel-27/osmo",
-          "exponent": 6
-        }
-      ],
-      "base": "transfer/channel-27/uosmo",
-      "display": "transfer/channel-27/osmo",
-      "name": "Osmosis Testnet",
-      "symbol": "OSMO",
-      "penumbraAssetId": {
-        "inner": "r6r5xiQvs+2TDSxEpnghztB/O+zUYs5iJOEDSYv6GQE="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg",
-          "theme": {
-            "primaryColorHex": "#6b0db7"
-          }
-        }
-      ],
-      "coingeckoId": "osmosis"
     },
     "reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=": {
       "denomUnits": [
