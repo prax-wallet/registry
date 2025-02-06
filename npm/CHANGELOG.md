@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.4.0
+
+### Minor Changes
+
+- bump registry and consume downstream deps
+
 ## 12.3.0
 
 ### Minor Changes
