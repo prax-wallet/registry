@@ -95,7 +95,7 @@
       "base": "transfer/channel-7/arb-wei",
       "display": "transfer/channel-7/arb",
       "name": "Arbitrum",
-      "symbol": "ARB",
+      "symbol": "axlARB",
       "penumbraAssetId": {
         "inner": "+CcJwejdvToU1FqwLLm9/InRANKjDoHbnsssdQ/s+gQ="
       },
@@ -394,7 +394,7 @@
       "base": "transfer/channel-7/pepe-wei",
       "display": "transfer/channel-7/pepe",
       "name": "Pepe",
-      "symbol": "PEPE",
+      "symbol": "axlPEPE",
       "penumbraAssetId": {
         "inner": "4S24boIE2iFGH9vme1ztzP/2HnNCij4BFV+v7XE+jgg="
       },
@@ -654,7 +654,7 @@
       "base": "transfer/channel-4/factory/osmo1p7x454ex08s4f9ztmm7wfv7lvtgdkfztj2u7v7fezfcauy85q35qmqrdpk/alloyed/allARB",
       "display": "transfer/channel-4/arb",
       "name": "Arbitrum",
-      "symbol": "ARB",
+      "symbol": "allARB",
       "penumbraAssetId": {
         "inner": "9sKDSVM9qU0G3ASpZted8wJB8fhdadAtzxZxE5tJMxI="
       },
@@ -691,7 +691,7 @@
       "base": "transfer/channel-7/uusdc",
       "display": "transfer/channel-7/usdc",
       "name": "USD Coin",
-      "symbol": "USDC",
+      "symbol": "axlUSDC",
       "penumbraAssetId": {
         "inner": "A/8PdbaWqFds9NiYzmAN75SehGpkLwr7tgoVmwaIVgg="
       },
@@ -1401,7 +1401,7 @@
       "base": "transfer/channel-4/factory/osmo1nnlxegt0scm9qkzys9c874t0ntapv4epfjy2w49c0xdrp3dr0v4ssmelzx/alloyed/allPEPE",
       "display": "transfer/channel-4/pepe",
       "name": "Pepe",
-      "symbol": "PEPE",
+      "symbol": "allPEPE",
       "penumbraAssetId": {
         "inner": "McCafoNb60lBtL1I77ADhx0GII9EHH8iCqmpGro3Pgk="
       },
@@ -1652,7 +1652,7 @@
       "base": "transfer/channel-7/base-weth-wei",
       "display": "transfer/channel-7/base-weth",
       "name": "Base axlETH",
-      "symbol": "axlETH",
+      "symbol": "axlETH.base",
       "penumbraAssetId": {
         "inner": "PjouKv626JSUImljc13/bCeQ7owkX/7mjErTF3P/bgw="
       },
@@ -1706,7 +1706,7 @@
       "base": "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC",
       "display": "transfer/channel-4/allBTC",
       "name": "Bitcoin",
-      "symbol": "BTC",
+      "symbol": "allBTC",
       "penumbraAssetId": {
         "inner": "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA="
       },
@@ -1769,7 +1769,7 @@
       "base": "transfer/channel-4/factory/osmo1nufyzqlm8qhu2w7lm0l4rrax0ec8rsk69mga4tel8eare7c7ljaqpk2lyg/alloyed/allOP",
       "display": "transfer/channel-4/op",
       "name": "Optimism",
-      "symbol": "OP",
+      "symbol": "allOP",
       "penumbraAssetId": {
         "inner": "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE="
       },
@@ -1806,7 +1806,7 @@
       "base": "transfer/channel-7/wbtc-satoshi",
       "display": "transfer/channel-7/wbtc",
       "name": "Wrapped Bitcoin",
-      "symbol": "WBTC",
+      "symbol": "axlWBTC",
       "penumbraAssetId": {
         "inner": "Rw5reO179530Znstv1X0FLCc4mVIXLR158Q1IcJmDg0="
       },
@@ -1834,7 +1834,7 @@
       "base": "transfer/channel-4/factory/osmo1r53fx9fvcdzncrs7zkn4gw5vfelx5gk8k5wc6wqha2jpkh992rusr5tk02/alloyed/allDOT",
       "display": "transfer/channel-4/dot",
       "name": "Polkadot",
-      "symbol": "DOT",
+      "symbol": "allDOT",
       "penumbraAssetId": {
         "inner": "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE="
       },
@@ -1878,7 +1878,7 @@
       "base": "transfer/channel-4/factory/osmo1eqjda4pc6e09jtxzxggf6jl3jye2yn453ja58we5gxwzmf5ah28qvlnaz8/alloyed/allUNI",
       "display": "transfer/channel-4/allUNI",
       "name": "Uniswap",
-      "symbol": "UNI",
+      "symbol": "allUNI",
       "penumbraAssetId": {
         "inner": "SChNnza9qDQMNGqwSoQMzB2x2M5nmEBtST1EoSy29gM="
       },
@@ -1987,7 +1987,7 @@
       "base": "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc",
       "display": "transfer/channel-4/wbtc",
       "name": "Wrapped Bitcoin",
-      "symbol": "WBTC",
+      "symbol": "osmoWBTC",
       "penumbraAssetId": {
         "inner": "UWEI0NC7o/duH5gtCnzeEYgzMHsDwM1My5TogrU8Hw8="
       },
@@ -2044,7 +2044,7 @@
       "base": "transfer/channel-7/polygon-uusdc",
       "display": "transfer/channel-7/polygon-usdc",
       "name": "USD Coin from Polygon",
-      "symbol": "USDC",
+      "symbol": "axlUSDC.polygon",
       "penumbraAssetId": {
         "inner": "UkxOwF0fEethJexuH0JcBiIphfjVUodI6rIWz2Qu7Q8="
       },
@@ -2210,7 +2210,7 @@
       "base": "transfer/channel-7/op-wei",
       "display": "transfer/channel-7/op",
       "name": "Optimism",
-      "symbol": "OP",
+      "symbol": "axlOP",
       "penumbraAssetId": {
         "inner": "WOyM4tESN7UFmMkqVPfNCzK8IaTCzhZktU3TBQjdUgg="
       },
@@ -2238,7 +2238,7 @@
       "base": "transfer/channel-7/shib-wei",
       "display": "transfer/channel-7/shib",
       "name": "Shiba Inu",
-      "symbol": "SHIB",
+      "symbol": "axlSHIB",
       "penumbraAssetId": {
         "inner": "WaTLvjfj1BKKtIwzCWFMW2xozOQ3X0XcSVrl/KGtRgw="
       },
@@ -2292,7 +2292,7 @@
       "base": "transfer/channel-7/polygon-weth-wei",
       "display": "transfer/channel-7/polygon-weth",
       "name": "Polygon axlETH",
-      "symbol": "axlETH",
+      "symbol": "axlETH.polygon",
       "penumbraAssetId": {
         "inner": "WumzwIu4j0VHASx3VfxiOTDOeebLRIoOX82d6QXokQc="
       },
@@ -2792,7 +2792,7 @@
       "base": "transfer/channel-4/factory/osmo18zdw5yvs6gfp95rp74qqwug9yduw2fyr8kplk2xgs726s9axc5usa2vpgw/alloyed/allLINK",
       "display": "transfer/channel-4/link",
       "name": "Chainlink",
-      "symbol": "LINK",
+      "symbol": "allLINK",
       "penumbraAssetId": {
         "inner": "h4c+OAGonGVREC9ZaYzLbrpnSkUpl0JhHqHwBogeXw0="
       },
@@ -2829,7 +2829,7 @@
       "base": "transfer/channel-4/factory/osmo1f588gk9dazpsueevdl2w6wfkmfmhg5gdvg2uerdlzl0atkasqhsq59qc6a/alloyed/allSHIB",
       "display": "transfer/channel-4/shib",
       "name": "Shiba Inu",
-      "symbol": "SHIB",
+      "symbol": "allSHIB",
       "penumbraAssetId": {
         "inner": "hOnMqQbpe5Abe7vvfHYda77fg3Zit88fatqDfPO1bgQ="
       },
@@ -3030,7 +3030,7 @@
       "base": "transfer/channel-7/avalanche-uusdc",
       "display": "transfer/channel-7/avalanche-usdc",
       "name": "USD Coin from Avalanche",
-      "symbol": "USDC",
+      "symbol": "axlUSDC.avax",
       "penumbraAssetId": {
         "inner": "jm8R/hHUxcqdCW6GilDQNg3J2FdOytuXU5LDahzhrQk="
       },
@@ -3202,7 +3202,7 @@
       "base": "transfer/channel-7/uni-wei",
       "display": "transfer/channel-7/uni",
       "name": "Uniswap",
-      "symbol": "UNI",
+      "symbol": "axlUNI",
       "penumbraAssetId": {
         "inner": "neh64toTy3b5K0n1sHBFiR0NYpO3QsN124Ov60oXVAA="
       },
@@ -3228,7 +3228,7 @@
       "base": "transfer/channel-7/arbitrum-weth-wei",
       "display": "transfer/channel-7/arbitrum-weth",
       "name": "Arbitrum axlETH",
-      "symbol": "axlETH",
+      "symbol": "axlETH.arbitrum",
       "penumbraAssetId": {
         "inner": "oJrqiS598GEGDk2k1aSzyjgQGDKcNB5gnvf62kE9JQQ="
       },
@@ -3394,7 +3394,7 @@
       "base": "transfer/channel-7/link-wei",
       "display": "transfer/channel-7/link",
       "name": "Chainlink",
-      "symbol": "LINK",
+      "symbol": "axlLINK",
       "penumbraAssetId": {
         "inner": "q8PoP4dzqzHUyiqvrs0SnvjXnCi96gfhxAe2ci59zg0="
       },
@@ -3634,7 +3634,7 @@
       "base": "transfer/channel-7/dot-planck",
       "display": "transfer/channel-7/dot",
       "name": "Wrapped Polkadot",
-      "symbol": "DOT",
+      "symbol": "axlDOT",
       "penumbraAssetId": {
         "inner": "uXK2ihrObFuUlAF4KinZ/VZgvObq6MN8MnJcC9ci8AQ="
       },
@@ -3690,7 +3690,7 @@
       "base": "transfer/channel-4/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
       "display": "transfer/channel-4/allUSDT",
       "name": "Tether USD",
-      "symbol": "USDT",
+      "symbol": "allUSDT",
       "penumbraAssetId": {
         "inner": "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0="
       },
@@ -3761,7 +3761,7 @@
       "base": "transfer/channel-7/uusdt",
       "display": "transfer/channel-7/usdt",
       "name": "Tether USD",
-      "symbol": "USDT",
+      "symbol": "axlUSDT",
       "penumbraAssetId": {
         "inner": "w4O3mziGXG7TuIupoybfMBMMlXj4jFNGKXyHl5cQtQE="
       },

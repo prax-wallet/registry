@@ -62,6 +62,8 @@ pub struct IbcInput {
     pub cosmos_registry_dir: String,
     pub display_name: String,
     pub images: Vec<AssetImage>,
+    #[serde(default)]
+    pub symbol_overrides: HashMap<String, String>,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]

@@ -1,5 +1,5 @@
 use anyhow::{anyhow, Context};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashMap};
 use std::fs;
 use std::path::Path;
 use tracing::instrument;
@@ -245,6 +245,17 @@ fn get_dominant_color_from_png(url: &str) -> Result<Color, anyhow::Error> {
     Ok(dominant)
 }
 
+/// Extracts the symbol from a Metadata instance by serializing to JSON and back
+fn extract_symbol(metadata: &Metadata) -> AppResult<String> {
+    let json_value = serde_json::to_value(metadata)?;
+    let symbol = json_value
+        .get("symbol")
+        .and_then(|s| s.as_str())
+        .ok_or_else(|| anyhow!("Metadata missing symbol field"))?
+        .to_string();
+    Ok(symbol)
+}
+
 #[tracing::instrument(skip_all)]
 fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
     let mut all_metadata = Vec::new();
@@ -269,9 +280,19 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
                 continue;
             }
             // Turn the asset back into JSON so we can deserialize it as a penumbra Metadata
-            let asset_json = serde_json::to_string(&source_asset)?;
-            let source_asset_metadata = serde_json::from_str(&asset_json)?;
+            let mut asset_json = serde_json::to_value(&source_asset)?;
 
+            // Check if we have a symbol override for this asset's base denom
+            if let Some(override_symbol) = ibc_input.symbol_overrides.get(&*source_asset.base) {
+                let original_symbol = asset_json["symbol"].as_str().unwrap_or("unknown");
+                println!(
+                    "applying symbol override for {}: {} => {}",
+                    *source_asset.base, original_symbol, override_symbol
+                );
+                asset_json["symbol"] = serde_json::Value::String(override_symbol.clone());
+            }
+
+            let source_asset_metadata: Metadata = serde_json::from_value(asset_json)?;
             let transferred_asset =
                 transport_metadata_along_channel(ibc_input, source_asset_metadata)?;
             all_metadata.push(transferred_asset);
@@ -353,6 +374,35 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
 
     // Process images to add dominant colors
     process_registry_images(&mut registry)?;
+
+    // Check for duplicate symbols
+    let mut symbol_map: HashMap<String, Vec<String>> = HashMap::new();
+
+    // Collect all symbols and their base denoms
+    for (_, metadata) in &registry.asset_by_id {
+        let symbol = extract_symbol(metadata)?;
+        let base_denom = metadata.base_denom().denom.clone();
+        symbol_map.entry(symbol).or_default().push(base_denom);
+    }
+
+    // Check for duplicates and print any found
+    let duplicates: Vec<(String, Vec<String>)> = symbol_map
+        .into_iter()
+        .filter(|(_, bases)| bases.len() > 1)
+        .collect();
+
+    if !duplicates.is_empty() {
+        println!("Duplicate symbols found:");
+        for (symbol, bases) in duplicates {
+            println!("Symbol '{}' is used by multiple assets:", symbol,);
+            for base in bases {
+                println!("  {}", base);
+            }
+        }
+        return Err(AppError::Anyhow(anyhow!(
+            "Ensure each symbol is unique and rerun the compiler."
+        )));
+    }
 
     Ok(registry)
 }

@@ -55,7 +55,19 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
-      ]
+      ],
+      "symbolOverrides": {
+        "factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC": "allBTC",
+        "factory/osmo18zdw5yvs6gfp95rp74qqwug9yduw2fyr8kplk2xgs726s9axc5usa2vpgw/alloyed/allLINK": "allLINK",
+        "factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT": "allUSDT",
+        "factory/osmo1p7x454ex08s4f9ztmm7wfv7lvtgdkfztj2u7v7fezfcauy85q35qmqrdpk/alloyed/allARB": "allARB",
+        "factory/osmo1nnlxegt0scm9qkzys9c874t0ntapv4epfjy2w49c0xdrp3dr0v4ssmelzx/alloyed/allPEPE": "allPEPE",
+        "factory/osmo1nufyzqlm8qhu2w7lm0l4rrax0ec8rsk69mga4tel8eare7c7ljaqpk2lyg/alloyed/allOP": "allOP",
+        "factory/osmo1r53fx9fvcdzncrs7zkn4gw5vfelx5gk8k5wc6wqha2jpkh992rusr5tk02/alloyed/allDOT": "allDOT",
+        "factory/osmo1f588gk9dazpsueevdl2w6wfkmfmhg5gdvg2uerdlzl0atkasqhsq59qc6a/alloyed/allSHIB": "allSHIB",
+        "factory/osmo1eqjda4pc6e09jtxzxggf6jl3jye2yn453ja58we5gxwzmf5ah28qvlnaz8/alloyed/allUNI": "allUNI",
+        "factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc": "osmoWBTC"
+      }
     },
     {
       "displayName": "Stride",
@@ -83,7 +95,24 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.svg"
         }
-      ]
+      ],
+      "symbolOverrides": {
+        "base-weth-wei": "axlETH.base",
+        "polygon-weth-wei": "axlETH.polygon",
+        "arbitrum-weth-wei": "axlETH.arbitrum",
+        "link-wei": "axlLINK",
+        "uusdt": "axlUSDT",
+        "arb-wei": "axlARB",
+        "uusdc": "axlUSDC",
+        "polygon-uusdc": "axlUSDC.polygon",
+        "avalanche-uusdc": "axlUSDC.avax",
+        "pepe-wei": "axlPEPE",
+        "op-wei": "axlOP",
+        "dot-planck": "axlDOT",
+        "shib-wei": "axlSHIB",
+        "uni-wei": "axlUNI",
+        "wbtc-satoshi": "axlWBTC"
+      }
     }
   ],
   "validators": [],

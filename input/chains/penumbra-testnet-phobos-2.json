@@ -38,7 +38,13 @@
         {
           "svg": ""
         }
-      ]
+      ],
+      "symbolOverrides": {
+        "uusdc": "USDC.duke",
+        "ulove": "LOVE.duke",
+        "ausdy": "USDY.duke",
+        "ustake": "STAKE.duke"
+      }
     }
   ],
   "validators": [
@@ -288,4 +294,3 @@
   "badges": {},
   "badgesByBase": {}
 }
-
