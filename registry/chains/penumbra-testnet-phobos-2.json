@@ -179,7 +179,7 @@
       "base": "transfer/channel-26/ausdy",
       "display": "transfer/channel-26/usdy",
       "name": "Ondo US Dollar Yield",
-      "symbol": "USDY",
+      "symbol": "USDY.duke",
       "penumbraAssetId": {
         "inner": "Dfd6xgFCU9AKO1Ik+GHhunVNRSAApSrASdOUJIIWgA0="
       },
@@ -379,7 +379,7 @@
       "base": "transfer/channel-26/uusdc",
       "display": "transfer/channel-26/usdc",
       "name": "USD Coin",
-      "symbol": "USDC",
+      "symbol": "USDC.duke",
       "penumbraAssetId": {
         "inner": "dwcobY1Emez10NWXoQsgNDfMO8esIkw4sDob0xVe1A8="
       },
@@ -408,7 +408,7 @@
       "base": "transfer/channel-26/ulove",
       "display": "transfer/channel-26/love",
       "name": "Love",
-      "symbol": "LOVE",
+      "symbol": "LOVE.duke",
       "penumbraAssetId": {
         "inner": "hy0xtct5UJEJ0oiF53bUK9e8nQkE5Lssd0OIAGt3GQM="
       }
@@ -571,7 +571,7 @@
       "base": "transfer/channel-26/ustake",
       "display": "transfer/channel-26/stake",
       "name": "Stake",
-      "symbol": "STAKE",
+      "symbol": "STAKE.duke",
       "penumbraAssetId": {
         "inner": "tBf2PvH+M6xwlUrCB/lFpcaJpms5UNkKaDZ7wEHHoQ8="
       }

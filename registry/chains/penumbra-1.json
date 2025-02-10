@@ -15,19 +15,6 @@
       ]
     },
     {
-      "addressPrefix": "dydx",
-      "chainId": "dydx-mainnet-1",
-      "channelId": "channel-1",
-      "counterpartyChannelId": "channel-70",
-      "displayName": "dYdX Protocol",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg"
-        }
-      ]
-    },
-    {
       "addressPrefix": "noble",
       "chainId": "noble-1",
       "channelId": "channel-2",
@@ -65,9 +52,119 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
         }
       ]
+    },
+    {
+      "addressPrefix": "stride",
+      "chainId": "stride-1",
+      "channelId": "channel-8",
+      "counterpartyChannelId": "channel-307",
+      "displayName": "Stride",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/osmo.svg"
+        }
+      ]
+    },
+    {
+      "addressPrefix": "axelar",
+      "chainId": "axelar-dojo-1",
+      "channelId": "channel-7",
+      "counterpartyChannelId": "channel-171",
+      "displayName": "Axelar",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.svg"
+        }
+      ]
     }
   ],
   "assetById": {
+    "+CcJwejdvToU1FqwLLm9/InRANKjDoHbnsssdQ/s+gQ=": {
+      "description": "Arbitrum on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/arb-wei"
+        },
+        {
+          "denom": "transfer/channel-7/arb",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/arb-wei",
+      "display": "transfer/channel-7/arb",
+      "name": "Arbitrum",
+      "symbol": "axlARB",
+      "penumbraAssetId": {
+        "inner": "+CcJwejdvToU1FqwLLm9/InRANKjDoHbnsssdQ/s+gQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/arbitrum/images/arb.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/arbitrum/images/arb.svg",
+          "theme": {
+            "primaryColorHex": "#253545"
+          }
+        }
+      ]
+    },
+    "0MEQQsTe/BbQkavD+bHMcWiLsVAv21ifSVMalRXDjhA=": {
+      "description": "Stride's liquid staked TIA",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stutia"
+        },
+        {
+          "denom": "transfer/channel-8/stTIA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stutia",
+      "display": "transfer/channel-8/stTIA",
+      "name": "Stride Staked TIA",
+      "symbol": "stTIA",
+      "penumbraAssetId": {
+        "inner": "0MEQQsTe/BbQkavD+bHMcWiLsVAv21ifSVMalRXDjhA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/sttia.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/sttia.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
+    "0SuJsiK7sOHgnilM9D5M5/fmp4X89KejPiSWkgFukwk=": {
+      "description": "Stride's liquid staked DYM",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stadym"
+        },
+        {
+          "denom": "transfer/channel-8/stDYM",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-8/stadym",
+      "display": "transfer/channel-8/stDYM",
+      "name": "Stride Staked DYM",
+      "symbol": "stDYM",
+      "penumbraAssetId": {
+        "inner": "0SuJsiK7sOHgnilM9D5M5/fmp4X89KejPiSWkgFukwk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stdym.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stdym.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
     "11ulh+zO2v206EDtb6L2SdB09q4ChrHcc+p1zHubzgU=": {
       "description": "COOK is the governance token for Start.Cooking, the premier token factory on Cosmos.",
       "denomUnits": [
@@ -172,6 +269,141 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png",
           "theme": {
             "primaryColorHex": "#edd5ee"
+          }
+        }
+      ]
+    },
+    "2k9aUF4SL9uEXl02lWocY2g1z2gkPQEFu+1glmZJngw=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/sfrxeth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/sfrxeth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/sfrxeth-wei",
+      "display": "transfer/channel-7/sfrxeth",
+      "name": "Staked Frax Ether",
+      "symbol": "sfrxETH",
+      "penumbraAssetId": {
+        "inner": "2k9aUF4SL9uEXl02lWocY2g1z2gkPQEFu+1glmZJngw="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sfrxeth.svg",
+          "theme": {
+            "primaryColorHex": "#c8c8c8"
+          }
+        }
+      ]
+    },
+    "2xS/1WB0QswaA59huaDnxz14eoyg+nj9fyTpWktxpRE=": {
+      "description": "Axie Infinity Shard on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/axs-wei"
+        },
+        {
+          "denom": "transfer/channel-7/axs",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/axs-wei",
+      "display": "transfer/channel-7/axs",
+      "name": "Axie Infinity Shard",
+      "symbol": "AXS",
+      "penumbraAssetId": {
+        "inner": "2xS/1WB0QswaA59huaDnxz14eoyg+nj9fyTpWktxpRE="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/axs.svg",
+          "theme": {
+            "primaryColorHex": "#0454d3"
+          }
+        }
+      ]
+    },
+    "3iA9anFxe2oS0eun85y2l6f77wnK78c31GVrLFgltgI=": {
+      "description": "Dai stablecoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/dai-wei"
+        },
+        {
+          "denom": "transfer/channel-7/dai",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/dai-wei",
+      "display": "transfer/channel-7/dai",
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "penumbraAssetId": {
+        "inner": "3iA9anFxe2oS0eun85y2l6f77wnK78c31GVrLFgltgI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/dai.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/dai.svg",
+          "theme": {
+            "primaryColorHex": "#f4ac34"
+          }
+        }
+      ]
+    },
+    "3jBzXlXvGMufL9A2BPgfYkOLvPGQqMvuzHJw1ZIstQU=": {
+      "description": "ApeCoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/ape-wei"
+        },
+        {
+          "denom": "transfer/channel-7/ape",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/ape-wei",
+      "display": "transfer/channel-7/ape",
+      "name": "ApeCoin",
+      "symbol": "APE",
+      "penumbraAssetId": {
+        "inner": "3jBzXlXvGMufL9A2BPgfYkOLvPGQqMvuzHJw1ZIstQU="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/ape.svg",
+          "theme": {
+            "primaryColorHex": "#5b6b8c"
+          }
+        }
+      ]
+    },
+    "4S24boIE2iFGH9vme1ztzP/2HnNCij4BFV+v7XE+jgg=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/pepe-wei"
+        },
+        {
+          "denom": "transfer/channel-7/pepe",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/pepe-wei",
+      "display": "transfer/channel-7/pepe",
+      "name": "Pepe",
+      "symbol": "axlPEPE",
+      "penumbraAssetId": {
+        "inner": "4S24boIE2iFGH9vme1ztzP/2HnNCij4BFV+v7XE+jgg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.svg",
+          "theme": {
+            "primaryColorHex": "#cc3233"
           }
         }
       ]
@@ -297,6 +529,33 @@
         }
       ]
     },
+    "63+dQ57ItK/VCG1qf4GTHVEWF8SXs6vppRKmmVmmMQo=": {
+      "description": "Rai Reflex Index on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/rai-wei"
+        },
+        {
+          "denom": "transfer/channel-7/rai",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/rai-wei",
+      "display": "transfer/channel-7/rai",
+      "name": "Rai Reflex Index",
+      "symbol": "RAI",
+      "penumbraAssetId": {
+        "inner": "63+dQ57ItK/VCG1qf4GTHVEWF8SXs6vppRKmmVmmMQo="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/rai.svg",
+          "theme": {
+            "primaryColorHex": "#68dbda"
+          }
+        }
+      ]
+    },
     "6zEm1cTHN1PsueimuNxC+6S/t6uDYRdhbitgkUV9IxE=": {
       "description": "MilkyWay's liquid staked TIA",
       "denomUnits": [
@@ -395,7 +654,7 @@
       "base": "transfer/channel-4/factory/osmo1p7x454ex08s4f9ztmm7wfv7lvtgdkfztj2u7v7fezfcauy85q35qmqrdpk/alloyed/allARB",
       "display": "transfer/channel-4/arb",
       "name": "Arbitrum",
-      "symbol": "ARB",
+      "symbol": "allARB",
       "penumbraAssetId": {
         "inner": "9sKDSVM9qU0G3ASpZted8wJB8fhdadAtzxZxE5tJMxI="
       },
@@ -417,6 +676,35 @@
       ],
       "priorityScore": "500000000000",
       "coingeckoId": "arbitrum"
+    },
+    "A/8PdbaWqFds9NiYzmAN75SehGpkLwr7tgoVmwaIVgg=": {
+      "description": "Circle's stablecoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/uusdc"
+        },
+        {
+          "denom": "transfer/channel-7/usdc",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/uusdc",
+      "display": "transfer/channel-7/usdc",
+      "name": "USD Coin",
+      "symbol": "axlUSDC",
+      "penumbraAssetId": {
+        "inner": "A/8PdbaWqFds9NiYzmAN75SehGpkLwr7tgoVmwaIVgg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg",
+          "theme": {
+            "primaryColorHex": "#2474cc"
+          }
+        }
+      ],
+      "coingeckoId": "axlusdc"
     },
     "AdlT67pUDx0wsIFBC4opbslYEOk6+QDIzWUcVtQlXgQ=": {
       "description": "Chain-key Bitcoin bridged via Omnity Network.",
@@ -544,6 +832,61 @@
       "priorityScore": "400000000000",
       "coingeckoId": "the-open-network"
     },
+    "BWqv9jswBdv/ig9aaa35ostn7bmvnp3GmcODqgkbBAQ=": {
+      "description": "Frax's fractional-algorithmic stablecoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/frax-wei"
+        },
+        {
+          "denom": "transfer/channel-7/frax",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/frax-wei",
+      "display": "transfer/channel-7/frax",
+      "name": "Frax",
+      "symbol": "FRAX",
+      "penumbraAssetId": {
+        "inner": "BWqv9jswBdv/ig9aaa35ostn7bmvnp3GmcODqgkbBAQ="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/frax.svg",
+          "theme": {
+            "primaryColorHex": "#bfbfbf"
+          }
+        }
+      ]
+    },
+    "BnSvnSoramn/A3n60rYRTydWKIyibJi2z/a8ItIllhE=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/staevmos"
+        },
+        {
+          "denom": "transfer/channel-8/stevmos",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-8/staevmos",
+      "display": "transfer/channel-8/stevmos",
+      "name": "Stride Staked EVMOS",
+      "symbol": "stEVMOS",
+      "penumbraAssetId": {
+        "inner": "BnSvnSoramn/A3n60rYRTydWKIyibJi2z/a8ItIllhE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stevmos.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stevmos.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-evmos"
+    },
     "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc=": {
       "description": "Margined Power Token sqBTC",
       "denomUnits": [
@@ -570,6 +913,63 @@
           }
         }
       ]
+    },
+    "EQbzRHIIuD+AbS7XJFVSYaDXh88mcPuOzlpJ+f0PIQk=": {
+      "description": "Axelar is a decentralized interoperability network connecting multiple blockchain ecosystems, enabling seamless cross-chain communication and value transfer.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/uaxl"
+        },
+        {
+          "denom": "transfer/channel-7/axl",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/uaxl",
+      "display": "transfer/channel-7/axl",
+      "name": "Axelar",
+      "symbol": "AXL",
+      "penumbraAssetId": {
+        "inner": "EQbzRHIIuD+AbS7XJFVSYaDXh88mcPuOzlpJ+f0PIQk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.svg",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
+        }
+      ],
+      "coingeckoId": "axelar"
+    },
+    "EcnyMANizU+7U7JdNakQJL7RwNYFxECqmPxaVETk1gs=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stuosmo"
+        },
+        {
+          "denom": "transfer/channel-8/stosmo",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stuosmo",
+      "display": "transfer/channel-8/stosmo",
+      "name": "Stride Staked OSMO",
+      "symbol": "stOSMO",
+      "penumbraAssetId": {
+        "inner": "EcnyMANizU+7U7JdNakQJL7RwNYFxECqmPxaVETk1gs="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-osmo"
     },
     "HiMfbhLbTTAP0bDI1spwmkZUDAl658X8/8WptethTww=": {
       "denomUnits": [
@@ -651,6 +1051,35 @@
           }
         }
       ]
+    },
+    "J5fl721TUDElXFEMzCRcc8TPBsv3XbKnTJujdoVBXgE=": {
+      "description": "Stride is a liquid staking blockchain in the Cosmos ecosystem that allows users to stake any IBC-compatible tokens and receive stTokens in return, providing liquidity while earning staking rewards.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/ustrd"
+        },
+        {
+          "denom": "transfer/channel-8/strd",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/ustrd",
+      "display": "transfer/channel-8/strd",
+      "name": "Stride",
+      "symbol": "STRD",
+      "penumbraAssetId": {
+        "inner": "J5fl721TUDElXFEMzCRcc8TPBsv3XbKnTJujdoVBXgE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg",
+          "theme": {
+            "primaryColorHex": "#e4047c"
+          }
+        }
+      ],
+      "coingeckoId": "stride"
     },
     "JfJc35xgtUPmKfidDjgHDnIYQ2klmu8x4N8lbKryDwY=": {
       "description": "For th",
@@ -736,6 +1165,61 @@
         }
       ]
     },
+    "KWWGxjlLGRIfjHc1Ldn4hUZNTJaUNtxsqKXAJ2ZNSAY=": {
+      "description": "Wrapped AVAX on Axelar.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/wavax-wei"
+        },
+        {
+          "denom": "transfer/channel-7/avax",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/wavax-wei",
+      "display": "transfer/channel-7/avax",
+      "name": "Wrapped AVAX",
+      "symbol": "WAVAX",
+      "penumbraAssetId": {
+        "inner": "KWWGxjlLGRIfjHc1Ldn4hUZNTJaUNtxsqKXAJ2ZNSAY="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/avalanche/images/wavax.svg",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "KY6IqjGyZyfiLdykar3/fgoOWT10Fxu3Jq8YVFqDoAg=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stujuno"
+        },
+        {
+          "denom": "transfer/channel-8/stjuno",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stujuno",
+      "display": "transfer/channel-8/stjuno",
+      "name": "Stride Staked JUNO",
+      "symbol": "stJUNO",
+      "penumbraAssetId": {
+        "inner": "KY6IqjGyZyfiLdykar3/fgoOWT10Fxu3Jq8YVFqDoAg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stjuno.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stjuno.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-juno"
+    },
     "KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA=": {
       "description": "The native token of Penumbra",
       "denomUnits": [
@@ -768,6 +1252,61 @@
       ],
       "priorityScore": "999999999999",
       "coingeckoId": "penumbra"
+    },
+    "Kh5RK8vXnSzJNFw63CKY8MticOcV7eSf2TtT3IzzdBI=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stucmdx"
+        },
+        {
+          "denom": "transfer/channel-8/stcmdx",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stucmdx",
+      "display": "transfer/channel-8/stcmdx",
+      "name": "Stride Staked CMDX",
+      "symbol": "stCMDX",
+      "penumbraAssetId": {
+        "inner": "Kh5RK8vXnSzJNFw63CKY8MticOcV7eSf2TtT3IzzdBI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stcmdx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stcmdx.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
+    "LMAzkQ0KgrdRtlcPVP2zWjL1molRVGLYc7Gz5b1VRw4=": {
+      "description": "Wrapped Matic on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/wmatic-wei"
+        },
+        {
+          "denom": "transfer/channel-7/wmatic",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/wmatic-wei",
+      "display": "transfer/channel-7/wmatic",
+      "name": "Wrapped Matic",
+      "symbol": "WMATIC",
+      "penumbraAssetId": {
+        "inner": "LMAzkQ0KgrdRtlcPVP2zWjL1molRVGLYc7Gz5b1VRw4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/wmatic.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/wmatic.svg",
+          "theme": {
+            "primaryColorHex": "#2b93fb"
+          }
+        }
+      ]
     },
     "LdexCcIS7h5jbSjieMV+MoC2IB1XmuKxzNNeRgq4QAQ=": {
       "description": "An alloy of SOL asset variants on Osmosis.",
@@ -862,7 +1401,7 @@
       "base": "transfer/channel-4/factory/osmo1nnlxegt0scm9qkzys9c874t0ntapv4epfjy2w49c0xdrp3dr0v4ssmelzx/alloyed/allPEPE",
       "display": "transfer/channel-4/pepe",
       "name": "Pepe",
-      "symbol": "PEPE",
+      "symbol": "allPEPE",
       "penumbraAssetId": {
         "inner": "McCafoNb60lBtL1I77ADhx0GII9EHH8iCqmpGro3Pgk="
       },
@@ -993,6 +1532,33 @@
         }
       ]
     },
+    "OoF3KTZTk0SHDFx0fNfNMYuepDiGewhe1q4PFh77/w4=": {
+      "description": "Aave on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/aave-wei"
+        },
+        {
+          "denom": "transfer/channel-7/aave",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/aave-wei",
+      "display": "transfer/channel-7/aave",
+      "name": "Aave",
+      "symbol": "AAVE",
+      "penumbraAssetId": {
+        "inner": "OoF3KTZTk0SHDFx0fNfNMYuepDiGewhe1q4PFh77/w4="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/aave.svg",
+          "theme": {
+            "primaryColorHex": "#6c8ab4"
+          }
+        }
+      ]
+    },
     "Orc48lgn3n+fPgKZEvsioa5NyosT8XFQdOr1o1fisA0=": {
       "description": "Fractionalized Atlas DAO",
       "denomUnits": [
@@ -1016,6 +1582,32 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fATLAS.png",
           "theme": {
             "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
+    "P2nfAmaAzrvMMw+d1Frmhrb1cRTKluUc+ML7IJ+/Pwc=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/wsteth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/wsteth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/wsteth-wei",
+      "display": "transfer/channel-7/wsteth",
+      "name": "Wrapped Lido Staked Ether",
+      "symbol": "wstETH",
+      "penumbraAssetId": {
+        "inner": "P2nfAmaAzrvMMw+d1Frmhrb1cRTKluUc+ML7IJ+/Pwc="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg",
+          "theme": {
+            "primaryColorHex": "#9cdcfc"
           }
         }
       ]
@@ -1047,6 +1639,32 @@
         }
       ]
     },
+    "PjouKv626JSUImljc13/bCeQ7owkX/7mjErTF3P/bgw=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/base-weth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/base-weth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/base-weth-wei",
+      "display": "transfer/channel-7/base-weth",
+      "name": "Base axlETH",
+      "symbol": "axlETH.base",
+      "penumbraAssetId": {
+        "inner": "PjouKv626JSUImljc13/bCeQ7owkX/7mjErTF3P/bgw="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/weth.svg",
+          "theme": {
+            "primaryColorHex": "#e71e7b"
+          }
+        }
+      ]
+    },
     "Px1BjGEeaPvgSPZX/8gDwHwwn2BWD+fjMrdu5/ZhLhI=": {
       "description": "Bernese Mountain Dog. Thematic dog token to have fun and be friends with all other dog tokens. Fixed supply 132M",
       "denomUnits": [
@@ -1074,42 +1692,6 @@
         }
       ]
     },
-    "QArMRIpyiMTawMktm5j53HfLNMrI8TIBQ2wqyCfgtQY=": {
-      "description": "DYDX is a decentralized trading platform focused on derivatives and perpetual contracts, offering a secure and efficient trading experience without intermediaries.",
-      "denomUnits": [
-        {
-          "denom": "transfer/channel-1/adydx"
-        },
-        {
-          "denom": "transfer/channel-1/dydx",
-          "exponent": 18
-        }
-      ],
-      "base": "transfer/channel-1/adydx",
-      "display": "transfer/channel-1/dydx",
-      "name": "dYdX",
-      "symbol": "DYDX",
-      "penumbraAssetId": {
-        "inner": "QArMRIpyiMTawMktm5j53HfLNMrI8TIBQ2wqyCfgtQY="
-      },
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg",
-          "theme": {
-            "primaryColorHex": "#21212f"
-          }
-        },
-        {
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx-circle.svg",
-          "theme": {
-            "primaryColorHex": "#d0d0d3"
-          }
-        }
-      ],
-      "priorityScore": "600000000000",
-      "coingeckoId": "dydx"
-    },
     "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA=": {
       "description": "An alloy of BTC asset variants on Osmosis.",
       "denomUnits": [
@@ -1124,7 +1706,7 @@
       "base": "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC",
       "display": "transfer/channel-4/allBTC",
       "name": "Bitcoin",
-      "symbol": "BTC",
+      "symbol": "allBTC",
       "penumbraAssetId": {
         "inner": "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA="
       },
@@ -1147,6 +1729,32 @@
       "priorityScore": "600000000000",
       "coingeckoId": "osmosis-allbtc"
     },
+    "Qd25ISoOrtLdcWKlFLIRLTlDTfrBYkuCATwtRYbVHQM=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/ox-wei"
+        },
+        {
+          "denom": "transfer/channel-7/ox",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/ox-wei",
+      "display": "transfer/channel-7/ox",
+      "name": "Open Exchange Token",
+      "symbol": "OX",
+      "penumbraAssetId": {
+        "inner": "Qd25ISoOrtLdcWKlFLIRLTlDTfrBYkuCATwtRYbVHQM="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/ox.svg",
+          "theme": {
+            "primaryColorHex": "#e8c92b"
+          }
+        }
+      ]
+    },
     "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE=": {
       "description": "An alloy of OP asset variants on Osmosis.",
       "denomUnits": [
@@ -1161,7 +1769,7 @@
       "base": "transfer/channel-4/factory/osmo1nufyzqlm8qhu2w7lm0l4rrax0ec8rsk69mga4tel8eare7c7ljaqpk2lyg/alloyed/allOP",
       "display": "transfer/channel-4/op",
       "name": "Optimism",
-      "symbol": "OP",
+      "symbol": "allOP",
       "penumbraAssetId": {
         "inner": "Rvh55FJrd8q3kT8xYIl5ApTOc9ErxyL8m1NS5RArHxE="
       },
@@ -1184,6 +1792,34 @@
       "priorityScore": "500000000000",
       "coingeckoId": "osmosis-allop"
     },
+    "Rw5reO179530Znstv1X0FLCc4mVIXLR158Q1IcJmDg0=": {
+      "description": "Wrapped Bitcoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/wbtc-satoshi"
+        },
+        {
+          "denom": "transfer/channel-7/wbtc",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-7/wbtc-satoshi",
+      "display": "transfer/channel-7/wbtc",
+      "name": "Wrapped Bitcoin",
+      "symbol": "axlWBTC",
+      "penumbraAssetId": {
+        "inner": "Rw5reO179530Znstv1X0FLCc4mVIXLR158Q1IcJmDg0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/wbtc.png",
+          "theme": {
+            "primaryColorHex": "#41394d"
+          }
+        }
+      ],
+      "coingeckoId": "axlwbtc"
+    },
     "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE=": {
       "description": "An alloy of DOT asset variants on Osmosis.",
       "denomUnits": [
@@ -1198,7 +1834,7 @@
       "base": "transfer/channel-4/factory/osmo1r53fx9fvcdzncrs7zkn4gw5vfelx5gk8k5wc6wqha2jpkh992rusr5tk02/alloyed/allDOT",
       "display": "transfer/channel-4/dot",
       "name": "Polkadot",
-      "symbol": "DOT",
+      "symbol": "allDOT",
       "penumbraAssetId": {
         "inner": "SBYNLMUsCQQJaZZYXbrDHD5u/q6rdo6sURKyBlGMtxE="
       },
@@ -1242,7 +1878,7 @@
       "base": "transfer/channel-4/factory/osmo1eqjda4pc6e09jtxzxggf6jl3jye2yn453ja58we5gxwzmf5ah28qvlnaz8/alloyed/allUNI",
       "display": "transfer/channel-4/allUNI",
       "name": "Uniswap",
-      "symbol": "UNI",
+      "symbol": "allUNI",
       "penumbraAssetId": {
         "inner": "SChNnza9qDQMNGqwSoQMzB2x2M5nmEBtST1EoSy29gM="
       },
@@ -1255,6 +1891,34 @@
         }
       ],
       "coingeckoId": "uniswap"
+    },
+    "SbW7AL9jbUhCub5QvW+B0bYamMinRj0Tb8+xMeNZLwk=": {
+      "description": "Binance USD on Axelar.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/busd-wei"
+        },
+        {
+          "denom": "transfer/channel-7/busd",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/busd-wei",
+      "display": "transfer/channel-7/busd",
+      "name": "Binance USD",
+      "symbol": "BUSD",
+      "penumbraAssetId": {
+        "inner": "SbW7AL9jbUhCub5QvW+B0bYamMinRj0Tb8+xMeNZLwk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/busd.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/busd.svg",
+          "theme": {
+            "primaryColorHex": "#f3bb0c"
+          }
+        }
+      ]
     },
     "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI=": {
       "description": "TRONIX is the mainnet native token of the TRON Protocol issued by TRON DAO, known as TRX.",
@@ -1323,7 +1987,7 @@
       "base": "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc",
       "display": "transfer/channel-4/wbtc",
       "name": "Wrapped Bitcoin",
-      "symbol": "WBTC",
+      "symbol": "osmoWBTC",
       "penumbraAssetId": {
         "inner": "UWEI0NC7o/duH5gtCnzeEYgzMHsDwM1My5TogrU8Hw8="
       },
@@ -1338,6 +2002,61 @@
       ],
       "priorityScore": "600000000000",
       "coingeckoId": "wrapped-bitcoin"
+    },
+    "UgI2CETO8zWMoiK1P2/VhfNUsy//5YKlwtzyViRa3ww=": {
+      "description": "Maker on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/mkr-wei"
+        },
+        {
+          "denom": "transfer/channel-7/mkr",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/mkr-wei",
+      "display": "transfer/channel-7/mkr",
+      "name": "Maker",
+      "symbol": "MKR",
+      "penumbraAssetId": {
+        "inner": "UgI2CETO8zWMoiK1P2/VhfNUsy//5YKlwtzyViRa3ww="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/mkr.svg",
+          "theme": {
+            "primaryColorHex": "#5bb9a9"
+          }
+        }
+      ]
+    },
+    "UkxOwF0fEethJexuH0JcBiIphfjVUodI6rIWz2Qu7Q8=": {
+      "description": "Circle's stablecoin from Polygon on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/polygon-uusdc"
+        },
+        {
+          "denom": "transfer/channel-7/polygon-usdc",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/polygon-uusdc",
+      "display": "transfer/channel-7/polygon-usdc",
+      "name": "USD Coin from Polygon",
+      "symbol": "axlUSDC.polygon",
+      "penumbraAssetId": {
+        "inner": "UkxOwF0fEethJexuH0JcBiIphfjVUodI6rIWz2Qu7Q8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg",
+          "theme": {
+            "primaryColorHex": "#2474cc"
+          }
+        }
+      ]
     },
     "UxSzPuz9XKLpnAttHgzK/j0t1YHJUtgU+2T99R+FxBE=": {
       "description": "Celestia is a modular blockchain network focused on data availability, allowing developers to deploy their own customizable blockchains with ease.",
@@ -1396,6 +2115,33 @@
         }
       ]
     },
+    "V9oS4+zznPDEnVR7Dz4GGjEazn4jI4XgbuR7Qmc63hA=": {
+      "description": "Wrapped Ether on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/weth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/weth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/weth-wei",
+      "display": "transfer/channel-7/weth",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "penumbraAssetId": {
+        "inner": "V9oS4+zznPDEnVR7Dz4GGjEazn4jI4XgbuR7Qmc63hA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/weth.png",
+          "theme": {
+            "primaryColorHex": "#3a3444"
+          }
+        }
+      ]
+    },
     "VDEYVUZ8ZKlhsAT2nr6NgdNdi7jREsKmFUV0U5uUxwU=": {
       "description": "OnE mEmEcOiN tO cOnNeCt oL ImBeCiles - aNd in Da Cosmos BiNd DeM",
       "denomUnits": [
@@ -1419,6 +2165,88 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibc.png",
           "theme": {
             "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "W5GBT1Lezfiwupp4I1VcHyyTDT7kJl/1Paf6P2JZuAY=": {
+      "description": "Wrapped FIL on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/wfil-wei"
+        },
+        {
+          "denom": "transfer/channel-7/fil",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/wfil-wei",
+      "display": "transfer/channel-7/fil",
+      "name": "Wrapped FIL from Filecoin",
+      "symbol": "axlFIL",
+      "penumbraAssetId": {
+        "inner": "W5GBT1Lezfiwupp4I1VcHyyTDT7kJl/1Paf6P2JZuAY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/filecoin/images/wfil.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/filecoin/images/wfil.svg",
+          "theme": {
+            "primaryColorHex": "#0694fc"
+          }
+        }
+      ]
+    },
+    "WOyM4tESN7UFmMkqVPfNCzK8IaTCzhZktU3TBQjdUgg=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/op-wei"
+        },
+        {
+          "denom": "transfer/channel-7/op",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/op-wei",
+      "display": "transfer/channel-7/op",
+      "name": "Optimism",
+      "symbol": "axlOP",
+      "penumbraAssetId": {
+        "inner": "WOyM4tESN7UFmMkqVPfNCzK8IaTCzhZktU3TBQjdUgg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/optimism/images/op.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/optimism/images/op.svg",
+          "theme": {
+            "primaryColorHex": "#fc0424"
+          }
+        }
+      ]
+    },
+    "WaTLvjfj1BKKtIwzCWFMW2xozOQ3X0XcSVrl/KGtRgw=": {
+      "description": "Shiba Inu on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/shib-wei"
+        },
+        {
+          "denom": "transfer/channel-7/shib",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/shib-wei",
+      "display": "transfer/channel-7/shib",
+      "name": "Shiba Inu",
+      "symbol": "axlSHIB",
+      "penumbraAssetId": {
+        "inner": "WaTLvjfj1BKKtIwzCWFMW2xozOQ3X0XcSVrl/KGtRgw="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/shib.svg",
+          "theme": {
+            "primaryColorHex": "#FFA409"
           }
         }
       ]
@@ -1450,6 +2278,60 @@
         }
       ],
       "coingeckoId": "collateralized-debt-token"
+    },
+    "WumzwIu4j0VHASx3VfxiOTDOeebLRIoOX82d6QXokQc=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/polygon-weth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/polygon-weth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/polygon-weth-wei",
+      "display": "transfer/channel-7/polygon-weth",
+      "name": "Polygon axlETH",
+      "symbol": "axlETH.polygon",
+      "penumbraAssetId": {
+        "inner": "WumzwIu4j0VHASx3VfxiOTDOeebLRIoOX82d6QXokQc="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/weth.svg",
+          "theme": {
+            "primaryColorHex": "#e71e7b"
+          }
+        }
+      ]
+    },
+    "XREY/7po0kX/cIgBeXzuVTQXsweMLMhsIg72Ag7OOw4=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stustars"
+        },
+        {
+          "denom": "transfer/channel-8/ststars",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stustars",
+      "display": "transfer/channel-8/ststars",
+      "name": "Stride Staked STARS",
+      "symbol": "stSTARS",
+      "penumbraAssetId": {
+        "inner": "XREY/7po0kX/cIgBeXzuVTQXsweMLMhsIg72Ag7OOw4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/ststars.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/ststars.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-stars"
     },
     "ZAf0vwfQdMjLyJH6OIQrt6t2y6VU37rzXBm8XeF6dQY=": {
       "denomUnits": [
@@ -1505,6 +2387,34 @@
         }
       ]
     },
+    "Zi8uYzf0sKRBZppHbELs/OsQx/KugQVVL1MWV67c5gE=": {
+      "description": "Wrapped Moonbeam on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/wglmr-wei"
+        },
+        {
+          "denom": "transfer/channel-7/wglmr",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/wglmr-wei",
+      "display": "transfer/channel-7/wglmr",
+      "name": "Wrapped Moonbeam",
+      "symbol": "WGLMR",
+      "penumbraAssetId": {
+        "inner": "Zi8uYzf0sKRBZppHbELs/OsQx/KugQVVL1MWV67c5gE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.svg",
+          "theme": {
+            "primaryColorHex": "#e4147c"
+          }
+        }
+      ]
+    },
     "ZpIbxFwvlU4udh9mutG/2hLBIpdNXhat3TCRbs1kbgI=": {
       "description": "Roostock BTC bridged via Router.",
       "denomUnits": [
@@ -1533,6 +2443,89 @@
         }
       ],
       "coingeckoId": "rootstock"
+    },
+    "bKYDq4zkPiKV7zxFWsziGwlRHechNcIhz+zd9Bo7FA4=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stuumee"
+        },
+        {
+          "denom": "transfer/channel-8/stumee",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stuumee",
+      "display": "transfer/channel-8/stumee",
+      "name": "Stride Staked UMEE",
+      "symbol": "stUMEE",
+      "penumbraAssetId": {
+        "inner": "bKYDq4zkPiKV7zxFWsziGwlRHechNcIhz+zd9Bo7FA4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stumee.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stumee.svg",
+          "theme": {
+            "primaryColorHex": "#fbd9e9"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-umee"
+    },
+    "bPgl4L4AZ50lxcgvFkJJLTjhRYdGlhv7HByGwQSM/gw=": {
+      "description": "Lido Staked Ether on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/steth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/steth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/steth-wei",
+      "display": "transfer/channel-7/steth",
+      "name": "Lido Staked Ether",
+      "symbol": "stETH",
+      "penumbraAssetId": {
+        "inner": "bPgl4L4AZ50lxcgvFkJJLTjhRYdGlhv7HByGwQSM/gw="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/steth.svg",
+          "theme": {
+            "primaryColorHex": "#3cb8fc"
+          }
+        }
+      ]
+    },
+    "cmKHlW9Y1Lk2HqejjdrBW3054TAgQvG79YALcRol2wA=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stuatom"
+        },
+        {
+          "denom": "transfer/channel-8/statom",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stuatom",
+      "display": "transfer/channel-8/statom",
+      "name": "Stride Staked ATOM",
+      "symbol": "stATOM",
+      "penumbraAssetId": {
+        "inner": "cmKHlW9Y1Lk2HqejjdrBW3054TAgQvG79YALcRol2wA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-atom"
     },
     "d2/yBdjkz//htrQwHYXVx3XN2QILdZoS5ickDAcRWgs=": {
       "description": "Beer Is Good for You!",
@@ -1619,6 +2612,34 @@
         }
       ]
     },
+    "fVJKvR0IQtpYvtHmOF3IDNyV4O5oeyA5o7HCskf9MxE=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/staISLM"
+        },
+        {
+          "denom": "transfer/channel-8/stISLM",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-8/staISLM",
+      "display": "transfer/channel-8/stISLM",
+      "name": "Stride Staked ISLM",
+      "symbol": "stISLM",
+      "penumbraAssetId": {
+        "inner": "fVJKvR0IQtpYvtHmOF3IDNyV4O5oeyA5o7HCskf9MxE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stislm.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stislm.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-islm"
+    },
     "feVP7pst7vgPhoxLLiYtNHFwUprssLR8Nfn7wUU2WwA=": {
       "description": "Margined Power Token sqTIA",
       "denomUnits": [
@@ -1703,6 +2724,60 @@
         }
       ]
     },
+    "gjZ6AXKLriH+HZCGJX8CV06RusaJG4QqngdJnq5LTQI=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stuband"
+        },
+        {
+          "denom": "transfer/channel-8/stBAND",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stuband",
+      "display": "transfer/channel-8/stBAND",
+      "name": "Stride Staked BAND",
+      "symbol": "stBAND",
+      "penumbraAssetId": {
+        "inner": "gjZ6AXKLriH+HZCGJX8CV06RusaJG4QqngdJnq5LTQI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stband.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stband.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
+    "gzi+nuewDdsSvP3jb0LeUzq+/3+c07faLR9V0k2yoQA=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stinj"
+        },
+        {
+          "denom": "transfer/channel-8/stINJ",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-8/stinj",
+      "display": "transfer/channel-8/stINJ",
+      "name": "Stride Staked INJ",
+      "symbol": "stINJ",
+      "penumbraAssetId": {
+        "inner": "gzi+nuewDdsSvP3jb0LeUzq+/3+c07faLR9V0k2yoQA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stinj.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stinj.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
     "h4c+OAGonGVREC9ZaYzLbrpnSkUpl0JhHqHwBogeXw0=": {
       "description": "An alloy of LINK asset variants on Osmosis.",
       "denomUnits": [
@@ -1717,7 +2792,7 @@
       "base": "transfer/channel-4/factory/osmo18zdw5yvs6gfp95rp74qqwug9yduw2fyr8kplk2xgs726s9axc5usa2vpgw/alloyed/allLINK",
       "display": "transfer/channel-4/link",
       "name": "Chainlink",
-      "symbol": "LINK",
+      "symbol": "allLINK",
       "penumbraAssetId": {
         "inner": "h4c+OAGonGVREC9ZaYzLbrpnSkUpl0JhHqHwBogeXw0="
       },
@@ -1754,7 +2829,7 @@
       "base": "transfer/channel-4/factory/osmo1f588gk9dazpsueevdl2w6wfkmfmhg5gdvg2uerdlzl0atkasqhsq59qc6a/alloyed/allSHIB",
       "display": "transfer/channel-4/shib",
       "name": "Shiba Inu",
-      "symbol": "SHIB",
+      "symbol": "allSHIB",
       "penumbraAssetId": {
         "inner": "hOnMqQbpe5Abe7vvfHYda77fg3Zit88fatqDfPO1bgQ="
       },
@@ -1776,6 +2851,87 @@
       ],
       "priorityScore": "500000000000",
       "coingeckoId": "osmosis-allshib"
+    },
+    "hZntyCsNRTDrRdd9co7TcsGFJ22uBMeJLj4TmP+6Hgw=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/yum-wei"
+        },
+        {
+          "denom": "transfer/channel-7/yum",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/yum-wei",
+      "display": "transfer/channel-7/yum",
+      "name": "Axelar Wrapped YUM",
+      "symbol": "YUM.axl",
+      "penumbraAssetId": {
+        "inner": "hZntyCsNRTDrRdd9co7TcsGFJ22uBMeJLj4TmP+6Hgw="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/yum.png",
+          "theme": {
+            "primaryColorHex": "#33a6e7"
+          }
+        }
+      ]
+    },
+    "i+PyXu+EB6JUn1xtHXJgAK5VWvoDuZoTc/UGESZzQQ4=": {
+      "description": "Wrapped BNB on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/wbnb-wei"
+        },
+        {
+          "denom": "transfer/channel-7/wbnb",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/wbnb-wei",
+      "display": "transfer/channel-7/wbnb",
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "penumbraAssetId": {
+        "inner": "i+PyXu+EB6JUn1xtHXJgAK5VWvoDuZoTc/UGESZzQQ4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.svg",
+          "theme": {
+            "primaryColorHex": "#f3bb0c"
+          }
+        }
+      ]
+    },
+    "i8+QN8X8CDCzFNKoxGruRVCHecDY5oVg2HPILg0CJAA=": {
+      "description": "Chain on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/xcn-wei"
+        },
+        {
+          "denom": "transfer/channel-7/xcn",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/xcn-wei",
+      "display": "transfer/channel-7/xcn",
+      "name": "Chain",
+      "symbol": "XCN",
+      "penumbraAssetId": {
+        "inner": "i8+QN8X8CDCzFNKoxGruRVCHecDY5oVg2HPILg0CJAA="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/xcn.svg",
+          "theme": {
+            "primaryColorHex": "#d7d7d7"
+          }
+        }
+      ]
     },
     "iI81O5821jqBIu4F1S2E4++UlzcvK+yI8cLEKZICgAs=": {
       "description": "ERIS liquid staked OSMO",
@@ -1833,6 +2989,61 @@
       ],
       "coingeckoId": "backbone-staked-osmo"
     },
+    "ipRnRZ9a5nmauojPsKUviUYrv0hxomur7FGxSOAAUAA=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/yieldeth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/YieldETH",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/yieldeth-wei",
+      "display": "transfer/channel-7/YieldETH",
+      "name": "Real Yield Eth",
+      "symbol": "YieldETH",
+      "penumbraAssetId": {
+        "inner": "ipRnRZ9a5nmauojPsKUviUYrv0hxomur7FGxSOAAUAA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/yieldeth.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/yieldeth.svg",
+          "theme": {
+            "primaryColorHex": "#14448c"
+          }
+        }
+      ]
+    },
+    "jm8R/hHUxcqdCW6GilDQNg3J2FdOytuXU5LDahzhrQk=": {
+      "description": "Circle's stablecoin from Avalanche on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/avalanche-uusdc"
+        },
+        {
+          "denom": "transfer/channel-7/avalanche-usdc",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/avalanche-uusdc",
+      "display": "transfer/channel-7/avalanche-usdc",
+      "name": "USD Coin from Avalanche",
+      "symbol": "axlUSDC.avax",
+      "penumbraAssetId": {
+        "inner": "jm8R/hHUxcqdCW6GilDQNg3J2FdOytuXU5LDahzhrQk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg",
+          "theme": {
+            "primaryColorHex": "#2474cc"
+          }
+        }
+      ]
+    },
     "k2flRuIwi8IAvyDasAL/9fjl8mGpPCPCMhYmsh8AlQQ=": {
       "description": "CosmoUSD",
       "denomUnits": [
@@ -1856,6 +3067,32 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CosmoUSD.png",
           "theme": {
             "primaryColorHex": "#343169"
+          }
+        }
+      ]
+    },
+    "kmxtCtqVIc/lLgdQkonBEvAK/3Qk1yrv0r7CuXo45A4=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/reth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/reth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/reth-wei",
+      "display": "transfer/channel-7/reth",
+      "name": "Rocket Pool Ether",
+      "symbol": "rETH",
+      "penumbraAssetId": {
+        "inner": "kmxtCtqVIc/lLgdQkonBEvAK/3Qk1yrv0r7CuXo45A4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/reth.png",
+          "theme": {
+            "primaryColorHex": "#fba487"
           }
         }
       ]
@@ -1896,6 +3133,34 @@
       ],
       "coingeckoId": "avail"
     },
+    "m4g1V91Iwjd+moqk+mbxGr9+mtFZl2jqde5HbltTGw8=": {
+      "description": "Stride's liquid staked SAGA",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stusaga"
+        },
+        {
+          "denom": "transfer/channel-8/stSAGA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stusaga",
+      "display": "transfer/channel-8/stSAGA",
+      "name": "Stride Staked SAGA",
+      "symbol": "stSAGA",
+      "penumbraAssetId": {
+        "inner": "m4g1V91Iwjd+moqk+mbxGr9+mtFZl2jqde5HbltTGw8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsaga.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsaga.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
     "n3badZGZ/y5sAyi3tnYYVuJX+squzic2GOVV9Fr1bBA=": {
       "description": "Fractionalized Rekt Bulls",
       "denomUnits": [
@@ -1919,6 +3184,59 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fBULLS.png",
           "theme": {
             "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
+    "neh64toTy3b5K0n1sHBFiR0NYpO3QsN124Ov60oXVAA=": {
+      "description": "Uniswap on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/uni-wei"
+        },
+        {
+          "denom": "transfer/channel-7/uni",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/uni-wei",
+      "display": "transfer/channel-7/uni",
+      "name": "Uniswap",
+      "symbol": "axlUNI",
+      "penumbraAssetId": {
+        "inner": "neh64toTy3b5K0n1sHBFiR0NYpO3QsN124Ov60oXVAA="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/uni.svg",
+          "theme": {
+            "primaryColorHex": "#fc047c"
+          }
+        }
+      ]
+    },
+    "oJrqiS598GEGDk2k1aSzyjgQGDKcNB5gnvf62kE9JQQ=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/arbitrum-weth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/arbitrum-weth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/arbitrum-weth-wei",
+      "display": "transfer/channel-7/arbitrum-weth",
+      "name": "Arbitrum axlETH",
+      "symbol": "axlETH.arbitrum",
+      "penumbraAssetId": {
+        "inner": "oJrqiS598GEGDk2k1aSzyjgQGDKcNB5gnvf62kE9JQQ="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/weth.svg",
+          "theme": {
+            "primaryColorHex": "#e71e7b"
           }
         }
       ]
@@ -1981,6 +3299,60 @@
         }
       ]
     },
+    "pg8WjZqwBktMi4mY4Fb2C+YGwctVw0cOLnOL9awOQwg=": {
+      "description": "Stride's liquid staked DYDX",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stadydx"
+        },
+        {
+          "denom": "transfer/channel-8/stDYDX",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-8/stadydx",
+      "display": "transfer/channel-8/stDYDX",
+      "name": "Stride Staked DYDX",
+      "symbol": "stDYDX",
+      "penumbraAssetId": {
+        "inner": "pg8WjZqwBktMi4mY4Fb2C+YGwctVw0cOLnOL9awOQwg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stdydx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stdydx.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
+    "pmzfmUbjmJ5hPRHQlPc7q99GqyC84871NThrLyxfPws=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/cbeth-wei"
+        },
+        {
+          "denom": "transfer/channel-7/cbeth",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/cbeth-wei",
+      "display": "transfer/channel-7/cbeth",
+      "name": "Coinbase Wrapped Staked ETH",
+      "symbol": "cbETH",
+      "penumbraAssetId": {
+        "inner": "pmzfmUbjmJ5hPRHQlPc7q99GqyC84871NThrLyxfPws="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/cbeth.png",
+          "theme": {
+            "primaryColorHex": "#c9dbfc"
+          }
+        }
+      ]
+    },
     "q+QdsB0j6GY5ZcgysYJYWfgOfEzUJ2lJXXf7gDiw0AA=": {
       "description": "Fractionalized Pixel Witches",
       "denomUnits": [
@@ -2004,6 +3376,34 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fWITCH.png",
           "theme": {
             "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
+    "q8PoP4dzqzHUyiqvrs0SnvjXnCi96gfhxAe2ci59zg0=": {
+      "description": "Chainlink on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/link-wei"
+        },
+        {
+          "denom": "transfer/channel-7/link",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/link-wei",
+      "display": "transfer/channel-7/link",
+      "name": "Chainlink",
+      "symbol": "axlLINK",
+      "penumbraAssetId": {
+        "inner": "q8PoP4dzqzHUyiqvrs0SnvjXnCi96gfhxAe2ci59zg0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/link.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/link.svg",
+          "theme": {
+            "primaryColorHex": "#2c5cdc"
           }
         }
       ]
@@ -2036,6 +3436,34 @@
       ],
       "coingeckoId": "membrane"
     },
+    "qhGnX2cUuvGR3zBLjZSd9yUgHIjlkzaTSktq6y5XLg0=": {
+      "description": "Wrapped FTM on Axelar.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/wftm-wei"
+        },
+        {
+          "denom": "transfer/channel-7/ftm",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-7/wftm-wei",
+      "display": "transfer/channel-7/ftm",
+      "name": "Wrapped FTM",
+      "symbol": "WFTM",
+      "penumbraAssetId": {
+        "inner": "qhGnX2cUuvGR3zBLjZSd9yUgHIjlkzaTSktq6y5XLg0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/fantom/images/ftm.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/fantom/images/ftm.svg",
+          "theme": {
+            "primaryColorHex": "#1c6cfc"
+          }
+        }
+      ]
+    },
     "rNNsvEj1LBheBJ3R4rJg+gmG6YXVGA6xmHCFVy0CPgM=": {
       "description": "USDC supplied on Mars looped using Membrane by a vault",
       "denomUnits": [
@@ -2054,6 +3482,34 @@
       "penumbraAssetId": {
         "inner": "rNNsvEj1LBheBJ3R4rJg+gmG6YXVGA6xmHCFVy0CPgM="
       }
+    },
+    "rqhdrBBlVtwkHicjGz8hO5ucYLDT+Cq0IL4rHSDn2AM=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stusomm"
+        },
+        {
+          "denom": "transfer/channel-8/stsomm",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stusomm",
+      "display": "transfer/channel-8/stsomm",
+      "name": "Stride Staked SOMM",
+      "symbol": "stSOMM",
+      "penumbraAssetId": {
+        "inner": "rqhdrBBlVtwkHicjGz8hO5ucYLDT+Cq0IL4rHSDn2AM="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsomm.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsomm.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-sommelier"
     },
     "rvPy5azGrvxTK0dzmiLWAfzsGrlqV9WM7wfHQhPJiQE=": {
       "description": "Jacob Haertnellez Turtle. Launched by Jake's Personally appointed TURD Cult Leader...\"NotSeanO'Riley.\" TURD is going to lead the shitcoins of Cosmos! Or Rug You. It will be Jake's Fault. ",
@@ -2164,6 +3620,62 @@
         }
       ]
     },
+    "uXK2ihrObFuUlAF4KinZ/VZgvObq6MN8MnJcC9ci8AQ=": {
+      "description": "Wrapped Polkadot on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/dot-planck"
+        },
+        {
+          "denom": "transfer/channel-7/dot",
+          "exponent": 10
+        }
+      ],
+      "base": "transfer/channel-7/dot-planck",
+      "display": "transfer/channel-7/dot",
+      "name": "Wrapped Polkadot",
+      "symbol": "axlDOT",
+      "penumbraAssetId": {
+        "inner": "uXK2ihrObFuUlAF4KinZ/VZgvObq6MN8MnJcC9ci8AQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.svg",
+          "theme": {
+            "primaryColorHex": "#e4047c"
+          }
+        }
+      ]
+    },
+    "uaJd0dbz4PUg85mKDcIQTxpTYqHOcmg+qoFLTClKhQg=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-8/stuluna"
+        },
+        {
+          "denom": "transfer/channel-8/stluna",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-8/stuluna",
+      "display": "transfer/channel-8/stluna",
+      "name": "Stride Staked LUNA",
+      "symbol": "stLUNA",
+      "penumbraAssetId": {
+        "inner": "uaJd0dbz4PUg85mKDcIQTxpTYqHOcmg+qoFLTClKhQg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stluna.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stluna.svg",
+          "theme": {
+            "primaryColorHex": "#e40474"
+          }
+        }
+      ],
+      "coingeckoId": "stride-staked-luna"
+    },
     "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0=": {
       "description": "An alloy of USDT asset variants on Osmosis.",
       "denomUnits": [
@@ -2178,7 +3690,7 @@
       "base": "transfer/channel-4/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT",
       "display": "transfer/channel-4/allUSDT",
       "name": "Tether USD",
-      "symbol": "USDT",
+      "symbol": "allUSDT",
       "penumbraAssetId": {
         "inner": "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0="
       },
@@ -2234,6 +3746,35 @@
           }
         }
       ]
+    },
+    "w4O3mziGXG7TuIupoybfMBMMlXj4jFNGKXyHl5cQtQE=": {
+      "description": "Tether's USD stablecoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/uusdt"
+        },
+        {
+          "denom": "transfer/channel-7/usdt",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/uusdt",
+      "display": "transfer/channel-7/usdt",
+      "name": "Tether USD",
+      "symbol": "axlUSDT",
+      "penumbraAssetId": {
+        "inner": "w4O3mziGXG7TuIupoybfMBMMlXj4jFNGKXyHl5cQtQE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdt.svg",
+          "theme": {
+            "primaryColorHex": "#54ac94"
+          }
+        }
+      ],
+      "coingeckoId": "axelar-usdt"
     },
     "w5681cktB4+4eGef8ADtZ8fQSlt3IuLI7BtueUwVOg0=": {
       "description": "A synthetic version of USDT issued by Router, which can be unwrapped to USDT on several chains.",

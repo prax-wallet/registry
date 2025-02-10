@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 use penumbra_asset::asset::Metadata;
 use penumbra_registry::parser::IbcInput;
 use penumbra_registry::processor::{base64_id, transport_metadata_along_channel, Registry};
@@ -29,6 +31,7 @@ fn test_transport_metadata_along_channel() {
         cosmos_registry_dir: "love-124".to_string(),
         display_name: "Strangelove".to_string(),
         images: vec![],
+        symbol_overrides: HashMap::new(),
     };
 
     let input_json = r#"
