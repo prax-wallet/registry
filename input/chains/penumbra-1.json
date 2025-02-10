@@ -16,20 +16,6 @@
       ]
     },
     {
-      "displayName": "dYdX Protocol",
-      "chainId": "dydx-mainnet-1",
-      "channelId": "channel-1",
-      "counterpartyChannelId": "channel-70",
-      "addressPrefix": "dydx",
-      "cosmosRegistryDir": "dydx",
-      "images": [
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg"
-        }
-      ]
-    },
-    {
       "displayName": "Noble",
       "chainId": "noble-1",
       "channelId": "channel-2",
@@ -68,6 +54,34 @@
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg"
+        }
+      ]
+    },
+    {
+      "displayName": "Stride",
+      "chainId": "stride-1",
+      "channelId": "channel-8",
+      "counterpartyChannelId": "channel-307",
+      "addressPrefix": "stride",
+      "cosmosRegistryDir": "stride",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/osmo.svg"
+        }
+      ]
+    },
+    {
+      "displayName": "Axelar",
+      "chainId": "axelar-dojo-1",
+      "channelId": "channel-7",
+      "counterpartyChannelId": "channel-171",
+      "addressPrefix": "axelar",
+      "cosmosRegistryDir": "axelar",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.svg"
         }
       ]
     }
