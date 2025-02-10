@@ -379,7 +379,7 @@ fn process_chain_config(chain_config: ChainConfig) -> AppResult<Registry> {
     let mut symbol_map: HashMap<String, Vec<String>> = HashMap::new();
 
     // Collect all symbols and their base denoms
-    for (_, metadata) in &registry.asset_by_id {
+    for metadata in registry.asset_by_id.values() {
         let symbol = extract_symbol(metadata)?;
         let base_denom = metadata.base_denom().denom.clone();
         symbol_map.entry(symbol).or_default().push(base_denom);
