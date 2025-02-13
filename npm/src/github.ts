@@ -20,17 +20,22 @@ export class GithubFetcher {
   async fetchRegistry(chainId: ChainId): Promise<Registry> {
     const response = await this.typedFetcher<GithubRegistryResponse>(
       `${REGISTRY_BASE_URL}/chains/${chainId}.json`,
+      {
+        cache: 'no-cache',
+      },
     );
     return new Registry(response);
   }
 
   async fetchGlobals(): Promise<RegistryGlobals> {
-    const response = await this.typedFetcher<JsonGlobals>(`${REGISTRY_BASE_URL}/globals.json`);
+    const response = await this.typedFetcher<JsonGlobals>(`${REGISTRY_BASE_URL}/globals.json`, {
+      cache: 'no-cache',
+    });
     return new RegistryGlobals(response);
   }
 
-  private async typedFetcher<T>(url: string): Promise<T> {
-    const response = await fetch(url);
+  private async typedFetcher<T>(url: string, init?: RequestInit): Promise<T> {
+    const response = await fetch(url, init);
     if (!response.ok) {
       throw new Error(`Failed to fetch from: ${url}`);
     }
