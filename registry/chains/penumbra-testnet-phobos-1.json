@@ -142,7 +142,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "coingeckoId": "usd-coin"
     },
     "KX8cjRGFpZUkZCwCtUX8Pi2lEyO5g0oPVr8WhsLgkwg=": {
       "denomUnits": [

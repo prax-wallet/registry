@@ -61,8 +61,21 @@
       "displayName": "Stride",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/osmo.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg"
+        }
+      ]
+    },
+    {
+      "addressPrefix": "neutron",
+      "chainId": "neutron-1",
+      "channelId": "channel-9",
+      "counterpartyChannelId": "channel-6560",
+      "displayName": "Neutron",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron.svg"
         }
       ]
     },
@@ -74,8 +87,8 @@
       "displayName": "Axelar",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.svg"
         }
       ]
     }
@@ -105,6 +118,40 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/arbitrum/images/arb.svg",
           "theme": {
             "primaryColorHex": "#253545"
+          }
+        }
+      ]
+    },
+    "/479qYXE+dD7kScmzQU/5eeJqI78sk40NG5cYF0acQQ=": {
+      "description": "An alloy of DYDX asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1zem8r6dv6u38f6qpg546zy30946av8h5srgug0s4gcyy6cfecf3seac083/alloyed/allDYDX"
+        },
+        {
+          "denom": "transfer/channel-4/allDYDX",
+          "exponent": 12
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1zem8r6dv6u38f6qpg546zy30946av8h5srgug0s4gcyy6cfecf3seac083/alloyed/allDYDX",
+      "display": "transfer/channel-4/allDYDX",
+      "name": "dYdX",
+      "symbol": "DYDX",
+      "penumbraAssetId": {
+        "inner": "/479qYXE+dD7kScmzQU/5eeJqI78sk40NG5cYF0acQQ="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx-circle.svg",
+          "theme": {
+            "primaryColorHex": "#d0d0d3"
+          }
+        },
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg",
+          "theme": {
+            "primaryColorHex": "#21212f"
           }
         }
       ]
@@ -165,6 +212,60 @@
         }
       ]
     },
+    "0kVhQRyUleM1JzS7rkLnEuZ6tAQ43rYzhd5YupNw6Ac=": {
+      "description": "Boost DAO FUEL",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1zl2htquajn50vxu5ltz0y5hf2qzvkgnjaaza2rssef268xplq6vsjuruxm/fuel"
+        },
+        {
+          "denom": "transfer/channel-9/FUEL",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1zl2htquajn50vxu5ltz0y5hf2qzvkgnjaaza2rssef268xplq6vsjuruxm/fuel",
+      "display": "transfer/channel-9/FUEL",
+      "name": "FUEL",
+      "symbol": "FUEL",
+      "penumbraAssetId": {
+        "inner": "0kVhQRyUleM1JzS7rkLnEuZ6tAQ43rYzhd5YupNw6Ac="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/fuel.png",
+          "theme": {
+            "primaryColorHex": "#d7e4f1"
+          }
+        }
+      ]
+    },
+    "0pGhIkJ9TM9VB7y+kTMyQ/MWRjlu2gE+lfwbUbtnbgY=": {
+      "description": "Reflections of cartel activity on Cosmos.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1w0pz4mjw7n96kkragj8etgfgakg5vw9lzg77wq/cartel"
+        },
+        {
+          "denom": "transfer/channel-9/cartel",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1w0pz4mjw7n96kkragj8etgfgakg5vw9lzg77wq/cartel",
+      "display": "transfer/channel-9/cartel",
+      "name": "cartel",
+      "symbol": "CARTEL",
+      "penumbraAssetId": {
+        "inner": "0pGhIkJ9TM9VB7y+kTMyQ/MWRjlu2gE+lfwbUbtnbgY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/cartel.png",
+          "theme": {
+            "primaryColorHex": "#8c9098"
+          }
+        }
+      ]
+    },
     "11ulh+zO2v206EDtb6L2SdB09q4ChrHcc+p1zHubzgU=": {
       "description": "COOK is the governance token for Start.Cooking, the premier token factory on Cosmos.",
       "denomUnits": [
@@ -219,6 +320,33 @@
         }
       ]
     },
+    "1RP/xXNeYICp2gwgz3lv6r0xa/3jKw3JitScl+QDhgk=": {
+      "description": "What the Fuck",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/neutron12h09p8hq5y4xpsmcuxxzsn9juef4f6jvekp8yefc6xnlwm6uumnsdk29wf"
+        },
+        {
+          "denom": "transfer/channel-9/wtf",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/neutron12h09p8hq5y4xpsmcuxxzsn9juef4f6jvekp8yefc6xnlwm6uumnsdk29wf",
+      "display": "transfer/channel-9/wtf",
+      "name": "wtf",
+      "symbol": "WTF",
+      "penumbraAssetId": {
+        "inner": "1RP/xXNeYICp2gwgz3lv6r0xa/3jKw3JitScl+QDhgk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/WTF.png",
+          "theme": {
+            "primaryColorHex": "#dcd5ab"
+          }
+        }
+      ]
+    },
     "1b1489PiR06kGAYS4y4+J0baqVEdYYqLDlxkHLy5CwA=": {
       "description": "The governance and utility token of Yieldmos, the Interchain Automation Protocol",
       "denomUnits": [
@@ -242,6 +370,35 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ymos.png",
           "theme": {
             "primaryColorHex": "#2c3554"
+          }
+        }
+      ]
+    },
+    "26qxGqev+0d1jEJc8C5iJhejfieGaoB/ypiRRmSacAw=": {
+      "description": "Internet Computer bridged via Omnity Network.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo10c4y9csfs8q7mtvfg4p9gd8d0acx0hpc2mte9xqzthd7rd3348tsfhaesm/sICP-native-ICP"
+        },
+        {
+          "denom": "transfer/channel-4/icp",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo10c4y9csfs8q7mtvfg4p9gd8d0acx0hpc2mte9xqzthd7rd3348tsfhaesm/sICP-native-ICP",
+      "display": "transfer/channel-4/icp",
+      "name": "Internet Computer",
+      "symbol": "ICP",
+      "penumbraAssetId": {
+        "inner": "26qxGqev+0d1jEJc8C5iJhejfieGaoB/ypiRRmSacAw="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/internetcomputer/images/icp.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/internetcomputer/images/icp.svg",
+          "theme": {
+            "primaryColorHex": "#29ABE2",
+            "circle": true
           }
         }
       ]
@@ -381,6 +538,62 @@
         }
       ]
     },
+    "43MGNOeNet0OxyIjo7ENmIJ1Sr2p6ALAK5gygAIFDwg=": {
+      "description": "NEWTROLL",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1ume2n42r5j0660gegrr28fzdze7aqf7r5cd9y6/newtroll"
+        },
+        {
+          "denom": "transfer/channel-9/newtroll",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1ume2n42r5j0660gegrr28fzdze7aqf7r5cd9y6/newtroll",
+      "display": "transfer/channel-9/newtroll",
+      "name": "Newtroll",
+      "symbol": "NTRL",
+      "penumbraAssetId": {
+        "inner": "43MGNOeNet0OxyIjo7ENmIJ1Sr2p6ALAK5gygAIFDwg="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/newtroll.svg",
+          "theme": {
+            "primaryColorHex": "#e4edea"
+          }
+        }
+      ]
+    },
+    "4KwdCQTdeO7QlJcEObIlASWEvnox5L+BKXzfZHohgwA=": {
+      "description": "Astrovault xATOM on Neutron Chain",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/cw20:neutron1vjl4ze7gr32lar5s4fj776v70j4ml7mlt4aqln2hwgfhqjck8xwqfhx8vj"
+        },
+        {
+          "denom": "transfer/channel-9/xATOM",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/cw20:neutron1vjl4ze7gr32lar5s4fj776v70j4ml7mlt4aqln2hwgfhqjck8xwqfhx8vj",
+      "display": "transfer/channel-9/xATOM",
+      "name": "Astrovault xATOM (Neutron)",
+      "symbol": "xATOM",
+      "penumbraAssetId": {
+        "inner": "4KwdCQTdeO7QlJcEObIlASWEvnox5L+BKXzfZHohgwA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/xatom.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/xatom.svg",
+          "theme": {
+            "primaryColorHex": "#0cd9c3"
+          }
+        }
+      ],
+      "coingeckoId": "astrovault-xatom"
+    },
     "4S24boIE2iFGH9vme1ztzP/2HnNCij4BFV+v7XE+jgg=": {
       "denomUnits": [
         {
@@ -404,6 +617,35 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.svg",
           "theme": {
             "primaryColorHex": "#cc3233"
+          }
+        }
+      ]
+    },
+    "4jHUqvDhiWLxTDhiYpfkqDCWZJ8vyKtT+NPB6r8PVAM=": {
+      "description": "Tether's USD stablecoin from Polygon on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/polygon-uusdt"
+        },
+        {
+          "denom": "transfer/channel-7/usdt",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/polygon-uusdt",
+      "display": "transfer/channel-7/usdt",
+      "name": "Tether USD (Polygon)",
+      "symbol": "axlUSDT.polygon",
+      "penumbraAssetId": {
+        "inner": "4jHUqvDhiWLxTDhiYpfkqDCWZJ8vyKtT+NPB6r8PVAM="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg",
+          "theme": {
+            "primaryColorHex": "#009393",
+            "circle": true
           }
         }
       ]
@@ -556,6 +798,62 @@
         }
       ]
     },
+    "6IDer/CFuwr5OgoPj6GSy2bpLVON6aQdfFibMsRMrAU=": {
+      "description": "SinGarden token",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/sin"
+        },
+        {
+          "denom": "transfer/channel-9/SIN",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/sin",
+      "display": "transfer/channel-9/SIN",
+      "name": "SIN",
+      "symbol": "SIN",
+      "penumbraAssetId": {
+        "inner": "6IDer/CFuwr5OgoPj6GSy2bpLVON6aQdfFibMsRMrAU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/sin.png",
+          "theme": {
+            "primaryColorHex": "#ebf0f4"
+          }
+        }
+      ]
+    },
+    "6xVpui0Nmgiigj/S+3zZQBWeHAhDcMxkvISwiL2Npg8=": {
+      "description": "An alloy of BCH asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1cranx3twqxfrgeqvgsu262gy54vafpc9xap6scye99v244zl970s7kw2sz/alloyed/allBCH"
+        },
+        {
+          "denom": "transfer/channel-4/allBCH",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1cranx3twqxfrgeqvgsu262gy54vafpc9xap6scye99v244zl970s7kw2sz/alloyed/allBCH",
+      "display": "transfer/channel-4/allBCH",
+      "name": "Bitcoin Cash",
+      "symbol": "BCH",
+      "penumbraAssetId": {
+        "inner": "6xVpui0Nmgiigj/S+3zZQBWeHAhDcMxkvISwiL2Npg8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/bitcoincash/images/bch.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/bitcoincash/images/bch.svg",
+          "theme": {
+            "primaryColorHex": "#0AC18E",
+            "circle": true
+          }
+        }
+      ]
+    },
     "6zEm1cTHN1PsueimuNxC+6S/t6uDYRdhbitgkUV9IxE=": {
       "description": "MilkyWay's liquid staked TIA",
       "denomUnits": [
@@ -584,6 +882,117 @@
         }
       ],
       "coingeckoId": "milktia"
+    },
+    "7Vf/lL80Mu4FfmwBVKjo++cp15ZLn1aUPZukApt4AA0=": {
+      "description": "An alloy of XRP asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1qnglc04tmhg32uc4kxlxh55a5cmhj88cpa3rmtly484xqu82t79sfv94w0/alloyed/allXRP"
+        },
+        {
+          "denom": "transfer/channel-4/allXRP",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1qnglc04tmhg32uc4kxlxh55a5cmhj88cpa3rmtly484xqu82t79sfv94w0/alloyed/allXRP",
+      "display": "transfer/channel-4/allXRP",
+      "name": "Ripple",
+      "symbol": "XRP",
+      "penumbraAssetId": {
+        "inner": "7Vf/lL80Mu4FfmwBVKjo++cp15ZLn1aUPZukApt4AA0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/xrpl/images/xrp.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/xrpl/images/xrp.svg",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "7eT7kabmjqSa7k1bTrPQUSjHS5Watuq/X+3tW5usjA4=": {
+      "description": "WEIRD FRIENDS token",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD"
+        },
+        {
+          "denom": "transfer/channel-9/WEIRD",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD",
+      "display": "transfer/channel-9/WEIRD",
+      "name": "WEIRD",
+      "symbol": "WEIRD",
+      "penumbraAssetId": {
+        "inner": "7eT7kabmjqSa7k1bTrPQUSjHS5Watuq/X+3tW5usjA4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/WEIRD.png",
+          "theme": {
+            "primaryColorHex": "#ebf0f4"
+          }
+        }
+      ]
+    },
+    "8RPKCPIUN1js8AYW/fSncylaYcCg+XYm98i3fbqdRwU=": {
+      "description": "The Seven Green Shade Token, limited to 7777 units, represents exclusive access and utilities in the upcoming Seven Shaders RPG AI game.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/t7s"
+        },
+        {
+          "denom": "transfer/channel-4/T7S",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/t7s",
+      "display": "transfer/channel-4/T7S",
+      "name": "The seven green shade ",
+      "symbol": "T7S",
+      "penumbraAssetId": {
+        "inner": "8RPKCPIUN1js8AYW/fSncylaYcCg+XYm98i3fbqdRwU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/T7S.png",
+          "theme": {
+            "primaryColorHex": "#31f244"
+          }
+        }
+      ]
+    },
+    "8SUSbNQv+PP0hbTduAuvfx98/GKjGtVMC7Mz2KAp7wQ=": {
+      "description": "Lombard Staked Bitcoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/lbtc-satoshi"
+        },
+        {
+          "denom": "transfer/channel-7/lbtc",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-7/lbtc-satoshi",
+      "display": "transfer/channel-7/lbtc",
+      "name": "Lombard Staked Bitcoin",
+      "symbol": "axlLBTC",
+      "penumbraAssetId": {
+        "inner": "8SUSbNQv+PP0hbTduAuvfx98/GKjGtVMC7Mz2KAp7wQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/lbtc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/lbtc.svg",
+          "theme": {
+            "primaryColorHex": "#162E2F",
+            "circle": true
+          }
+        }
+      ]
     },
     "9K0nhsHG5pn/MpmxYDkGyIHbVXh2aZm3eknCYy9auws=": {
       "description": "A group of french boulanger who wanna bring fun and baguette on cosmos",
@@ -639,6 +1048,34 @@
         }
       ],
       "coingeckoId": "mad-scientists"
+    },
+    "9hxO0eoOeL5nRYGrI7X751jo/Q3BHqU2E84QtCn0aA8=": {
+      "description": "The Spice memecoin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1n6asrjy9754q8y9jsxqf557zmsv3s3xa5m9eg5/uspice"
+        },
+        {
+          "denom": "transfer/channel-4/Spice",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1n6asrjy9754q8y9jsxqf557zmsv3s3xa5m9eg5/uspice",
+      "display": "transfer/channel-4/Spice",
+      "name": "Spice",
+      "symbol": "SPICE",
+      "penumbraAssetId": {
+        "inner": "9hxO0eoOeL5nRYGrI7X751jo/Q3BHqU2E84QtCn0aA8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/spice.png",
+          "theme": {
+            "primaryColorHex": "#e5ba44"
+          }
+        }
+      ],
+      "coingeckoId": "spice-2"
     },
     "9sKDSVM9qU0G3ASpZted8wJB8fhdadAtzxZxE5tJMxI=": {
       "description": "An alloy of ARB asset variants on Osmosis.",
@@ -706,6 +1143,35 @@
       ],
       "coingeckoId": "axlusdc"
     },
+    "Ab+YgSwUEu9eoWqiLieB6N1MyllLiM7/NOO7lfP9kwQ=": {
+      "description": "The governance token of the Arena DAO",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron129ukd5cwahcjkccujz87rjemjukff7jf6sau72qrhva677xgz9gs4m4jeq/uarena"
+        },
+        {
+          "denom": "transfer/channel-9/arena",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron129ukd5cwahcjkccujz87rjemjukff7jf6sau72qrhva677xgz9gs4m4jeq/uarena",
+      "display": "transfer/channel-9/arena",
+      "name": "Arena Token",
+      "symbol": "ARENA",
+      "penumbraAssetId": {
+        "inner": "Ab+YgSwUEu9eoWqiLieB6N1MyllLiM7/NOO7lfP9kwQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena_dao.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena_dao.svg",
+          "theme": {
+            "primaryColorHex": "#FF8000",
+            "circle": true
+          }
+        }
+      ]
+    },
     "AdlT67pUDx0wsIFBC4opbslYEOk6+QDIzWUcVtQlXgQ=": {
       "description": "Chain-key Bitcoin bridged via Omnity Network.",
       "denomUnits": [
@@ -761,8 +1227,7 @@
             "primaryColorHex": "#1e264f"
           }
         }
-      ],
-      "coingeckoId": "sail-dao"
+      ]
     },
     "B+9mATKkwyNfqyctQ9m5dSqDN7LRCFl6v/r/XyRtDw8=": {
       "description": "ATOM is the native cryptocurrency of the Cosmos network, designed to facilitate interoperability between multiple blockchains through its innovative hub-and-spoke model.",
@@ -807,7 +1272,7 @@
       ],
       "base": "transfer/channel-4/factory/osmo12lnwf54yd30p6amzaged2atln8k0l32n7ncxf04ctg7u7ymnsy7qkqgsw4/alloyed/allTON",
       "display": "transfer/channel-4/ton",
-      "name": "TON (The Open Network)",
+      "name": "Toncoin",
       "symbol": "TON",
       "penumbraAssetId": {
         "inner": "BK/Hz826s94tKv7AxSPTGqojgzTnZSsZjpUTYupkZws="
@@ -859,6 +1324,35 @@
         }
       ]
     },
+    "BYrmeDwTX7i1szu85yMFU8rNeg+1oeTAc5S8bNF5kAI=": {
+      "description": "Tether's USD stablecoin from Arbitrum on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/arbitrum-uusdt"
+        },
+        {
+          "denom": "transfer/channel-7/usdt",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/arbitrum-uusdt",
+      "display": "transfer/channel-7/usdt",
+      "name": "Tether USD (Arbitrum)",
+      "symbol": "axlUSDT.arbitrum",
+      "penumbraAssetId": {
+        "inner": "BYrmeDwTX7i1szu85yMFU8rNeg+1oeTAc5S8bNF5kAI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg",
+          "theme": {
+            "primaryColorHex": "#009393",
+            "circle": true
+          }
+        }
+      ]
+    },
     "BnSvnSoramn/A3n60rYRTydWKIyibJi2z/a8ItIllhE=": {
       "denomUnits": [
         {
@@ -884,8 +1378,34 @@
             "primaryColorHex": "#e40474"
           }
         }
+      ]
+    },
+    "DJlyenhbLm2EYBi/BkFJ7SNSEF1aJj2vm/1zGoz5vAc=": {
+      "description": "BITCOSMOS",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/neutron1fjzg7fmv770hsvahqm0nwnu6grs3rjnd2wa6fvm9unv6vedkzekqpw44qj"
+        },
+        {
+          "denom": "transfer/channel-9/bitcosmos",
+          "exponent": 6
+        }
       ],
-      "coingeckoId": "stride-staked-evmos"
+      "base": "transfer/channel-9/neutron1fjzg7fmv770hsvahqm0nwnu6grs3rjnd2wa6fvm9unv6vedkzekqpw44qj",
+      "display": "transfer/channel-9/bitcosmos",
+      "name": "Bitcosmos",
+      "symbol": "BTC",
+      "penumbraAssetId": {
+        "inner": "DJlyenhbLm2EYBi/BkFJ7SNSEF1aJj2vm/1zGoz5vAc="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/bitcosmos.png",
+          "theme": {
+            "primaryColorHex": "#1b0847"
+          }
+        }
+      ]
     },
     "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc=": {
       "description": "Margined Power Token sqBTC",
@@ -971,6 +1491,60 @@
       ],
       "coingeckoId": "stride-staked-osmo"
     },
+    "FRRdTvPErKQOa3WzsiDc8YAgwZ7LxvsQbkxkcsvOiwA=": {
+      "description": "The Sherpa memecoin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1n6asrjy9754q8y9jsxqf557zmsv3s3xa5m9eg5/usherpa"
+        },
+        {
+          "denom": "transfer/channel-4/Sherpa",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1n6asrjy9754q8y9jsxqf557zmsv3s3xa5m9eg5/usherpa",
+      "display": "transfer/channel-4/Sherpa",
+      "name": "Sherpa",
+      "symbol": "SHERPA",
+      "penumbraAssetId": {
+        "inner": "FRRdTvPErKQOa3WzsiDc8YAgwZ7LxvsQbkxkcsvOiwA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sherpa.png",
+          "theme": {
+            "primaryColorHex": "#fe9cdf"
+          }
+        }
+      ]
+    },
+    "GbgtRiLud3Pw9nLpkAY6DjmUOxA03YAMA3FmnZr5wAc=": {
+      "description": "clownmaxxed store of value",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron170v88vrtnedesyfytuku257cggxc79rd7lwt7q/ucircus"
+        },
+        {
+          "denom": "transfer/channel-9/circus",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron170v88vrtnedesyfytuku257cggxc79rd7lwt7q/ucircus",
+      "display": "transfer/channel-9/circus",
+      "name": "AtomEconomicZone69JaeKwonInu",
+      "symbol": "CIRCUS",
+      "penumbraAssetId": {
+        "inner": "GbgtRiLud3Pw9nLpkAY6DjmUOxA03YAMA3FmnZr5wAc="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/circus.png",
+          "theme": {
+            "primaryColorHex": "#242033"
+          }
+        }
+      ]
+    },
     "HiMfbhLbTTAP0bDI1spwmkZUDAl658X8/8WptethTww=": {
       "denomUnits": [
         {
@@ -994,6 +1568,33 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/stibcx.svg",
           "theme": {
             "primaryColorHex": "#e40474"
+          }
+        }
+      ]
+    },
+    "HirrT0N2UFSWuJ+MYmH2gYxTY3s+U2wVNzA38tYGthE=": {
+      "description": "A Mechanical Canine",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1t5qrjtyryh8gzt800qr5vylhh2f8cmx4wmz9mc/ugoddard"
+        },
+        {
+          "denom": "transfer/channel-9/goddard",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1t5qrjtyryh8gzt800qr5vylhh2f8cmx4wmz9mc/ugoddard",
+      "display": "transfer/channel-9/goddard",
+      "name": "Goddard",
+      "symbol": "GODRD",
+      "penumbraAssetId": {
+        "inner": "HirrT0N2UFSWuJ+MYmH2gYxTY3s+U2wVNzA38tYGthE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/goddardntrn.png",
+          "theme": {
+            "primaryColorHex": "#516b80"
           }
         }
       ]
@@ -1081,6 +1682,34 @@
       ],
       "coingeckoId": "stride"
     },
+    "JYxf1s+1m4rB2Cl/s4tcZrxjE614W1c4Y2PsEKEfdQ4=": {
+      "description": "Fire Bitcoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/fbtc-satoshi"
+        },
+        {
+          "denom": "transfer/channel-7/fbtc",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-7/fbtc-satoshi",
+      "display": "transfer/channel-7/fbtc",
+      "name": "Fire Bitcoin",
+      "symbol": "axlFBTC",
+      "penumbraAssetId": {
+        "inner": "JYxf1s+1m4rB2Cl/s4tcZrxjE614W1c4Y2PsEKEfdQ4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/mantle/images/fbtc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/mantle/images/fbtc.svg",
+          "theme": {
+            "primaryColorHex": "#8F00FF"
+          }
+        }
+      ]
+    },
     "JfJc35xgtUPmKfidDjgHDnIYQ2klmu8x4N8lbKryDwY=": {
       "description": "For th",
       "denomUnits": [
@@ -1104,6 +1733,33 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CrazyHorse.png",
           "theme": {
             "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "KRiGHpv2/L0vixwjgMUdOZI9JqLreJksGAv0VirTBxI=": {
+      "description": "ashION - Burned ION",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1svj5kd8kzj7xxtrd6ftjk0856ffpyj4egz7f9pd9dge5wr4kwansmefq07/ion.ash"
+        },
+        {
+          "denom": "transfer/channel-4/ashION",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1svj5kd8kzj7xxtrd6ftjk0856ffpyj4egz7f9pd9dge5wr4kwansmefq07/ion.ash",
+      "display": "transfer/channel-4/ashION",
+      "name": "Burned ION",
+      "symbol": "ashION",
+      "penumbraAssetId": {
+        "inner": "KRiGHpv2/L0vixwjgMUdOZI9JqLreJksGAv0VirTBxI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ashion.png",
+          "theme": {
+            "primaryColorHex": "#ebb093"
           }
         }
       ]
@@ -1308,6 +1964,33 @@
         }
       ]
     },
+    "LPgsVcmWhTA8XmOVMBwljytgYbea+ZIs/W/4MWayjRA=": {
+      "description": "Astropepe meme coin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron14henrqx9y328fjrdvz6l6d92r0t7g5hk86q5nd/uastropepe"
+        },
+        {
+          "denom": "transfer/channel-9/ASTROPEPE",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron14henrqx9y328fjrdvz6l6d92r0t7g5hk86q5nd/uastropepe",
+      "display": "transfer/channel-9/ASTROPEPE",
+      "name": "AstroPepe",
+      "symbol": "ASTROPEPE",
+      "penumbraAssetId": {
+        "inner": "LPgsVcmWhTA8XmOVMBwljytgYbea+ZIs/W/4MWayjRA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astropepe.png",
+          "theme": {
+            "primaryColorHex": "#47391d"
+          }
+        }
+      ]
+    },
     "LdexCcIS7h5jbSjieMV+MoC2IB1XmuKxzNNeRgq4QAQ=": {
       "description": "An alloy of SOL asset variants on Osmosis.",
       "denomUnits": [
@@ -1450,6 +2133,35 @@
         }
       ]
     },
+    "N1X01EuWa+PABhSItnvavUvrZ7I2eyABQiGZRA2hZRE=": {
+      "description": "Coinbase Wrapped Bitcoin on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/cbbtc-satoshi"
+        },
+        {
+          "denom": "transfer/channel-7/cbbtc",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-7/cbbtc-satoshi",
+      "display": "transfer/channel-7/cbbtc",
+      "name": "Coinbase Warpped Bitcoin",
+      "symbol": "axl-cbBTC",
+      "penumbraAssetId": {
+        "inner": "N1X01EuWa+PABhSItnvavUvrZ7I2eyABQiGZRA2hZRE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/base/images/cbbtc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/base/images/cbbtc.svg",
+          "theme": {
+            "primaryColorHex": "#0052FF",
+            "circle": true
+          }
+        }
+      ]
+    },
     "N6cjbF+9/ztCnmEb035XRlDJCgxwm4Q+apv5m73ZGgA=": {
       "description": "The permissioned staking asset for Noble Chain",
       "denomUnits": [
@@ -1501,6 +2213,33 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fMAD.png",
           "theme": {
             "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
+    "NcfDACjHzyiH4cXuAPKAMkFJ+FKmH/1OFHVDqSn3YQI=": {
+      "description": "CULT - Less Brainwashing, More Utility",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1qdvwftqd8ml6t9w6dmj97m03ck5ghqqmd8y7cm/cult"
+        },
+        {
+          "denom": "transfer/channel-4/CULT",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1qdvwftqd8ml6t9w6dmj97m03ck5ghqqmd8y7cm/cult",
+      "display": "transfer/channel-4/CULT",
+      "name": "CULT",
+      "symbol": "CULT",
+      "penumbraAssetId": {
+        "inner": "NcfDACjHzyiH4cXuAPKAMkFJ+FKmH/1OFHVDqSn3YQI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/cult.png",
+          "theme": {
+            "primaryColorHex": "#f1a507"
           }
         }
       ]
@@ -1586,6 +2325,34 @@
         }
       ]
     },
+    "Oub7StLSW7l7FO1SejnC4l8gvK6C4/9YuOnbbnfwqxA=": {
+      "description": "The cutest NEWT token on Neutron chain.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1p8d89wvxyjcnawmgw72klknr3lg9gwwl6ypxda/newt"
+        },
+        {
+          "denom": "transfer/channel-9/newt",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1p8d89wvxyjcnawmgw72klknr3lg9gwwl6ypxda/newt",
+      "display": "transfer/channel-9/newt",
+      "name": "Newt",
+      "symbol": "NEWT",
+      "penumbraAssetId": {
+        "inner": "Oub7StLSW7l7FO1SejnC4l8gvK6C4/9YuOnbbnfwqxA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/newt.png",
+          "theme": {
+            "primaryColorHex": "#16233d"
+          }
+        }
+      ],
+      "coingeckoId": "newt"
+    },
     "P2nfAmaAzrvMMw+d1Frmhrb1cRTKluUc+ML7IJ+/Pwc=": {
       "denomUnits": [
         {
@@ -1599,7 +2366,7 @@
       "base": "transfer/channel-7/wsteth-wei",
       "display": "transfer/channel-7/wsteth",
       "name": "Wrapped Lido Staked Ether",
-      "symbol": "wstETH",
+      "symbol": "wstETH.axelar",
       "penumbraAssetId": {
         "inner": "P2nfAmaAzrvMMw+d1Frmhrb1cRTKluUc+ML7IJ+/Pwc="
       },
@@ -1692,6 +2459,35 @@
         }
       ]
     },
+    "QCrnqqh9Qi+vwf9Fst5vq1yMI1F/cP1zX0bGwXGBBxI=": {
+      "description": "Mars Protocol is a cross-collateralized Money Market Protocol on Neutron and Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS"
+        },
+        {
+          "denom": "transfer/channel-9/MARS",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1ndu2wvkrxtane8se2tr48gv7nsm46y5gcqjhux/MARS",
+      "display": "transfer/channel-9/MARS",
+      "name": "Mars Protocol token",
+      "symbol": "MARS",
+      "penumbraAssetId": {
+        "inner": "QCrnqqh9Qi+vwf9Fst5vq1yMI1F/cP1zX0bGwXGBBxI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/mars-token.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/mars-token.svg",
+          "theme": {
+            "primaryColorHex": "#ef4136"
+          }
+        }
+      ],
+      "coingeckoId": "mars-protocol-a7fcbcfb-fd61-4017-92f0-7ee9f9cc6da3"
+    },
     "QU5yP3S9mHwCzLyZdYXtUrGW4v/nWzeTqmjMKZZiaRA=": {
       "description": "An alloy of BTC asset variants on Osmosis.",
       "denomUnits": [
@@ -1751,6 +2547,47 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/ox.svg",
           "theme": {
             "primaryColorHex": "#e8c92b"
+          }
+        }
+      ]
+    },
+    "QnAMDwszxX3EMgb3dFGw2dcGaN9najQfY5+kTxD85g8=": {
+      "description": "An alloy of APTOS asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1zynnzvwdu72zc4mxqnnp348ksfmayldqyfs8khdud3myr7m5h8nsqwta2v/alloyed/allAPT"
+        },
+        {
+          "denom": "transfer/channel-4/APT",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1zynnzvwdu72zc4mxqnnp348ksfmayldqyfs8khdud3myr7m5h8nsqwta2v/alloyed/allAPT",
+      "display": "transfer/channel-4/APT",
+      "name": "Aptos Coin",
+      "symbol": "APT",
+      "penumbraAssetId": {
+        "inner": "QnAMDwszxX3EMgb3dFGw2dcGaN9najQfY5+kTxD85g8="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/aptos/images/aptos.svg",
+          "theme": {
+            "primaryColorHex": "#ffffff"
+          }
+        },
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/aptos/images/apt-dm.svg",
+          "theme": {
+            "primaryColorHex": "#c4c4c4"
+          }
+        },
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allAPT.svg",
+          "theme": {
+            "primaryColorHex": "#ffffff",
+            "circle": true,
+            "darkMode": true
           }
         }
       ]
@@ -1853,13 +2690,6 @@
             "primaryColorHex": "#E6007A",
             "circle": true
           }
-        },
-        {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.svg",
-          "theme": {
-            "primaryColorHex": "#e4047c"
-          }
         }
       ],
       "coingeckoId": "osmosis-alldot"
@@ -1920,6 +2750,34 @@
         }
       ]
     },
+    "SqkPQvMBCuRleo9ooI0SbN6EJspdsDZRCfZ9Q7Eeyws=": {
+      "description": "An alloy of FET asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1mdvn6lmykp2z345ncpf647dztslyll8cyhwj9pltrc0lf7nva3cqvrp6qs/alloyed/allFET"
+        },
+        {
+          "denom": "transfer/channel-4/allFET",
+          "exponent": 12
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1mdvn6lmykp2z345ncpf647dztslyll8cyhwj9pltrc0lf7nva3cqvrp6qs/alloyed/allFET",
+      "display": "transfer/channel-4/allFET",
+      "name": "fetch-ai",
+      "symbol": "FET",
+      "penumbraAssetId": {
+        "inner": "SqkPQvMBCuRleo9ooI0SbN6EJspdsDZRCfZ9Q7Eeyws="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/fetchhub/images/fet.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/fetchhub/images/fet.svg",
+          "theme": {
+            "primaryColorHex": "#1c2444"
+          }
+        }
+      ]
+    },
     "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI=": {
       "description": "TRONIX is the mainnet native token of the TRON Protocol issued by TRON DAO, known as TRX.",
       "denomUnits": [
@@ -1939,6 +2797,13 @@
         "inner": "TNHw/+5PPN0BC2U1Q80CnhoiKx3GI8ivmb2OG6m5yAI="
       },
       "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/trx.rt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/trx.rt.svg",
+          "theme": {
+            "primaryColorHex": "#fb040c"
+          }
+        },
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tron/images/trx.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tron/images/trx.svg",
@@ -2030,6 +2895,35 @@
         }
       ]
     },
+    "Ugr8HKpkY9+EFvbxfCm9GsJgj8D/jxT+umvxTDZ9VQw=": {
+      "description": "Astrovault AXV",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/cw20:neutron10dxyft3nv4vpxh5vrpn0xw8geej8dw3g39g7nqp8mrm307ypssksau29af"
+        },
+        {
+          "denom": "transfer/channel-9/AXV",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/cw20:neutron10dxyft3nv4vpxh5vrpn0xw8geej8dw3g39g7nqp8mrm307ypssksau29af",
+      "display": "transfer/channel-9/AXV",
+      "name": "Astrovault AXV (Neutron)",
+      "symbol": "AXV",
+      "penumbraAssetId": {
+        "inner": "Ugr8HKpkY9+EFvbxfCm9GsJgj8D/jxT+umvxTDZ9VQw="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/axv.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/axv.svg",
+          "theme": {
+            "primaryColorHex": "#141434"
+          }
+        }
+      ],
+      "coingeckoId": "astrovault"
+    },
     "UkxOwF0fEethJexuH0JcBiIphfjVUodI6rIWz2Qu7Q8=": {
       "description": "Circle's stablecoin from Polygon on Axelar",
       "denomUnits": [
@@ -2054,6 +2948,34 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg",
           "theme": {
             "primaryColorHex": "#2474cc"
+          }
+        }
+      ]
+    },
+    "Uqxim3LGpkyOIo7EAvUaBlqfAFQRIs06JbA3jZxPiQI=": {
+      "description": "An alloy of AIOZ asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo17ceugf0nnkk228k2sulemn0s9pl3yg554462eexxs3pgq8p629us98gqae/alloyed/allAIOZ"
+        },
+        {
+          "denom": "transfer/channel-4/allAIOZ",
+          "exponent": 12
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo17ceugf0nnkk228k2sulemn0s9pl3yg554462eexxs3pgq8p629us98gqae/alloyed/allAIOZ",
+      "display": "transfer/channel-4/allAIOZ",
+      "name": "AIOZ",
+      "symbol": "AIOZ",
+      "penumbraAssetId": {
+        "inner": "Uqxim3LGpkyOIo7EAvUaBlqfAFQRIs06JbA3jZxPiQI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/aioz/images/aioz.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/aioz/images/aioz.svg",
+          "theme": {
+            "primaryColorHex": "#24241c"
           }
         }
       ]
@@ -2140,7 +3062,8 @@
             "primaryColorHex": "#3a3444"
           }
         }
-      ]
+      ],
+      "coingeckoId": "axlweth"
     },
     "VDEYVUZ8ZKlhsAT2nr6NgdNdi7jREsKmFUV0U5uUxwU=": {
       "description": "OnE mEmEcOiN tO cOnNeCt oL ImBeCiles - aNd in Da Cosmos BiNd DeM",
@@ -2165,6 +3088,60 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ibc.png",
           "theme": {
             "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "VJ3A7A4jV74gBYVOojNGe2zfm86D9G4Ragdb0FVyxwU=": {
+      "description": "Sssshhh…",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/bomu"
+        },
+        {
+          "denom": "transfer/channel-4/BOMU",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/bomu",
+      "display": "transfer/channel-4/BOMU",
+      "name": "$bomu",
+      "symbol": "BOMU",
+      "penumbraAssetId": {
+        "inner": "VJ3A7A4jV74gBYVOojNGe2zfm86D9G4Ragdb0FVyxwU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bomu.png",
+          "theme": {
+            "primaryColorHex": "#e54437"
+          }
+        }
+      ]
+    },
+    "VzDVzgpZW+YmKzPs1yJkLcUJtJ6oz7ECO2zkEhvkGg0=": {
+      "description": "THE FIRST NATIVE GODDARD MEMECOIN ON NEUTRON",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1yqj9vcc0y73xfxjzegaj4v8q0zefevnlpuh4rj/GODDARD"
+        },
+        {
+          "denom": "transfer/channel-9/goddard",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1yqj9vcc0y73xfxjzegaj4v8q0zefevnlpuh4rj/GODDARD",
+      "display": "transfer/channel-9/goddard",
+      "name": "Goddard",
+      "symbol": "GODDARD",
+      "penumbraAssetId": {
+        "inner": "VzDVzgpZW+YmKzPs1yJkLcUJtJ6oz7ECO2zkEhvkGg0="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/goddard.svg",
+          "theme": {
+            "primaryColorHex": "#cee0de"
           }
         }
       ]
@@ -2387,6 +3364,34 @@
         }
       ]
     },
+    "ZhFBNHfIMMpmMKcMwUWx8b5rhkCIOX4UzZEhruRPxgs=": {
+      "description": "Liquid Staked USDC",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1mdy5fhtwdjagp5eallsdhlx6gxylm8rxqk72wjzg6y5d5kt44ysqprkduw/JSD"
+        },
+        {
+          "denom": "transfer/channel-9/JSD",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1mdy5fhtwdjagp5eallsdhlx6gxylm8rxqk72wjzg6y5d5kt44ysqprkduw/JSD",
+      "display": "transfer/channel-9/JSD",
+      "name": "Jade",
+      "symbol": "JSD",
+      "penumbraAssetId": {
+        "inner": "ZhFBNHfIMMpmMKcMwUWx8b5rhkCIOX4UzZEhruRPxgs="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/jsd.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/jsd.svg",
+          "theme": {
+            "primaryColorHex": "#24c35c"
+          }
+        }
+      ]
+    },
     "Zi8uYzf0sKRBZppHbELs/OsQx/KugQVVL1MWV67c5gE=": {
       "description": "Wrapped Moonbeam on Axelar",
       "denomUnits": [
@@ -2428,12 +3433,19 @@
       ],
       "base": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/BTC.rt",
       "display": "transfer/channel-4/rbtc",
-      "name": "Rootstock Smart Bitcoin",
-      "symbol": "RBTC",
+      "name": "Rootstock (Router)",
+      "symbol": "RBTC.rt",
       "penumbraAssetId": {
         "inner": "ZpIbxFwvlU4udh9mutG/2hLBIpdNXhat3TCRbs1kbgI="
       },
       "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/rbtc.rt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/rbtc.rt.svg",
+          "theme": {
+            "primaryColorHex": "#040e09"
+          }
+        },
         {
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/rootstock/images/rbtc.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/rootstock/images/rbtc.svg",
@@ -2443,6 +3455,33 @@
         }
       ],
       "coingeckoId": "rootstock"
+    },
+    "b5NltMpWXHJVmKhWJq0BaVNZAGP6olIRX69KaUQXOw4=": {
+      "description": "wstETH on Neutron",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH"
+        },
+        {
+          "denom": "transfer/channel-9/wstETH",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH",
+      "display": "transfer/channel-9/wstETH",
+      "name": "wstETH",
+      "symbol": "wstETH.neutron",
+      "penumbraAssetId": {
+        "inner": "b5NltMpWXHJVmKhWJq0BaVNZAGP6olIRX69KaUQXOw4="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg",
+          "theme": {
+            "primaryColorHex": "#9cdcfc"
+          }
+        }
+      ]
     },
     "bKYDq4zkPiKV7zxFWsziGwlRHechNcIhz+zd9Bo7FA4=": {
       "denomUnits": [
@@ -2495,6 +3534,69 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/steth.svg",
           "theme": {
             "primaryColorHex": "#3cb8fc"
+          }
+        }
+      ]
+    },
+    "bRVleb2+QC3W4VXLw5ycxJYmndvTWmwbnFNvXrVEJBE=": {
+      "description": "An alloy of BNB asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1zetxzc5nka4jm203ljjtjf933jwjh45ge6spfeef447rnnhqxc4qrazrcz/alloyed/allBNB"
+        },
+        {
+          "denom": "transfer/channel-4/bnb",
+          "exponent": 12
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1zetxzc5nka4jm203ljjtjf933jwjh45ge6spfeef447rnnhqxc4qrazrcz/alloyed/allBNB",
+      "display": "transfer/channel-4/bnb",
+      "name": "Binance Coin",
+      "symbol": "BNB",
+      "penumbraAssetId": {
+        "inner": "bRVleb2+QC3W4VXLw5ycxJYmndvTWmwbnFNvXrVEJBE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/bnb.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/bnb.svg",
+          "theme": {
+            "primaryColorHex": "#f0b90b"
+          }
+        },
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBNB.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allBNB.svg",
+          "theme": {
+            "primaryColorHex": "#f0b90b",
+            "circle": true
+          }
+        }
+      ]
+    },
+    "cNEnw3iPGCEJlLiGlq9Y++lZPwJoMxe6JnLzBb8Hiwg=": {
+      "description": "Astroport is a neutral marketplace where anyone, from anywhere in the galaxy, can dock to trade their wares.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1zlf3hutsa4qnmue53lz2tfxrutp8y2e3rj4nkghg3rupgl4mqy8s5jgxsn/xASTRO"
+        },
+        {
+          "denom": "transfer/channel-9/xASTRO",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1zlf3hutsa4qnmue53lz2tfxrutp8y2e3rj4nkghg3rupgl4mqy8s5jgxsn/xASTRO",
+      "display": "transfer/channel-9/xASTRO",
+      "name": "Staked Astroport Token",
+      "symbol": "xASTRO",
+      "penumbraAssetId": {
+        "inner": "cNEnw3iPGCEJlLiGlq9Y++lZPwJoMxe6JnLzBb8Hiwg="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/xAstro.svg",
+          "theme": {
+            "primaryColorHex": "#483ef1"
           }
         }
       ]
@@ -2554,6 +3656,33 @@
         }
       ]
     },
+    "dN2Bc92n4dRFKSV7qgLOIGEG6dYRboqUqO2HoMvwYAU=": {
+      "description": "Drop staked TIA",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1ut4c6pv4u6vyu97yw48y8g7mle0cat54848v6m97k977022lzxtsaqsgmq/udtia"
+        },
+        {
+          "denom": "transfer/channel-9/dTIA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1ut4c6pv4u6vyu97yw48y8g7mle0cat54848v6m97k977022lzxtsaqsgmq/udtia",
+      "display": "transfer/channel-9/dTIA",
+      "name": "dTIA",
+      "symbol": "dTIA",
+      "penumbraAssetId": {
+        "inner": "dN2Bc92n4dRFKSV7qgLOIGEG6dYRboqUqO2HoMvwYAU="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/dTIA.svg",
+          "theme": {
+            "primaryColorHex": "#d4cafc"
+          }
+        }
+      ]
+    },
     "drPksQaBNYwSOzgfkGOEdrd4kEDkeALeh58Ps+7cjQs=": {
       "description": "USD Coin",
       "denomUnits": [
@@ -2584,6 +3713,60 @@
       ],
       "priorityScore": "800000000100",
       "coingeckoId": "usd-coin"
+    },
+    "eHP8hLia2CIA2WTf7Be3fXGmXSlQVVSzTT5yTBPiOA8=": {
+      "description": "Jimmy Neutron Finance",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron108x7vp9zv22d6wxrs9as8dshd3pd5vsga463yd/JIMMY"
+        },
+        {
+          "denom": "transfer/channel-9/jimmy",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron108x7vp9zv22d6wxrs9as8dshd3pd5vsga463yd/JIMMY",
+      "display": "transfer/channel-9/jimmy",
+      "name": "jimmy",
+      "symbol": "JIMMY",
+      "penumbraAssetId": {
+        "inner": "eHP8hLia2CIA2WTf7Be3fXGmXSlQVVSzTT5yTBPiOA8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/jimmy.png",
+          "theme": {
+            "primaryColorHex": "#7d3c20"
+          }
+        }
+      ]
+    },
+    "eQthHIzuZ6ACthJK/RnzfkG5F3KVHjKfuqBJPY3QFwQ=": {
+      "description": "The deflationary utility token of the Apollo DAO project",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron154gg0wtm2v4h9ur8xg32ep64e8ef0g5twlsgvfeajqwghdryvyqsqhgk8e/APOLLO"
+        },
+        {
+          "denom": "transfer/channel-9/apollo",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron154gg0wtm2v4h9ur8xg32ep64e8ef0g5twlsgvfeajqwghdryvyqsqhgk8e/APOLLO",
+      "display": "transfer/channel-9/apollo",
+      "name": "Apollo DAO",
+      "symbol": "APOLLO",
+      "penumbraAssetId": {
+        "inner": "eQthHIzuZ6ACthJK/RnzfkG5F3KVHjKfuqBJPY3QFwQ="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/apollo.svg",
+          "theme": {
+            "primaryColorHex": "#f7a933"
+          }
+        }
+      ]
     },
     "f/IAN065Ou6XwYdWe3m3SgiLFDYOAY47vphr9y+bowQ=": {
       "description": "Fractionalized Pixel Wizards",
@@ -2639,6 +3822,33 @@
         }
       ],
       "coingeckoId": "stride-staked-islm"
+    },
+    "fZFhCeC/N3PaOI3P7WRaYtx1ljSl+dVqbVYxBQpSDwE=": {
+      "description": "CryptoGopniks token",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/GOP"
+        },
+        {
+          "denom": "transfer/channel-9/GOP",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/GOP",
+      "display": "transfer/channel-9/GOP",
+      "name": "GOP",
+      "symbol": "GOP",
+      "penumbraAssetId": {
+        "inner": "fZFhCeC/N3PaOI3P7WRaYtx1ljSl+dVqbVYxBQpSDwE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/gop.png",
+          "theme": {
+            "primaryColorHex": "#000000"
+          }
+        }
+      ]
     },
     "feVP7pst7vgPhoxLLiYtNHFwUprssLR8Nfn7wUU2WwA=": {
       "description": "Margined Power Token sqTIA",
@@ -2696,6 +3906,33 @@
         }
       ],
       "coingeckoId": "monerium-eur-money"
+    },
+    "gLmZhUXt/2jdpLgs+LF6b8jjsoINWBxK+mOuK0VJuw0=": {
+      "description": "An alloy of SUI asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1nqu7rc5mj5p2cgyfp7gl3lw7kw99cltple3xtzl2cs5fyw0r2tasr7xv48/alloyed/allSUI"
+        },
+        {
+          "denom": "transfer/channel-4/sui",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1nqu7rc5mj5p2cgyfp7gl3lw7kw99cltple3xtzl2cs5fyw0r2tasr7xv48/alloyed/allSUI",
+      "display": "transfer/channel-4/sui",
+      "name": "Sui",
+      "symbol": "SUI",
+      "penumbraAssetId": {
+        "inner": "gLmZhUXt/2jdpLgs+LF6b8jjsoINWBxK+mOuK0VJuw0="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/sui/images/sui.svg",
+          "theme": {
+            "primaryColorHex": "#6fbcef"
+          }
+        }
+      ]
     },
     "gO4qR7mYarC4AAPCck7XHhujNBUWGsaxRW6U3JkrSgM=": {
       "description": "Rapture insurance is the first ever P2P insurance platform on $OSMO. Get rewarded to take care of peoples loved ones after the Rapture.",
@@ -2906,6 +4143,41 @@
         }
       ]
     },
+    "i0Tayo0Inl+SbRdpLACLlMbKvBkI2zt/celeUoZXHhE=": {
+      "description": "A multi-chain dogecoin twin, trustlessly created by chain-key cryptography and Internet Computer smart contracts that directly hold raw dogecoin.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo10c4y9csfs8q7mtvfg4p9gd8d0acx0hpc2mte9xqzthd7rd3348tsfhaesm/dogecoin-native-DOGE"
+        },
+        {
+          "denom": "transfer/channel-4/ckDOGE",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo10c4y9csfs8q7mtvfg4p9gd8d0acx0hpc2mte9xqzthd7rd3348tsfhaesm/dogecoin-native-DOGE",
+      "display": "transfer/channel-4/ckDOGE",
+      "name": "Chain-key Dogecoin",
+      "symbol": "ckDOGE",
+      "penumbraAssetId": {
+        "inner": "i0Tayo0Inl+SbRdpLACLlMbKvBkI2zt/celeUoZXHhE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ckDOGE.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ckDOGE.svg",
+          "theme": {
+            "primaryColorHex": "#e3bc65"
+          }
+        },
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/dogecoin/images/doge.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/dogecoin/images/doge.svg",
+          "theme": {
+            "primaryColorHex": "#b99937"
+          }
+        }
+      ]
+    },
     "i8+QN8X8CDCzFNKoxGruRVCHecDY5oVg2HPILg0CJAA=": {
       "description": "Chain on Axelar",
       "denomUnits": [
@@ -3016,6 +4288,33 @@
         }
       ]
     },
+    "jWrt4r5oJ3lH0s3sKa8o9MKMc7SPPHP5xvgJQSOYVwU=": {
+      "description": "Baby Corgi is the real doggo of Neutron!",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1tklm6cvr2wxg8k65t8gh5ewslnzdfd5fsk0w3f/corgi"
+        },
+        {
+          "denom": "transfer/channel-9/corgi",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1tklm6cvr2wxg8k65t8gh5ewslnzdfd5fsk0w3f/corgi",
+      "display": "transfer/channel-9/corgi",
+      "name": "Baby Corgi",
+      "symbol": "CORGI",
+      "penumbraAssetId": {
+        "inner": "jWrt4r5oJ3lH0s3sKa8o9MKMc7SPPHP5xvgJQSOYVwU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/babycorgi.png",
+          "theme": {
+            "primaryColorHex": "#fab442"
+          }
+        }
+      ]
+    },
     "jm8R/hHUxcqdCW6GilDQNg3J2FdOytuXU5LDahzhrQk=": {
       "description": "Circle's stablecoin from Avalanche on Axelar",
       "denomUnits": [
@@ -3040,6 +4339,33 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg",
           "theme": {
             "primaryColorHex": "#2474cc"
+          }
+        }
+      ]
+    },
+    "jwo+u0cDkbUOIRfAsPE9DRCrQ9m3AdkRBCvnP7VyRhI=": {
+      "description": "Retro Game",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1t24nc7whl77relnu3taxyg3p66pjyuk82png2y/uretro"
+        },
+        {
+          "denom": "transfer/channel-9/retro",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1t24nc7whl77relnu3taxyg3p66pjyuk82png2y/uretro",
+      "display": "transfer/channel-9/retro",
+      "name": "Retro",
+      "symbol": "RETRO",
+      "penumbraAssetId": {
+        "inner": "jwo+u0cDkbUOIRfAsPE9DRCrQ9m3AdkRBCvnP7VyRhI="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/retro.svg",
+          "theme": {
+            "primaryColorHex": "#8b3d47"
           }
         }
       ]
@@ -3070,6 +4396,34 @@
           }
         }
       ]
+    },
+    "k3wpWFkTLuYk5wCBXdRrqNeTI4+0K4m6TNB1Xms2TwA=": {
+      "description": "Drop staked ATOM",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1k6hr0f83e7un2wjf29cspk7j69jrnskk65k3ek2nj9dztrlzpj6q00rtsa/udatom"
+        },
+        {
+          "denom": "transfer/channel-9/dATOM",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1k6hr0f83e7un2wjf29cspk7j69jrnskk65k3ek2nj9dztrlzpj6q00rtsa/udatom",
+      "display": "transfer/channel-9/dATOM",
+      "name": "dATOM",
+      "symbol": "dATOM",
+      "penumbraAssetId": {
+        "inner": "k3wpWFkTLuYk5wCBXdRrqNeTI4+0K4m6TNB1Xms2TwA="
+      },
+      "images": [
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/dATOM.svg",
+          "theme": {
+            "primaryColorHex": "#643cfb"
+          }
+        }
+      ],
+      "coingeckoId": "drop-staked-atom"
     },
     "kmxtCtqVIc/lLgdQkonBEvAK/3Qk1yrv0r7CuXo45A4=": {
       "denomUnits": [
@@ -3110,8 +4464,8 @@
       ],
       "base": "transfer/channel-4/factory/osmo1myv2g72h8dan7n4hx7stt3mmust6ws03zh6gxc7vz4hpmgp5z3lq9aunm9/AVAIL.rt",
       "display": "transfer/channel-4/AVAIL",
-      "name": "Avail",
-      "symbol": "AVAIL",
+      "name": "Avail (Ethereum via Router)",
+      "symbol": "AVAIL.eth.rt",
       "penumbraAssetId": {
         "inner": "laTqmqV0r3PERHERkPSyNu7d697F4C8mupKyfsKnjAo="
       },
@@ -3215,6 +4569,61 @@
         }
       ]
     },
+    "o+MALwmW631aohS0whSZ45kjaObtS+jgFI6Gbfc/CwY=": {
+      "description": "Baddest coin on Cosmos",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron143wp6g8paqasnuuey6zyapucknwy9rhnld8hkr/bad"
+        },
+        {
+          "denom": "transfer/channel-9/bad",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron143wp6g8paqasnuuey6zyapucknwy9rhnld8hkr/bad",
+      "display": "transfer/channel-9/bad",
+      "name": "Badcoin",
+      "symbol": "BAD",
+      "penumbraAssetId": {
+        "inner": "o+MALwmW631aohS0whSZ45kjaObtS+jgFI6Gbfc/CwY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/bad.png",
+          "theme": {
+            "primaryColorHex": "#211a0d"
+          }
+        }
+      ]
+    },
+    "o4n0zz6kvjLFJTXO6MBdtLMOC/WA4f5J500LRK7OWgY=": {
+      "description": "The advance token for ATOM denominated vaults on Amulet Protocol",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1shwxlkpdjd8h5wdtrykypwd2v62z5glr95yp0etdcspkkjwm5meq82ndxs/amatom"
+        },
+        {
+          "denom": "transfer/channel-9/amATOM",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1shwxlkpdjd8h5wdtrykypwd2v62z5glr95yp0etdcspkkjwm5meq82ndxs/amatom",
+      "display": "transfer/channel-9/amATOM",
+      "name": "amATOM",
+      "symbol": "amATOM",
+      "penumbraAssetId": {
+        "inner": "o4n0zz6kvjLFJTXO6MBdtLMOC/WA4f5J500LRK7OWgY="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/amATOM.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/amATOM.svg",
+          "theme": {
+            "primaryColorHex": "#0f526b"
+          }
+        }
+      ]
+    },
     "oJrqiS598GEGDk2k1aSzyjgQGDKcNB5gnvf62kE9JQQ=": {
       "denomUnits": [
         {
@@ -3270,6 +4679,61 @@
         }
       ],
       "priorityScore": "800000000096"
+    },
+    "pbFlvS5JAHyhRQDnIJuGd/mxfeLpdu7ee/KfVh15Gw0=": {
+      "description": "Tether's USD stablecoin from Optimism on Axelar",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-7/optimism-uusdt"
+        },
+        {
+          "denom": "transfer/channel-7/usdt",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-7/optimism-uusdt",
+      "display": "transfer/channel-7/usdt",
+      "name": "Tether USD (Optimism)",
+      "symbol": "axlUSDT.optimism",
+      "penumbraAssetId": {
+        "inner": "pbFlvS5JAHyhRQDnIJuGd/mxfeLpdu7ee/KfVh15Gw0="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg",
+          "theme": {
+            "primaryColorHex": "#009393",
+            "circle": true
+          }
+        }
+      ]
+    },
+    "pfau1v4i2fSqAS7d9crfwB+qAIiV7IfjvzmTNsMoLww=": {
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron19tynwawkm2rgefqxy7weupu4hdamyhg890zep2/TAKUMI"
+        },
+        {
+          "denom": "transfer/channel-9/takumi",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron19tynwawkm2rgefqxy7weupu4hdamyhg890zep2/TAKUMI",
+      "display": "transfer/channel-9/takumi",
+      "name": "Takumi Asano",
+      "symbol": "TAKUMI",
+      "penumbraAssetId": {
+        "inner": "pfau1v4i2fSqAS7d9crfwB+qAIiV7IfjvzmTNsMoLww="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/TAKUMI.png",
+          "theme": {
+            "primaryColorHex": "#556867"
+          }
+        }
+      ]
     },
     "pfhuSArfwYCRpRI+PY3bM3wWpmKdgqZlmxrqCPhrXhA=": {
       "description": "Frienzies are an IBC token redeemable exclusively for a physical asset issued by the Noble entity.",
@@ -3436,6 +4900,34 @@
       ],
       "coingeckoId": "membrane"
     },
+    "qaDFFlDQ00yzmgR0QElCA9WgtA847cyE+R6aaXClQQg=": {
+      "description": "An alloy of DOGE asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo10pk4crey8fpdyqd62rsau0y02e3rk055w5u005ah6ly7k849k5tsf72x40/alloyed/allDOGE"
+        },
+        {
+          "denom": "transfer/channel-4/allDOGE",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo10pk4crey8fpdyqd62rsau0y02e3rk055w5u005ah6ly7k849k5tsf72x40/alloyed/allDOGE",
+      "display": "transfer/channel-4/allDOGE",
+      "name": "Dogecoin",
+      "symbol": "DOGE",
+      "penumbraAssetId": {
+        "inner": "qaDFFlDQ00yzmgR0QElCA9WgtA847cyE+R6aaXClQQg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/dogecoin/images/doge.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/dogecoin/images/doge.svg",
+          "theme": {
+            "primaryColorHex": "#bda148"
+          }
+        }
+      ]
+    },
     "qhGnX2cUuvGR3zBLjZSd9yUgHIjlkzaTSktq6y5XLg0=": {
       "description": "Wrapped FTM on Axelar.",
       "denomUnits": [
@@ -3464,21 +4956,50 @@
         }
       ]
     },
+    "qv0KzIQ8nB5hl6A0yj4BDG+5oz6REJCK6xebCjXopg4=": {
+      "description": "Astroport is a neutral marketplace where anyone, from anywhere in the galaxy, can dock to trade their wares.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro"
+        },
+        {
+          "denom": "transfer/channel-9/astro",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro",
+      "display": "transfer/channel-9/astro",
+      "name": "Astroport token",
+      "symbol": "ASTRO",
+      "penumbraAssetId": {
+        "inner": "qv0KzIQ8nB5hl6A0yj4BDG+5oz6REJCK6xebCjXopg4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.svg",
+          "theme": {
+            "primaryColorHex": "#4056e9"
+          }
+        }
+      ],
+      "coingeckoId": "astroport-fi"
+    },
     "rNNsvEj1LBheBJ3R4rJg+gmG6YXVGA6xmHCFVy0CPgM=": {
-      "description": "USDC supplied on Mars looped using Membrane by a vault",
+      "description": "USDC supplied on Mars looped using Membrane by a vault that also has an entry fee",
       "denomUnits": [
         {
           "denom": "transfer/channel-4/factory/osmo1vf6e300hv2qe7r5rln8deft45ewgyytjnwfrdfcv5rgzrfy0s6cswjqf9r/mars-usdc-looped"
         },
         {
-          "denom": "transfer/channel-4/loopedUSDCmars",
+          "denom": "transfer/channel-4/earnUSDC",
           "exponent": 6
         }
       ],
       "base": "transfer/channel-4/factory/osmo1vf6e300hv2qe7r5rln8deft45ewgyytjnwfrdfcv5rgzrfy0s6cswjqf9r/mars-usdc-looped",
-      "display": "transfer/channel-4/loopedUSDCmars",
-      "name": "Mars Looped USDC",
-      "symbol": "loopedUSDCmars",
+      "display": "transfer/channel-4/earnUSDC",
+      "name": "Mars Looped USDC Vault",
+      "symbol": "earnUSDC",
       "penumbraAssetId": {
         "inner": "rNNsvEj1LBheBJ3R4rJg+gmG6YXVGA6xmHCFVy0CPgM="
       }
@@ -3538,6 +5059,71 @@
         }
       ]
     },
+    "sFaJYKF7Zsgeer8N4d22rM/l57EQqIApJuX2vlvzuQc=": {
+      "description": "Neutron is a smart contract blockchain within the Cosmos ecosystem, leveraging the Cosmos Hub's security to provide cross-chain DeFi applications.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/untrn"
+        },
+        {
+          "denom": "transfer/channel-9/ntrn",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/untrn",
+      "display": "transfer/channel-9/ntrn",
+      "name": "Neutron",
+      "symbol": "NTRN",
+      "penumbraAssetId": {
+        "inner": "sFaJYKF7Zsgeer8N4d22rM/l57EQqIApJuX2vlvzuQc="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ntrn.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ntrn.svg",
+          "theme": {
+            "primaryColorHex": "#040404",
+            "circle": true
+          }
+        }
+      ],
+      "coingeckoId": "neutron-3"
+    },
+    "sKnf7dH1bzQ+PI/+N2Y8edAkRYyE94l5NyoUWKi1KRA=": {
+      "description": "An alloy of FIL asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1ss0n3ghv5rr4z4y54fnkprc69tegmdm3ejlkgr2z4utnyg7eljgs9pztvs/alloyed/allFIL"
+        },
+        {
+          "denom": "transfer/channel-4/allFIL",
+          "exponent": 12
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1ss0n3ghv5rr4z4y54fnkprc69tegmdm3ejlkgr2z4utnyg7eljgs9pztvs/alloyed/allFIL",
+      "display": "transfer/channel-4/allFIL",
+      "name": "Filecoin",
+      "symbol": "FIL",
+      "penumbraAssetId": {
+        "inner": "sKnf7dH1bzQ+PI/+N2Y8edAkRYyE94l5NyoUWKi1KRA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/filecoin/images/fil.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/filecoin/images/fil.svg",
+          "theme": {
+            "primaryColorHex": "#0493fc"
+          }
+        },
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allFIL.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/allFIL.svg",
+          "theme": {
+            "primaryColorHex": "#c0e3fc"
+          }
+        }
+      ]
+    },
     "tavJ/TAKws0M/Mguef8wxx0rqZQtKjAFTA8vM41+Sgc=": {
       "description": "The memecoin built for the Celestia community",
       "denomUnits": [
@@ -3593,6 +5179,35 @@
         }
       ]
     },
+    "tec7y297UYj1eKMzI8jE5QwxW7lpY3GJH65UHE1MmwI=": {
+      "description": "An alloy of LTC asset variants on Osmosis.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1csp8fk353hnq2tmulklecxpex43qmjvrkxjcsh4c3eqcw2vjcslq5jls9v/alloyed/allLTC"
+        },
+        {
+          "denom": "transfer/channel-4/allLTC",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1csp8fk353hnq2tmulklecxpex43qmjvrkxjcsh4c3eqcw2vjcslq5jls9v/alloyed/allLTC",
+      "display": "transfer/channel-4/allLTC",
+      "name": "Litecoin",
+      "symbol": "LTC",
+      "penumbraAssetId": {
+        "inner": "tec7y297UYj1eKMzI8jE5QwxW7lpY3GJH65UHE1MmwI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/litecoin/images/ltc.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/litecoin/images/ltc.svg",
+          "theme": {
+            "primaryColorHex": "#345D9D",
+            "circle": true
+          }
+        }
+      ]
+    },
     "tiqjoeiKwglZyFbvinYhCNpI8lpUQmxNlrsn7Q3m2gw=": {
       "description": "Margined Power Token sqOSMO",
       "denomUnits": [
@@ -3619,6 +5234,25 @@
           }
         }
       ]
+    },
+    "u0FIAb117e4ZDn3sFwA/fTJti/n1Cl6x47I51J29sQA=": {
+      "description": "Auto-compounding vault for Membrane's Stability Pool used to ease the UX of compounding CDT",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-4/factory/osmo1jw6r68y0uhfmqagc7uhtdddctc7wq95pncvrqnvtd47w4hx46p7se9nju5/earn-cdt"
+        },
+        {
+          "denom": "transfer/channel-4/earnCDT",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-4/factory/osmo1jw6r68y0uhfmqagc7uhtdddctc7wq95pncvrqnvtd47w4hx46p7se9nju5/earn-cdt",
+      "display": "transfer/channel-4/earnCDT",
+      "name": "Earn CDT Vault",
+      "symbol": "earnCDT",
+      "penumbraAssetId": {
+        "inner": "u0FIAb117e4ZDn3sFwA/fTJti/n1Cl6x47I51J29sQA="
+      }
     },
     "uXK2ihrObFuUlAF4KinZ/VZgvObq6MN8MnJcC9ci8AQ=": {
       "description": "Wrapped Polkadot on Axelar",
@@ -3673,8 +5307,7 @@
             "primaryColorHex": "#e40474"
           }
         }
-      ],
-      "coingeckoId": "stride-staked-luna"
+      ]
     },
     "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0=": {
       "description": "An alloy of USDT asset variants on Osmosis.",
@@ -3747,6 +5380,33 @@
         }
       ]
     },
+    "w/XFvxel/TroZYPNEY4i9OdesQvFjJFgnURmnpNHhwM=": {
+      "description": "Bonded GopLend USDC",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron16ue9kysgneyqktmjxdfshajgvlrcx9rehxz8x9th7g8fgtnlxwuqvg9mgp/bglUSDC"
+        },
+        {
+          "denom": "transfer/channel-9/bglUSDC",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron16ue9kysgneyqktmjxdfshajgvlrcx9rehxz8x9th7g8fgtnlxwuqvg9mgp/bglUSDC",
+      "display": "transfer/channel-9/bglUSDC",
+      "name": "bglUSDC",
+      "symbol": "bglUSDC",
+      "penumbraAssetId": {
+        "inner": "w/XFvxel/TroZYPNEY4i9OdesQvFjJFgnURmnpNHhwM="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/bglUSDC.png",
+          "theme": {
+            "primaryColorHex": "#3aa6e0"
+          }
+        }
+      ]
+    },
     "w4O3mziGXG7TuIupoybfMBMMlXj4jFNGKXyHl5cQtQE=": {
       "description": "Tether's USD stablecoin on Axelar",
       "denomUnits": [
@@ -3767,10 +5427,11 @@
       },
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdt.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdt.svg",
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg",
           "theme": {
-            "primaryColorHex": "#54ac94"
+            "primaryColorHex": "#009393",
+            "circle": true
           }
         }
       ],
@@ -3906,6 +5567,33 @@
       ],
       "coingeckoId": "ion"
     },
+    "xiQRY+bbf/knL8LkZc7sv0/uvMNdZwdiuReCN/3YkQM=": {
+      "description": "$ATOM to $1,000 LFG!!",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/factory/neutron13lkh47msw28yynspc5rnmty3yktk43wc3dsv0l/ATOM1KLFG"
+        },
+        {
+          "denom": "transfer/channel-9/ATOM1KLFG",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/factory/neutron13lkh47msw28yynspc5rnmty3yktk43wc3dsv0l/ATOM1KLFG",
+      "display": "transfer/channel-9/ATOM1KLFG",
+      "name": "ATOM1KLFG",
+      "symbol": "ATOM1KLFG",
+      "penumbraAssetId": {
+        "inner": "xiQRY+bbf/knL8LkZc7sv0/uvMNdZwdiuReCN/3YkQM="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ATOM1KLFGc.png",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
     "zA08nu8Mf/TiJeyoWjCUYDaR0omur0KKsNhzGa2TowI=": {
       "description": "Ondo US Dollar Yield",
       "denomUnits": [
@@ -3935,6 +5623,33 @@
       ],
       "priorityScore": "800000000095",
       "coingeckoId": "ondo-us-dollar-yield"
+    },
+    "zC+ORf7HacuaeqpExaDI99HNPPuJHQ7I9UNYjmC37gk=": {
+      "description": "Astro BOY",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-9/neutron1uqvse8fdrd9tam47f2jhy9m6al6xxtqpc83f9pdnz5gdle4swc0spfnctv"
+        },
+        {
+          "denom": "transfer/channel-9/boy",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-9/neutron1uqvse8fdrd9tam47f2jhy9m6al6xxtqpc83f9pdnz5gdle4swc0spfnctv",
+      "display": "transfer/channel-9/boy",
+      "name": "boy",
+      "symbol": "BOY",
+      "penumbraAssetId": {
+        "inner": "zC+ORf7HacuaeqpExaDI99HNPPuJHQ7I9UNYjmC37gk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/boy.png",
+          "theme": {
+            "primaryColorHex": "#333333"
+          }
+        }
+      ]
     },
     "za/OmxtGVAwvXWiizJSHIjT/PBzQ6Xh2lXtBbMv8UxE=": {
       "description": "Banana Vault Token - Banana Beach (🍹,🌴) II",
