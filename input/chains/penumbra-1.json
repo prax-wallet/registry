@@ -78,10 +78,27 @@
       "cosmosRegistryDir": "stride",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/osmo.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg"
         }
       ]
+    },
+    {
+      "displayName": "Neutron",
+      "chainId": "neutron-1",
+      "channelId": "channel-9",
+      "counterpartyChannelId": "channel-6560",
+      "addressPrefix": "neutron",
+      "cosmosRegistryDir": "neutron",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron.svg"
+        }
+      ],
+      "symbolOverrides": {
+        "factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH": "wstETH.neutron"
+      }
     },
     {
       "displayName": "Axelar",
@@ -92,8 +109,8 @@
       "cosmosRegistryDir": "axelar",
       "images": [
         {
-          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.png",
-          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/osmo.svg"
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.svg"
         }
       ],
       "symbolOverrides": {
@@ -111,7 +128,11 @@
         "dot-planck": "axlDOT",
         "shib-wei": "axlSHIB",
         "uni-wei": "axlUNI",
-        "wbtc-satoshi": "axlWBTC"
+        "wbtc-satoshi": "axlWBTC",
+	"polygon-uusdt": "axlUSDT.polygon",
+        "arbitrum-uusdt": "axlUSDT.arbitrum",
+        "optimism-uusdt": "axlUSDT.optimism",
+        "wsteth-wei": "wstETH.axelar"
       }
     }
   ],

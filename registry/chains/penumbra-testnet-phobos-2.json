@@ -64,7 +64,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "coingeckoId": "usd-coin"
     },
     "3ErXVnp08wv5lSOfwIi2MjWSTKUa7NQI94Rvh3ua1gU=": {
       "denomUnits": [
@@ -392,7 +393,8 @@
             "circle": true
           }
         }
-      ]
+      ],
+      "coingeckoId": "usd-coin"
     },
     "hy0xtct5UJEJ0oiF53bUK9e8nQkE5Lssd0OIAGt3GQM=": {
       "description": "Love is a test tokenfactory asset controlled by the Strangelove Team",
