@@ -8,8 +8,8 @@ importers:
   .:
     devDependencies:
       '@bufbuild/protobuf':
-        specifier: ^1.10.0
-        version: 1.10.0
+        specifier: ^2.2.2
+        version: 2.2.3
       '@changesets/cli':
         specifier: ^2.27.9
         version: 2.27.9
@@ -20,8 +20,8 @@ importers:
         specifier: ^9.13.0
         version: 9.13.0
       '@penumbra-zone/protobuf':
-        specifier: ^7.1.0
-        version: 7.1.0(@bufbuild/protobuf@1.10.0)
+        specifier: file:../../web/packages/protobuf/penumbra-zone-protobuf-9.0.0.tgz
+        version: file:../../web/packages/protobuf/penumbra-zone-protobuf-9.0.0.tgz(@bufbuild/protobuf@2.2.3)
       eslint:
         specifier: ^9.13.0
         version: 9.13.0
@@ -87,10 +87,10 @@ packages:
       }
     engines: { node: '>=6.9.0' }
 
-  '@bufbuild/protobuf@1.10.0':
+  '@bufbuild/protobuf@2.2.3':
     resolution:
       {
-        integrity: sha512-QDdVFLoN93Zjg36NoQPZfsVH9tZew7wKDKyV5qRdj8ntT4wQCOradQjRaTdwMhWUYsgKsvCINKKm87FdEk96Ag==,
+        integrity: sha512-tFQoXHJdkEOSwj5tRIZSPNUuXK3RaR7T1nUrPgbYX1pUbvqqaaZAsfo+NXBPsz5rZMSKVFrgK1WL8Q/MSLvprg==,
       }
 
   '@changesets/apply-release-plan@7.0.5':
@@ -809,13 +809,15 @@ packages:
       }
     engines: { node: '>= 8' }
 
-  '@penumbra-zone/protobuf@7.1.0':
+  '@penumbra-zone/protobuf@file:../../web/packages/protobuf/penumbra-zone-protobuf-9.0.0.tgz':
     resolution:
       {
-        integrity: sha512-pjqghT4MICesZDQhF0O3UAYQka7uj1rSzINh0S1pEE8d7jevy7/HiM9o+jMYfzySfOLyV0qEhbcV8ttHWxOdMQ==,
+        integrity: sha512-GElB/M0kdS3YS/K2+UkdBSg0v5CuqlsoD8Oo38Ea2KgXsVs0KIVxAiUjBqqUs92/XPzj8Aucp9ufFsue+y3d3g==,
+        tarball: file:../../web/packages/protobuf/penumbra-zone-protobuf-9.0.0.tgz,
       }
+    version: 9.0.0
     peerDependencies:
-      '@bufbuild/protobuf': ^1.10.0
+      '@bufbuild/protobuf': ^2.2.2
 
   '@pkgjs/parseargs@0.11.0':
     resolution:
@@ -3218,7 +3220,7 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@bufbuild/protobuf@1.10.0': {}
+  '@bufbuild/protobuf@2.2.3': {}
 
   '@changesets/apply-release-plan@7.0.5':
     dependencies:
@@ -3642,9 +3644,9 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@penumbra-zone/protobuf@7.1.0(@bufbuild/protobuf@1.10.0)':
+  '@penumbra-zone/protobuf@file:../../web/packages/protobuf/penumbra-zone-protobuf-9.0.0.tgz(@bufbuild/protobuf@2.2.3)':
     dependencies:
-      '@bufbuild/protobuf': 1.10.0
+      '@bufbuild/protobuf': 2.2.3
 
   '@pkgjs/parseargs@0.11.0':
     optional: true

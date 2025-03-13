@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
+import { create, equals } from '@bufbuild/protobuf';
 import { ChainRegistryClient } from './client';
 import { Registry } from './registry';
-import { AssetId } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
+import { AssetIdSchema } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { base64ToUint8Array } from './utils/base64';
 
 describe('BundledClient', () => {
@@ -35,9 +36,9 @@ describe('BundledClient', () => {
 
   it('returns staking asset global as expected', () => {
     const registry = bundled.globals();
-    const umStakingAsset = new AssetId({
+    const umStakingAsset = create(AssetIdSchema, {
       inner: base64ToUint8Array('KeqcLzNx9qSH5+lcJHBB9KNW+YPrBk5dKzvPMiypahA='),
     });
-    expect(umStakingAsset.equals(registry.stakingAssetId)).toBeTruthy();
+    expect(equals(AssetIdSchema, umStakingAsset, registry.stakingAssetId)).toBeTruthy();
   });
 });

@@ -1,5 +1,7 @@
 import { it, describe, expect, beforeEach, afterEach } from 'vitest';
 import fetchMock from 'fetch-mock';
+import { toJson } from '@bufbuild/protobuf';
+import { AssetIdSchema } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { RemoteClient } from './remote';
 import { REGISTRY_BASE_URL } from './github';
 import { ChainRegistryClient } from './client';
@@ -56,7 +58,7 @@ describe('RemoteClient', () => {
     const registry = await rClient.globals();
 
     expect(fetchMock.callHistory.called(endpoint)).toBe(true);
-    expect(registry.stakingAssetId.toJson()).toEqual(GlobalsJson.stakingAssetId);
+    expect(toJson(AssetIdSchema, registry.stakingAssetId)).toEqual(GlobalsJson.stakingAssetId);
     expect(registry.frontends).toEqual(GlobalsJson.frontendsV2);
     expect(registry.rpcs).toEqual(GlobalsJson.rpcs);
   });

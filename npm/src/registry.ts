@@ -1,6 +1,10 @@
-import { AssetId, Metadata } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
+import {
+  AssetIdSchema,
+  MetadataSchema,
+} from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
+import type { AssetId, Metadata } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { JsonRegistry } from './json';
-import { JsonValue } from '@bufbuild/protobuf';
+import { JsonValue, create, fromJson } from '@bufbuild/protobuf';
 import { base64ToUint8Array, uint8ArrayToBase64 } from './utils/base64';
 import { mapObjectValues } from './utils/object-mapping';
 import { sha256Hash } from './utils/sha256';
@@ -42,9 +46,11 @@ export class Registry {
     this.chainId = r.chainId;
     this.ibcConnections = r.ibcConnections;
     this.assetById = mapObjectValues(r.assetById, jsonMetadata =>
-      Metadata.fromJson(jsonMetadata as unknown as JsonValue, { ignoreUnknownFields: true }),
+      fromJson(MetadataSchema, jsonMetadata as unknown as JsonValue, { ignoreUnknownFields: true }),
     );
-    this.numeraires = r.numeraires.map(a => new AssetId({ inner: base64ToUint8Array(a) }));
+    this.numeraires = r.numeraires.map(a =>
+      create(AssetIdSchema, { inner: base64ToUint8Array(a) }),
+    );
   }
 
   // Throws an error if not in registry
