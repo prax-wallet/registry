@@ -78,6 +78,10 @@ export class Registry {
   }
 
   async version(): Promise<string> {
-    return sha256Hash(JSON.stringify(this));
+    return sha256Hash(
+      JSON.stringify(this, (_, value) =>
+        typeof value === 'bigint' ? value.toString() : (value as unknown),
+      ),
+    );
   }
 }
