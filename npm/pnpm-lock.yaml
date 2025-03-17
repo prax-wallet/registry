@@ -8,46 +8,46 @@ importers:
   .:
     devDependencies:
       '@bufbuild/protobuf':
-        specifier: ^2.2.2
+        specifier: ^2.2.3
         version: 2.2.3
       '@changesets/cli':
-        specifier: ^2.27.9
+        specifier: ^2.28.1
         version: 2.28.1
       '@eslint/eslintrc':
-        specifier: ^3.1.0
+        specifier: ^3.3.0
         version: 3.3.0
       '@eslint/js':
-        specifier: ^9.13.0
+        specifier: ^9.22.0
         version: 9.22.0
       '@penumbra-zone/protobuf':
-        specifier: file:./penumbra-zone-protobuf-10.0.0.tgz
+        specifier: file:penumbra-zone-protobuf-10.0.0.tgz
         version: file:penumbra-zone-protobuf-10.0.0.tgz(@bufbuild/protobuf@2.2.3)
       eslint:
-        specifier: ^9.13.0
+        specifier: ^9.22.0
         version: 9.22.0
       fetch-mock:
-        specifier: ^12.0.2
+        specifier: ^12.5.2
         version: 12.5.2
       prettier:
-        specifier: ^3.3.3
+        specifier: ^3.5.3
         version: 3.5.3
       tsup:
-        specifier: ^8.3.5
+        specifier: ^8.4.0
         version: 8.4.0(@microsoft/api-extractor@7.52.1(@types/node@22.5.5))(postcss@8.5.3)(typescript@5.8.2)(yaml@2.5.1)
       typescript:
-        specifier: ^5.6.3
+        specifier: ^5.8.2
         version: 5.8.2
       typescript-eslint:
-        specifier: ^8.12.2
+        specifier: ^8.26.1
         version: 8.26.1(eslint@9.22.0)(typescript@5.8.2)
       vite:
-        specifier: ^5.4.10
+        specifier: ^5.4.14
         version: 5.4.14(@types/node@22.5.5)
       vite-plugin-dts:
-        specifier: ^4.3.0
+        specifier: ^4.5.3
         version: 4.5.3(@types/node@22.5.5)(rollup@4.35.0)(typescript@5.8.2)(vite@5.4.14(@types/node@22.5.5))
       vitest:
-        specifier: ^2.1.4
+        specifier: ^2.1.9
         version: 2.1.9(@types/node@22.5.5)
 
 packages:
@@ -835,7 +835,7 @@ packages:
   '@penumbra-zone/protobuf@file:penumbra-zone-protobuf-10.0.0.tgz':
     resolution:
       {
-        integrity: sha512-KpR8iotoG1suTAR8xXm7zkof6A8QEF9FmzCCQQfk7fIbZUn4GuWvxqTqCoe84rnaONLMQD7PFBOtqE3PKvTXnQ==,
+        integrity: sha512-3CbOdSpzMV7ri0TLAJfg+hQYinJ7TVLIb3TVKjwOhCMxZY4H7H/QsADXGXEETc1zoERG4+ZVDdEZsUBMSTSrGA==,
         tarball: file:penumbra-zone-protobuf-10.0.0.tgz,
       }
     version: 10.0.0
@@ -2320,10 +2320,10 @@ packages:
         integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==,
       }
 
-  nanoid@3.3.9:
+  nanoid@3.3.10:
     resolution:
       {
-        integrity: sha512-SppoicMGpZvbF1l3z4x7No3OlIjP7QJvC9XR7AhZr1kL133KHnKPztkKDc+Ir4aJ/1VhTySrtKhrsycmrMQfvg==,
+        integrity: sha512-vSJJTG+t/dIKAUhUDw/dLdZ9s//5OxcHqLaDWWrW4Cdq7o6tdLIczUkMXt2MBNmk6sJRZBZRXVixs7URY1CmIg==,
       }
     engines: { node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1 }
     hasBin: true
@@ -4537,7 +4537,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nanoid@3.3.9: {}
+  nanoid@3.3.10: {}
 
   natural-compare@1.4.0: {}
 
@@ -4642,7 +4642,7 @@ snapshots:
 
   postcss@8.5.3:
     dependencies:
-      nanoid: 3.3.9
+      nanoid: 3.3.10
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
