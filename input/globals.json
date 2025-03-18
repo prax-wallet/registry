@@ -26,6 +26,15 @@
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/silent-validator.png"
         }
       ]
+    },
+    {
+      "name": "ghostinnet",
+      "url": "https://penumbra.grpc.ghostinnet.com",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/ghostinnet.png"
+        }
+      ]
     }
   ],
   "frontends": [
