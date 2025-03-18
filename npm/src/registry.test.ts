@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import { create } from '@bufbuild/protobuf';
 import { Registry } from './registry';
-import { AssetId } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
+import { AssetIdSchema } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { base64ToUint8Array } from './utils/base64';
 import * as testRegistry from '../../registry/chains/penumbra-testnet-deimos-8-x6de97e39.json';
 
@@ -8,7 +9,7 @@ describe('Registry', () => {
   it('gets metadata successfully', () => {
     const registry = new Registry(testRegistry);
     const usdcId = base64ToUint8Array('reum7wQmk/owgvGMWMZn/6RFPV24zIKq3W6In/WwZgg=');
-    const res = registry.getMetadata(new AssetId({ inner: usdcId }));
+    const res = registry.getMetadata(create(AssetIdSchema, { inner: usdcId }));
     expect(res.base).toEqual('wtest_usd');
     // TODO: Renable when badges fixed in minifront
     // expect(res.badges.length).toEqual(1);
@@ -20,7 +21,7 @@ describe('Registry', () => {
   it('gets metadata without badges', () => {
     const registry = new Registry(testRegistry);
     const usdcId = base64ToUint8Array('ra98J77CX10Us2s6+d7bebfpm1Q3+UOycPfaaEeeuAY=');
-    const res = registry.getMetadata(new AssetId({ inner: usdcId }));
+    const res = registry.getMetadata(create(AssetIdSchema, { inner: usdcId }));
     expect(res.base).toEqual(
       'transfer/channel-0/factory/osmo1zlkzu72774ynac53necz46u4ycqtp36wedrar0/willyz',
     );
@@ -30,14 +31,14 @@ describe('Registry', () => {
   it('throws when searching for metadata that does not exist', () => {
     const registry = new Registry(testRegistry);
     const cubeId = base64ToUint8Array('aGVsbG8gd29ybGQ=');
-    const getCubeMetadata = () => registry.getMetadata(new AssetId({ inner: cubeId }));
+    const getCubeMetadata = () => registry.getMetadata(create(AssetIdSchema, { inner: cubeId }));
     expect(getCubeMetadata).toThrow();
   });
 
   it('returns undefined when using try method', () => {
     const registry = new Registry(testRegistry);
     const cubeId = base64ToUint8Array('aGVsbG8gd29ybGQ=');
-    const result = registry.tryGetMetadata(new AssetId({ inner: cubeId }));
+    const result = registry.tryGetMetadata(create(AssetIdSchema, { inner: cubeId }));
     expect(result).toBeUndefined();
   });
 
