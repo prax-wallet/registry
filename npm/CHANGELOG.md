@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.5.0
+
+### Minor Changes
+
+- dfad8cd: Allow querying metadata by asset's denom
+
 ## 12.4.0
 
 ### Minor Changes
