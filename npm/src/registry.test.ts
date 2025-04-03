@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { Registry } from './registry';
-import { AssetId } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
+import { AssetId, Denom } from '@penumbra-zone/protobuf/penumbra/core/asset/v1/asset_pb';
 import { base64ToUint8Array } from './utils/base64';
 import * as testRegistry from '../../registry/chains/penumbra-testnet-deimos-8-x6de97e39.json';
 
@@ -15,6 +15,12 @@ describe('Registry', () => {
     // expect(res.badges[0]?.png).toEqual(
     //   'https://raw.githubusercontent.com/prax-wallet/registry/main/images/penumbra-favicon.png',
     // );
+  });
+
+  it('gets metadata by asset denom successfully', () => {
+    const registry = new Registry(testRegistry);
+    const res = registry.getMetadata(new Denom({ denom: 'penumbra' }));
+    expect(res.base).toEqual('upenumbra');
   });
 
   it('gets metadata without badges', () => {
