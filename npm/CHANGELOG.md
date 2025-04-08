@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.5.1
+
+### Patch Changes
+
+- 0ca7bc4: Fix querying metadata by denom – should use `base` field instead of `denom`
+
 ## 12.5.0
 
 ### Minor Changes
