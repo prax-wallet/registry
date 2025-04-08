@@ -19,7 +19,7 @@ describe('Registry', () => {
 
   it('gets metadata by asset denom successfully', () => {
     const registry = new Registry(testRegistry);
-    const res = registry.getMetadata(new Denom({ denom: 'penumbra' }));
+    const res = registry.getMetadata(new Denom({ denom: 'upenumbra' }));
     expect(res.base).toEqual('upenumbra');
   });
 

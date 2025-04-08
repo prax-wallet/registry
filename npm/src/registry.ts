@@ -53,7 +53,7 @@ export class Registry {
       });
 
       this.assetById[key] = metadata;
-      this.assetByDenom[metadata.display] = metadata;
+      this.assetByDenom[metadata.base] = metadata;
     });
   }
 
