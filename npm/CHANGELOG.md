@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.6.0
+
+### Minor Changes
+
+- add penumbra-testnet-phobos-3 to registry list
+
 ## 12.5.1
 
 ### Patch Changes
