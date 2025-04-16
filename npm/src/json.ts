@@ -2,6 +2,7 @@ import * as Deimos8 from '../../registry/chains/penumbra-testnet-deimos-8-x6de97
 import * as Penumbra1 from '../../registry/chains/penumbra-1.json';
 import * as Phobos1 from '../../registry/chains/penumbra-testnet-phobos-1.json';
 import * as Phobos2 from '../../registry/chains/penumbra-testnet-phobos-2.json';
+import * as Phobos3 from '../../registry/chains/penumbra-testnet-phobos-3.json';
 import { Base64AssetId, Chain, EntityMetadata } from './registry';
 
 export interface JsonRegistry {
@@ -55,4 +56,5 @@ export const allJsonRegistries: Record<string, JsonRegistry> = {
   'penumbra-1': Penumbra1,
   'penumbra-testnet-phobos-1': Phobos1,
   'penumbra-testnet-phobos-2': Phobos2,
+  'penumbra-testnet-phobos-3': Phobos3,
 };

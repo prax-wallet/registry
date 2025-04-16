@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.6.0
+
+### Minor Changes
+
+- a4e903b: Add Phobos3 bundled registry
+
 ## 12.5.1
 
 ### Patch Changes
