@@ -49,6 +49,8 @@ Let's say you want to add or edit an asset in the registry. Here are the steps y
 8. After merge, the latest registry will be live in `registry/` and available in the newly published npm package
    version.
 
+There's a [nix](https://nixos.org/download/) flake in the repo that will pull in the relevant tooling, such as Rust and pnpm.
+
 ### File structure
 
 The generator expects a specific directory structure:
