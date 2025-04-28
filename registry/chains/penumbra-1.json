@@ -54,6 +54,32 @@
       ]
     },
     {
+      "addressPrefix": "dydx",
+      "chainId": "dxdy-mainnet-1",
+      "channelId": "channel-16",
+      "counterpartyChannelId": "channel-89",
+      "displayName": "dYdX Protocol",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg"
+        }
+      ]
+    },
+    {
+      "addressPrefix": "inj",
+      "chainId": "injective-1",
+      "channelId": "channel-15",
+      "counterpartyChannelId": "channel-434",
+      "displayName": "Injective Finance",
+      "images": [
+        {
+          "png": "https://github.com/cosmos/chain-registry/blob/6af926f1580b481656f9c69b3d2a11674b66b398/injective/images/inj.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/injective/images/inj.svg"
+        }
+      ]
+    },
+    {
       "addressPrefix": "stride",
       "chainId": "stride-1",
       "channelId": "channel-8",
@@ -122,6 +148,61 @@
         }
       ]
     },
+    "+qCaY6TDxmw8sCqsfgpkXC49PFu4ZSkLW9Gl/rgXyg4=": {
+      "description": "A receipt token for lent USDC issued by the Neptune Protocol.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj1dafy7fv7qczzatd98dv8hekx6ssckrflswpjaz"
+        },
+        {
+          "denom": "transfer/channel-15/nUSDC",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/inj1dafy7fv7qczzatd98dv8hekx6ssckrflswpjaz",
+      "display": "transfer/channel-15/nUSDC",
+      "name": "Neptune Receipt USDC",
+      "symbol": "nUSDC",
+      "penumbraAssetId": {
+        "inner": "+qCaY6TDxmw8sCqsfgpkXC49PFu4ZSkLW9Gl/rgXyg4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/nusdc.png",
+          "theme": {
+            "primaryColorHex": "#2775ca"
+          }
+        }
+      ]
+    },
+    "+yw2MHKWq4doZct3jVTZ2Eux2VlkicktYwfcbk5xBwo=": {
+      "description": "$AUTISM exists to celebrate autism as a superior biological tech stack for a changing world",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism"
+        },
+        {
+          "denom": "transfer/channel-15/autism",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism",
+      "display": "transfer/channel-15/autism",
+      "name": "Autism",
+      "symbol": "AUTISM",
+      "penumbraAssetId": {
+        "inner": "+yw2MHKWq4doZct3jVTZ2Eux2VlkicktYwfcbk5xBwo="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/autism.png",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
+        }
+      ],
+      "coingeckoId": "autism"
+    },
     "/479qYXE+dD7kScmzQU/5eeJqI78sk40NG5cYF0acQQ=": {
       "description": "An alloy of DYDX asset variants on Osmosis.",
       "denomUnits": [
@@ -136,7 +217,7 @@
       "base": "transfer/channel-4/factory/osmo1zem8r6dv6u38f6qpg546zy30946av8h5srgug0s4gcyy6cfecf3seac083/alloyed/allDYDX",
       "display": "transfer/channel-4/allDYDX",
       "name": "dYdX",
-      "symbol": "DYDX",
+      "symbol": "allDYDX",
       "penumbraAssetId": {
         "inner": "/479qYXE+dD7kScmzQU/5eeJqI78sk40NG5cYF0acQQ="
       },
@@ -430,6 +511,33 @@
         }
       ]
     },
+    "2gBGH6iieQsUti6zCFZXldWpoz/7Vm38FBHiO/8EHgE=": {
+      "description": "The native governance and staking token for the Neptune Finance protocol",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1v3a4zznudwpukpr8y987pu5gnh4xuf7v36jhva/nept"
+        },
+        {
+          "denom": "transfer/channel-15/NEPT",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1v3a4zznudwpukpr8y987pu5gnh4xuf7v36jhva/nept",
+      "display": "transfer/channel-15/NEPT",
+      "name": "Neptune Finance",
+      "symbol": "NEPT",
+      "penumbraAssetId": {
+        "inner": "2gBGH6iieQsUti6zCFZXldWpoz/7Vm38FBHiO/8EHgE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/nept.png",
+          "theme": {
+            "primaryColorHex": "#21549f"
+          }
+        }
+      ]
+    },
     "2k9aUF4SL9uEXl02lWocY2g1z2gkPQEFu+1glmZJngw=": {
       "denomUnits": [
         {
@@ -479,6 +587,33 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/axs.svg",
           "theme": {
             "primaryColorHex": "#0454d3"
+          }
+        }
+      ]
+    },
+    "375LXFs6rwhYAJHWrCrmJvtsL4AFhELFnxnxqNYeYw4=": {
+      "description": "Talis governance token",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/Talis"
+        },
+        {
+          "denom": "transfer/channel-15/Talis",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/Talis",
+      "display": "transfer/channel-15/Talis",
+      "name": "Talis Token",
+      "symbol": "TALIS",
+      "penumbraAssetId": {
+        "inner": "375LXFs6rwhYAJHWrCrmJvtsL4AFhELFnxnxqNYeYw4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/talis.png",
+          "theme": {
+            "primaryColorHex": "#0c0f17"
           }
         }
       ]
@@ -534,6 +669,33 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/ape.svg",
           "theme": {
             "primaryColorHex": "#5b6b8c"
+          }
+        }
+      ]
+    },
+    "3zIebZi+qAMl2xi8sZWZzWmlFRpKKVQ+gkAIpzOsHBI=": {
+      "description": "A receipt token for lent USDT issued by the Neptune Protocol.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj1cy9hes20vww2yr6crvs75gxy5hpycya2hmjg9s"
+        },
+        {
+          "denom": "transfer/channel-15/nUSDT",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/inj1cy9hes20vww2yr6crvs75gxy5hpycya2hmjg9s",
+      "display": "transfer/channel-15/nUSDT",
+      "name": "Neptune Receipt USDT",
+      "symbol": "nUSDT",
+      "penumbraAssetId": {
+        "inner": "3zIebZi+qAMl2xi8sZWZzWmlFRpKKVQ+gkAIpzOsHBI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/nusdt.png",
+          "theme": {
+            "primaryColorHex": "#54ac94"
           }
         }
       ]
@@ -1407,6 +1569,60 @@
         }
       ]
     },
+    "DVnMr8Bcs/w1R1lqteCmrjjqrvlPEN9Wj6kT9zHEqgk=": {
+      "description": "A receipt token for lent WETH issued by the Neptune Protocol.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj1kehk5nvreklhylx22p3x0yjydfsz9fv3fvg5xt"
+        },
+        {
+          "denom": "transfer/channel-15/nWETH",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-15/inj1kehk5nvreklhylx22p3x0yjydfsz9fv3fvg5xt",
+      "display": "transfer/channel-15/nWETH",
+      "name": "Neptune Receipt WETH",
+      "symbol": "nWETH",
+      "penumbraAssetId": {
+        "inner": "DVnMr8Bcs/w1R1lqteCmrjjqrvlPEN9Wj6kT9zHEqgk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/nweth.png",
+          "theme": {
+            "primaryColorHex": "#2a303f"
+          }
+        }
+      ]
+    },
+    "Dd/O2gtWq4WV1IUuxSilsxhQiJAS+pIX7DYZ4Vl+dAI=": {
+      "description": "Cosmo is the best currency in the universe.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO"
+        },
+        {
+          "denom": "transfer/channel-15/COSMO",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1je6n5sr4qtx2lhpldfxndntmgls9hf38ncmcez/COSMO",
+      "display": "transfer/channel-15/COSMO",
+      "name": "Cosmo",
+      "symbol": "COSMO",
+      "penumbraAssetId": {
+        "inner": "Dd/O2gtWq4WV1IUuxSilsxhQiJAS+pIX7DYZ4Vl+dAI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/cosmo.png",
+          "theme": {
+            "primaryColorHex": "#343169"
+          }
+        }
+      ]
+    },
     "EMttUTznXaZu2d7ecHS5UC0RvJsBh9GYc79abym2ewc=": {
       "description": "Margined Power Token sqBTC",
       "denomUnits": [
@@ -1541,6 +1757,60 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/circus.png",
           "theme": {
             "primaryColorHex": "#242033"
+          }
+        }
+      ]
+    },
+    "Gbl2Umi+8/EFVafkaRnoU82RZZ3oWHPzFz420wNlKwg=": {
+      "description": "CW20 DRUGS meme coin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/cw20:inj19vy83ne9tzta2yqynj8yg7dq9ghca6yqn9hyej"
+        },
+        {
+          "denom": "transfer/channel-15/DRUGS",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-15/cw20:inj19vy83ne9tzta2yqynj8yg7dq9ghca6yqn9hyej",
+      "display": "transfer/channel-15/DRUGS",
+      "name": "cw20 DRUGS",
+      "symbol": "DRUGS.cw20",
+      "penumbraAssetId": {
+        "inner": "Gbl2Umi+8/EFVafkaRnoU82RZZ3oWHPzFz420wNlKwg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/cw20drugs.png",
+          "theme": {
+            "primaryColorHex": "#f5db48"
+          }
+        }
+      ]
+    },
+    "H4QTYv1phoibdFv5mZhGDbFP5YW/eDZSwc+SAaY5mAA=": {
+      "description": "SYN burn Derivative; minted when SYN is burned via The Furnace",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1ej2f3lmpxj4djsmmuxvnfuvplrut7zmwrq7zj8/syn.ash"
+        },
+        {
+          "denom": "transfer/channel-15/ashSYN",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1ej2f3lmpxj4djsmmuxvnfuvplrut7zmwrq7zj8/syn.ash",
+      "display": "transfer/channel-15/ashSYN",
+      "name": "ASH Syndicate",
+      "symbol": "ashSYN",
+      "penumbraAssetId": {
+        "inner": "H4QTYv1phoibdFv5mZhGDbFP5YW/eDZSwc+SAaY5mAA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/syn.ash.png",
+          "theme": {
+            "primaryColorHex": "#eb9c9e"
           }
         }
       ]
@@ -2041,6 +2311,33 @@
       "priorityScore": "600000000000",
       "coingeckoId": "osmosis-allsol"
     },
+    "LjfxFa3dKUHrCSto7/cSdtqXcZ6dB3cZE4s3EstG1wk=": {
+      "description": "Bricscoin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1s9hr5zfz3xrkzchde94hd2d0edjs4q5mrqrz6x/BRICS"
+        },
+        {
+          "denom": "transfer/channel-15/BRICS",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1s9hr5zfz3xrkzchde94hd2d0edjs4q5mrqrz6x/BRICS",
+      "display": "transfer/channel-15/BRICS",
+      "name": "Bricscoin",
+      "symbol": "BRICS",
+      "penumbraAssetId": {
+        "inner": "LjfxFa3dKUHrCSto7/cSdtqXcZ6dB3cZE4s3EstG1wk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/brics.png",
+          "theme": {
+            "primaryColorHex": "#F79017"
+          }
+        }
+      ]
+    },
     "MMDbC4jQ7GUP6yEU+Yo2xkW85LyRKJASJN4MPHAPmhE=": {
       "description": "Levana Well-funded Perps is a protocol for perpetual swaps, which are leveraged trading contracts.",
       "denomUnits": [
@@ -2240,6 +2537,62 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/cult.png",
           "theme": {
             "primaryColorHex": "#f1a507"
+          }
+        }
+      ]
+    },
+    "OC4eAf31pDJ4+kBhQJ3jj5lVRMmW9K0EcYc11bwWBg4=": {
+      "description": "Tether USDt from Ethereum via Peggy bridge.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/peggy0xdAC17F958D2ee523a2206206994597C13D831ec7"
+        },
+        {
+          "denom": "transfer/channel-15/usdt",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/peggy0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "display": "transfer/channel-15/usdt",
+      "name": "Tether USDT",
+      "symbol": "USDT",
+      "penumbraAssetId": {
+        "inner": "OC4eAf31pDJ4+kBhQJ3jj5lVRMmW9K0EcYc11bwWBg4="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg",
+          "theme": {
+            "primaryColorHex": "#009393",
+            "circle": true
+          }
+        }
+      ]
+    },
+    "OI788Mqx8XoWypcUa2OZKX1T9533g88b/mySfz/iTAs=": {
+      "description": "JUDO is a very futuristic meme token.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj16ukv8g2jcmml7gykxn5ws8ykhxjkugl4zhft5h"
+        },
+        {
+          "denom": "transfer/channel-15/JUDO",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/inj16ukv8g2jcmml7gykxn5ws8ykhxjkugl4zhft5h",
+      "display": "transfer/channel-15/JUDO",
+      "name": "Judo",
+      "symbol": "JUDO",
+      "penumbraAssetId": {
+        "inner": "OI788Mqx8XoWypcUa2OZKX1T9533g88b/mySfz/iTAs="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/judo.png",
+          "theme": {
+            "primaryColorHex": "#18120f"
           }
         }
       ]
@@ -3282,6 +3635,33 @@
         }
       ]
     },
+    "X3Jg1LCnPncsj6uDWt7HspcNyA6itwyXlRmrRVFOLgg=": {
+      "description": "BEAST-ERC20 on injective",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/peggy0xA4426666addBE8c4985377d36683D17FB40c31Be"
+        },
+        {
+          "denom": "transfer/channel-15/beast",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/peggy0xA4426666addBE8c4985377d36683D17FB40c31Be",
+      "display": "transfer/channel-15/beast",
+      "name": "Gelotto BEAST",
+      "symbol": "BEAST",
+      "penumbraAssetId": {
+        "inner": "X3Jg1LCnPncsj6uDWt7HspcNyA6itwyXlRmrRVFOLgg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/beast.png",
+          "theme": {
+            "primaryColorHex": "#21172b"
+          }
+        }
+      ]
+    },
     "XREY/7po0kX/cIgBeXzuVTQXsweMLMhsIg72Ag7OOw4=": {
       "denomUnits": [
         {
@@ -3336,6 +3716,35 @@
         }
       ],
       "coingeckoId": "ibc-index"
+    },
+    "ZMpPa+29X3g2aBBKKsooBDzqK9JVqIKgcorFgYk6cgI=": {
+      "description": "Injective is a decentralized exchange protocol that enables fast, secure, and fully decentralized trading of derivatives, futures, and spot markets.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj"
+        },
+        {
+          "denom": "transfer/channel-15/INJ",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-15/inj",
+      "display": "transfer/channel-15/INJ",
+      "name": "Injective",
+      "symbol": "INJ",
+      "penumbraAssetId": {
+        "inner": "ZMpPa+29X3g2aBBKKsooBDzqK9JVqIKgcorFgYk6cgI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/inj.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/inj.svg",
+          "theme": {
+            "primaryColorHex": "#04a2fc"
+          }
+        }
+      ],
+      "coingeckoId": "injective-protocol"
     },
     "ZMvzNe0oaoRjhBIPf0KgUGH0EVaE6der5FavRNfMbgQ=": {
       "description": "Fractionalized DAONuts",
@@ -3456,6 +3865,87 @@
       ],
       "coingeckoId": "rootstock"
     },
+    "ZpY9M7AVDe3pS9G0k0DP+I4i1ago/HRZR84sumcU7wk=": {
+      "description": "The $WGMI Token - We Gonna Make It. Are you ready?",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1rmjzj9fn47kdmfk4f3z39qr6czexxe0yjyc546/WGMI"
+        },
+        {
+          "denom": "transfer/channel-15/WGMI",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1rmjzj9fn47kdmfk4f3z39qr6czexxe0yjyc546/WGMI",
+      "display": "transfer/channel-15/WGMI",
+      "name": "WGMI",
+      "symbol": "WGMI",
+      "penumbraAssetId": {
+        "inner": "ZpY9M7AVDe3pS9G0k0DP+I4i1ago/HRZR84sumcU7wk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/wgmi.png",
+          "theme": {
+            "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "aN52Wsq0DCdONMNeoDfnrIz1KIRyu4GAMbsJHaqTvwU=": {
+      "description": "ERIS liquid staked INJ",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1cdwt8g7nxgtg2k4fn8sj363mh9ahkw2qt0vrnc/ampINJ"
+        },
+        {
+          "denom": "transfer/channel-15/ampINJ",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1cdwt8g7nxgtg2k4fn8sj363mh9ahkw2qt0vrnc/ampINJ",
+      "display": "transfer/channel-15/ampINJ",
+      "name": "ERIS Amplified INJ",
+      "symbol": "ampINJ",
+      "penumbraAssetId": {
+        "inner": "aN52Wsq0DCdONMNeoDfnrIz1KIRyu4GAMbsJHaqTvwU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ampinj.png",
+          "theme": {
+            "primaryColorHex": "#5480cc"
+          }
+        }
+      ]
+    },
+    "afBEMh3yMKRpolikUCMeSKwtlG5un91VanECSTV/5Qw=": {
+      "description": "Instant Noodles Coin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1s9hr5zfz3xrkzchde94hd2d0edjs4q5mrqrz6x/INC"
+        },
+        {
+          "denom": "transfer/channel-15/INC",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1s9hr5zfz3xrkzchde94hd2d0edjs4q5mrqrz6x/INC",
+      "display": "transfer/channel-15/INC",
+      "name": "Instant Noodles Coin",
+      "symbol": "INC",
+      "penumbraAssetId": {
+        "inner": "afBEMh3yMKRpolikUCMeSKwtlG5un91VanECSTV/5Qw="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/inc.png",
+          "theme": {
+            "primaryColorHex": "#37BEFF"
+          }
+        }
+      ]
+    },
     "b5NltMpWXHJVmKhWJq0BaVNZAGP6olIRX69KaUQXOw4=": {
       "description": "wstETH on Neutron",
       "denomUnits": [
@@ -3479,6 +3969,33 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg",
           "theme": {
             "primaryColorHex": "#9cdcfc"
+          }
+        }
+      ]
+    },
+    "b7/J5YdVH7VAZEoXSSkTDNuqSZvT9ms435fkQGebaQQ=": {
+      "description": "A receipt token for lent TIA issued by the Neptune Protocol.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj1fzquxxxam59z6fzewy2hvvreeh3m04x83zg4vv"
+        },
+        {
+          "denom": "transfer/channel-15/nTIA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/inj1fzquxxxam59z6fzewy2hvvreeh3m04x83zg4vv",
+      "display": "transfer/channel-15/nTIA",
+      "name": "Neptune Receipt TIA",
+      "symbol": "nTIA",
+      "penumbraAssetId": {
+        "inner": "b7/J5YdVH7VAZEoXSSkTDNuqSZvT9ms435fkQGebaQQ="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ntia.png",
+          "theme": {
+            "primaryColorHex": "#7931f9"
           }
         }
       ]
@@ -3656,6 +4173,60 @@
         }
       ]
     },
+    "d8SJmP4OGgZkz6AJ97p3giPD5IngZkLJpcBIGYdrSBA=": {
+      "description": "The second meme coin on Injective.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj1sudjgsyhufqu95yp7rqad3g78ws8g6htf32h88"
+        },
+        {
+          "denom": "transfer/channel-15/NINPO",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/inj1sudjgsyhufqu95yp7rqad3g78ws8g6htf32h88",
+      "display": "transfer/channel-15/NINPO",
+      "name": "Ninpo",
+      "symbol": "NINPO",
+      "penumbraAssetId": {
+        "inner": "d8SJmP4OGgZkz6AJ97p3giPD5IngZkLJpcBIGYdrSBA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ninpo.png",
+          "theme": {
+            "primaryColorHex": "#31292a"
+          }
+        }
+      ]
+    },
+    "dKC1LXt+ODbitoXw7J3A42Jp5Kug8MB8C84JvNcHOgg=": {
+      "description": "A receipt token for lent INJ issued by the Neptune Protocol.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj1rmzufd7h09sqfrre5dtvu5d09ta7c0t4jzkr2f"
+        },
+        {
+          "denom": "transfer/channel-15/nINJ",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-15/inj1rmzufd7h09sqfrre5dtvu5d09ta7c0t4jzkr2f",
+      "display": "transfer/channel-15/nINJ",
+      "name": "Neptune Receipt INJ",
+      "symbol": "nINJ",
+      "penumbraAssetId": {
+        "inner": "dKC1LXt+ODbitoXw7J3A42Jp5Kug8MB8C84JvNcHOgg="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ninj.png",
+          "theme": {
+            "primaryColorHex": "#293a6f"
+          }
+        }
+      ]
+    },
     "dN2Bc92n4dRFKSV7qgLOIGEG6dYRboqUqO2HoMvwYAU=": {
       "description": "Drop staked TIA",
       "denomUnits": [
@@ -3768,6 +4339,33 @@
         }
       ]
     },
+    "el1KEAIWzBPqkFlDupx9xz8slPdc2AeGQFuWgpqeYQA=": {
+      "description": "The most degenerate NFT on Injective. Gravedigger collection for $bINJ. Giving power back to the community.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/SYN"
+        },
+        {
+          "denom": "transfer/channel-15/SYN",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1a6xdezq7a94qwamec6n6cnup02nvewvjtz6h6e/SYN",
+      "display": "transfer/channel-15/SYN",
+      "name": "Syndicate",
+      "symbol": "SYN",
+      "penumbraAssetId": {
+        "inner": "el1KEAIWzBPqkFlDupx9xz8slPdc2AeGQFuWgpqeYQA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/syn.png",
+          "theme": {
+            "primaryColorHex": "#04a2fc"
+          }
+        }
+      ]
+    },
     "f/IAN065Ou6XwYdWe3m3SgiLFDYOAY47vphr9y+bowQ=": {
       "description": "Fractionalized Pixel Wizards",
       "denomUnits": [
@@ -3791,6 +4389,33 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/fWIZ.png",
           "theme": {
             "primaryColorHex": "#639BFF"
+          }
+        }
+      ]
+    },
+    "fRqkn0o3XssIqhFbKpGm/Y/PclbhN24Mq5ir/dR+Ggk=": {
+      "description": "BackBone Labs Liquid Staked Injective",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1dxp690rd86xltejgfq2fa7f2nxtgmm5cer3hvu/bINJ"
+        },
+        {
+          "denom": "transfer/channel-15/bINJ",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1dxp690rd86xltejgfq2fa7f2nxtgmm5cer3hvu/bINJ",
+      "display": "transfer/channel-15/bINJ",
+      "name": "BackBone Labs Liquid Staked Injective",
+      "symbol": "bINJ",
+      "penumbraAssetId": {
+        "inner": "fRqkn0o3XssIqhFbKpGm/Y/PclbhN24Mq5ir/dR+Ggk="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/binj.png",
+          "theme": {
+            "primaryColorHex": "#04a2fc"
           }
         }
       ]
@@ -3961,6 +4586,41 @@
         }
       ]
     },
+    "gWd90cf8h/fDbYt68Dy45VAxQc2sG3ir+GMbphxOMwc=": {
+      "description": "DYDX is a decentralized trading platform focused on derivatives and perpetual contracts, offering a secure and efficient trading experience without intermediaries.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-16/adydx"
+        },
+        {
+          "denom": "transfer/channel-16/dydx",
+          "exponent": 18
+        }
+      ],
+      "base": "transfer/channel-16/adydx",
+      "display": "transfer/channel-16/dydx",
+      "name": "dYdX",
+      "symbol": "DYDX",
+      "penumbraAssetId": {
+        "inner": "gWd90cf8h/fDbYt68Dy45VAxQc2sG3ir+GMbphxOMwc="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg",
+          "theme": {
+            "primaryColorHex": "#21212f"
+          }
+        },
+        {
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx-circle.svg",
+          "theme": {
+            "primaryColorHex": "#d0d0d3"
+          }
+        }
+      ],
+      "coingeckoId": "dydx-chain"
+    },
     "gjZ6AXKLriH+HZCGJX8CV06RusaJG4QqngdJnq5LTQI=": {
       "denomUnits": [
         {
@@ -4088,6 +4748,34 @@
       ],
       "priorityScore": "500000000000",
       "coingeckoId": "osmosis-allshib"
+    },
+    "hT1GzcT3M/mkG8w5mguEFuS4q8GFg0fF+dolR4oRnQw=": {
+      "description": "GLTO-ERC20 on injective",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/peggy0xd73175f9eb15eee81745d367ae59309Ca2ceb5e2"
+        },
+        {
+          "denom": "transfer/channel-15/glto",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/peggy0xd73175f9eb15eee81745d367ae59309Ca2ceb5e2",
+      "display": "transfer/channel-15/glto",
+      "name": "Gelotto",
+      "symbol": "GLTO",
+      "penumbraAssetId": {
+        "inner": "hT1GzcT3M/mkG8w5mguEFuS4q8GFg0fF+dolR4oRnQw="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/glto.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/glto.svg",
+          "theme": {
+            "primaryColorHex": "#501cad"
+          }
+        }
+      ]
     },
     "hZntyCsNRTDrRdd9co7TcsGFJ22uBMeJLj4TmP+6Hgw=": {
       "denomUnits": [
@@ -4288,6 +4976,33 @@
         }
       ]
     },
+    "ivCBI9gjAyc1A4Co7nxq8Irag5wxM/ZebWbb0tPrSgo=": {
+      "description": "Cosmos Bitcoin",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1s9hr5zfz3xrkzchde94hd2d0edjs4q5mrqrz6x/BITCOIN"
+        },
+        {
+          "denom": "transfer/channel-15/BITCOIN",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1s9hr5zfz3xrkzchde94hd2d0edjs4q5mrqrz6x/BITCOIN",
+      "display": "transfer/channel-15/BITCOIN",
+      "name": "Cosmos Bitcoin",
+      "symbol": "BITCOIN",
+      "penumbraAssetId": {
+        "inner": "ivCBI9gjAyc1A4Co7nxq8Irag5wxM/ZebWbb0tPrSgo="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/bitcoin.png",
+          "theme": {
+            "primaryColorHex": "#1DB5E1"
+          }
+        }
+      ]
+    },
     "jWrt4r5oJ3lH0s3sKa8o9MKMc7SPPHP5xvgJQSOYVwU=": {
       "description": "Baby Corgi is the real doggo of Neutron!",
       "denomUnits": [
@@ -4311,6 +5026,34 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/babycorgi.png",
           "theme": {
             "primaryColorHex": "#fab442"
+          }
+        }
+      ]
+    },
+    "jfbIv16q8TomK/SAS/00aqI5SwrGG8Yr4C2CLtRQGhI=": {
+      "description": "Ninja Blaze is a decentralized multi-chain gaming platform powered by Injective Blockchain.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZ"
+        },
+        {
+          "denom": "transfer/channel-15/NBZ",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1llr45x92t7jrqtxvc02gpkcqhqr82dvyzkr4mz/NBZ",
+      "display": "transfer/channel-15/NBZ",
+      "name": "Ninja Blaze",
+      "symbol": "NBZ",
+      "penumbraAssetId": {
+        "inner": "jfbIv16q8TomK/SAS/00aqI5SwrGG8Yr4C2CLtRQGhI="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/NBZ.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/NBZ.svg",
+          "theme": {
+            "primaryColorHex": "#9890f9"
           }
         }
       ]
@@ -4424,6 +5167,33 @@
         }
       ],
       "coingeckoId": "drop-staked-atom"
+    },
+    "kFUL9uTQqKL3fjdAGV00hAz6x7edhA+Mi1niXIYRagA=": {
+      "description": "Distributing happiness, is a serious business",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89/DRUGS"
+        },
+        {
+          "denom": "transfer/channel-15/DRUGS",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89/DRUGS",
+      "display": "transfer/channel-15/DRUGS",
+      "name": "DRUGS",
+      "symbol": "DRUGS.factory",
+      "penumbraAssetId": {
+        "inner": "kFUL9uTQqKL3fjdAGV00hAz6x7edhA+Mi1niXIYRagA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/drugs.png",
+          "theme": {
+            "primaryColorHex": "#adf85b"
+          }
+        }
+      ]
     },
     "kmxtCtqVIc/lLgdQkonBEvAK/3Qk1yrv0r7CuXo45A4=": {
       "denomUnits": [
@@ -4646,6 +5416,33 @@
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/weth.svg",
           "theme": {
             "primaryColorHex": "#e71e7b"
+          }
+        }
+      ]
+    },
+    "oycNnvh/tee/Phl2PyO/TERFU1+oAGtCvgn5fqaUSxE=": {
+      "description": "A receipt token for lent ATOM issued by the Neptune Protocol.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj16jf4qkcarp3lan4wl2qkrelf4kduvvujwg0780"
+        },
+        {
+          "denom": "transfer/channel-15/nATOM",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/inj16jf4qkcarp3lan4wl2qkrelf4kduvvujwg0780",
+      "display": "transfer/channel-15/nATOM",
+      "name": "Neptune Receipt ATOM",
+      "symbol": "nATOM",
+      "penumbraAssetId": {
+        "inner": "oycNnvh/tee/Phl2PyO/TERFU1+oAGtCvgn5fqaUSxE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/natom.png",
+          "theme": {
+            "primaryColorHex": "#272f4b"
           }
         }
       ]
@@ -5004,6 +5801,35 @@
         "inner": "rNNsvEj1LBheBJ3R4rJg+gmG6YXVGA6xmHCFVy0CPgM="
       }
     },
+    "rWk15J1Pyhn0dcnlsmXSjtCD1GyyaWcIyP0OAKp67AE=": {
+      "description": "The first meme coin on Injective. It’s a dog, but he has nunchucks",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1xtel2knkt8hmc9dnzpjz6kdmacgcfmlv5f308w/ninja"
+        },
+        {
+          "denom": "transfer/channel-15/NINJA",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1xtel2knkt8hmc9dnzpjz6kdmacgcfmlv5f308w/ninja",
+      "display": "transfer/channel-15/NINJA",
+      "name": "Dog wif nunchucks",
+      "symbol": "NINJA",
+      "penumbraAssetId": {
+        "inner": "rWk15J1Pyhn0dcnlsmXSjtCD1GyyaWcIyP0OAKp67AE="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ninja.png",
+          "theme": {
+            "primaryColorHex": "#00468E",
+            "circle": true
+          }
+        }
+      ],
+      "coingeckoId": "dog-wif-nuchucks"
+    },
     "rqhdrBBlVtwkHicjGz8hO5ucYLDT+Cq0IL4rHSDn2AM=": {
       "denomUnits": [
         {
@@ -5309,6 +6135,33 @@
         }
       ]
     },
+    "ugyLkmzH9jqGzL9qbU+BugGwALyBg1MmPFU9A7AYLxA=": {
+      "description": "Talis revenue sharing token",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/xTalis"
+        },
+        {
+          "denom": "transfer/channel-15/xTalis",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1maeyvxfamtn8lfyxpjca8kuvauuf2qeu6gtxm3/xTalis",
+      "display": "transfer/channel-15/xTalis",
+      "name": "xTalis Token",
+      "symbol": "XTALIS",
+      "penumbraAssetId": {
+        "inner": "ugyLkmzH9jqGzL9qbU+BugGwALyBg1MmPFU9A7AYLxA="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/xtalis.png",
+          "theme": {
+            "primaryColorHex": "#eaf0df"
+          }
+        }
+      ]
+    },
     "v4sDXdozm2zajyIeeXc7D9hx8npHKSD4TEqitPmKcA0=": {
       "description": "An alloy of USDT asset variants on Osmosis.",
       "denomUnits": [
@@ -5352,6 +6205,34 @@
       ],
       "priorityScore": "700000000000",
       "coingeckoId": "osmosis-allusdt"
+    },
+    "v7bOP4dV8O2quMIshqM/LN8I1J1tC/VUZokSTug8hwU=": {
+      "description": "Hava Coin is the lifeblood of the Cosmos & Injective networks, rewarding builders and welcoming supporters.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava"
+        },
+        {
+          "denom": "transfer/channel-15/hava",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava",
+      "display": "transfer/channel-15/hava",
+      "name": "Hava Coin",
+      "symbol": "HAVA",
+      "penumbraAssetId": {
+        "inner": "v7bOP4dV8O2quMIshqM/LN8I1J1tC/VUZokSTug8hwU="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/hava.png",
+          "theme": {
+            "primaryColorHex": "#eacea5"
+          }
+        }
+      ],
+      "coingeckoId": "hava-coin"
     },
     "vSCVmtndzw2C2RYuB2vcKWfkPVZRCP9GNN8MwB6QUAU=": {
       "description": "Cosmus Cartol always get rich",
@@ -5501,6 +6382,33 @@
         }
       ]
     },
+    "wnQVmp6WLkgS+MIToXRtS0DdTOqAPtWcJBtGtilJNgs=": {
+      "description": "Crypto",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/factory/inj1s9hr5zfz3xrkzchde94hd2d0edjs4q5mrqrz6x/CRYPTO"
+        },
+        {
+          "denom": "transfer/channel-15/CRYPTO",
+          "exponent": 6
+        }
+      ],
+      "base": "transfer/channel-15/factory/inj1s9hr5zfz3xrkzchde94hd2d0edjs4q5mrqrz6x/CRYPTO",
+      "display": "transfer/channel-15/CRYPTO",
+      "name": "Crypto",
+      "symbol": "CRYPTO",
+      "penumbraAssetId": {
+        "inner": "wnQVmp6WLkgS+MIToXRtS0DdTOqAPtWcJBtGtilJNgs="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/crypto.png",
+          "theme": {
+            "primaryColorHex": "#F79017"
+          }
+        }
+      ]
+    },
     "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4=": {
       "description": "An alloy of ETH asset variants on Osmosis.",
       "denomUnits": [
@@ -5515,7 +6423,7 @@
       "base": "transfer/channel-4/factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH",
       "display": "transfer/channel-4/allETH",
       "name": "Ethereum",
-      "symbol": "ETH",
+      "symbol": "allETH",
       "penumbraAssetId": {
         "inner": "wvdhZWgNarKHAJit1ikuBeR7nQB7x83rgf6vYYBHdg4="
       },
@@ -5590,6 +6498,33 @@
           "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ATOM1KLFGc.png",
           "theme": {
             "primaryColorHex": "#040404"
+          }
+        }
+      ]
+    },
+    "yHxvyOuLfgfjcq3d5WFPmbR3yukOU30iN3egodgu3g8=": {
+      "description": "A receipt token for lent SOL issued by the Neptune Protocol.",
+      "denomUnits": [
+        {
+          "denom": "transfer/channel-15/inj1zcwr03uqw57g88nqvgpwfkazwutpqz9kplny4s"
+        },
+        {
+          "denom": "transfer/channel-15/nSOL",
+          "exponent": 8
+        }
+      ],
+      "base": "transfer/channel-15/inj1zcwr03uqw57g88nqvgpwfkazwutpqz9kplny4s",
+      "display": "transfer/channel-15/nSOL",
+      "name": "Neptune Receipt SOL",
+      "symbol": "nSOL",
+      "penumbraAssetId": {
+        "inner": "yHxvyOuLfgfjcq3d5WFPmbR3yukOU30iN3egodgu3g8="
+      },
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/nsol.png",
+          "theme": {
+            "primaryColorHex": "#7964ea"
           }
         }
       ]
