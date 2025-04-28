@@ -71,6 +71,34 @@
       }
     },
     {
+      "displayName": "dYdX Protocol",
+      "chainId": "dxdy-mainnet-1",
+      "channelId": "channel-16",
+      "counterpartyChannelId": "channel-89",
+      "addressPrefix": "dydx",
+      "cosmosRegistryDir": "dydx",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg"
+        }
+      ]
+    },
+    {
+      "displayName": "Injective Finance",
+      "chainId": "injective-1",
+      "channelId": "channel-15",
+      "counterpartyChannelId": "channel-434",
+      "addressPrefix": "inj",
+      "cosmosRegistryDir": "injective",
+      "images": [
+        {
+          "png": "https://github.com/cosmos/chain-registry/blob/6af926f1580b481656f9c69b3d2a11674b66b398/injective/images/inj.png",
+          "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/injective/images/inj.svg"
+        }
+      ]
+    },
+    {
       "displayName": "Stride",
       "chainId": "stride-1",
       "channelId": "channel-8",
@@ -130,7 +158,7 @@
         "shib-wei": "axlSHIB",
         "uni-wei": "axlUNI",
         "wbtc-satoshi": "axlWBTC",
-	"polygon-uusdt": "axlUSDT.polygon",
+        "polygon-uusdt": "axlUSDT.polygon",
         "arbitrum-uusdt": "axlUSDT.arbitrum",
         "optimism-uusdt": "axlUSDT.optimism",
         "wsteth-wei": "wstETH.axelar"
