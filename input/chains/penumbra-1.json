@@ -57,7 +57,7 @@
         }
       ],
       "symbolOverrides": {
-        "transfer/channel-4/factory/osmo1zem8r6dv6u38f6qpg546zy30946av8h5srgug0s4gcyy6cfecf3seac083/alloyed/allDYDX": "allDyDx",
+        "factory/osmo1zem8r6dv6u38f6qpg546zy30946av8h5srgug0s4gcyy6cfecf3seac083/alloyed/allDYDX": "allDYDX",
         "factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH": "allETH",
         "factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC": "allBTC",
         "factory/osmo18zdw5yvs6gfp95rp74qqwug9yduw2fyr8kplk2xgs726s9axc5usa2vpgw/alloyed/allLINK": "allLINK",
@@ -97,7 +97,11 @@
           "png": "https://github.com/cosmos/chain-registry/blob/6af926f1580b481656f9c69b3d2a11674b66b398/injective/images/inj.png",
           "svg": "https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/injective/images/inj.svg"
         }
-      ]
+      ],
+      "symbolOverrides": {
+        "cw20:inj19vy83ne9tzta2yqynj8yg7dq9ghca6yqn9hyej": "DRUGS.cw20",
+        "factory/inj178zy7myyxewek7ka7v9hru8ycpvfnen6xeps89/DRUGS": "DRUGS.factory"
+      }
     },
     {
       "displayName": "Stride",
@@ -344,7 +348,7 @@
     "transfer/channel-4/factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/shitmos": 800000000096,
     "transfer/channel-2/ausdy": 800000000095,
     "transfer/channel-4/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT": 700000000000,
-    "transfer/channel-1/adydx": 600000000000,
+    "transfer/channel-9/adydx": 600000000000,
     "transfer/channel-4/factory/osmo1z6r6qdknhgsc0zeracktgpcxf43j6sekq07nw8sxduc9lg0qjjlqfu25e3/alloyed/allBTC": 600000000000,
     "transfer/channel-4/factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc": 600000000000,
     "transfer/channel-4/factory/osmo1k6c8jln7ejuqwtqmay3yvzrg3kueaczl96pk067ldg8u835w0yhsw27twm/alloyed/allETH": 600000000000,
