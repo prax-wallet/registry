@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.6.1
+
+### Patch Changes
+
+- rename allETH, add dydx and injective
+
 ## 12.6.0
 
 ### Minor Changes
