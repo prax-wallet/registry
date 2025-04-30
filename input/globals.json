@@ -1,6 +1,15 @@
 {
   "rpcs": [
     {
+      "name": "Radiant Commons",
+      "url": "https://penumbra-1.radiantcommons.com",
+      "images": [
+        {
+          "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/radiant-emblem-light.png"
+        }
+      ]
+    },
+    {
       "name": "CroutonDigital",
       "url": "https://penumbra.crouton.digital",
       "images": [
@@ -35,7 +44,7 @@
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/ghostinnet.png"
         }
       ]
-    }
+    },
   ],
   "frontends": [
     "https://stake.with.starlingcyber.net",
