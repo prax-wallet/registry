@@ -44,7 +44,7 @@
           "png": "https://raw.githubusercontent.com/prax-wallet/registry/main/images/ghostinnet.png"
         }
       ]
-    },
+    }
   ],
   "frontends": [
     "https://stake.with.starlingcyber.net",
