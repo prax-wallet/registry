@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.7.0
+
+### Minor Changes
+
+- rpc: add radiant commons to registry
+
 ## 12.6.1
 
 ### Patch Changes
