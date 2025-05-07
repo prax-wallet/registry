@@ -4,8 +4,8 @@
     {
       "displayName": "Osmosis",
       "chainId": "osmo-test-5",
-      "channelId": "channel-0",
-      "counterpartyChannelId": "channel-10364",
+      "channelId": "channel-2",
+      "counterpartyChannelId": "channel-10407",
       "addressPrefix": "osmo",
       "cosmosRegistryDir": "testnets/osmosistestnet",
       "images": [
@@ -17,8 +17,8 @@
     {
       "displayName": "Noble",
       "chainId": "grand-1",
-      "channelId": "channel-1",
-      "counterpartyChannelId": "channel-340",
+      "channelId": "channel-3",
+      "counterpartyChannelId": "channel-348",
       "addressPrefix": "noble",
       "cosmosRegistryDir": "testnets/nobletestnet",
       "images": [
@@ -261,15 +261,15 @@
   ],
   "canonicalNumeraires": [
     "wtest_usd",
-    "transfer/channel-1/uusdc"
+    "transfer/channel-3/uusdc"
   ],
   "priorityScoresByBase": {
     "upenumbra": 999999999999,
     "wtest_usd": 1000,
     "ugm": 900,
     "ugn": 900,
-    "transfer/channel-0/uosmo": 800,
-    "transfer/channel-1/uusdc": 800
+    "transfer/channel-2/uosmo": 800,
+    "transfer/channel-3/uusdc": 800
   },
   "badges": {},
   "badgesByBase": {}
