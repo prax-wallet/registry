@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.7.1
+
+### Patch Changes
+
+- update channels for phobos-3 testnet
+
 ## 12.7.0
 
 ### Minor Changes
