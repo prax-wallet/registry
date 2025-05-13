@@ -36,7 +36,7 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm changeset:publish
-          cwd: "./npm"
+          cwd: "${{ github.workspace }}/npm"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
