@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.7.2
+
+### Patch Changes
+
+- Remove Simply Staking RPC for downtime
+
 ## 12.7.1
 
 ### Patch Changes
