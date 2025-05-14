@@ -4,10 +4,20 @@ import { RegistryGlobals } from './globals';
 import { BundledClient } from './bundled';
 import { deriveTestnetChainIdFromPreview, isTestnetPreviewChainId } from './utils/testnet-parser';
 
-export class RemoteClient {
-  private readonly github = new GithubFetcher();
+interface RemoteClientOptions {
+  // erwan: we can override this baseUrl with a custom one, e.g, using a branch.
+  baseUrl?: string;
+}
 
-  constructor(private readonly bundled: BundledClient) {}
+export class RemoteClient {
+  private readonly github: GithubFetcher;
+
+  constructor(
+    private readonly bundled: BundledClient,
+    options?: RemoteClientOptions,
+  ) {
+    this.github = new GithubFetcher(options?.baseUrl);
+  }
 
   async get(chainId: string): Promise<Registry> {
     try {
