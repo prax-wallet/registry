@@ -3,11 +3,17 @@ import { GithubFetcher } from './github';
 import { RegistryGlobals } from './globals';
 import { BundledClient } from './bundled';
 import { deriveTestnetChainIdFromPreview, isTestnetPreviewChainId } from './utils/testnet-parser';
+import { RegistryOptions } from './options';
 
 export class RemoteClient {
-  private readonly github = new GithubFetcher();
+  private readonly github;
 
-  constructor(private readonly bundled: BundledClient) {}
+  constructor(
+    private readonly bundled: BundledClient,
+    options?: RegistryOptions,
+  ) {
+    this.github = new GithubFetcher(options);
+  }
 
   async get(chainId: string): Promise<Registry> {
     try {
