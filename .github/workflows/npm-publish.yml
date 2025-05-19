@@ -33,7 +33,8 @@ jobs:
       # If there are none, it will publish newer-versioned public packages to npm
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@v1
+        # Pin version for changeset action helper; refs https://github.com/prax-wallet/registry/issues/147
+        uses: changesets/action@v1.5.2
         with:
           publish: pnpm changeset:publish
           cwd: "${{ github.workspace }}/npm"
