@@ -1,5 +1,11 @@
 # @penumbra-labs/registry
 
+## 12.8.0
+
+### Minor Changes
+
+- Add an option to improve caching in NextJS environments.
+
 ## 12.7.2
 
 ### Patch Changes
